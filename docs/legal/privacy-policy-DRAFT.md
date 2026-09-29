@@ -7,7 +7,7 @@ Last updated: [DATE]
 ---
 
 ## 1. Who we are
-**Clear Signs** is run by **Farah Musa**, a sole trader trading as Clear Signs, of **[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]**. We decide how your personal information is used, so we are the "controller" (the person responsible for it under UK data protection law). Contact us: **fmusa00@outlook.com**, **07405 535846** (both temporary, they may change).
+**Clear Signs** is run by **Farah Musa**, a sole trader trading as Clear Signs, of **Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE**. We decide how your personal information is used, so we are the "controller" (the person responsible for it under UK data protection law). Contact us: **fmusa00@outlook.com**, **07405 535846** (both temporary, they may change).
 
 ## 2. What this website does with your information
 - **No accounts, no online shop, no analytics, no advertising trackers.** (Checked by reading the site code on 2026-09-29: `site/index.html` and `site/script.js` set no cookies, use no browser storage, load no third-party scripts, fonts or embeds, and send nothing to a server of ours.)
@@ -70,7 +70,7 @@ We will update this page if what we do changes. The date at the top shows the la
 ---
 
 ## Questions for the owner
-1. Name order and exact estate name (same answers as the terms).
+1. (Answered: name and address confirmed.)
 2. Which host, email provider and payment method will you use?
 3. Which partner and NFC supplier will receive customer details, and which details?
 4. How long do you want to keep enquiries and job files?

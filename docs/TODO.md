@@ -40,7 +40,7 @@ See `docs/business-setup-guide.md` for official sources and figures (checked 202
 
 ## D. Legal documents
 - [x] [claude] First draft of terms and conditions written: `docs/legal/terms-and-conditions-DRAFT.md` (not published).
-- [x] [claude] Terms, privacy draft and quote/invoice templates filled with the agreed defaults (P2-1, P2-2). Still bracketed: name order, estate name, maintenance edit count, video who/where, late fees, hosting/payment provider.
+- [x] [claude] Terms, privacy draft and quote/invoice templates filled with the agreed defaults (P2-1, P2-2). Name and address now confirmed. Still bracketed: maintenance edit count, video who/where, late fees, hosting/payment provider.
 - [ ] [you] Answer the 10 questions at the end of the draft so I can fill in the brackets.
 - [ ] [you] Have the finished terms checked (solicitor, trade body or insurer) before using them with customers.
 - [ ] [claude] Add a Terms page to the website once approved.

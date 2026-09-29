@@ -4,7 +4,6 @@ Answer in chat or by email. When answered, move the answer to DECISIONS.md and d
 Defaults for questions 5 to 20, 26 and 27 were accepted ("agree", 2026-09-29).
 
 ## About you
-3. Address received: Unit 12, Leviss Industrial ..., Birmingham, B33 9AE. CONFIRM the exact estate name (Estate or Station? spelling of Leviss?). Not shown on the website.
 4. Customers: mainly businesses? Also members of the public? (affects consumer cancellation rules in the terms)
 
 ## Still needed to finish the terms and site

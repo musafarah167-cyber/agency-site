@@ -4,7 +4,7 @@ Copy for each invoice and keep the copies OUTSIDE the repo. Replace everything i
 Rules on what an invoice must show: see the gov.uk page listed in `docs/business-setup-guide.md`. Read it and check this template against it.
 
 **Farah Musa trading as Clear Signs**, sole trader
-[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]
+Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE
 Phone 07405 535846 (temporary)  Email fmusa00@outlook.com (temporary)
 Not VAT registered  (only while true; if you register for VAT, this template needs changing)
 

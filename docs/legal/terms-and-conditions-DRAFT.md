@@ -6,7 +6,7 @@ Written by Claude in plain English as a starting point. It is not legal advice. 
 ---
 
 ## 1. Who we are
-These terms apply to work done by **Clear Signs**, run by **Farah Musa**, a sole trader trading as Clear Signs, of **[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]**. Contact: **07405 535846** and **fmusa00@outlook.com** (both temporary, they may change). ("we", "us"). "You" means the customer.
+These terms apply to work done by **Clear Signs**, run by **Farah Musa**, a sole trader trading as Clear Signs, of **Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE**. Contact: **07405 535846** and **fmusa00@outlook.com** (both temporary, they may change). ("we", "us"). "You" means the customer.
 
 ## 2. What these terms cover
 - NFC cards (blank and custom)
@@ -111,8 +111,7 @@ These terms are governed by the law of **England and Wales**, and the courts of 
 ---
 
 ## Questions for the owner (still open)
-1. Estate name: exact spelling of "Leviss Industrial ..." (Estate? Station?).
-2. Customers: mainly businesses, or also members of the public? (This changes which consumer rules apply, see section 14.4.)
-3. Maintenance: how many small edits per month are included? (section 9.1)
-4. Video: who films, and where? (section 10.1)
-5. Professional check: have a solicitor, trade body or insurer check this before use.
+1. Customers: mainly businesses, or also members of the public? (This changes which consumer rules apply, see section 14.4.)
+2. Maintenance: how many small edits per month are included? (section 9.1)
+3. Video: who films, and where? (section 10.1)
+4. Professional check: have a solicitor, trade body or insurer check this before use.
