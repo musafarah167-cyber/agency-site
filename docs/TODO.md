@@ -38,7 +38,10 @@ Update this file whenever something is done or added.
 - [ ] Simple lead tracker (name, service, status, quote given).
 
 ## D. Legal documents
-- [ ] [claude] Draft plain-English terms and conditions (build, maintenance, refunds, ownership, cancellation). [you] have them checked before relying on them.
+- [x] [claude] First draft of terms and conditions written: `docs/legal/terms-and-conditions-DRAFT.md` (not published).
+- [ ] [you] Answer the 10 questions at the end of the draft so I can fill in the brackets.
+- [ ] [you] Have the finished terms checked (solicitor, trade body or insurer) before using them with customers.
+- [ ] [claude] Add a Terms page to the website once approved.
 - [ ] [claude] Draft privacy policy (and cookie notice if analytics are added).
 - [ ] [claude] Quote template and customer onboarding checklist.
 
