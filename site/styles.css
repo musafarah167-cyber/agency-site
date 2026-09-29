@@ -11,6 +11,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
 img, svg { max-width: 100%; }
 a { color: var(--accent); }
@@ -84,7 +85,11 @@ details p { color: var(--muted); margin: 8px 0 0; }
 form { display: grid; gap: 16px; }
 label { display: grid; gap: 6px; font-weight: 600; }
 input, select, textarea { font: inherit; padding: 12px; border: 1px solid #a9bbd6; border-radius: 8px; background: #fff; }
-input:focus, select:focus, textarea:focus, .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #9dc0ff; outline-offset: 2px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #0a2a5e; outline-offset: 2px; }
+.hero :focus-visible, .site-footer :focus-visible { outline-color: #fff; }
+main:focus { outline: none; }
+.skip-link { position: absolute; left: 8px; top: -100px; z-index: 30; background: #fff; color: var(--navy); padding: 12px 18px; border-radius: 8px; font-weight: 700; border: 2px solid var(--navy); }
+.skip-link:focus { top: 8px; }
 .form-error { color: #b00020; margin: 0; }
 
 /* footer */
@@ -93,7 +98,7 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, a:focus-visible, 
 .footer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .site-footer p { margin: 4px 0 0; }
 .footer-inner .small { grid-column: 1 / -1; font-size: .85rem; opacity: .8; }
-.float-wa { position: fixed; right: 16px; bottom: 16px; background: #1fa855; color: #fff; padding: 12px 18px; border-radius: 99px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 20; }
+.float-wa { position: fixed; right: 16px; bottom: 16px; background: #0f7a35; color: #fff; padding: 12px 18px; border-radius: 99px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 20; }
 
 /* mobile */
 @media (max-width: 1000px) {
@@ -106,6 +111,15 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, a:focus-visible, 
   .nav-toggle { display: block; }
   .nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 16px; border-bottom: 1px solid var(--line); }
   .nav.open { display: flex; }
+  /* room at the bottom so the floating WhatsApp button never covers the form button or footer links */
+  .site-footer { padding-bottom: 96px; }
+  /* 44px minimum tap targets */
+  .nav-toggle { min-height: 44px; min-width: 44px; }
+  .nav a { display: flex; align-items: center; min-height: 44px; }
+  .btn, .btn-small { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  summary { padding: 10px 0; min-height: 44px; display: flex; align-items: center; }
+  .site-footer a { display: inline-block; padding: 10px 0; min-height: 44px; }
+  .float-wa { min-height: 44px; display: inline-flex; align-items: center; }
 }
 
 /* keep package buttons level */

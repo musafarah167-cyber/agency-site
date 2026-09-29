@@ -17,6 +17,15 @@ nav.addEventListener("click", (e) => {
   }
 });
 
+// Escape closes the mobile menu and returns focus to the toggle
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.focus();
+  }
+});
+
 // Package/service buttons pre-select the enquiry dropdown
 const form = document.getElementById("quote-form");
 document.querySelectorAll("[data-interest]").forEach((el) => {
