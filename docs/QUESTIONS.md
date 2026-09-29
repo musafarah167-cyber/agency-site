@@ -1,0 +1,40 @@
+# Open questions for the owner (Batch 1 and 2)
+
+Answer in chat or by email reply: "agree" accepts every suggestion in brackets; otherwise give the number and your answer.
+When answered, move the answer to DECISIONS.md and delete the question here.
+
+## URGENT
+1. When did you first take money for this work? If before 6 April 2026, the HMRC self-employed registration deadline may be 5 October 2026. Check gov.uk ("register for self assessment") and register if needed. Only you can do this.
+
+## About you (terms, invoices, footer)
+2. Full legal name for terms and invoices.
+3. Address to show: home, or a paid business address service (needs approval)? Sole traders using a business name may have to show name and address on invoices and the site.
+4. Customers: mainly businesses? Also members of the public?
+5. VAT registered? (No)
+
+## How you work
+6. Deposit (50% for websites, video, designs; 100% for NFC)
+7. Balance due (before a site goes live; before final video files; before designs go to print)
+8. Quote valid for (30 days)
+9. Rounds of changes (2 websites, 2 video, 2 design proofs)
+10. Fault reporting deadline (7 days NFC, 14 days everything else)
+11. Complaint reply time (5 working days)
+12. Maintenance includes (monthly check, backup, SSL and domain watch, up to [how many?] small edits); excludes new pages and redesigns. Give the number of edits.
+13. Maintenance contract (no minimum term, 1 month notice)
+14. Who owns customer domain and hosting (the customer, you get access)
+15. Custom NFC cards (direct link the customer controls)
+16. Video: who films, and where? (needs answer)
+17. Draft terms liability limit and cancellation rules (accept, subject to professional check)
+
+## Website wording
+18. Remove unconfirmed claims: "Most popular" badge, "Bulk quantities available", "works with every iPhone and Android", "one monthly bill" (yes)
+19. Analytics and cookies (none at launch, no cookie banner)
+20. Demo site trades (plumber and roofer); usual website turnaround time (needs answer)
+
+## Prices and packages (only you can set these)
+21. Bronze, Silver, Gold, Platinum price each; one-off, monthly or both?
+22. Suggested Silver, Gold, Platinum inclusions OK? How many cards and videos in each?
+23. Blank NFC cards: bulk price or minimum order?
+24. Uniform designs: set price, or quote by message?
+25. Is Bronze profitable? 4 cards = £120 at normal price before website work.
+Fallback: "Price on request" on every package is fine for launch.
