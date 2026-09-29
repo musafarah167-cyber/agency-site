@@ -12,10 +12,10 @@ Tick tasks here and in `TODO.md` as they finish.
 - Never put real customer data or bank details in git. Never invent claims, prices or reviews.
 
 ## Phase 1: now (no owner input needed)
-- [ ] T1. Move site files into `site/` so a deploy can never publish `docs/` or `CLAUDE.md`.
-- [ ] T2. Remove unconfirmed claims: "Most popular" badge, "Bulk quantities available", flat "works with iPhone and Android" (use "most modern"), maintenance card details (mark CONFIRM). Flag "one monthly bill" for Batch 1.
-- [ ] T3. Accessibility and mobile: skip link, WhatsApp button contrast to 4.5:1, stronger focus ring, bottom padding so the float button never covers the form or footer, Escape closes menu, reduced-motion, 44px tap targets.
-- [ ] T4. On-page SEO without a domain: title/description include all services, Open Graph tags, theme-color, one h1, logical headings. (robots, sitemap, canonical, structured data wait for Phase 3.)
+- [x] T1. Move site files into `site/` so a deploy can never publish `docs/` or `CLAUDE.md`.
+- [x] T2. Remove unconfirmed claims: "Most popular" badge, "Bulk quantities available", flat "works with iPhone and Android" (use "most modern"), maintenance card details (mark CONFIRM). Flag "one monthly bill" for Batch 1.
+- [x] T3. Accessibility and mobile: skip link, WhatsApp button contrast to 4.5:1, stronger focus ring, bottom padding so the float button never covers the form or footer, Escape closes menu, reduced-motion, 44px tap targets.
+- [x] T4. On-page SEO without a domain: title/description include all services, Open Graph tags, theme-color, one h1, logical headings. (robots, sitemap, canonical, structured data wait for Phase 3.)
 - [ ] T5. Privacy policy draft: `docs/legal/privacy-policy-DRAFT.md`.
 - [ ] T6. Business setup guide with gov.uk/ICO/IPO sources: `docs/business-setup-guide.md`.
 - [ ] T7. Website build and launch process with pre-launch checklist: `docs/process/website-build-process.md`.

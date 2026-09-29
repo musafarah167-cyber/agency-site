@@ -66,9 +66,13 @@ CAN BE PLACEHOLDER FOR NOW
 - [ ] 3. Private testing area so customer sites are approved before going live
 
 ## G. Site build (Claude)
+- [x] Site moved into `site/`; unconfirmed claims removed; accessibility and mobile fixes done (T1 to T3)
+- [ ] Owner to confirm: bulk/minimum order for NFC, what monthly maintenance includes, billing (one monthly bill?), whether any package is 'most popular'. Then restore the wording (see IDEAS.md)
+- [ ] Check the site on a real phone (float button, menu, tap targets)
 - [ ] Fill in prices and package details when given
 - [ ] Add the "Our work" projects when given
 - [ ] Separate pages per service (later)
 - [ ] Email delivery for the quote form (optional; today it opens WhatsApp)
-- [ ] Basic SEO: real meta description, page titles, sitemap, local business details
+- [x] On-page SEO done: title, description, Open Graph, theme-color, one h1 (T4)
+- [ ] Still to do for SEO (needs a domain, Phase 3): robots.txt, sitemap, canonical, og:url, local business structured data
 - [ ] Final checks before launch: links, forms, phone/WhatsApp, mobile, images, console errors, SSL
