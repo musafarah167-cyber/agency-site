@@ -11,7 +11,7 @@ Ongoing project: the owner sends content in stages and the site is built up over
 Brand name: Clear Signs (owner confirmed). Owner thought it might be trademarked; a UK IPO register check is still advised before spending on branding or a domain.
 
 ## Placeholders (search for `[` in the HTML)
-`[EMAIL]`, package names, prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
+Package names, prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
 Never invent prices, reviews, claims or certifications.
 
 ## Quote form
@@ -22,3 +22,6 @@ Real content, logo, colours, per-service pages, domain, hosting, deployment (ask
 
 ## Phone number (temporary, owner will change it)
 07405 535846. To change: search `447405535846` (tel: and wa.me links, and `WHATSAPP_NUMBER` in `script.js`) and `07405 535846` (display text) across `index.html` and `script.js`. WhatsApp format is international with no + or leading 0.
+
+## Email (temporary, owner will change it)
+fmusa00@outlook.com. To change: search `fmusa00@outlook.com` in `index.html` (mailto link and display text).
