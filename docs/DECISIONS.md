@@ -22,3 +22,20 @@ Only things the owner has said. Add the date when something changes.
 - Business address (for invoices, terms, privacy policy only; NOT the website): Unit 12, Leviss Industrial [Estate?], Birmingham, B33 9AE (owner gave "leviss industrial station"; exact spelling of the estate name to confirm before it goes on documents).
 - Owner's name: given as "Farah Musa" (confirm the order of first name and surname as on official ID before it goes on invoices and terms). Used as "[name] trading as Clear Signs".
 - Trading status (2026-09-29): no customers or income yet; business is just starting. So the 5 Oct 2026 HMRC deadline does NOT apply. Register as self-employed after the first paid job; if first income is on or after 6 Apr 2026, the deadline is 5 Oct 2027 (check gov.uk and the £1,000 trading allowance).
+
+## Owner agreed to Claude's suggested defaults ("agree", 2026-09-29)
+- Not VAT registered.
+- Deposit: 50% up front for websites, video and designs; 100% up front for NFC cards.
+- Balance due: before a website goes live; before final video files are sent; before designs go to print.
+- Quotes valid 30 days. Quotes are free.
+- Rounds of changes: 2 for websites, 2 for video, 2 for design proofs.
+- Fault reporting: 7 days for NFC cards, 14 days for everything else.
+- Complaint reply time: 5 working days.
+- Maintenance covers a monthly check, backup, SSL and domain watch, and a set number of small edits (NUMBER STILL NEEDED); excludes new pages and redesigns. No minimum term, 1 month notice.
+- Customer owns their domain and hosting; Clear Signs is given access.
+- Custom NFC cards: Clear Signs programs a direct link the customer controls (their website, Google review link etc.).
+- Draft terms liability limit and cancellation rules accepted, subject to a professional check.
+- Unconfirmed claims stay off the site (Most popular, bulk quantities, works with every phone, one monthly bill).
+- No analytics or cookies at launch, so no cookie banner.
+- Demo sites: plumber and roofer.
+- Site wording: keep "A clear quote, no hidden extras" and "You approve everything before it goes live"; soften "Websites built & maintained" and "We keep it running after launch" until the maintenance edit count is set; keep "Get a free quote" and "Pre-programmed for you"; soften "people in your area can find you" to "Set up with the basics search engines look for"; keep "websites that bring in enquiries" as an aim.
