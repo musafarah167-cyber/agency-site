@@ -2,7 +2,7 @@
 
 Copy this file for each customer and keep the copy OUTSIDE the repo. Replace everything in [brackets]. Delete this line.
 
-**[OWNER NAME: Farah Musa, order to confirm] trading as Clear Signs**, sole trader
+**Farah Musa trading as Clear Signs**, sole trader
 [ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]
 Phone 07405 535846 (temporary)  Email fmusa00@outlook.com (temporary)
 Not VAT registered  (only show this while true)
