@@ -14,6 +14,8 @@ Update this file whenever something is done or added.
 - [ ] Get written OK from customers before showing their work in the portfolio.
 
 ## B. Online identity
+- [x] Private GitHub repo created and first push done (2026-09-29).
+- [ ] [both] Make GitHub login permanent: `gh` was downloaded to a temporary folder for this session only. Next session, install it properly (ask first) or log in again before pushing.
 - [ ] [you] Buy domain (ASK first, costs money): e.g. clearsigns.co.uk if the name is clear.
 - [ ] [you] Professional email on the domain (replaces the temporary Outlook address).
 - [ ] [you] Google Business Profile, Instagram, Facebook, TikTok, WhatsApp Business (same name everywhere).
