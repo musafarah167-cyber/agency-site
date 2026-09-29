@@ -11,7 +11,7 @@ Ongoing project: the owner sends content in stages and the site is built up over
 Brand name: Clear Signs (owner confirmed). Owner thought it might be trademarked; a UK IPO register check is still advised before spending on branding or a domain.
 
 ## Placeholders (search for `[` in the HTML)
-Package names, prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
+Packages are Bronze, Silver, Gold (names confirmed; prices and inclusions still needed). Package prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
 Never invent prices, reviews, claims or certifications.
 
 ## Quote form
