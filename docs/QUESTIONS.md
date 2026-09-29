@@ -8,7 +8,7 @@ When answered, move the answer to DECISIONS.md and delete the question here.
 
 ## About you (terms, invoices, footer)
 2. Full legal name for terms and invoices.
-3. Address to show: home, or a paid business address service (needs approval)? Sole traders using a business name may have to show name and address on invoices and the site.
+3. (Answered: address left off the website for now.) Still needed: the address to put on invoices and the draft terms and privacy policy. Also check on gov.uk whether a sole trader must show an address on the website.
 4. Customers: mainly businesses? Also members of the public?
 5. VAT registered? (No)
 
