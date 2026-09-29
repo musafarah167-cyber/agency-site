@@ -2,6 +2,12 @@
 
 Marketing agency website. Services: NFC cards (blank + custom), website builds and maintenance, video content, tiered packages.
 
+## Project notes (read these first)
+- `docs/TODO.md`: the checklist of everything left to do (business setup, content, sites). Tick items off and add new ones as we go.
+- `docs/DECISIONS.md`: what the owner has confirmed. Update whenever they tell us something new.
+- `docs/IDEAS.md`: suggestions not yet agreed.
+Keep these three files current at the end of every task: record new facts, tick finished items, add new tasks.
+
 ## Colours
 Blue and white (owner request): navy `#0a2a5e` hero and footer, royal blue `#1558d6` buttons and accents, pale blue `#eef4fd` alternate sections. Set in `:root` at the top of `styles.css`.
 
