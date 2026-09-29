@@ -16,15 +16,15 @@ Tick tasks here and in `TODO.md` as they finish.
 - [x] T2. Remove unconfirmed claims: "Most popular" badge, "Bulk quantities available", flat "works with iPhone and Android" (use "most modern"), maintenance card details (mark CONFIRM). Flag "one monthly bill" for Batch 1.
 - [x] T3. Accessibility and mobile: skip link, WhatsApp button contrast to 4.5:1, stronger focus ring, bottom padding so the float button never covers the form or footer, Escape closes menu, reduced-motion, 44px tap targets.
 - [x] T4. On-page SEO without a domain: title/description include all services, Open Graph tags, theme-color, one h1, logical headings. (robots, sitemap, canonical, structured data wait for Phase 3.)
-- [ ] T5. Privacy policy draft: `docs/legal/privacy-policy-DRAFT.md`.
-- [ ] T6. Business setup guide with gov.uk/ICO/IPO sources: `docs/business-setup-guide.md`.
-- [ ] T7. Website build and launch process with pre-launch checklist: `docs/process/website-build-process.md`.
-- [ ] T8. Maintenance checklist (internal): `docs/process/maintenance-checklist.md`.
-- [ ] T9. Customer onboarding checklist per service: `docs/process/customer-onboarding-checklist.md`.
-- [ ] T10. Quote and invoice templates (no bank details): `docs/templates/`.
-- [ ] T11. Partner job checklist for outsourced printing and fitting: `docs/process/partner-job-checklist.md`.
-- [ ] T12. Lead tracker and sales/expenses CSV templates, headers only: `docs/templates/`.
-- [ ] T13. Demo sites plan (plan only): `docs/demo-sites-plan.md`.
+- [x] T5. Privacy policy draft: `docs/legal/privacy-policy-DRAFT.md`.
+- [x] T6. Business setup guide with gov.uk/ICO/IPO sources: `docs/business-setup-guide.md`.
+- [x] T7. Website build and launch process with pre-launch checklist: `docs/process/website-build-process.md`.
+- [x] T8. Maintenance checklist (internal): `docs/process/maintenance-checklist.md`.
+- [x] T9. Customer onboarding checklist per service: `docs/process/customer-onboarding-checklist.md`.
+- [x] T10. Quote and invoice templates (no bank details): `docs/templates/`.
+- [x] T11. Partner job checklist for outsourced printing and fitting: `docs/process/partner-job-checklist.md`.
+- [x] T12. Lead tracker and sales/expenses CSV templates, headers only: `docs/templates/`.
+- [x] T13. Demo sites plan (plan only): `docs/demo-sites-plan.md`.
 
 ## Owner decision batches (emailed)
 - **Batch 1** (sent with Batch 2): 20 answers for terms, privacy, site wording. Includes the URGENT HMRC question.

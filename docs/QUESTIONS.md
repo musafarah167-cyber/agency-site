@@ -30,6 +30,7 @@ When answered, move the answer to DECISIONS.md and delete the question here.
 18. Remove unconfirmed claims: "Most popular" badge, "Bulk quantities available", "works with every iPhone and Android", "one monthly bill" (yes)
 19. Analytics and cookies (none at launch, no cookie banner)
 20. Demo site trades (plumber and roofer); usual website turnaround time (needs answer)
+26. These claims are still on the site and unconfirmed. Keep or remove? "Websites built & maintained" (trust strip), "We keep it running after launch, so you never have to worry about it" (Websites intro), "A clear quote, no hidden extras" and "You approve everything before it goes live" (How it works). Suggested default: keep the last two once you confirm (they are how we intend to work); soften the first two until the maintenance scope is set (question 12).
 
 ## Prices and packages (only you can set these)
 21. Bronze, Silver, Gold, Platinum price each; one-off, monthly or both?
