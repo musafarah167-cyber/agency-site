@@ -5,7 +5,9 @@ Update this file whenever something is done or added.
 
 ## A. Business setup (all [you]; nothing here is legal or tax advice)
 - [ ] Trade mark check for "Clear Signs": UK IPO register, Companies House, Google. Do before buying a domain, logo or printed cards.
-- [ ] Choose sole trader or limited company (ask an accountant if unsure). Register with HMRC or Companies House.
+- [x] Business type: sole trader (decided).
+- [ ] [you] Register as self-employed with HMRC (gov.uk, free). Deadline is usually 5 October after the tax year in which you started trading. Check the exact rules and the £1,000 trading allowance on gov.uk or with an accountant.
+- [ ] [you] Check the rules for trading under a business name as a sole trader (your own name and address may need to appear on invoices and the website). Decide what address to use if you work from home.
 - [ ] Open a business bank account.
 - [ ] Get insurance quotes: public liability and professional indemnity.
 - [ ] Check whether the ICO data protection fee applies (about £52 a year for most small businesses).
@@ -19,11 +21,15 @@ Update this file whenever something is done or added.
 - [ ] [both] Choose hosting (static hosting is enough; ASK before paying) and go live with SSL.
 
 ## C. How each service runs (decisions needed)
-- [ ] NFC: supplier for blank cards; way to program them; printer for custom cards; test a small batch on iPhone and Android.
+- [x] NFC: owner has a blank-card supplier.
+- [ ] NFC: way to program cards; who prints custom cards; test a small batch on iPhone and Android; confirm the cost per card so £30/£50 covers it.
 - [ ] Websites: agree the build process (brief, private test link, approval, go live). Who owns the domain and hosting?
 - [ ] Maintenance: monthly checklist, number of small edits included, price for extra edits, notice period.
 - [ ] Video: kit and editing tools; revisions included; who films?
-- [ ] Uniforms and vans: design only, or printing/embroidery/fitting through a partner?
+- [x] Uniforms and vans: outsourced to a partner at the start (decided).
+- [ ] Find and test the partner(s): get a written price list, turnaround times, minimums, sample work, and who is responsible if a job goes wrong. Try a small paid sample first.
+- [ ] Decide what the partner does (design only, or printing/embroidery/vinyl fitting) and what margin Clear Signs adds to the quote.
+- [ ] Agree how customers approve a design (proof/mock-up) before the partner starts.
 - [ ] Payments: bank transfer, Stripe or SumUp; deposit rules; when monthly payments are due.
 - [ ] Invoice template and a simple record of sales and expenses.
 - [ ] Simple lead tracker (name, service, status, quote given).
@@ -38,7 +44,7 @@ ESSENTIAL
 - [ ] Package prices, one-off or monthly (Bronze, Silver, Gold, Platinum)
 - [ ] Confirm or change proposed Silver, Gold, Platinum inclusions, and the [X] quantities
 - [ ] Whether blank NFC cards are sold in bulk; any minimum order
-- [ ] Uniform and van: design only, or printing/fitting too?
+- [ ] Uniform and van: does the partner do printing/fitting too, or design only? (for the site wording)
 - [ ] Permanent phone, WhatsApp and email (current ones are temporary)
 
 CAN BE PLACEHOLDER FOR NOW

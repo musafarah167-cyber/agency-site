@@ -13,3 +13,6 @@ Only things the owner has said. Add the date when something changes.
 - Single services can be bought without a package. Only NFC cards have a set price. Website work, video, uniform and van designs are quoted by message.
 - Van designs are quoted by message because the price depends on van size and the customer's needs.
 - Owner is UK based. They will supply real content and examples over time; until then the site is a template.
+- Business type: sole trader (owner confirmed).
+- NFC cards: owner already has a supplier.
+- Uniform and van designs: OUTSOURCED to a partner at the start. Clear Signs takes the enquiry and the customer deals with Clear Signs. Still to confirm: whether printing/embroidery/fitting is part of what the partner does.
