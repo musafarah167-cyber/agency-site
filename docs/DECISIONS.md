@@ -15,4 +15,4 @@ Only things the owner has said. Add the date when something changes.
 - Owner is UK based. They will supply real content and examples over time; until then the site is a template.
 - Business type: sole trader (owner confirmed).
 - NFC cards: owner already has a supplier.
-- Uniform and van designs: OUTSOURCED to a partner at the start. Clear Signs takes the enquiry and the customer deals with Clear Signs. Still to confirm: whether printing/embroidery/fitting is part of what the partner does.
+- Uniform and van designs: OUTSOURCED to a partner at the start. Clear Signs takes the enquiry and the customer deals with Clear Signs. Design is done in house by Clear Signs. The partner does the printing (uniforms and vans) and the fitting (vans). Embroidery not mentioned, so not offered on the site.

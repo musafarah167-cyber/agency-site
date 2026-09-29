@@ -28,7 +28,8 @@ Update this file whenever something is done or added.
 - [ ] Video: kit and editing tools; revisions included; who films?
 - [x] Uniforms and vans: outsourced to a partner at the start (decided).
 - [ ] Find and test the partner(s): get a written price list, turnaround times, minimums, sample work, and who is responsible if a job goes wrong. Try a small paid sample first.
-- [ ] Decide what the partner does (design only, or printing/embroidery/vinyl fitting) and what margin Clear Signs adds to the quote.
+- [x] Split decided: design in house; partner prints (uniforms and vans) and fits (vans).
+- [ ] Decide the margin Clear Signs adds on the partner's printing/fitting price.
 - [ ] Agree how customers approve a design (proof/mock-up) before the partner starts.
 - [ ] Payments: bank transfer, Stripe or SumUp; deposit rules; when monthly payments are due.
 - [ ] Invoice template and a simple record of sales and expenses.
@@ -44,7 +45,7 @@ ESSENTIAL
 - [ ] Package prices, one-off or monthly (Bronze, Silver, Gold, Platinum)
 - [ ] Confirm or change proposed Silver, Gold, Platinum inclusions, and the [X] quantities
 - [ ] Whether blank NFC cards are sold in bulk; any minimum order
-- [ ] Uniform and van: does the partner do printing/fitting too, or design only? (for the site wording)
+- [x] Uniform and van wording updated: designed by us, printed (and fitted for vans) for the customer.
 - [ ] Permanent phone, WhatsApp and email (current ones are temporary)
 
 CAN BE PLACEHOLDER FOR NOW
