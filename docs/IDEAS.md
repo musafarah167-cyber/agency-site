@@ -13,3 +13,4 @@ Suggestions from Claude. Move an item to DECISIONS.md once the owner agrees.
 - Match colours to the logo once one exists.
 - Outsourcing: show the customer a mock-up before anything is made, and keep the partner's price list private. Test with one small paid job before promising turnaround times on the site.
 - As a sole trader you are personally liable for mistakes, so insurance matters more. Ask insurers about cover for work done by partners.
+- Removed from the site in T2 because not confirmed; can return once the owner confirms them: "Most popular" badge on a package, "Bulk quantities available" for blank NFC cards, "One monthly bill", "Simple monthly packages", and the list of what monthly maintenance covers (updates, backups, security, small changes).
