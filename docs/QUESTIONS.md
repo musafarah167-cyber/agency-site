@@ -7,7 +7,7 @@ When answered, move the answer to DECISIONS.md and delete the question here.
 1. When did you first take money for this work? If before 6 April 2026, the HMRC self-employed registration deadline may be 5 October 2026. Check gov.uk ("register for self assessment") and register if needed. Only you can do this.
 
 ## About you (terms, invoices, footer)
-2. Full legal name for terms and invoices.
+2. Name received: "Farah Musa". CONFIRM first name and surname order, exactly as on your passport or driving licence.
 3. Address received: Unit 12, Leviss Industrial ..., Birmingham, B33 9AE. CONFIRM the exact name of the estate (Estate or Station? spelling of Leviss?) before it goes on invoices and legal documents. Not shown on the website.
 4. Customers: mainly businesses? Also members of the public?
 5. VAT registered? (No)

@@ -20,3 +20,4 @@ Only things the owner has said. Add the date when something changes.
 - Owner wants decision requests emailed to musafarah167@gmail.com (via the Gmail connector, once it has send permission). Until then, questions live in docs/QUESTIONS.md and in chat.
 - Address: NOT shown on the website for now (owner decision 2026-09-29). It goes on invoices and legal documents only. Revisit if gov.uk says it must appear on the site. No company number exists (sole trader).
 - Business address (for invoices, terms, privacy policy only; NOT the website): Unit 12, Leviss Industrial [Estate?], Birmingham, B33 9AE (owner gave "leviss industrial station"; exact spelling of the estate name to confirm before it goes on documents).
+- Owner's name: given as "Farah Musa" (confirm the order of first name and surname as on official ID before it goes on invoices and terms). Used as "[name] trading as Clear Signs".
