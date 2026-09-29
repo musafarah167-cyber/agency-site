@@ -31,6 +31,7 @@ When answered, move the answer to DECISIONS.md and delete the question here.
 19. Analytics and cookies (none at launch, no cookie banner)
 20. Demo site trades (plumber and roofer); usual website turnaround time (needs answer)
 26. These claims are still on the site and unconfirmed. Keep or remove? "Websites built & maintained" (trust strip), "We keep it running after launch, so you never have to worry about it" (Websites intro), "A clear quote, no hidden extras" and "You approve everything before it goes live" (How it works). Suggested default: keep the last two once you confirm (they are how we intend to work); soften the first two until the maintenance scope is set (question 12).
+27. More unconfirmed wording. Keep, change or remove? "Get a free quote" (are quotes always free? suggested: yes), "Pre-programmed for you" on custom NFC cards (do you program them? suggested: yes, see Q15), "Set up so people searching in your area can find you" (suggested: soften to "Set up with the basics search engines look for"), "websites that bring in enquiries" (suggested: keep as an aim, not a promise; terms already say no guaranteed results), "Ideal for resellers" on blank cards (do you sell to resellers?).
 
 ## Prices and packages (only you can set these)
 21. Bronze, Silver, Gold, Platinum price each; one-off, monthly or both?

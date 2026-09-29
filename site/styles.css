@@ -71,7 +71,6 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .ticks li { padding-left: 26px; position: relative; margin-bottom: 6px; }
 .ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 .price-tag { font-size: 1.8rem; font-weight: 800; color: var(--ink) !important; }
-.featured { border: 2px solid var(--accent); }
 .badge { position: absolute; top: -12px; right: 16px; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; }
 .steps { padding-left: 20px; max-width: 42em; }
 .steps li { margin-bottom: 12px; }
