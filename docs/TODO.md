@@ -7,7 +7,7 @@ Update this file whenever something is done or added.
 See `docs/business-setup-guide.md` for official sources and figures (checked 2026-09-29). HMRC registration deadline 5 October 2026 may apply: see QUESTIONS.md question 1.
 - [ ] Trade mark check for "Clear Signs": UK IPO register, Companies House, Google. Do before buying a domain, logo or printed cards.
 - [x] Business type: sole trader (decided).
-- [ ] [you] Register as self-employed with HMRC (gov.uk, free). Deadline is usually 5 October after the tax year in which you started trading. Check the exact rules and the £1,000 trading allowance on gov.uk or with an accountant.
+- [ ] [you] Register as self-employed with HMRC AFTER the first paid job (no income yet as of 2026-09-29). Deadline: 5 October after the end of the tax year you start trading in (e.g. first paid job before 5 Apr 2027 -> register by 5 Oct 2027). Check the £1,000 trading allowance on gov.uk. See docs/business-setup-guide.md.
 - [ ] [you] Check the rules for trading under a business name as a sole trader (your own name and address may need to appear on invoices and the website). Decide what address to use if you work from home.
 - [ ] Open a business bank account.
 - [ ] Get insurance quotes: public liability and professional indemnity.
