@@ -17,3 +17,4 @@ Only things the owner has said. Add the date when something changes.
 - NFC cards: owner already has a supplier.
 - Uniform and van designs: OUTSOURCED to a partner at the start. Clear Signs takes the enquiry and the customer deals with Clear Signs. Design is done in house by Clear Signs. The partner does the printing (uniforms and vans) and the fitting (vans). Embroidery not mentioned, so not offered on the site.
 - GitHub: private repo https://github.com/musafarah167-cyber/agency-site (account musafarah167-cyber). Created 2026-09-29; branch main. Push only when the owner asks.
+- Owner wants decision requests emailed to musafarah167@gmail.com (via the Gmail connector, once it has send permission). Until then, questions live in docs/QUESTIONS.md and in chat.
