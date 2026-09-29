@@ -33,6 +33,12 @@ Tick tasks here and in `TODO.md` as they finish.
 
 ## Phase 2: after Batch 1 and 2 answers
 Fill terms and privacy brackets; build `site/terms.html` and `site/privacy.html` as unlinked DRAFT + noindex; privacy line under the form; fill FAQ, footer, packages; update templates; build demo sites outside this repo.
+### Phase 2 progress
+- [x] P2-1. Terms draft filled with agreed decisions (brackets kept for name order, estate name, maintenance edit count, video who/where, late fees).
+- [x] P2-2. Privacy draft, quote template and invoice template updated.
+- [x] P2-3. Site wording softened per DECISIONS.md; privacy line under the quote form.
+- [ ] Still to do in Phase 2: `site/terms.html` and `site/privacy.html` (unlinked, noindex), FAQ and footer content, package prices, demo sites.
+
 **Gate:** legal documents checked professionally. Owner completes Batch 3 items 1 to 3 and approves any spend.
 
 ## Phase 3: staging

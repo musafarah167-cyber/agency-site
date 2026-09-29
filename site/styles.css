@@ -90,6 +90,7 @@ main:focus { outline: none; }
 .skip-link { position: absolute; left: 8px; top: -100px; z-index: 30; background: #fff; color: var(--navy); padding: 12px 18px; border-radius: 8px; font-weight: 700; border: 2px solid var(--navy); }
 .skip-link:focus { top: 8px; }
 .form-error { color: #b00020; margin: 0; }
+.form-note { color: var(--muted); font-size: .85rem; margin: 0; }
 
 /* footer */
 .site-footer { background: var(--navy); color: #c9d8f0; padding: 40px 0; }

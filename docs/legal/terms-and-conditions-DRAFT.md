@@ -6,7 +6,7 @@ Written by Claude in plain English as a starting point. It is not legal advice. 
 ---
 
 ## 1. Who we are
-These terms apply to work done by **Clear Signs**, run by **[YOUR FULL NAME]**, a sole trader, of **[BUSINESS ADDRESS]**. Contact: **[PHONE]**, **[EMAIL]**. ("we", "us"). "You" means the customer.
+These terms apply to work done by **Clear Signs**, run by **[OWNER NAME: Farah Musa, order to confirm] trading as Clear Signs**, a sole trader, of **[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]**. Contact: **07405 535846** and **fmusa00@outlook.com** (both temporary, they may change). ("we", "us"). "You" means the customer.
 
 ## 2. What these terms cover
 - NFC cards (blank and custom)
@@ -19,17 +19,17 @@ These terms apply to work done by **Clear Signs**, run by **[YOUR FULL NAME]**, 
 If a written quote or package description says something different, the quote wins for that job.
 
 ## 3. Quotes and accepting a job
-1. Prices for NFC cards are on our website. Everything else is quoted by message, based on what you need.
-2. A quote is valid for **[X] days**. Prices may change after that.
+1. Prices for NFC cards are on our website. Everything else is quoted by message, based on what you need. Quotes are free.
+2. A quote is valid for **30 days**. Prices may change after that.
 3. A job starts when you accept the quote in writing (message or email counts) **and** pay any deposit due.
 4. The quote will say what is included. Anything not listed is not included and can be quoted separately.
 
 ## 4. Payment
-1. Deposit: **[X]%** up front for websites, video, and uniform and van work. NFC card orders are paid **[in full / X%]** up front.
-2. The balance is due **[on completion / before going live / before printing]**.
+1. Deposit: **50%** up front for websites, video, and uniform and van designs. NFC card orders are paid **100%** up front.
+2. The balance is due **before a website goes live**, **before we send the final video files**, and **before a design goes to print**.
 3. Maintenance and monthly packages are billed **[monthly in advance]** by **[bank transfer / card / direct debit]**.
 4. Late invoices: **[we may pause work; add a fixed late fee or interest if you want one]**.
-5. Prices are **[include / exclude]** VAT. **[Only fill in if you are VAT registered. Otherwise say we are not VAT registered.]**
+5. We are not VAT registered, so no VAT is added to our prices. (If this changes, we will tell you before it affects a quote.)
 
 ## 5. What you need to provide
 1. Text, logos, photos and other material we ask for, on time. Delays on your side can delay the job.
@@ -37,26 +37,26 @@ If a written quote or package description says something different, the quote wi
 3. Accurate details, for example spelling on cards and designs, van measurements and phone numbers. **Please check every proof carefully. Once you approve it, we make it exactly as approved.**
 
 ## 6. Changes and revisions
-- Website builds include **[X]** rounds of changes. Video includes **[X]** rounds. Uniform and van designs include **[X]** rounds of changes to the design proof.
+- Website builds include **2** rounds of changes. Video includes **2** rounds. Uniform and van designs include **2** rounds of changes to the design proof.
 - More changes, or big changes after approval, are quoted separately.
 
 ## 7. NFC cards
-1. **Blank cards** are sold as supplied. If a card is faulty when you receive it, tell us within **[X] days** and we will replace it or refund it.
+1. **Blank cards** are sold as supplied. If a card is faulty when you receive it, tell us within **7 days** and we will replace it or refund it.
 2. **Custom cards** are made especially for you. Once we start printing or programming, we cannot cancel or refund the order, unless the cards are faulty or not as approved.
 3. Phone compatibility: NFC works on modern iPhone and Android phones. Some older or unusual phones or cases (for example thick metal cases) may not read a card. We do not guarantee it will work on every device.
-4. **[Confirm: do you program links onto cards for customers, and do they own the link if they change supplier?]**
+4. **Links on custom cards.** For custom cards we program a direct link onto the card, for example your website or Google review link. You control that link. If you change supplier, you keep the link and can use it on other cards. We do not put a link that goes through us, so the card does not depend on us to keep working.
 
 ## 8. Websites
 1. We build the website to the agreed design and list of pages. We will show you a private preview and you approve it before it goes live.
-2. **Ownership.** Once you have paid in full, you own the website content and design we created specifically for you. We may keep and reuse general code, tools and methods we use across many websites. **[Decide: who owns the domain and hosting account? Recommended: the customer.]**
+2. **Ownership.** Once you have paid in full, you own the website content and design we created specifically for you. We may keep and reuse general code, tools and methods we use across many websites. **You own your domain name and your hosting account.** They are registered in your name, and you give us the access we need to build and maintain your site.
 3. **Portfolio.** We may show your finished website in our portfolio and marketing, unless you tell us in writing before the job starts that you do not want this.
 4. **No guarantees of results.** We build websites to help you get enquiries. We cannot promise a particular number of visitors, enquiries, sales or Google ranking, because these depend on things outside our control.
 5. Third-party services (hosting, domains, forms, plug-ins) have their own terms and prices. Some may cost extra. **[List which ones you use.]**
 
 ## 9. Website maintenance
-1. Maintenance is **[monthly]** and includes: **[LIST: e.g. software updates, backups, security checks, up to X small content edits per month]**.
-2. It does not include: **[LIST: e.g. new pages, redesigns, new features, fixing problems caused by someone else editing the site]**. These can be quoted separately.
-3. Either of us can end maintenance with **[X days/one month]** notice in writing. You pay up to the end of the notice period. **[Decide: minimum term? Recommended: none or 3 months.]**
+1. Maintenance is monthly and includes: a monthly check of the site, a backup, watching your SSL certificate (the padlock that makes the site secure) and your domain renewal, and up to **[X: number of small edits per month, still to be decided]** small content edits per month.
+2. It does not include new pages or redesigns. These can be quoted separately, as can new features and fixing problems caused by someone else editing the site.
+3. There is no minimum term. Either of us can end maintenance with one month's notice in writing. You pay up to the end of the notice period.
 4. We take reasonable care to keep your site secure, but we cannot guarantee it will never be hacked or go offline, especially where the cause is a hosting or third-party provider.
 5. If a website is not on our maintenance plan, you (or someone you choose) are responsible for keeping it updated and backed up.
 
@@ -81,8 +81,8 @@ If a written quote or package description says something different, the quote wi
 3. Upgrading to a higher package is possible. We will quote the price difference. **[Decide if downgrades are allowed and when.]**
 
 ## 13. Problems and complaints
-1. If something is faulty or not as agreed, tell us as soon as you notice, with photos where relevant, within **[X days]** of receiving it, and we will repair, replace or refund at our choice, as fits the problem.
-2. If you are not happy, contact **[EMAIL / PHONE]** and we will reply within **[X working days]**.
+1. If something is faulty or not as agreed, tell us as soon as you notice, with photos where relevant, within **7 days** of receiving it for NFC cards, or **14 days** for everything else, and we will repair, replace or refund at our choice, as fits the problem.
+2. If you are not happy, contact **fmusa00@outlook.com** or **07405 535846** (both temporary) and we will reply within **5 working days**.
 3. Nothing in these terms limits any legal rights you have that cannot be limited by law.
 
 ## 14. Cancelling
@@ -110,14 +110,10 @@ These terms are governed by the law of **England and Wales**, and the courts of 
 
 ---
 
-## Questions for the owner (answer these to finish the draft)
-1. Full name and address for section 1 (this may need to appear on the website too).
-2. Deposit percentage and when the balance is due.
-3. How many rounds of changes for websites, video and designs?
-4. What exactly does monthly maintenance include and exclude? Minimum term? Notice period?
-5. Who owns the domain and hosting account: you or the customer? (I recommend the customer.)
-6. Are you VAT registered? (Most new sole traders are not.)
-7. For custom NFC cards: do you program the links, and can the customer change them later?
-8. Who films video, and where?
-9. Are you happy with the liability limit in section 15 and the cancellation rules in section 14?
-10. Consumers or businesses? Are most customers trades and small businesses, or also individual members of the public? (This changes which consumer rules apply.)
+## Questions for the owner (still open)
+1. Name order: is it "Farah Musa" exactly as on your passport or driving licence?
+2. Estate name: exact spelling of "Leviss Industrial ..." (Estate? Station?).
+3. Customers: mainly businesses, or also members of the public? (This changes which consumer rules apply, see section 14.4.)
+4. Maintenance: how many small edits per month are included? (section 9.1)
+5. Video: who films, and where? (section 10.1)
+6. Professional check: have a solicitor, trade body or insurer check this before use.

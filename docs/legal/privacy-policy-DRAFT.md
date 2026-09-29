@@ -7,11 +7,11 @@ Last updated: [DATE]
 ---
 
 ## 1. Who we are
-**Clear Signs** is run by **[YOUR FULL NAME]**, a sole trader, of **[BUSINESS ADDRESS]**. We decide how your personal information is used, so we are the "controller" (the person responsible for it under UK data protection law). Contact us: **[EMAIL]**, **[PHONE]**.
+**Clear Signs** is run by **[OWNER NAME: Farah Musa, order to confirm] trading as Clear Signs**, a sole trader, of **[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]**. We decide how your personal information is used, so we are the "controller" (the person responsible for it under UK data protection law). Contact us: **fmusa00@outlook.com**, **07405 535846** (both temporary, they may change).
 
 ## 2. What this website does with your information
 - **No accounts, no online shop, no analytics, no advertising trackers.** (Checked by reading the site code on 2026-09-29: `site/index.html` and `site/script.js` set no cookies, use no browser storage, load no third-party scripts, fonts or embeds, and send nothing to a server of ours.)
-- **No cookie banner is needed** while that stays true. If we later add analytics, maps, video embeds or similar, we will update this policy and add a cookie notice first. **[Re-check this line before every launch and whenever the site changes.]**
+- **We use no analytics or cookies at launch (owner decision), so no cookie banner is needed** while that stays true. If we later add analytics, maps, video embeds or similar, we will update this policy and add a cookie notice first. **[Re-check this line before every launch and whenever the site changes.]**
 - **The quote form does not send your details to us directly and we do not store what you type on the site.** When you press the button, your name, contact details, choice of service and message are put into a WhatsApp message, and WhatsApp opens (in the app or in your browser) so you can send it to us. You choose whether to press send in WhatsApp.
 - **WhatsApp is run by Meta Platforms**, not by us. Once you use WhatsApp, Meta's own terms and privacy policy apply to how they handle your message, phone number and device data. See <https://www.whatsapp.com/legal/privacy-policy-eea> **[CHECK: correct WhatsApp policy link for UK users]**.
 - If you tap a phone number or email address on the site, your phone or email app handles that. We only receive it if you send it.
@@ -56,7 +56,7 @@ Under UK data protection law you can ask us to:
 - give it to you in a portable form (in some cases)
 - withdraw consent you gave us (for example for portfolio use), at any time
 
-Contact **[EMAIL]**. We will reply within one month **[CHECK against ICO guidance]**.
+Contact **fmusa00@outlook.com**. We will reply within one month **[CHECK against ICO guidance]**.
 
 ## 8. Complaints
 If you are unhappy with how we handle your information, please tell us first so we can put it right. You also have the right to complain to the **Information Commissioner's Office (ICO)**: <https://ico.org.uk/make-a-complaint/> or 0303 123 1113 **[CHECK the ICO details are current before publishing]**.
@@ -70,9 +70,9 @@ We will update this page if what we do changes. The date at the top shows the la
 ---
 
 ## Questions for the owner
-1. Your full name and address to show (same answer as the terms).
+1. Name order and exact estate name (same answers as the terms).
 2. Which host, email provider and payment method will you use?
 3. Which partner and NFC supplier will receive customer details, and which details?
 4. How long do you want to keep enquiries and job files?
-5. Will you ever send marketing messages or add analytics? (Default: no.)
+5. Will you ever send marketing messages or add analytics later? (Decided for launch: no analytics or cookies.)
 6. Have you completed the ICO fee self-assessment?

@@ -40,10 +40,12 @@ See `docs/business-setup-guide.md` for official sources and figures (checked 202
 
 ## D. Legal documents
 - [x] [claude] First draft of terms and conditions written: `docs/legal/terms-and-conditions-DRAFT.md` (not published).
+- [x] [claude] Terms, privacy draft and quote/invoice templates filled with the agreed defaults (P2-1, P2-2). Still bracketed: name order, estate name, maintenance edit count, video who/where, late fees, hosting/payment provider.
 - [ ] [you] Answer the 10 questions at the end of the draft so I can fill in the brackets.
 - [ ] [you] Have the finished terms checked (solicitor, trade body or insurer) before using them with customers.
 - [ ] [claude] Add a Terms page to the website once approved.
 - [x] [claude] Privacy policy drafted: `docs/legal/privacy-policy-DRAFT.md` (T5). Needs owner answers and a professional check. Cookie notice only if analytics are added.
+- [x] [claude] Site wording softened and privacy line added under the quote form (P2-3)
 - [x] [claude] Quote template (`docs/templates/`) and customer onboarding checklist (`docs/process/`) drafted (T9, T10). Fill in brackets once answers arrive.
 
 ## E. Website content still needed

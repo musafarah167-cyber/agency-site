@@ -3,10 +3,10 @@
 Copy for each invoice and keep the copies OUTSIDE the repo. Replace everything in [brackets]. Delete this line.
 Rules on what an invoice must show: see the gov.uk page listed in `docs/business-setup-guide.md`. Read it and check this template against it.
 
-**[YOUR FULL NAME], trading as Clear Signs**, sole trader
-[BUSINESS ADDRESS: decision pending]
-Phone [PHONE]  Email [EMAIL]
-[CONFIRM: not VAT registered]  (only while true; if you register for VAT, this template needs changing)
+**[OWNER NAME: Farah Musa, order to confirm] trading as Clear Signs**, sole trader
+[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]
+Phone 07405 535846 (temporary)  Email fmusa00@outlook.com (temporary)
+Not VAT registered  (only while true; if you register for VAT, this template needs changing)
 
 **Invoice number:** [NUMBERING SCHEME: unique, in order, no gaps]
 **Invoice date:** [DATE]
@@ -21,11 +21,11 @@ Phone [PHONE]  Email [EMAIL]
 | | | | |
 
 Deposit already paid: £[X]
-**Total due: £[TOTAL]**  [CONFIRM: not VAT registered, no VAT charged]
+**Total due: £[TOTAL]**  (Not VAT registered, no VAT charged)
 
 ## How to pay
 Bank transfer to: [OWNER FILLS IN, NEVER COMMITTED TO GIT]
 Use reference: [INVOICE NUMBER]
-[Late payment terms: DECISION PENDING, terms section 4.4]
+[Late payment terms: still to be decided, terms section 4.4]
 
-Thank you. Questions: [EMAIL / PHONE].
+Thank you. Questions: fmusa00@outlook.com / 07405 535846.

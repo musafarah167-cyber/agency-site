@@ -2,14 +2,14 @@
 
 Copy this file for each customer and keep the copy OUTSIDE the repo. Replace everything in [brackets]. Delete this line.
 
-**Clear Signs**, trading name of [YOUR FULL NAME], sole trader
-[BUSINESS ADDRESS: decision pending, see QUESTIONS.md question 3]
-Phone [PHONE]  Email [EMAIL]
-[CONFIRM: not VAT registered]  (only show this while true)
+**[OWNER NAME: Farah Musa, order to confirm] trading as Clear Signs**, sole trader
+[ADDRESS: Unit 12, Leviss Industrial (estate name to confirm), Birmingham, B33 9AE]
+Phone 07405 535846 (temporary)  Email fmusa00@outlook.com (temporary)
+Not VAT registered  (only show this while true)
 
 **Quote number:** [NUMBERING SCHEME, e.g. CS-2026-001]
 **Date:** [DATE]
-**Valid until:** [DATE] ([X] days from the date above; QUESTIONS.md question 8)
+**Valid until:** [DATE] (30 days from the date above)
 
 **Prepared for:** [CUSTOMER NAME / BUSINESS], [CUSTOMER ADDRESS or contact]
 
@@ -21,15 +21,15 @@ Phone [PHONE]  Email [EMAIL]
 | | | |
 
 **Not included:** [list anything not covered, e.g. new pages, extra changes, domain and hosting fees, printing not listed]
-**Rounds of changes included:** [X]
+**Rounds of changes included:** 2 (websites, video, design proofs)
 **Timescale (estimate):** [X weeks, starts once deposit and materials are received]
 **Third-party costs (domain, hosting, partner printing/fitting) are [included / extra: state which]**
 
-**Total:** £[TOTAL]  [CONFIRM: not VAT registered, so no VAT added]
+**Total:** £[TOTAL]  (Not VAT registered, so no VAT added)
 
 ## Payment
-- Deposit: [X%] = £[AMOUNT] due before we start. [DECISION PENDING: QUESTIONS.md question 6]
-- Balance: £[AMOUNT] due [before go-live / before final files / before designs go to print]. [Question 7]
+- Deposit: 50% = £[AMOUNT] due before we start (websites, video, designs). NFC cards: 100% = £[AMOUNT] up front. Delete the one that does not apply.
+- Balance: £[AMOUNT] due before go-live (websites), before final files are sent (video), or before designs go to print. Delete the ones that do not apply.
 - Pay by [BANK TRANSFER etc.]. Bank details: [OWNER FILLS IN, NEVER COMMITTED TO GIT]
 
 ## Accepting
