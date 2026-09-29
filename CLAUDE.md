@@ -8,10 +8,10 @@ Preview: `python3 -m http.server 8765` in this folder, then open http://localhos
 
 ## Status
 Ongoing project: the owner sends content in stages and the site is built up over time.
-Brand name is undecided (the "Clear Signs" idea may be trademarked; check the UK IPO register). Don't use it.
+Brand name: Clear Signs (owner confirmed). Owner thought it might be trademarked; a UK IPO register check is still advised before spending on branding or a domain.
 
 ## Placeholders (search for `[` in the HTML)
-`[YOUR BRAND]`, `[PHONE]`, `[EMAIL]`, `44XXXXXXXXXX` (also `WHATSAPP_NUMBER` in `script.js`), package names, prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
+`[PHONE]`, `[EMAIL]`, `44XXXXXXXXXX` (also `WHATSAPP_NUMBER` in `script.js`), package names, prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
 Never invent prices, reviews, claims or certifications.
 
 ## Quote form
