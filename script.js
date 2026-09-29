@@ -1,6 +1,5 @@
 // Business WhatsApp number in international format, digits only (no + or spaces).
-// [CLIENT: replace with the real number]
-const WHATSAPP_NUMBER = "44XXXXXXXXXX";
+const WHATSAPP_NUMBER = "447405535846";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
