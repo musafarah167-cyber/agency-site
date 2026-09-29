@@ -16,7 +16,7 @@ Brand name: Clear Signs (owner confirmed). Owner thought it might be trademarked
 ## Placeholders (search for `[` in the HTML)
 Services also include uniform and van logo designs (separate from packages). Van designs: no fixed price, quoted by message because it depends on van size and customer needs (owner confirmed). Uniform price and design-only vs printing scope still not given.
 NFC prices: blank £30 per card, custom £50 per card (owner confirmed; bulk tiers and minimum order not given).
-Packages are Bronze, Silver, Gold (names confirmed; prices and inclusions still needed). Package prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
+Packages are Bronze, Silver, Gold (names confirmed. Bronze = professional website built, 4 plain NFC cards, no maintenance, price not given. Silver and Gold contents not given; prices and inclusions still needed). Package prices and inclusions, NFC prices, reviews, projects, FAQ details, footer company details.
 Never invent prices, reviews, claims or certifications.
 
 ## Quote form
