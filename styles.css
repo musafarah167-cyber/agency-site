@@ -1,11 +1,12 @@
 :root {
-  --ink: #14181f;
-  --muted: #5a6472;
+  --ink: #0b1f3a;
+  --navy: #0a2a5e;
+  --muted: #4a5a70;
   --bg: #ffffff;
-  --alt: #f3f5f8;
-  --line: #e1e5ea;
-  --accent: #0b5fff;
-  --accent-dark: #0847c2;
+  --alt: #eef4fd;
+  --line: #d6e2f3;
+  --accent: #1558d6;
+  --accent-dark: #0d3f9e;
   --radius: 10px;
 }
 * { box-sizing: border-box; }
@@ -19,7 +20,7 @@ a { color: var(--accent); }
 /* header */
 .site-header { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
-.logo { font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+.logo { font-weight: 800; font-size: 1.2rem; color: var(--navy); text-decoration: none; }
 .nav { display: flex; align-items: center; gap: 22px; }
 .nav a { color: var(--ink); text-decoration: none; font-weight: 500; }
 .nav a:hover { color: var(--accent); }
@@ -34,7 +35,13 @@ a { color: var(--accent); }
 .btn-small { padding: 9px 16px; font-size: .95rem; }
 
 /* hero */
-.hero { padding: 72px 0; background: var(--alt); }
+.hero { padding: 72px 0; background: var(--navy); color: #fff; }
+.hero .eyebrow { color: #9cc2ff; }
+.hero .lead { color: #d3e2fa; }
+.hero .btn { background: #fff; color: var(--navy); border-color: #fff; }
+.hero .btn:hover { background: #dbe8fd; border-color: #dbe8fd; }
+.hero .btn-outline { background: transparent; color: #fff; border-color: #fff; }
+.hero .btn-outline:hover { background: #fff; color: var(--navy); }
 .hero-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; }
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; font-weight: 700; color: var(--accent); margin: 0 0 8px; }
 h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 0 0 16px; }
@@ -42,7 +49,7 @@ h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); line-height: 1.2; margin: 0 0 12px
 h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.nfc-card { background: var(--ink); color: #fff; border-radius: 16px; aspect-ratio: 1.6; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(20,24,31,.25); transform: rotate(-3deg); max-width: 360px; margin-inline: auto; }
+.nfc-card { background: #fff; color: var(--navy); border-radius: 16px; aspect-ratio: 1.6; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(0,0,0,.35); transform: rotate(-3deg); max-width: 360px; margin-inline: auto; }
 .nfc-brand { font-weight: 800; }
 .nfc-tap { font-size: .9rem; opacity: .8; }
 
@@ -74,12 +81,12 @@ details p { color: var(--muted); margin: 8px 0 0; }
 /* form */
 form { display: grid; gap: 16px; }
 label { display: grid; gap: 6px; font-weight: 600; }
-input, select, textarea { font: inherit; padding: 12px; border: 1px solid #b9c0ca; border-radius: 8px; background: #fff; }
+input, select, textarea { font: inherit; padding: 12px; border: 1px solid #a9bbd6; border-radius: 8px; background: #fff; }
 input:focus, select:focus, textarea:focus, .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #9dc0ff; outline-offset: 2px; }
 .form-error { color: #b00020; margin: 0; }
 
 /* footer */
-.site-footer { background: var(--ink); color: #cfd5dd; padding: 40px 0; }
+.site-footer { background: var(--navy); color: #c9d8f0; padding: 40px 0; }
 .site-footer a { color: #fff; }
 .footer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .site-footer p { margin: 4px 0 0; }

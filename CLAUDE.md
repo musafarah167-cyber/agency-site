@@ -2,6 +2,9 @@
 
 Marketing agency website. Services: NFC cards (blank + custom), website builds and maintenance, video content, tiered packages.
 
+## Colours
+Blue and white (owner request): navy `#0a2a5e` hero and footer, royal blue `#1558d6` buttons and accents, pale blue `#eef4fd` alternate sections. Set in `:root` at the top of `styles.css`.
+
 ## Stack
 Plain HTML/CSS/JS, no build step. Files: `index.html`, `styles.css`, `script.js`, `favicon.svg`.
 Preview: `python3 -m http.server 8765` in this folder, then open http://localhost:8765.
@@ -20,7 +23,7 @@ Never invent prices, reviews, claims or certifications.
 No backend. It validates, then opens WhatsApp with the message prefilled. Add a form service later if email delivery is wanted.
 
 ## Not done yet
-Real content, logo, colours, per-service pages, domain, hosting, deployment (ask before spending money or going live).
+Real content, logo, per-service pages, domain, hosting, deployment (ask before spending money or going live).
 
 ## Phone number (temporary, owner will change it)
 07405 535846. To change: search `447405535846` (tel: and wa.me links, and `WHATSAPP_NUMBER` in `script.js`) and `07405 535846` (display text) across `index.html` and `script.js`. WhatsApp format is international with no + or leading 0.
