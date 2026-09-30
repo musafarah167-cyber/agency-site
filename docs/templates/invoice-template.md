@@ -26,6 +26,7 @@ Deposit already paid: £[X]
 ## How to pay
 Bank transfer to: [OWNER FILLS IN, NEVER COMMITTED TO GIT]
 Use reference: [INVOICE NUMBER]
+Or pay by card: [CARD PAYMENT LINK, once a card provider is chosen]
 Late payment: if this invoice is not paid by the due date, work may be paused and a late payment charge of [LATE FEE] may be added (see our terms, section 4.4).
 
 Thank you. Questions: fmusa00@outlook.com / 07405 535846.

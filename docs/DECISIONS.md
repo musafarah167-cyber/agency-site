@@ -42,3 +42,4 @@ Only things the owner has said. Add the date when something changes.
 - Customers: mainly businesses (confirmed 2026-09-30). Some members of the public may buy, so the consumer cancellation section in the terms stays and still needs a professional check.
 - Video: Clear Signs films in house. Location anywhere, depending on the client's request (confirmed 2026-09-30). Filming time, number of videos and any travel cost are set per quote.
 - Late payments: pause work AND add a late payment charge (confirmed 2026-09-30). Charge amount or method still to decide.
+- Payment methods: bank transfer AND card (confirmed 2026-09-30). Monthly items billed monthly in advance. Card provider not chosen yet (needs an account, has fees; owner decides).

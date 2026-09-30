@@ -27,7 +27,7 @@ If a written quote or package description says something different, the quote wi
 ## 4. Payment
 1. Deposit: **50%** up front for websites, video, and uniform and van designs. NFC card orders are paid **100%** up front.
 2. The balance is due **before a website goes live**, **before we send the final video files**, and **before a design goes to print**.
-3. Maintenance and monthly packages are billed **[monthly in advance]** by **[bank transfer / card / direct debit]**.
+3. Maintenance and monthly packages are billed monthly in advance. You can pay by bank transfer or by card.
 4. Late invoices: if an invoice is not paid by its due date, we may pause work until it is paid, and we may add a late payment charge of **[LATE FEE: amount or method to decide]**. We will tell you before adding any charge.
 5. We are not VAT registered, so no VAT is added to our prices. (If this changes, we will tell you before it affects a quote.)
 

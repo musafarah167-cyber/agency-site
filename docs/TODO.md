@@ -34,7 +34,8 @@ See `docs/business-setup-guide.md` for official sources and figures (checked 202
 - [x] Split decided: design in house; partner prints (uniforms and vans) and fits (vans).
 - [ ] Decide the margin Clear Signs adds on the partner's printing/fitting price.
 - [ ] Agree how customers approve a design (proof/mock-up) before the partner starts.
-- [ ] Payments: bank transfer, Stripe or SumUp; deposit rules; when monthly payments are due.
+- [x] Payments: bank transfer and card; deposits and due dates agreed.
+- [ ] [you] Choose a card payment provider (e.g. Stripe, SumUp; compare fees) and open an account. Needs your details, so only you can do it.
 - [x] Invoice template and sales/expenses record: templates in `docs/templates/` (T10, T12). Working copies live OUTSIDE the repo.
 - [x] Simple lead tracker: header-only CSV in `docs/templates/` (T12); working copy outside the repo.
 

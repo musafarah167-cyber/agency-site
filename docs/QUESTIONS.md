@@ -6,7 +6,6 @@ Defaults for questions 5 to 20, 26 and 27 were accepted ("agree", 2026-09-29).
 ## Still needed to finish the terms and site
 20. Your usual website turnaround time (for the FAQ)?
 28. Late payments: BOTH agreed (pause work and charge a fee). Still needed: what fee? Options: a fixed amount (e.g. £[X]), or the statutory late payment interest and compensation that UK law already allows between businesses (check the current figures on gov.uk "late commercial payments").
-29. How customers pay: bank transfer, card, or both?
 27. Do you sell blank cards to resellers? (the site says "Ideal for resellers")
 
 ## Prices and packages (only you can set these)

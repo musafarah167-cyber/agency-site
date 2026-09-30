@@ -35,7 +35,7 @@ We do not sell your data. We share it only where needed to do the job:
 - **Our printing and fitting partner** for uniform and van work: **[PARTNER NAME, once decided]**. They receive design files, sizes and delivery or fitting details, and **[whether they receive customer name and contact details: CONFIRM]**.
 - **Our NFC card supplier**: **[SUPPLIER NAME]**. They receive **[CONFIRM: e.g. card artwork, quantity, delivery address]**.
 - **Hosting, domain and email providers** used for your website.
-- **Payment or bank providers** used to take payment: **[bank / Stripe / SumUp, once decided]**.
+- **Payment or bank providers** used to take payment: your bank (for transfers) and **[card payment provider, e.g. Stripe or SumUp, once chosen]**.
 - **Accountant or adviser**: **[if you use one]**.
 - **Meta / WhatsApp**, as explained above.
 - **The authorities**, if the law requires it.
