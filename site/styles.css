@@ -188,3 +188,9 @@ main:focus { outline: none; }
   .sig-ring, .sig-node, .card-stage .nfc-card { animation: none; }
   .sig-pulse { display: none; }
 }
+
+/* design 1: phone hero buttons stack full width below 480px */
+@media (max-width: 480px) {
+  .hero .cta-row { flex-direction: column; gap: 12px; }
+  .hero .cta-row .btn { width: 100%; }
+}
