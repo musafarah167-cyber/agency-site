@@ -61,10 +61,11 @@ If a written quote or package description says something different, the quote wi
 5. If a website is not on our maintenance plan, you (or someone you choose) are responsible for keeping it updated and backed up.
 
 ## 10. Video content
-1. Videos are made from the brief and any footage you give us. **[Confirm: who films, where, and how many days/clips are included.]**
-2. You need permission from anyone identifiable in the footage to appear in the video. We will not publish videos of people or premises without that permission.
-3. We may use finished videos in our portfolio unless you tell us in writing before the job starts that you do not want this.
-4. Music, stock footage and other third-party material we use follow the licences of the service we get them from. **[Confirm what licences apply.]**
+1. We film the videos ourselves. We can film at your premises, on a job site or at another location you ask for, as agreed in the quote. The quote will say how much filming time and how many finished videos are included. We may also use footage you give us.
+2. You make sure we are allowed to film at the location (for example, the site owner or customer agrees). Travel to distant locations may be quoted as an extra.
+3. You need permission from anyone identifiable in the footage to appear in the video. We will not publish videos of people or premises without that permission.
+4. We may use finished videos in our portfolio unless you tell us in writing before the job starts that you do not want this.
+5. Music, stock footage and other third-party material we use follow the licences of the service we get them from. **[Confirm what licences apply.]**
 
 ## 11. Uniform and van logo designs
 1. **We design; printing and fitting are arranged through partners.** We create the design in house. Printing (and fitting, for vans) is carried out by our partner suppliers, arranged by us. We remain your point of contact.
@@ -111,5 +112,4 @@ These terms are governed by the law of **England and Wales**, and the courts of 
 ---
 
 ## Questions for the owner (still open)
-1. Video: who films, and where? (section 10.1)
-2. Professional check: have a solicitor, trade body or insurer check this before use.
+1. Professional check: have a solicitor, trade body or insurer check this before use.
