@@ -49,3 +49,8 @@ Only things the owner has said. Add the date when something changes.
 - Video in packages (2026-09-30): Gold includes 2 videos a month. Otherwise video is on request (quoted separately), including extra videos on any package. Platinum is "everything in Gold", so assumed to include 2 a month too (owner to confirm).
 - Platinum does NOT include a van or uniform design (2026-09-30). Van and uniform designs are on request with any package, quoted separately.
 - Platinum package DROPPED (2026-09-30). Three packages only: Bronze, Silver, Gold.
+- PACKAGES FINAL (owner accepted Claude's suggestion, 2026-09-30):
+  - Bronze: £499 one-off. Website built, 4 plain NFC cards, no maintenance.
+  - Silver: £499 set-up + £49/month. Everything in Bronze, monthly maintenance (2 small edits), reply to messages within 24 hours ("24-hour access" = reply within 24 hours).
+  - Gold: £699 set-up + £249/month. Everything in Silver, 2 videos a month, 5 custom NFC cards instead of 4 plain.
+  - Monthly plans: no minimum term, 1 month notice. Extras (more videos, van/uniform designs) on request.
