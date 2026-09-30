@@ -41,3 +41,6 @@ fmusa00@outlook.com. To change: search `fmusa00@outlook.com` in `site/index.html
 ## Packages and quotes (owner confirmed)
 All three packages confirmed with prices (2026-09-30).
 Single services can be bought without a package. Only NFC cards have set prices; website work, video, uniform and van designs are quoted by message.
+
+## Working style (owner request 2026-09-30)
+Keep the site preview open in the browser panel (server on port 8765 from `site/`) and make changes live as the owner asks, reloading the panel after each change. Record each change in docs as usual. Push to GitHub only when asked.
