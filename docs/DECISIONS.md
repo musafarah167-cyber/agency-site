@@ -44,3 +44,4 @@ Only things the owner has said. Add the date when something changes.
 - Late payments: pause work AND add a late payment charge (confirmed 2026-09-30). Fixed charge of £30 per overdue invoice (confirmed 2026-09-30).
 - Payment methods: bank transfer AND card (confirmed 2026-09-30). Monthly items billed monthly in advance. Card provider not chosen yet (needs an account, has fees; owner decides).
 - Website turnaround: usually 1 to 7 days depending on complexity (confirmed 2026-09-30). Shown in the FAQ; timescale confirmed per quote, starting once content is received.
+- NFC kept simple (2026-09-30): £30 plain, £50 custom, per card. No minimum order. Bulk orders quoted individually by phone or email. No reseller pricing on the site.
