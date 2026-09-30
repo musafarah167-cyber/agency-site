@@ -203,3 +203,7 @@ main:focus { outline: none; }
 /* design 3: 44px minimum tap targets for the logo and phone links inside text */
 .logo { display: inline-flex; align-items: center; min-height: 44px; }
 p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
+
+/* design 4: Silver button looks active (white on #5f6368 = 6.05:1; hover white on #44484d = 9.21:1). Silver tint, strip and heading stay. */
+.pkg-silver .btn { background: #5f6368; border-color: #5f6368; color: #fff; }
+.pkg-silver .btn:hover { background: #44484d; border-color: #44484d; filter: none; }
