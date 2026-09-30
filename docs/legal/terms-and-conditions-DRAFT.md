@@ -54,7 +54,7 @@ If a written quote or package description says something different, the quote wi
 5. Third-party services (hosting, domains, forms, plug-ins) have their own terms and prices. Some may cost extra. **[List which ones you use.]**
 
 ## 9. Website maintenance
-1. Maintenance is monthly and includes: a monthly check of the site, a backup, watching your SSL certificate (the padlock that makes the site secure) and your domain renewal, and up to **[X: number of small edits per month, still to be decided]** small content edits per month.
+1. Maintenance is monthly and includes: a monthly check of the site, a backup, watching your SSL certificate (the padlock that makes the site secure) and your domain renewal, and up to **2** small content edits per month.
 2. It does not include new pages or redesigns. These can be quoted separately, as can new features and fixing problems caused by someone else editing the site.
 3. There is no minimum term. Either of us can end maintenance with one month's notice in writing. You pay up to the end of the notice period.
 4. We take reasonable care to keep your site secure, but we cannot guarantee it will never be hacked or go offline, especially where the cause is a hosting or third-party provider.
@@ -111,6 +111,5 @@ These terms are governed by the law of **England and Wales**, and the courts of 
 ---
 
 ## Questions for the owner (still open)
-1. Maintenance: how many small edits per month are included? (section 9.1)
-2. Video: who films, and where? (section 10.1)
-3. Professional check: have a solicitor, trade body or insurer check this before use.
+1. Video: who films, and where? (section 10.1)
+2. Professional check: have a solicitor, trade body or insurer check this before use.

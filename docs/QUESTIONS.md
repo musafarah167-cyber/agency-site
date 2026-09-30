@@ -4,7 +4,6 @@ Answer in chat or by email. When answered, move the answer to DECISIONS.md and d
 Defaults for questions 5 to 20, 26 and 27 were accepted ("agree", 2026-09-29).
 
 ## Still needed to finish the terms and site
-12. Maintenance: how many small edits per month are included?
 16. Video: who films, and where?
 20. Your usual website turnaround time (for the FAQ)?
 28. Late payments: pause the work, add a late fee, or both?

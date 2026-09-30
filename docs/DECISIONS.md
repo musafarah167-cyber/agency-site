@@ -31,7 +31,7 @@ Only things the owner has said. Add the date when something changes.
 - Rounds of changes: 2 for websites, 2 for video, 2 for design proofs.
 - Fault reporting: 7 days for NFC cards, 14 days for everything else.
 - Complaint reply time: 5 working days.
-- Maintenance covers a monthly check, backup, SSL and domain watch, and a set number of small edits (NUMBER STILL NEEDED); excludes new pages and redesigns. No minimum term, 1 month notice.
+- Maintenance covers a monthly check, backup, SSL and domain watch, and up to 2 small edits a month (confirmed 2026-09-30); excludes new pages and redesigns. No minimum term, 1 month notice.
 - Customer owns their domain and hosting; Clear Signs is given access.
 - Custom NFC cards: Clear Signs programs a direct link the customer controls (their website, Google review link etc.).
 - Draft terms liability limit and cancellation rules accepted, subject to a professional check.

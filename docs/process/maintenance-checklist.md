@@ -1,7 +1,7 @@
 # Monthly maintenance checklist (static sites, internal)
 
 For customer sites on a maintenance plan. Copy per customer per month and keep the copies outside the repo.
-**What is included is not decided yet** (QUESTIONS.md question 12): up to **[X]** small edits a month; new pages and redesigns excluded. Only do what the customer's plan includes.
+**Included:** up to **2** small edits a month (confirmed 2026-09-30); new pages and redesigns excluded. Only do what the customer's plan includes.
 
 Customer: [NAME]   Site: [URL]   Month: [MONTH YEAR]   Done by: [WHO]
 
@@ -19,12 +19,12 @@ Customer: [NAME]   Site: [URL]   Month: [MONTH YEAR]   Done by: [WHO]
 - [ ] Any new third-party parts (form service, embeds) still working and still needed.
 - [ ] Update dependencies only if the site uses any (static sites often have none).
 
-## Small edits (included: [X] per month)
+## Small edits (included: 2 per month)
 | Date requested | What | Done | Counts toward limit |
 |---|---|---|---|
 | | | | |
 
-Requests beyond [X] or larger than [small edit definition: DECISION PENDING] are quoted separately at [PRICE, not set].
+Requests beyond 2 or larger than [small edit definition: DECISION PENDING] are quoted separately at [PRICE, not set].
 
 ## Record
 - Problems found and fixed:
