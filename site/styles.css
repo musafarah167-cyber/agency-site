@@ -146,3 +146,13 @@ main:focus { outline: none; }
 .pkg-silver .btn { background: #c0c0c0; border-color: #c0c0c0; color: var(--navy); }
 .pkg-gold .btn { background: #d4af37; border-color: #d4af37; color: var(--navy); }
 .pkg-bronze .btn:hover, .pkg-silver .btn:hover, .pkg-gold .btn:hover { filter: brightness(.92); }
+
+/* stronger theme accents (owner request 2026-09-30) */
+.site-header { border-bottom: 3px solid var(--orange); }
+.site-footer { border-top: 4px solid var(--orange); }
+.pkg-bronze { background: #fbf1e6; border-color: #e6c3a0; }
+.pkg-silver { background: #f3f4f6; border-color: #cfd2d6; }
+.pkg-gold { background: #fcf6df; border-color: #e8d48a; }
+.pkg-bronze { border-top-color: #cd7f32; }
+.pkg-silver { border-top-color: #a8a9ad; }
+.pkg-gold { border-top-color: #d4af37; }
