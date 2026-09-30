@@ -17,7 +17,8 @@ Only things the owner has said. Add the date when something changes.
 - NFC cards: owner already has a supplier.
 - Uniform and van designs: OUTSOURCED to a partner at the start. Clear Signs takes the enquiry and the customer deals with Clear Signs. Design is done in house by Clear Signs. The partner does the printing (uniforms and vans) and the fitting (vans). Embroidery not mentioned, so not offered on the site.
 - GitHub: private repo https://github.com/musafarah167-cyber/agency-site (account musafarah167-cyber). Created 2026-09-29; branch main. Push only when the owner asks.
-- Owner wants decision requests emailed to musafarah167@gmail.com (via the Gmail connector, once it has send permission). Until then, questions live in docs/QUESTIONS.md and in chat.
+- Owner wants decision requests emailed to fmusa00@outlook.com (changed 2026-09-30; was musafarah167@gmail.com). Sending needs the Gmail connector reconnected with send permission. Until then, questions live in docs/QUESTIONS.md and the coordinator chat.
+- All questions and decisions from every session go through the coordinator session (2026-09-30).
 - Address: NOT shown on the website for now (owner decision 2026-09-29). It goes on invoices and legal documents only. Revisit if gov.uk says it must appear on the site. No company number exists (sole trader).
 - Business address (for invoices, terms, privacy policy only; NOT the website): Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE (confirmed 2026-09-29).
 - Owner's name: Farah Musa (first name Farah, surname Musa; confirmed 2026-09-29). Documents say "Farah Musa trading as Clear Signs".
