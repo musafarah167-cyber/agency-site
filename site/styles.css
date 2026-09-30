@@ -207,3 +207,13 @@ p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
 /* design 4: Silver button looks active (white on #5f6368 = 6.05:1; hover white on #44484d = 9.21:1). Silver tint, strip and heading stay. */
 .pkg-silver .btn { background: #5f6368; border-color: #5f6368; color: #fff; }
 .pkg-silver .btn:hover { background: #44484d; border-color: #44484d; filter: none; }
+
+/* design 5: tighter section spacing on phones; clearer alternate sections.
+   --alt #eaf1fc: body text #4a5a70 6.1:1, orange text #c2410c 4.6:1 */
+:root { --alt: #eaf1fc; }
+.section.alt { border-block: 1px solid var(--line); }
+@media (max-width: 480px) {
+  .section { padding: 36px 0; }
+  .hero { padding: 36px 0; }
+  .section-intro { margin-bottom: 24px; }
+}
