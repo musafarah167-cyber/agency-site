@@ -126,3 +126,8 @@ main:focus { outline: none; }
 .card.price { display: flex; flex-direction: column; }
 .card.price .ticks { flex: 1; }
 .card.price .btn { align-self: flex-start; }
+
+/* package price terms */
+.price-tag { margin-bottom: 16px; }
+.price-term { font-size: .9rem; font-weight: 600; color: var(--muted); }
+.price-monthly { font-weight: 700; color: var(--ink) !important; margin: -12px 0 16px; }

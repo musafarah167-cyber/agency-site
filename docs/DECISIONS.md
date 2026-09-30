@@ -45,3 +45,4 @@ Only things the owner has said. Add the date when something changes.
 - Payment methods: bank transfer AND card (confirmed 2026-09-30). Monthly items billed monthly in advance. Card provider not chosen yet (needs an account, has fees; owner decides).
 - Website turnaround: usually 1 to 7 days depending on complexity (confirmed 2026-09-30). Shown in the FAQ; timescale confirmed per quote, starting once content is received.
 - NFC kept simple (2026-09-30): £30 plain, £50 custom, per card. No minimum order. Bulk orders quoted individually by phone or email. No reseller pricing on the site.
+- Package pricing model (2026-09-30): Bronze is a one-off price. Silver and Gold are a flat (one-off) rate PLUS a monthly fee that covers website maintenance, and include "24-hour access" (meaning to confirm). Platinum model not yet stated. Amounts not yet given.
