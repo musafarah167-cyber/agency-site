@@ -55,3 +55,4 @@ Only things the owner has said. Add the date when something changes.
   - Gold: £699 set-up + £249/month. Everything in Silver, 2 videos a month, 5 custom NFC cards instead of 4 plain.
   - Monthly plans: no minimum term, 1 month notice. Extras (more videos, van/uniform designs) on request.
 - Colours (2026-09-30): orange accent added to the blue and white scheme at owner request.
+- Hero NFC card (2026-09-30): shows an example custom card for a made-up business ("Brookvale Plumbing & Heating", "James Carter"), labelled on the page as an example for a made-up business. Replace with a real customer design once one exists and the customer agrees in writing.

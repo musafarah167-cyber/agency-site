@@ -53,9 +53,16 @@ h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); line-height: 1.2; margin: 0 0 12px
 h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.nfc-card { background: #fff; color: var(--navy); border-radius: 16px; aspect-ratio: 1.6; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(0,0,0,.35); transform: rotate(-3deg); max-width: 360px; margin-inline: auto; }
-.nfc-brand { font-weight: 800; }
-.nfc-tap { font-size: .9rem; opacity: .8; }
+.hero-card { margin: 0; }
+.nfc-card { background: #1b1f24; color: #fff; border-radius: 16px; aspect-ratio: 1.6; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 16px 36px rgba(0,0,0,.45); transform: rotate(-3deg); max-width: 360px; margin-inline: auto; border-top: 5px solid var(--orange); }
+.nfc-top { display: flex; align-items: center; gap: 12px; }
+.nfc-brand { display: block; font-weight: 800; font-size: 1.35rem; letter-spacing: .02em; line-height: 1.1; }
+.nfc-sub { display: block; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: #ffa552; }
+.nfc-bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+.nfc-person { display: block; font-weight: 600; }
+.nfc-tap { display: block; font-size: .85rem; opacity: .75; }
+.nfc-icon { color: #ffa552; }
+.hero-card-caption { text-align: center; font-size: .85rem; color: #c9d8f0; margin-top: 18px; }
 
 /* sections */
 .trust { border-bottom: 1px solid var(--line); }
