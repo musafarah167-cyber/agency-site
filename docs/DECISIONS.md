@@ -54,3 +54,4 @@ Only things the owner has said. Add the date when something changes.
   - Silver: £499 set-up + £49/month. Everything in Bronze, monthly maintenance (2 small edits), reply to messages within 24 hours ("24-hour access" = reply within 24 hours).
   - Gold: £699 set-up + £249/month. Everything in Silver, 2 videos a month, 5 custom NFC cards instead of 4 plain.
   - Monthly plans: no minimum term, 1 month notice. Extras (more videos, van/uniform designs) on request.
+- Colours (2026-09-30): orange accent added to the blue and white scheme at owner request.

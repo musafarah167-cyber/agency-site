@@ -10,7 +10,7 @@ Marketing agency website. Services: NFC cards (blank + custom), website builds a
 Keep these three files current at the end of every task: record new facts, tick finished items, add new tasks.
 
 ## Colours
-Blue and white (owner request): navy `#0a2a5e` hero and footer, royal blue `#1558d6` buttons and accents, pale blue `#eef4fd` alternate sections. Set in `:root` at the top of `site/styles.css`.
+Blue and white (owner request): navy `#0a2a5e` hero and footer, royal blue `#1558d6` buttons and accents, pale blue `#eef4fd` alternate sections. Orange accent (owner request 2026-09-30): main buttons `#f7931e` with navy text (hover `#e8770f`), orange text `#c2410c` for small headings and ticks, `#ffa552` on navy. Set in `:root` at the top of `site/styles.css`.
 
 ## Stack
 Plain HTML/CSS/JS, no build step. All site files live in `site/` (only this folder is ever deployed; `docs/` and `CLAUDE.md` stay private): `site/index.html`, `site/styles.css`, `site/script.js`, `site/favicon.svg`.
