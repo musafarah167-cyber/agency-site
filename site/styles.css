@@ -39,7 +39,7 @@ a { color: var(--accent); }
 .btn-small { padding: 9px 16px; font-size: .95rem; }
 
 /* hero */
-.hero { padding: 72px 0; background: var(--navy); color: #fff; }
+.hero { padding: 72px 0; background: var(--navy); color: #fff; position: relative; overflow: hidden; }
 .hero .eyebrow { color: #ffa552; }
 .hero .lead { color: #d3e2fa; }
 .hero .btn { background: var(--orange); color: var(--navy); border-color: var(--orange); }
@@ -163,3 +163,28 @@ main:focus { outline: none; }
 .pkg-bronze { border-top-color: #cd7f32; }
 .pkg-silver { border-top-color: #a8a9ad; }
 .pkg-gold { border-top-color: #d4af37; }
+
+/* hero background animation: "one tap connects everything" */
+.hero-inner { position: relative; }
+.hero-inner > div:first-child { position: relative; z-index: 2; }
+.card-stage { position: relative; }
+.card-stage .nfc-card { position: relative; z-index: 1; animation: card-float 6s ease-in-out infinite; }
+.signal-bg { position: absolute; left: 50%; top: 50%; width: 200%; max-width: none; transform: translate(-50%, -50%); z-index: 0; pointer-events: none; overflow: visible; }
+.sig-glow { fill: #1558d6; opacity: .18; }
+.sig-ring { fill: none; stroke: #ffa552; stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; animation: sig-ring 4.8s ease-out infinite; }
+.sig-ring.r2 { animation-delay: 1.6s; }
+.sig-ring.r3 { animation-delay: 3.2s; }
+.sig-line { stroke: #ffa552; stroke-opacity: .28; stroke-width: 1.5; stroke-dasharray: 4 6; fill: none; }
+.sig-pulse { fill: #ffa552; }
+.sig-node-bg { fill: #13387a; stroke: #ffa552; stroke-opacity: .5; stroke-width: 1.5; }
+.sig-node { opacity: .55; animation: sig-node 3.2s ease-in-out infinite; animation-delay: var(--d); }
+@keyframes sig-ring { 0% { transform: scale(1); opacity: .45; } 100% { transform: scale(3); opacity: 0; } }
+@keyframes sig-node { 0%, 60%, 100% { opacity: .55; } 75% { opacity: 1; } }
+@keyframes card-float { 0%, 100% { transform: rotate(-3deg) translateY(0); } 50% { transform: rotate(-3deg) translateY(-8px); } }
+@media (max-width: 820px) {
+  .sig-node, .sig-line, .sig-pulse { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sig-ring, .sig-node, .card-stage .nfc-card { animation: none; }
+  .sig-pulse { display: none; }
+}

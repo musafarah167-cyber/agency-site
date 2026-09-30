@@ -53,3 +53,9 @@ form.addEventListener("submit", (e) => {
     ((d.get("message") || "").trim() ? `Details: ${d.get("message").trim()}` : "");
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
 });
+
+// Respect "reduce motion": stop the hero SVG animation (CSS alone cannot pause SVG motion)
+const signal = document.querySelector(".signal-bg");
+if (signal && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  signal.pauseAnimations();
+}
