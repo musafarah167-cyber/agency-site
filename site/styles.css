@@ -199,3 +199,7 @@ main:focus { outline: none; }
 @media (max-width: 480px) {
   .float-wa { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); padding: 6px 14px; font-size: .9rem; box-shadow: 0 3px 10px rgba(0,0,0,.25); }
 }
+
+/* design 3: 44px minimum tap targets for the logo and phone links inside text */
+.logo { display: inline-flex; align-items: center; min-height: 44px; }
+p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
