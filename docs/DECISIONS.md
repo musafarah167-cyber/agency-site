@@ -48,3 +48,4 @@ Only things the owner has said. Add the date when something changes.
 - Package pricing model (2026-09-30): Bronze is a one-off price. Silver and Gold are a flat (one-off) rate PLUS a monthly fee that covers website maintenance, and include "24-hour access" (meaning to confirm). Platinum model not yet stated. Amounts not yet given.
 - Video in packages (2026-09-30): Gold includes 2 videos a month. Otherwise video is on request (quoted separately), including extra videos on any package. Platinum is "everything in Gold", so assumed to include 2 a month too (owner to confirm).
 - Platinum does NOT include a van or uniform design (2026-09-30). Van and uniform designs are on request with any package, quoted separately.
+- Platinum package DROPPED (2026-09-30). Three packages only: Bronze, Silver, Gold.
