@@ -6,6 +6,7 @@ Marketing agency website. Services: NFC cards (blank + custom), website builds a
 - `docs/TODO.md`: the checklist of everything left to do (business setup, content, sites). Tick items off and add new ones as we go.
 - `docs/DECISIONS.md`: what the owner has confirmed. Update whenever they tell us something new.
 - `docs/IDEAS.md`: suggestions not yet agreed.
+- `docs/SESSIONS.md`: which session (design, front end, testing, back end prep, coordinator) owns which files. Read it before editing.
 - `docs/PLAN.md`: the phased execution plan (Opus plans, Sonnet builder executes one task at a time, verifier checks). Follow its rules and gates.
 Keep these three files current at the end of every task: record new facts, tick finished items, add new tasks.
 
