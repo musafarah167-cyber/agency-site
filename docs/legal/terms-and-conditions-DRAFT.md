@@ -89,7 +89,7 @@ If a written quote or package description says something different, the quote wi
 1. **Before work starts:** you may cancel and we refund your deposit, less any costs we have already paid to others.
 2. **After work has started:** you pay for the work done up to the day you cancel, plus any costs already committed to suppliers (for example partly printed items). **[Decide how you want this to work.]**
 3. **Custom-made items** (custom NFC cards, designs, printed uniforms or vans): see sections 7 and 11. These cannot be cancelled once production starts.
-4. **If you are a consumer** (an individual buying for personal use, not for a business): you may have a legal right to cancel within 14 days for some services, but this right is lost or limited for personalised goods made to your specification and for services that have already been carried out with your agreement. **[Have this section checked. The rules differ between goods, services and made-to-order items.]**
+4. **If you are a consumer** (an individual buying for personal use, not for a business): you may have a legal right to cancel within 14 days for some services, but this right is lost or limited for personalised goods made to your specification and for services that have already been carried out with your agreement. Most of our customers are businesses, but this section stays for any individual who buys from us. **[Have this section checked. The rules differ between goods, services and made-to-order items.]**
 5. We may cancel or pause a job if you do not pay, do not give us what we need, or ask us to do something unlawful or unsafe. We would tell you first.
 
 ## 15. Our responsibility (liability)
@@ -111,7 +111,6 @@ These terms are governed by the law of **England and Wales**, and the courts of 
 ---
 
 ## Questions for the owner (still open)
-1. Customers: mainly businesses, or also members of the public? (This changes which consumer rules apply, see section 14.4.)
-2. Maintenance: how many small edits per month are included? (section 9.1)
-3. Video: who films, and where? (section 10.1)
-4. Professional check: have a solicitor, trade body or insurer check this before use.
+1. Maintenance: how many small edits per month are included? (section 9.1)
+2. Video: who films, and where? (section 10.1)
+3. Professional check: have a solicitor, trade body or insurer check this before use.

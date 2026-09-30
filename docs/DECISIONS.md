@@ -39,3 +39,4 @@ Only things the owner has said. Add the date when something changes.
 - No analytics or cookies at launch, so no cookie banner.
 - Demo sites: plumber and roofer.
 - Site wording: keep "A clear quote, no hidden extras" and "You approve everything before it goes live"; soften "Websites built & maintained" and "We keep it running after launch" until the maintenance edit count is set; keep "Get a free quote" and "Pre-programmed for you"; soften "people in your area can find you" to "Set up with the basics search engines look for"; keep "websites that bring in enquiries" as an aim.
+- Customers: mainly businesses (confirmed 2026-09-30). Some members of the public may buy, so the consumer cancellation section in the terms stays and still needs a professional check.

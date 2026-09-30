@@ -3,9 +3,6 @@
 Answer in chat or by email. When answered, move the answer to DECISIONS.md and delete the question here.
 Defaults for questions 5 to 20, 26 and 27 were accepted ("agree", 2026-09-29).
 
-## About you
-4. Customers: mainly businesses? Also members of the public? (affects consumer cancellation rules in the terms)
-
 ## Still needed to finish the terms and site
 12. Maintenance: how many small edits per month are included?
 16. Video: who films, and where?
