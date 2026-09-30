@@ -134,3 +134,15 @@ main:focus { outline: none; }
 .price-tag { margin-bottom: 16px; }
 .price-term { font-size: .9rem; font-weight: 600; color: var(--muted); }
 .price-monthly { font-weight: 700; color: var(--ink) !important; margin: -12px 0 16px; }
+
+/* package metal colours: thick top edge + heading colour (text colours pass 4.5:1 on white) */
+.pkg-bronze { border-top: 6px solid #cd7f32; }
+.pkg-bronze h3 { color: #8a4b12; }
+.pkg-silver { border-top: 6px solid #a8a9ad; }
+.pkg-silver h3 { color: #5f6368; }
+.pkg-gold { border-top: 6px solid #d4af37; }
+.pkg-gold h3 { color: #7a5c00; }
+.pkg-bronze .btn { background: #cd7f32; border-color: #cd7f32; color: #1a1a1a; }
+.pkg-silver .btn { background: #c0c0c0; border-color: #c0c0c0; color: var(--navy); }
+.pkg-gold .btn { background: #d4af37; border-color: #d4af37; color: var(--navy); }
+.pkg-bronze .btn:hover, .pkg-silver .btn:hover, .pkg-gold .btn:hover { filter: brightness(.92); }
