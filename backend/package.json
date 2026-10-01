@@ -1,0 +1,11 @@
+{
+  "name": "clear-signs-backend-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "description": "LOCAL prototype: receives the quote form and would email it. Not deployed.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
