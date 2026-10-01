@@ -269,12 +269,63 @@
       <p class="section-intro">Short videos for social media and your website: project showcases, testimonials and behind-the-scenes clips. Every job is different, so message us for a quote. Travel for filming is charged at 80p per mile (there and back).</p>
       <figure class="illus illus-video" aria-hidden="true">
         <div class="mock-player">
-          <div class="mp-scene"><span class="mp-sun"></span><span class="mp-house"></span><span class="mp-ground"></span></div>
+          <svg class="film" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="f-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3f7a"/><stop offset="1" stop-color="#b8693a"/></linearGradient>
+              <linearGradient id="f-night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050d22"/><stop offset="1" stop-color="#16294f"/></linearGradient>
+              <radialGradient id="f-glow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <g class="f-cam">
+              <rect width="320" height="180" fill="url(#f-sky)"/>
+              <circle class="f-sun" cx="0" cy="0" r="14" fill="#ffc46b"/>
+              <rect class="f-night" width="320" height="180" fill="url(#f-night)"/>
+              <g class="f-stars" fill="#fff"><circle class="f-star" style="animation-delay:0s" cx="30" cy="22" r="1"/><circle class="f-star" style="animation-delay:0.6s" cx="70" cy="40" r="1.2"/><circle class="f-star" style="animation-delay:1.2s" cx="110" cy="18" r="0.9"/><circle class="f-star" style="animation-delay:0.3s" cx="150" cy="34" r="1"/><circle class="f-star" style="animation-delay:0.9s" cx="205" cy="20" r="1.1"/><circle class="f-star" style="animation-delay:0.2s" cx="250" cy="44" r="0.9"/><circle class="f-star" style="animation-delay:1.4s" cx="290" cy="26" r="1.2"/><circle class="f-star" style="animation-delay:0.7s" cx="180" cy="52" r="0.8"/></g>
+              <rect y="138" width="320" height="42" fill="#0b1d3d"/>
+              <rect y="138" width="320" height="3" fill="#1d3561"/>
+              <!-- house -->
+              <g class="f-house">
+                <rect x="110" y="86" width="100" height="52" fill="#2b3b5c"/>
+                <path d="M100 88 L160 52 L220 88 Z" fill="#26324a"/>
+                <path class="f-roof-new" d="M100 88 L160 52 L220 88 Z" fill="#b5502c"/>
+                <rect x="124" y="98" width="20" height="16" fill="#1a2640"/><rect x="176" y="98" width="20" height="16" fill="#1a2640"/>
+                <rect class="f-win" x="124" y="98" width="20" height="16" fill="#ffd27a"/><rect class="f-win" x="176" y="98" width="20" height="16" fill="#ffd27a"/>
+                <circle class="f-win f-glow" cx="134" cy="106" r="22" fill="url(#f-glow)"/><circle class="f-win f-glow" cx="186" cy="106" r="22" fill="url(#f-glow)"/>
+                <rect x="152" y="112" width="16" height="26" fill="#1a2640"/>
+                <rect class="f-door" x="152" y="112" width="16" height="26" fill="#f7931e"/>
+                <g class="f-scaffold" stroke="#c9d3e2" stroke-width="1.4"><path d="M104 138 V70 M216 138 V70 M104 78 H216 M104 108 H216 M104 78 L216 108"/></g>
+              </g>
+              <g class="f-bush-old" fill="#24402c"><ellipse cx="96" cy="136" rx="20" ry="12"/><ellipse cx="226" cy="134" rx="22" ry="14"/><ellipse cx="80" cy="132" rx="12" ry="9"/></g>
+              <g class="f-bush-new" fill="#2f6b45"><rect x="84" y="128" width="22" height="10" rx="5"/><rect x="214" y="128" width="22" height="10" rx="5"/></g>
+              <!-- van -->
+              <g class="f-van">
+                <path d="M0 0 V-18 Q0 -22 4 -22 H38 L50 -12 Q56 -11 56 -6 V0 Z" fill="#e9eef6"/>
+                <path d="M40 -20 L49 -12 H40 Z" fill="#9cc2ff"/>
+                <rect x="2" y="-9" width="37" height="3" fill="#f7931e"/>
+                <circle cx="12" cy="1" r="4.5" fill="#0b0f14"/><circle cx="44" cy="1" r="4.5" fill="#0b0f14"/>
+              </g>
+              <g class="f-spark" fill="#ffd27a"><path d="M150 60 l2 -6 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2z"/><path d="M200 74 l1.5 -4 l1.5 4 l4 1.5 l-4 1.5 l-1.5 4 l-1.5 -4 l-4 -1.5z"/></g>
+            </g>
+            <!-- end card -->
+            <g class="f-end">
+              <rect width="320" height="180" fill="#0a2a5e"/>
+              <circle cx="160" cy="62" r="18" fill="#f7931e"/><path d="M160 50c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15z" fill="#1b1f24"/>
+              <text x="160" y="100" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="system-ui, sans-serif">Brookvale</text>
+              <text x="160" y="113" text-anchor="middle" font-size="6.5" font-weight="700" letter-spacing="1.5" fill="#ffa552" font-family="system-ui, sans-serif">PLUMBING &amp; HEATING</text>
+              <g class="f-cta"><rect x="112" y="124" width="96" height="20" rx="5" fill="#f7931e"/><text x="160" y="137.5" text-anchor="middle" font-size="7.5" font-weight="800" fill="#0a2a5e" font-family="system-ui, sans-serif">Get your free quote</text></g>
+              <text x="160" y="164" text-anchor="middle" font-size="5.5" fill="#c9d8f0" font-family="system-ui, sans-serif">Example video for a made-up business</text>
+            </g>
+            <rect class="f-bars" width="320" height="14" fill="#000"/><rect class="f-bars" y="166" width="320" height="14" fill="#000"/>
+          </svg>
+          <span class="f-title t1">Before</span>
+          <span class="f-title t2">On the job</span>
+          <span class="f-title t3">Time-lapse</span>
+          <span class="f-title t4">After</span>
           <span class="mp-rec">REC</span>
           <span class="mp-play"></span>
+          <span class="mp-time">0:00 / 0:20</span>
           <div class="mp-bar"><span class="mp-progress"></span></div>
         </div>
-        <div class="mock-reel"><span class="mr-scene"></span><span class="mr-icons"><i></i><i></i><i></i></span><span class="mr-caption"></span></div>
+        <div class="mock-reel"><span class="mr-scene"></span><span class="mr-hearts"><i></i><i></i><i></i></span><span class="mr-icons"><i></i><i></i><i></i></span><span class="mr-caption"></span></div>
         <figcaption>Example video formats</figcaption>
       </figure>
     </div>
