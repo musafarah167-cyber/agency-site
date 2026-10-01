@@ -84,3 +84,95 @@ if (hero && "IntersectionObserver" in window) {
     }
   }).observe(hero);
 }
+
+// Helper: fill the quote form and jump to it
+function fillQuote(interest, message) {
+  if (interest) form.elements.interest.value = interest;
+  if (message !== undefined) form.elements.message.value = message;
+}
+
+// ---- NFC price calculator (prices from DECISIONS: plain £30, custom £50 per card)
+const calcQty = document.getElementById("calc-qty");
+const calcTotal = document.getElementById("calc-total");
+const calcBulk = document.getElementById("calc-bulk");
+const calcOrder = document.getElementById("calc-order");
+function calcState() {
+  const type = document.querySelector('input[name="calc-type"]:checked');
+  let qty = parseInt(calcQty.value, 10);
+  if (!Number.isFinite(qty) || qty < 1) qty = 1;
+  if (qty > 999) qty = 999;
+  return { price: Number(type.value), label: type.dataset.label, qty };
+}
+function updateCalc() {
+  const { price, qty } = calcState();
+  calcTotal.textContent = "£" + (price * qty).toLocaleString("en-GB");
+  calcBulk.hidden = qty < 10;
+}
+if (calcQty) {
+  document.querySelectorAll('input[name="calc-type"]').forEach((r) => r.addEventListener("change", updateCalc));
+  calcQty.addEventListener("input", updateCalc);
+  calcQty.addEventListener("blur", () => { calcQty.value = calcState().qty; updateCalc(); });
+  document.querySelectorAll("#nfc-calc .step").forEach((b) => b.addEventListener("click", () => {
+    calcQty.value = Math.min(999, Math.max(1, calcState().qty + Number(b.dataset.step)));
+    updateCalc();
+  }));
+  calcOrder.addEventListener("click", () => {
+    const { price, label, qty } = calcState();
+    fillQuote(label === "custom" ? "Custom NFC cards" : "Blank NFC cards",
+      `I'd like ${qty} ${label} NFC card${qty > 1 ? "s" : ""} (£${(price * qty).toLocaleString("en-GB")} at £${price} each).`);
+  });
+  updateCalc();
+}
+
+// ---- "Try it" NFC demo
+const demoTap = document.getElementById("demo-tap");
+const demoStage = document.querySelector(".demo-stage");
+const demoStatus = document.getElementById("demo-status");
+if (demoTap) {
+  demoTap.addEventListener("click", () => {
+    const on = !demoStage.classList.contains("tapped");
+    demoStage.classList.toggle("tapped", on);
+    demoStatus.textContent = on
+      ? "The phone opened the business's own page: call, WhatsApp, website and reviews in one tap. Press the card again to reset."
+      : "Example for a made-up business. Press the card to try it.";
+  });
+}
+
+// ---- Package finder
+const finder = document.querySelector(".finder-card");
+const results = {
+  bronze: { name: "Bronze", price: "£499 one-off", why: "A professional website and 4 plain NFC cards. Ideal if you just need to get online.", interest: "Bronze package" },
+  silver: { name: "Silver", price: "£499 set-up + £175 a month (6-month minimum)", why: "Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.", interest: "Silver package" },
+  gold: { name: "Gold", price: "£699 set-up + £300 a month (6-month minimum)", why: "Everything in Silver, plus 2 videos a month and 5 custom NFC cards.", interest: "Gold package" },
+  nfc: { name: "NFC cards on their own", price: "£30 plain or £50 custom, per card", why: "No package needed. Use the price calculator in the NFC section to see your total.", interest: "Custom NFC cards" },
+  video: { name: "Videos on their own", price: "Quoted per job", why: "Every filming job is different (location, travel and filming time), so we give you a free quote.", interest: "Video content" },
+  design: { name: "Van or uniform design", price: "Quoted per job", why: "Designed by us, printed (and fitted for vans) for you. Price depends on the size and design.", interest: "Van logo design" },
+};
+if (finder) {
+  const steps = finder.querySelectorAll(".finder-step");
+  const resultBox = finder.querySelector(".finder-result");
+  let chosen = null;
+  const show = (n) => {
+    steps.forEach((s) => { s.hidden = s.dataset.step !== String(n); });
+    resultBox.hidden = true;
+    const first = finder.querySelector(`.finder-step[data-step="${n}"] .finder-opt`);
+    if (first && n !== 1) first.focus();
+  };
+  finder.addEventListener("click", (e) => {
+    const opt = e.target.closest(".finder-opt");
+    if (opt && opt.dataset.next) return show(opt.dataset.next);
+    if (opt && opt.dataset.result) {
+      chosen = results[opt.dataset.result];
+      steps.forEach((s) => { s.hidden = true; });
+      resultBox.querySelector(".finder-name").textContent = chosen.name;
+      resultBox.querySelector(".finder-price").textContent = chosen.price;
+      resultBox.querySelector(".finder-why").textContent = chosen.why;
+      resultBox.hidden = false;
+      resultBox.querySelector(".finder-name").setAttribute("tabindex", "-1");
+      resultBox.querySelector(".finder-name").focus();
+      return;
+    }
+    if (e.target.closest(".finder-restart")) return show(1);
+    if (e.target.closest(".finder-go") && chosen) fillQuote(chosen.interest);
+  });
+}

@@ -181,6 +181,56 @@
         <a href="#contact" class="btn btn-small" data-interest="Custom NFC cards">Get custom cards</a>
       </article>
     </div>
+
+    <div class="grid two nfc-tools">
+      <div class="card tool" id="nfc-calc">
+        <h3>Price calculator</h3>
+        <p>See your total straight away.</p>
+        <fieldset class="calc-type">
+          <legend>Card type</legend>
+          <label><input type="radio" name="calc-type" value="30" data-label="plain" checked> Plain (£30 each)</label>
+          <label><input type="radio" name="calc-type" value="50" data-label="custom"> Custom (£50 each)</label>
+        </fieldset>
+        <div class="calc-qty">
+          <span id="calc-qty-label">How many cards?</span>
+          <div class="stepper" role="group" aria-labelledby="calc-qty-label">
+            <button type="button" class="step" data-step="-1" aria-label="One fewer card">&minus;</button>
+            <input type="number" id="calc-qty" min="1" max="999" value="1" inputmode="numeric" aria-labelledby="calc-qty-label">
+            <button type="button" class="step" data-step="1" aria-label="One more card">+</button>
+          </div>
+        </div>
+        <p class="calc-total" aria-live="polite">Total: <strong id="calc-total">£30</strong></p>
+        <p class="calc-bulk" id="calc-bulk" hidden>Buying in bulk? Message us for a quote.</p>
+        <a href="#contact" class="btn btn-small" id="calc-order">Order these cards</a>
+      </div>
+
+      <div class="card tool" id="nfc-demo">
+        <h3>Try it: tap the card</h3>
+        <p>See what your customers see when they tap your card with their phone.</p>
+        <div class="demo-stage">
+          <button type="button" class="demo-card" id="demo-tap" aria-describedby="demo-status">
+            <span class="demo-card-name">Brookvale</span>
+            <span class="demo-card-sub">Plumbing &amp; Heating</span>
+            <span class="demo-card-tap">Tap here</span>
+          </button>
+          <div class="demo-phone" aria-hidden="true">
+            <div class="demo-screen">
+              <div class="demo-idle">Hold your phone near the card</div>
+              <div class="demo-page">
+                <span class="demo-logo"></span>
+                <strong>Brookvale Plumbing &amp; Heating</strong>
+                <small>James Carter</small>
+                <span class="demo-btn">Call</span>
+                <span class="demo-btn">WhatsApp</span>
+                <span class="demo-btn">Website</span>
+                <span class="demo-btn alt">Leave a review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="demo-status" id="demo-status" aria-live="polite">Example for a made-up business. Press the card to try it.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -239,7 +289,50 @@
   </div>
 </section>
 
-<section id="packages" class="section">
+<section id="package-finder" class="section finder">
+  <div class="container narrow">
+    <p class="eyebrow">Not sure where to start?</p>
+    <h2>Find the right option in 3 questions</h2>
+    <div class="card finder-card">
+      <div class="finder-step" data-step="1">
+        <p class="finder-q" id="fq1">What do you need most?</p>
+        <div class="finder-options" role="group" aria-labelledby="fq1">
+          <button type="button" class="finder-opt" data-next="2">A website (and more)</button>
+          <button type="button" class="finder-opt" data-result="nfc">Just NFC cards</button>
+          <button type="button" class="finder-opt" data-result="video">Just videos</button>
+          <button type="button" class="finder-opt" data-result="design">A van or uniform design</button>
+        </div>
+      </div>
+      <div class="finder-step" data-step="2" hidden>
+        <p class="finder-q" id="fq2">Should we look after your website every month?</p>
+        <p class="finder-hint">Updates, backups, security and 2 small edits a month.</p>
+        <div class="finder-options" role="group" aria-labelledby="fq2">
+          <button type="button" class="finder-opt" data-next="3">Yes, look after it for me</button>
+          <button type="button" class="finder-opt" data-result="bronze">No, I just need it built</button>
+        </div>
+      </div>
+      <div class="finder-step" data-step="3" hidden>
+        <p class="finder-q" id="fq3">Would you like 2 videos a month to show off your work?</p>
+        <div class="finder-options" role="group" aria-labelledby="fq3">
+          <button type="button" class="finder-opt" data-result="gold">Yes, include videos</button>
+          <button type="button" class="finder-opt" data-result="silver">No, just the website</button>
+        </div>
+      </div>
+      <div class="finder-result" aria-live="polite" hidden>
+        <p class="finder-label">We recommend</p>
+        <h3 class="finder-name"></h3>
+        <p class="finder-price"></p>
+        <p class="finder-why"></p>
+        <div class="cta-row">
+          <a href="#contact" class="btn finder-go">Get a quote</a>
+          <button type="button" class="btn btn-outline finder-restart">Start again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="section alt">
   <div class="container">
     <p class="eyebrow">Packages</p>
     <h2>Simple packages, no surprises</h2>
@@ -273,7 +366,7 @@
   </div>
 </section>
 
-<section class="section alt">
+<section class="section">
   <div class="container">
     <p class="eyebrow">How it works</p>
     <h2>Three simple steps</h2>
@@ -285,7 +378,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="container">
     <p class="eyebrow">Our work</p>
     <h2>Recent projects</h2>
@@ -293,7 +386,7 @@
   </div>
 </section>
 
-<section id="faq" class="section alt">
+<section id="faq" class="section">
   <div class="container narrow">
     <p class="eyebrow">FAQ</p>
     <h2>Common questions</h2>
@@ -310,7 +403,7 @@
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section alt">
   <div class="container narrow">
     <p class="eyebrow">Contact</p>
     <h2>Get a free quote</h2>
