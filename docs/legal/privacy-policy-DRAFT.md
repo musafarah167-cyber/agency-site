@@ -20,7 +20,7 @@ Last updated: [DATE]
 ## 3. What we collect and why
 | What | Why | Our legal basis | How long we keep it |
 |---|---|---|---|
-| Name, phone/WhatsApp, email, what you asked about (from your enquiry) | To reply and give you a quote | Legitimate interests: answering your enquiry. **[CHECK]** | **[e.g. X months if no job follows]** |
+| Name, phone/WhatsApp, email, what you asked about (from your enquiry) | To reply and give you a quote | Legitimate interests: answering your enquiry. **[CHECK]** | 12 months if no job follows |
 | Name, address, contact details, job details, files and content you give us | To carry out your job (contract) | Contract | **[X years]** |
 | Invoices, payment records | Tax and accounting records | Legal obligation | **[X years: check HMRC record-keeping rules]** |
 | Photos, logos, footage and business details you send | To do the design, website or video | Contract | **[X months after the job]** |
@@ -35,11 +35,13 @@ We do not sell your data. We share it only where needed to do the job:
 - **Our printing and fitting partner** for uniform and van work: **[PARTNER NAME, once decided]**. They receive design files, sizes and delivery or fitting details, and **[whether they receive customer name and contact details: CONFIRM]**.
 - **Our NFC card supplier**: **[SUPPLIER NAME]**. They receive **[CONFIRM: e.g. card artwork, quantity, delivery address]**.
 - **Hosting, domain and email providers** used for your website.
-- **Payment or bank providers** used to take payment: your bank (for transfers) and **[card payment provider, e.g. Stripe or SumUp, once chosen]**.
+- **Payment or bank providers** used to take payment: your bank (for transfers) and **Stripe** (card payments through Stripe payment links). Stripe handles your card details; we never see your full card number.
 - **Accountant or adviser**: **[if you use one]**.
 - **Meta / WhatsApp**, as explained above.
 - **The authorities**, if the law requires it.
-**[Check whether any of these are outside the UK. If so, add how the data is protected.]**
+- **Enquiry form service** (once the form emails enquiries to us): **[FORM SERVICE NAME, once chosen; may be US-based]**. It receives what you type into the quote form.
+
+**[Check whether any of these are outside the UK (Stripe and the form service may process data in the US). If so, add how the data is protected.]**
 
 ## 5. Customer website data (maintenance)
 If we maintain your website, we may be able to see the personal data of your own customers (for example enquiries stored on your site). We only use that to keep the site working. **[Decide: is Clear Signs a "processor" for the customer? If yes, a short written agreement may be needed. Get advice.]**
