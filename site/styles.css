@@ -644,3 +644,37 @@ input[aria-invalid="true"] { border-color: #b00020; box-shadow: 0 0 0 1px #b0002
   .f-sun { transform: translate(250px, 80px); } .f-van { transform: translate(36px, 136px); }
 }
 @media print { .film *, .f-title, .mr-hearts i { animation: none !important; } }
+
+/* ===== 3D upgrade for the video mock-up (owner request 2026-10-01) ===== */
+.stage3d { position: relative; perspective: 1300px; transform-style: preserve-3d; padding: 10px 0 18px; }
+.stage3d .mock-player { transform-origin: 60% 50%; transform: rotateY(-14deg) rotateX(5deg); animation: stage-sway 10s ease-in-out infinite; box-shadow: 0 30px 60px rgba(10,42,94,.35), 0 0 0 1px rgba(255,255,255,.08) inset; }
+.stage3d .mock-reel { right: 6%; transform: translateZ(50px) rotateY(-22deg) rotateX(4deg); animation: reel-float 5s ease-in-out infinite; }
+@keyframes stage-sway { 0%, 100% { transform: rotateY(-14deg) rotateX(5deg); } 50% { transform: rotateY(-6deg) rotateX(2deg) translateY(-6px); } }
+@keyframes reel-float { 0%, 100% { transform: translateZ(50px) rotateY(-22deg) rotateX(4deg) translateY(0); } 50% { transform: translateZ(50px) rotateY(-16deg) rotateX(2deg) translateY(-10px); } }
+.stage3d-shadow { position: absolute; left: 10%; right: 10%; bottom: -6px; height: 22px; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(10,42,94,.28), transparent 70%); filter: blur(4px); animation: shadow-breathe 10s ease-in-out infinite; }
+@keyframes shadow-breathe { 0%, 100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(.92); opacity: .75; } }
+
+/* parallax layers: each scene the camera pans; near layers move further than far ones */
+.p-far, .p-clouds, .p-mid, .p-front { transform-box: view-box; }
+.p-far { animation: p-far 20s linear infinite; }
+.p-mid { animation: p-mid 20s linear infinite; }
+.p-front { animation: p-front 20s linear infinite; }
+.p-clouds { animation: p-clouds 20s linear infinite; }
+@keyframes p-far   { 0% { transform: translateX(0); } 19.9% { transform: translateX(-4px); } 20% { transform: translateX(3px); } 39.9% { transform: translateX(-3px); } 40% { transform: translateX(0); } 59.9% { transform: translateX(4px); } 60% { transform: translateX(-2px); } 79.9% { transform: translateX(-6px); } 80%, 100% { transform: translateX(0); } }
+@keyframes p-mid   { 0% { transform: translateX(0); } 19.9% { transform: translateX(-12px); } 20% { transform: translateX(8px); } 39.9% { transform: translateX(-8px); } 40% { transform: translateX(0); } 59.9% { transform: translateX(10px); } 60% { transform: translateX(-4px); } 79.9% { transform: translateX(-16px); } 80%, 100% { transform: translateX(0); } }
+@keyframes p-front { 0% { transform: translateX(0); } 19.9% { transform: translateX(-28px); } 20% { transform: translateX(20px); } 39.9% { transform: translateX(-20px); } 40% { transform: translateX(0); } 59.9% { transform: translateX(24px); } 60% { transform: translateX(-10px); } 79.9% { transform: translateX(-38px); } 80%, 100% { transform: translateX(0); } }
+@keyframes p-clouds { from { transform: translateX(-20px); } to { transform: translateX(30px); } }
+/* sun rays follow the sun and slowly turn */
+.f-rays { transform-box: view-box; animation: f-sun 20s ease-in-out infinite; }
+.f-rays path { transform-box: fill-box; transform-origin: center; animation: f-rays-spin 12s linear infinite; }
+@keyframes f-rays-spin { to { transform: rotate(360deg); } }
+.f-roof-new.side { transform-origin: left center; animation: f-roof 20s infinite; animation-delay: .25s; }
+
+@media (max-width: 820px) {
+  .stage3d .mock-player { transform: rotateY(-8deg) rotateX(3deg); animation: none; }
+  .stage3d .mock-reel { right: 4px; transform: translateZ(30px) rotateY(-14deg); animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage3d .mock-player, .stage3d .mock-reel, .stage3d-shadow, .p-far, .p-mid, .p-front, .p-clouds, .f-rays, .f-rays path { animation: none !important; }
+  .f-rays { transform: translate(250px, 80px); }
+}
