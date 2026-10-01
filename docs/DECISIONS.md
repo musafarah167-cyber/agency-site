@@ -52,7 +52,7 @@ Only things the owner has said. Add the date when something changes.
 - Platinum package DROPPED (2026-09-30). Three packages only: Bronze, Silver, Gold.
 - PACKAGES FINAL (owner accepted Claude's suggestion, 2026-09-30):
   - Bronze: £499 one-off. Website built, 4 plain NFC cards, no maintenance.
-  - Silver: £499 set-up + £200/month (changed from £49 on 2026-10-01). Everything in Bronze, monthly maintenance (2 small edits), reply to messages within 24 hours ("24-hour access" = reply within 24 hours).
+  - Silver: £499 set-up + £175/month (changed from £49, then £200, on 2026-10-01). Everything in Bronze, monthly maintenance (2 small edits), reply to messages within 24 hours ("24-hour access" = reply within 24 hours).
   - Gold: £699 set-up + £300/month (changed from £249 on 2026-10-01). Everything in Silver, 2 videos a month, 5 custom NFC cards instead of 4 plain.
   - Monthly plans: no minimum term, 1 month notice. Extras (more videos, van/uniform designs) on request.
 - Colours (2026-09-30): orange accent added to the blue and white scheme at owner request.

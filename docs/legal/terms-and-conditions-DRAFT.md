@@ -77,7 +77,7 @@ If a written quote or package description says something different, the quote wi
 7. **Ownership.** Once you have paid in full, you may use the finished design for your business. We may show it in our portfolio unless you tell us in writing before the job starts that you do not want this.
 
 ## 12. Packages
-Current packages: Bronze £499 one-off; Silver £499 set-up + £200 a month; Gold £699 set-up + £300 a month. Silver and Gold have a 6-month minimum term (see section 9.3).
+Current packages: Bronze £499 one-off; Silver £499 set-up + £175 a month; Gold £699 set-up + £300 a month. Silver and Gold have a 6-month minimum term (see section 9.3).
 1. A package includes only what is listed for it at the time you accept the quote.
 2. Items in a package that are not used are not refundable or exchangeable for cash.
 3. Upgrading to a higher package is possible. We will quote the price difference. **[Decide if downgrades are allowed and when.]**
