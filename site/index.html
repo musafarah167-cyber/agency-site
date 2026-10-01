@@ -34,6 +34,10 @@
 <main id="top" tabindex="-1">
 
 <section class="hero">
+  <div class="hero-3d" aria-hidden="true">
+    <div class="h3d-floor"></div>
+    <div class="h3d-sweep"></div>
+  </div>
   <div class="container hero-inner">
     <div>
       <p class="eyebrow">Marketing for local businesses</p>
@@ -48,15 +52,28 @@
     <figure class="hero-card">
       <div class="card-stage">
         <svg class="signal-bg" viewBox="0 0 800 500" aria-hidden="true" focusable="false">
-          <defs><path id="sig-phone" d="M400 250 L195 85"/><path id="sig-web" d="M400 250 L610 92"/><path id="sig-video" d="M400 250 L625 430"/><path id="sig-van" d="M400 250 L190 415"/></defs>
           <circle cx="400" cy="250" r="190" class="sig-glow"/>
           <circle cx="400" cy="250" r="120" class="sig-ring"/>
           <circle cx="400" cy="250" r="120" class="sig-ring r2"/>
           <circle cx="400" cy="250" r="120" class="sig-ring r3"/>
-          <use href="#sig-phone" class="sig-line"/><use href="#sig-web" class="sig-line"/><use href="#sig-video" class="sig-line"/><use href="#sig-van" class="sig-line"/>
-          <circle r="4" class="sig-pulse"><animateMotion dur="3.2s" begin="0.0s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sig-phone"/></animateMotion></circle><circle r="4" class="sig-pulse"><animateMotion dur="3.2s" begin="0.8s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sig-web"/></animateMotion></circle><circle r="4" class="sig-pulse"><animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sig-video"/></animateMotion></circle><circle r="4" class="sig-pulse"><animateMotion dur="3.2s" begin="2.4000000000000004s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sig-van"/></animateMotion></circle>
-          <g class="sig-node" style="--d:2.2s" transform="translate(195 85)"><circle r="26" class="sig-node-bg"/><rect x="-7" y="-11" width="14" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2"/><circle cx="0" cy="7" r="1.4" fill="#fff"/></g><g class="sig-node" style="--d:3.0s" transform="translate(610 92)"><circle r="26" class="sig-node-bg"/><rect x="-12" y="-9" width="24" height="18" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M-12 -4h24" stroke="#fff" stroke-width="2"/><circle cx="-8" cy="-6.5" r="1" fill="#fff"/></g><g class="sig-node" style="--d:3.8000000000000003s" transform="translate(625 430)"><circle r="26" class="sig-node-bg"/><circle r="11" fill="none" stroke="#fff" stroke-width="2"/><path d="M-3 -6 L6 0 L-3 6z" fill="#fff"/></g><g class="sig-node" style="--d:4.6000000000000005s" transform="translate(190 415)"><circle r="26" class="sig-node-bg"/><path d="M-13 5 V-6 H3 L8 -1 H12 V5 Z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="-7" cy="6" r="2.6" fill="#fff"/><circle cx="7" cy="6" r="2.6" fill="#fff"/></g>
         </svg>
+        <div class="trailer" aria-hidden="true">
+          <div class="tr-tile tr-found">
+            <span class="tr-label">Get found</span>
+            <span class="tr-bar"><i></i><i></i><i></i></span>
+            <span class="tr-line w80"></span><span class="tr-line w60"></span>
+            <span class="tr-cta"></span>
+          </div>
+          <div class="tr-tile tr-chosen">
+            <span class="tr-label">Get chosen</span>
+            <span class="tr-video"><svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="18" fill="rgba(247,147,30,.9)"/><path d="M16 12 L28 20 L16 28z" fill="#0a2a5e"/></svg></span>
+          </div>
+          <div class="tr-tile tr-paid">
+            <span class="tr-label">Get paid</span>
+            <span class="tr-note"><b></b><span><strong>New enquiry</strong><em>Quote request, just now</em></span></span>
+          </div>
+          <div class="tr-phone"><span class="tr-screen"><span class="tr-tap"></span></span></div>
+        </div>
       <div class="nfc-card" aria-hidden="true">
         <div class="nfc-top">
           <svg class="nfc-logo" viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="23" fill="#f7931e"/><path d="M24 10c-6 8-10 13-10 18a10 10 0 0 0 20 0c0-5-4-10-10-18z" fill="#1b1f24"/><path d="M19 29a5 5 0 0 0 5 5" stroke="#f7931e" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
