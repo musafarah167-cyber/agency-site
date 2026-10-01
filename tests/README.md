@@ -1,15 +1,19 @@
 # Tests
 
-Needs only Python 3 (already on your Mac). Nothing to install.
+Needs only Python 3 (already on your Mac) and Google Chrome (for the browser check). Nothing to install.
 
 ```
-python3 tests/check_site.py            # everyday check
-python3 tests/check_site.py --launch   # before going live: any placeholder counts as a FAIL
+python3 tests/check_site.py             # quick automatic check: pages, links, anchors, meta tags, phone numbers, placeholders
+python3 tests/check_site.py --launch    # before going live: any placeholder counts as a FAIL
+python3 tests/full_browser_check.py     # full browser check (about 5 minutes), screenshots in docs/testing/screenshots-2026-10-01-c/
+python3 tests/full_browser_check.py --no-shots
 ```
 
-It starts a temporary local server for `site/`, loads every page, and checks links, `#anchors`, files,
-meta tags, one `h1`, `tel:` and WhatsApp numbers, alt text, and leftover placeholders (`[CLIENT`, `[CONFIRM`, `[X]`, `[£` ...).
-PASS / WARN / FAIL is printed per check. Exit code 1 means at least one FAIL.
+`full_browser_check.py` opens the site in a hidden Chrome at 375 / 768 / 1280 px and checks: sideways scroll, console errors,
+text contrast, tap sizes, mobile menu, quote form, NFC calculator, "try it" demo, package finder (including a real
+keyboard-only walkthrough), reduced motion (hero must have 0 running animations), pausing when the hero is off screen, scroll
+fade-ins (anchor jumps, JavaScript off, print), slanted hero clipping, illustration captions, header, frame timing and every
+price on the page. It prints PASS / FAIL / NOTE and exits with 1 if anything fails.
 
-Browser checks (widths, menu, form, keyboard, contrast, reduced motion) are run by hand in the in-app browser
-and written up in `docs/testing/REPORT-<date>.md`.
+Files: `cdp.py` (small Chrome remote-control helper), `browser_checks.js` (measuring script it injects),
+`check_site.py` (fast checks, no browser). Reports are in `docs/testing/REPORT-<date>.md`.

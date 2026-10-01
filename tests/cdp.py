@@ -126,9 +126,10 @@ class Chrome:
                 break
         self.ws.s.settimeout(None)
 
-    def open(self, url, width, height=800, reduce_motion=False):
+    def open(self, url, width, height=800, reduce_motion=False, media="", no_js=False):
         self.cmd("Emulation.setDeviceMetricsOverride", width=width, height=height, deviceScaleFactor=1, mobile=False)
-        self.cmd("Emulation.setEmulatedMedia", features=[{"name": "prefers-reduced-motion", "value": "reduce" if reduce_motion else "no-preference"}])
+        self.cmd("Emulation.setEmulatedMedia", media=media, features=[{"name": "prefers-reduced-motion", "value": "reduce" if reduce_motion else "no-preference"}])
+        self.cmd("Emulation.setScriptExecutionDisabled", value=no_js)
         self.cmd("Page.navigate", url=url)
         for _ in range(100):  # wait for load
             if self.js("document.readyState") == "complete":

@@ -74,6 +74,129 @@ def tab_until(c, predicate_js, limit=120, shift=False):
     return None
 
 
+REVEAL_ALL = """(async()=>{const h=document.documentElement.scrollHeight;for(let y=0;y<=h;y+=350){window.scrollTo({top:y,behavior:'instant'});await new Promise(r=>setTimeout(r,60))}
+  await new Promise(r=>setTimeout(r,900));window.scrollTo({top:0,behavior:'instant'});await new Promise(r=>setTimeout(r,300));return document.querySelectorAll('.reveal:not(.is-visible)').length})()"""
+
+HERO_CLIP = """(()=>{const hero=document.querySelector('.hero'),hb=hero.getBoundingClientRect(),W=hb.width,drop=innerWidth<=820?28:48;
+  const lineY=x=>hb.bottom-drop*((x-hb.left)/W);const bad=[];
+  const els=[...hero.querySelectorAll('.hero-inner *')].filter(e=>!e.closest('svg')&&e.checkVisibility({checkOpacity:true})&&(e.matches('.btn,.nfc-card,[class^="tr-"],[class*=" tr-"]')||([...e.children].length===0&&e.textContent.trim())));
+  els.forEach(e=>{const r=e.getBoundingClientRect();if(r.width===0)return;const cut=lineY(r.right);if(r.bottom>cut-4||r.bottom>hb.bottom-2)bad.push((e.className&&e.className.baseVal===undefined?e.className:e.tagName)+' "'+e.textContent.trim().slice(0,28)+'" bottom '+Math.round(r.bottom)+' cut '+Math.round(cut)+' x '+Math.round(r.right)+' tr '+Math.round(r.top)+'-')});
+  return bad})()"""
+
+ILLUS = """(()=>{const out=[];document.querySelectorAll('.illus').forEach(f=>{const cap=f.querySelector('figcaption').getBoundingClientRect();
+  const rg=document.createRange();rg.selectNodeContents(f.querySelector('figcaption'));const trs=[...rg.getClientRects()];
+  f.querySelectorAll('.mock-browser,.mock-mobile,.mock-player,.mock-reel,.mock-van').forEach(m=>{const r=m.getBoundingClientRect();
+    trs.forEach(t=>{const ox=Math.min(t.right,r.right)-Math.max(t.left,r.left),oy=Math.min(t.bottom,r.bottom)-Math.max(t.top,r.top);
+      if(ox>1&&oy>1)out.push(f.className+': caption text overlaps '+m.className+' ('+Math.round(ox)+'x'+Math.round(oy)+'px)')})});
+  if(cap.right>innerWidth+1||cap.left<-1)out.push(f.className+': caption off screen');
+  f.querySelectorAll('*').forEach(m=>{const r=m.getBoundingClientRect();if(r.width&&r.right>innerWidth+1)out.push(f.className+': '+m.className+' sticks out right by '+Math.round(r.right-innerWidth)+'px')})});
+  return [...new Set(out)]})()"""
+
+ANCHORS = """[...new Set([...document.querySelectorAll('a[href^="#"]')].map(a=>a.getAttribute('href')).filter(h=>h.length>1&&h!=='#top'))]"""
+
+JUMP = """(async(h)=>{const a=document.querySelector('a[href="'+h+'"]');a.click();
+  let last=-1;for(let i=0;i<40;i++){await new Promise(r=>setTimeout(r,100));if(Math.abs(scrollY-last)<1)break;last=scrollY}
+  await new Promise(r=>setTimeout(r,800));
+  const hdr=document.querySelector('.site-header').getBoundingClientRect().bottom,t=document.querySelector(h);
+  const head=t.querySelector('.eyebrow,h2,h3')||t,hr=head.getBoundingClientRect();
+  const cont=t.querySelector(':scope > .container')||t;
+  const stillHidden=[...document.querySelectorAll('.reveal:not(.is-visible)')].filter(e=>{const r=e.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).length;
+  return {h,headerBottom:Math.round(hdr),headingTop:Math.round(hr.top),headingText:head.textContent.trim().slice(0,28),contOpacity:+getComputedStyle(cont).opacity,visibleHiddenCount:stillHidden,scrolledHeader:document.querySelector('.site-header').classList.contains('scrolled')}})"""
+
+
+def design_pass(c, base, widths):
+    print("\n--- design pass: reveal, slanted hero, illustrations, header ---")
+    for w in widths:
+        H = 900 if w > 400 else 812
+        # slanted hero must not clip text, buttons, card, trailer screens (sampled over the 5 s loop)
+        c.open(base, w, H)
+        bad = set()
+        for _ in range(7):
+            c.pump(0.7)
+            bad.update(c.js(HERO_CLIP))
+        core = sorted(b for b in bad if not b.startswith("tr-"))
+        enter = sorted(b for b in bad if b.startswith("tr-"))
+        ok(not core, f"{w}px slanted hero does not clip buttons, text, card or caption (7 samples)", "; ".join(core)[:500])
+        if enter:
+            check("NOTE", f"{w}px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)", "; ".join(enter)[:200])
+        # illustrations
+        c.js(REVEAL_ALL)
+        for sel in (".illus-web", ".illus-video", ".illus-van"):
+            c.shot(str(SHOTS / f"{w}-illus-{sel[7:]}.png"), sel, 14) if not NO_SHOTS else None
+        probs = c.js(ILLUS)
+        ok(not probs, f"{w}px illustration captions not covered, nothing sticks out", str(probs))
+        # reveal: content never stays invisible
+        c.open(base, w, H)
+        c.pump(1.0)
+        n_reveal = c.js("document.querySelectorAll('.reveal').length")
+        c.js("window.scrollTo({top: document.documentElement.scrollHeight, behavior:'instant'})")
+        c.pump(1.5)
+        inview_hidden = c.js("[...document.querySelectorAll('.reveal:not(.is-visible)')].filter(e=>{const r=e.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).length")
+        ok(inview_hidden == 0, f"{w}px reveal: after jumping straight to the bottom nothing on screen is invisible ({n_reveal} elements fade in)", f"{inview_hidden} on-screen elements still invisible")
+        left = c.js(REVEAL_ALL)
+        ok(left == 0, f"{w}px reveal: after scrolling through the page every section is visible", f"{left} still hidden")
+        # anchor jumps
+        c.open(base, w, H)
+        c.pump(1.0)
+        targets = c.js(ANCHORS)
+        fails = []
+        for h in targets:
+            r = c.js(f"({JUMP})({json.dumps(h)})")
+            if r["headingTop"] < r["headerBottom"] - 1 or r["headingTop"] > H or r["contOpacity"] < 0.99 or r["visibleHiddenCount"]:
+                fails.append(r)
+            c.js("window.scrollTo({top:0,behavior:'instant'})")
+            c.pump(0.2)
+        ok(not fails, f"{w}px anchor jumps ({len(targets)} targets): heading below the header, content visible", json.dumps(fails)[:600])
+        check("NOTE", f"{w}px anchor targets tested", " ".join(targets))
+        hdr = c.js("(()=>{window.scrollTo({top:600,behavior:'instant'});return new Promise(r=>setTimeout(()=>r([document.querySelector('.site-header').getBoundingClientRect().height,getComputedStyle(document.documentElement).scrollPaddingTop,document.querySelector('.site-header').classList.contains('scrolled')]),500))})()")
+        ok(hdr[2] and float(hdr[1][:-2]) >= hdr[0], f"{w}px header slims when scrolled ({round(hdr[0])}px) and the page's scroll offset ({hdr[1]}) is at least that tall", str(hdr))
+        if not NO_SHOTS:
+            c.js("document.querySelector('a[href=\"#packages\"]').click()")
+            c.pump(2.0)
+            c.shot(str(SHOTS / f"{w}-anchor-packages-header.png"))
+            c.js("document.querySelector('a[href=\"#faq\"]').click()")
+            c.pump(2.0)
+            c.shot(str(SHOTS / f"{w}-anchor-faq-header.png"))
+
+        # print: nothing may stay invisible
+        c.open(base, w, H, media="print")
+        c.pump(1.0)
+        hid = c.js("[...document.querySelectorAll('.reveal')].filter(e=>+getComputedStyle(e).opacity<0.99).map(e=>e.className+' in '+(e.closest('section')||e).className).length")
+        total = c.js("document.querySelectorAll('.reveal').length")
+        ok(hid == 0, f"{w}px print: no section is invisible when printed straight from the top", f"{hid} of {total} faded-out sections would print blank")
+        c.open(base, w, H, media="")
+
+    # JavaScript off
+    c.open(base, 1280, 900, no_js=True)
+    c.pump(1.0)
+    inv = c.js("[...document.querySelectorAll('.section > .container, .services-strip .svc-grid')].filter(e=>+getComputedStyle(e).opacity<0.99).length")
+    ok(inv == 0, "JavaScript off: every section is visible", f"{inv} invisible")
+    ok(c.js("document.body.innerText.length") > 3000, "JavaScript off: page text is present", str(c.js("document.body.innerText.length")))
+    ok(c.js("document.getElementById('year').textContent.length>0"), "JavaScript off: footer year is filled (fallback text)", c.js("document.getElementById('year').textContent"))
+    check("NOTE", "JavaScript off: quote form, calculator, finder, menu and demo need JavaScript (the phone, WhatsApp and email links still work)", "")
+    c.open(base, 1280, 900)
+
+    # reduce motion: no reveal, 0 animations
+    for w in widths:
+        H = 900 if w > 400 else 812
+        c.open(base, w, H, reduce_motion=True)
+        c.pump(1.5)
+        n_reveal = c.js("document.querySelectorAll('.reveal').length")
+        anim = c.js("document.getAnimations().filter(a=>a.playState==='running').map(a=>a.animationName||a.constructor.name)")
+        ok(n_reveal == 0, f"{w}px reduce motion: scroll fade-in is off (0 elements get the reveal class)", str(n_reveal))
+        ok(not anim, f"{w}px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)", str(anim))
+        hid = c.js("[...document.querySelectorAll('.section > .container')].filter(e=>+getComputedStyle(e).opacity<0.99).length")
+        ok(hid == 0, f"{w}px reduce motion: all sections visible at once", str(hid))
+
+    # scroll performance (frosted header + reveal + hover effects)
+    for w in (1280, 375):
+        c.open(base, w, 900 if w > 400 else 812)
+        c.pump(1.0)
+        res = c.js("""new Promise(res=>{const t=[];let last=performance.now(),s=last,y=0;const max=document.documentElement.scrollHeight-innerHeight;function f(n){t.push(n-last);last=n;y+=14;window.scrollTo({top:y,behavior:'instant'});
+          if(y<max&&n-s<9000)requestAnimationFrame(f);else{t.shift();const a=[...t].sort((p,q)=>p-q);res({n:t.length,fps:+(1000/(t.reduce((p,q)=>p+q,0)/t.length)).toFixed(1),p95:+a[Math.floor(a.length*.95)].toFixed(1),worst:+a[a.length-1].toFixed(1),over33:t.filter(x=>x>33.4).length,over50:t.filter(x=>x>50).length})}}requestAnimationFrame(f)})""")
+        check("PASS" if res["fps"] >= 45 and res["over50"] <= 3 else "FAIL", f"{w}px scrolling the whole page (fast Mac, headless)", f"{res['fps']} fps, 95th percentile {res['p95']} ms, worst {res['worst']} ms, {res['over33']} frames over 33 ms, {res['over50']} over 50 ms")
+
+
 def main():
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=str(ROOT / "site")))
     threading.Thread(target=srv.serve_forever, daemon=True).start()
@@ -94,7 +217,8 @@ def main():
             else:
                 c.pump(2.0)
 
-            # ---- screenshots of every new section / state
+            # ---- screenshots of every new section / state (scroll through first so fade-ins have happened)
+            c.js(REVEAL_ALL)
             shot(c, f"{w}-whatwedo", ".services-strip")
             shot(c, f"{w}-nfc-tools-start", ".nfc-tools")
             c.js("document.querySelector('#nfc-calc input[value=\"50\"]').click(); const q=document.getElementById('calc-qty'); q.value=12; q.dispatchEvent(new Event('input',{bubbles:true}));")
@@ -336,6 +460,8 @@ def main():
             running = c.js(HERO_ANIMS)
             check("PASS" if frames["fps"] >= 50 and frames["over33"] <= 3 else "FAIL", f"{w}px hero frame timing over 6 s (fast Mac, headless)",
                   f"{frames['fps']} fps, 95th percentile {frames['p95']} ms, worst {frames['worst']} ms, {frames['over33']} frames over 33 ms; {running} hero animations running")
+
+        design_pass(c, base, WIDTHS)
 
         # ---------------- every price / claim number on the page
         print("\n--- prices and numbers on the page ---")

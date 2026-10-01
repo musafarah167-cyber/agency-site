@@ -691,6 +691,206 @@
  ],
  [
   "PASS",
+  "375px slanted hero does not clip buttons, text, card or caption (7 samples)",
+  ""
+ ],
+ [
+  "NOTE",
+  "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
+  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
+ ],
+ [
+  "PASS",
+  "375px illustration captions not covered, nothing sticks out",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reveal: after jumping straight to the bottom nothing on screen is invisible (12 elements fade in)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reveal: after scrolling through the page every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "375px anchor jumps (7 targets): heading below the header, content visible",
+  ""
+ ],
+ [
+  "NOTE",
+  "375px anchor targets tested",
+  "#nfc #websites #video #branding #packages #faq #contact"
+ ],
+ [
+  "PASS",
+  "375px header slims when scrolled (57px) and the page's scroll offset (72px) is at least that tall",
+  ""
+ ],
+ [
+  "FAIL",
+  "375px print: no section is invisible when printed straight from the top",
+  "12 of 12 faded-out sections would print blank"
+ ],
+ [
+  "PASS",
+  "768px slanted hero does not clip buttons, text, card or caption (7 samples)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px illustration captions not covered, nothing sticks out",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reveal: after jumping straight to the bottom nothing on screen is invisible (11 elements fade in)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reveal: after scrolling through the page every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "768px anchor jumps (7 targets): heading below the header, content visible",
+  ""
+ ],
+ [
+  "NOTE",
+  "768px anchor targets tested",
+  "#nfc #websites #video #branding #packages #faq #contact"
+ ],
+ [
+  "PASS",
+  "768px header slims when scrolled (57px) and the page's scroll offset (72px) is at least that tall",
+  ""
+ ],
+ [
+  "FAIL",
+  "768px print: no section is invisible when printed straight from the top",
+  "11 of 11 faded-out sections would print blank"
+ ],
+ [
+  "PASS",
+  "1280px slanted hero does not clip buttons, text, card or caption (7 samples)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px illustration captions not covered, nothing sticks out",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reveal: after jumping straight to the bottom nothing on screen is invisible (10 elements fade in)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reveal: after scrolling through the page every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px anchor jumps (7 targets): heading below the header, content visible",
+  ""
+ ],
+ [
+  "NOTE",
+  "1280px anchor targets tested",
+  "#nfc #websites #video #branding #packages #faq #contact"
+ ],
+ [
+  "PASS",
+  "1280px header slims when scrolled (57px) and the page's scroll offset (72px) is at least that tall",
+  ""
+ ],
+ [
+  "FAIL",
+  "1280px print: no section is invisible when printed straight from the top",
+  "10 of 10 faded-out sections would print blank"
+ ],
+ [
+  "PASS",
+  "JavaScript off: every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "JavaScript off: page text is present",
+  ""
+ ],
+ [
+  "PASS",
+  "JavaScript off: footer year is filled (fallback text)",
+  ""
+ ],
+ [
+  "NOTE",
+  "JavaScript off: quote form, calculator, finder, menu and demo need JavaScript (the phone, WhatsApp and email links still work)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: scroll fade-in is off (0 elements get the reveal class)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: all sections visible at once",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: scroll fade-in is off (0 elements get the reveal class)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: all sections visible at once",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: scroll fade-in is off (0 elements get the reveal class)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: all sections visible at once",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px scrolling the whole page (fast Mac, headless)",
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+ ],
+ [
+  "PASS",
+  "375px scrolling the whole page (fast Mac, headless)",
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+ ],
+ [
+  "PASS",
   "only confirmed prices appear on the page",
   ""
  ],
