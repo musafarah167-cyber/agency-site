@@ -110,7 +110,7 @@ function updateCalc() {
 }
 if (calcQty) {
   document.querySelectorAll('input[name="calc-type"]').forEach((r) => r.addEventListener("change", updateCalc));
-  calcQty.addEventListener("input", updateCalc);
+  calcQty.addEventListener("input", () => { if (Number(calcQty.value) > 999) calcQty.value = 999; updateCalc(); });
   calcQty.addEventListener("blur", () => { calcQty.value = calcState().qty; updateCalc(); });
   document.querySelectorAll("#nfc-calc .step").forEach((b) => b.addEventListener("click", () => {
     calcQty.value = Math.min(999, Math.max(1, calcState().qty + Number(b.dataset.step)));
