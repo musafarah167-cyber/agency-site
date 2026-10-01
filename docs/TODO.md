@@ -70,6 +70,8 @@ CAN BE PLACEHOLDER FOR NOW
 - [ ] 3. Private testing area so customer sites are approved before going live
 
 ## G. Site build (Claude)
+- [x] Local back end prototype for emailing enquiries (backend/, dry-run, 14 tests pass). Not deployed.
+- [ ] After hosting is set up: wire the quote form to the enquiry handler (steps in docs/backend/HANDOFF.md), choose the email/form service (owner opens the account), update the note under the form and the privacy policy. Keep WhatsApp as the fallback.
 - [ ] At deploy: make sure visitors get updated CSS/JS after changes (cache settings or versioned file names). Seen locally: a browser kept an old styles.css.
 - [x] Site moved into `site/`; unconfirmed claims removed; accessibility and mobile fixes done (T1 to T3)
 - [ ] Owner to confirm: bulk/minimum order for NFC, what monthly maintenance includes, billing (one monthly bill?), whether any package is 'most popular'. Then restore the wording (see IDEAS.md)
