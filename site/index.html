@@ -293,17 +293,30 @@
     <div class="split">
       <p class="section-intro">Logo designs for work uniforms and vans, so customers spot and remember you on every job. This is a separate service from our packages.</p>
       <figure class="illus illus-van" aria-hidden="true">
-        <svg viewBox="0 0 420 200" class="mock-van">
+        <svg viewBox="0 0 420 210" class="mock-van">
+          <defs>
+            <clipPath id="van-shape"><path d="M20 160 V60 Q20 40 40 40 H270 L330 95 Q392 104 398 130 V160 Z"/></clipPath>
+            <linearGradient id="van-shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <line x1="0" y1="194" x2="420" y2="194" stroke="#d6e2f3" stroke-width="3"/>
+          <line class="van-road" x1="-60" y1="203" x2="480" y2="203" stroke="#a9bbd6" stroke-width="4" stroke-linecap="round" stroke-dasharray="34 26"/>
+          <g class="van-move">
           <ellipse cx="210" cy="186" rx="190" ry="8" fill="rgba(10,42,94,.12)"/>
-          <path d="M20 160 V60 Q20 40 40 40 H270 L330 95 Q392 104 398 130 V160 Z" fill="#ffffff" stroke="#c9d3e2" stroke-width="2"/>
-          <path d="M276 50 L322 94 H276 Z" fill="#9cc2ff" opacity=".7"/>
-          <rect x="20" y="118" width="256" height="12" fill="#f7931e"/>
-          <circle cx="58" cy="78" r="18" fill="#f7931e"/><path d="M58 66c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15z" fill="#1b1f24"/>
-          <text x="86" y="76" font-size="20" font-weight="800" fill="#0a2a5e" font-family="system-ui, sans-serif">Brookvale</text>
-          <text x="86" y="96" font-size="10" font-weight="700" letter-spacing="2" fill="#c2410c" font-family="system-ui, sans-serif">PLUMBING &amp; HEATING</text>
-          <text x="210" y="152" text-anchor="middle" font-size="11" font-weight="700" fill="#0a2a5e" font-family="system-ui, sans-serif">Your number and website here</text>
-          <circle cx="90" cy="162" r="22" fill="#1b1f24"/><circle cx="90" cy="162" r="9" fill="#9aa3ad"/>
-          <circle cx="330" cy="162" r="22" fill="#1b1f24"/><circle cx="330" cy="162" r="9" fill="#9aa3ad"/>
+          <g class="van-puffs"><circle class="van-puff p1" cx="10" cy="152" r="7" fill="#c9d3e2"/><circle class="van-puff p2" cx="10" cy="152" r="5" fill="#c9d3e2"/></g>
+          <g class="van-body">
+            <path d="M20 160 V60 Q20 40 40 40 H270 L330 95 Q392 104 398 130 V160 Z" fill="#ffffff" stroke="#c9d3e2" stroke-width="2"/>
+            <path d="M276 50 L322 94 H276 Z" fill="#9cc2ff" opacity=".7"/>
+            <rect class="lv-stripe" x="20" y="118" width="256" height="12" fill="#f7931e"/>
+            <g class="lv-logo"><circle cx="58" cy="78" r="18" fill="#f7931e"/><path d="M58 66c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15z" fill="#1b1f24"/></g>
+            <g class="lv-name"><text x="86" y="76" font-size="20" font-weight="800" fill="#0a2a5e" font-family="system-ui, sans-serif">Brookvale</text>
+            <text x="86" y="96" font-size="10" font-weight="700" letter-spacing="2" fill="#c2410c" font-family="system-ui, sans-serif">PLUMBING &amp; HEATING</text></g>
+            <text class="lv-num" x="210" y="152" text-anchor="middle" font-size="11" font-weight="700" fill="#0a2a5e" font-family="system-ui, sans-serif">Your number and website here</text>
+            <rect class="van-light" x="392" y="128" width="7" height="9" rx="2" fill="#ffd25c"/>
+            <g clip-path="url(#van-shape)"><rect class="van-shine" x="-120" y="30" width="90" height="140" fill="url(#van-shine)"/></g>
+          </g>
+          <g class="van-wheel" transform="translate(90 162)"><g class="van-wheel-spin"><circle r="22" fill="#1b1f24"/><circle r="10" fill="#9aa3ad"/><path d="M0 -10 V10 M-10 0 H10 M-7 -7 L7 7 M-7 7 L7 -7" stroke="#5c6670" stroke-width="2"/><circle r="3" fill="#1b1f24"/></g></g>
+          <g class="van-wheel" transform="translate(330 162)"><g class="van-wheel-spin"><circle r="22" fill="#1b1f24"/><circle r="10" fill="#9aa3ad"/><path d="M0 -10 V10 M-10 0 H10 M-7 -7 L7 7 M-7 7 L7 -7" stroke="#5c6670" stroke-width="2"/><circle r="3" fill="#1b1f24"/></g></g>
+          </g>
         </svg>
         <figcaption>Example van design for a made-up business</figcaption>
       </figure>

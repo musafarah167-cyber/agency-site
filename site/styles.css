@@ -523,3 +523,54 @@ input[aria-invalid="true"] { border-color: #b00020; box-shadow: 0 0 0 1px #b0002
 .illus-web figcaption { padding-right: 100px; }
 .finder-back { margin-top: 14px; min-height: 44px; padding: 8px 4px; border: 0; background: none; font: inherit; font-weight: 600; color: var(--accent); cursor: pointer; }
 .finder-back:hover { text-decoration: underline; }
+
+/* van animation: 5-second story (owner request 2026-10-01)
+   0-24% drive in, 24-32% brake, 32-60% livery applied, 60-72% shine, 84-100% drive off */
+.illus-van { overflow: hidden; }
+.mock-van .van-move { animation: van-move 5s infinite; }
+@keyframes van-move {
+  0%   { transform: translateX(-520px); animation-timing-function: cubic-bezier(.15,.7,.35,1); }
+  24%  { transform: translateX(0); }
+  84%  { transform: translateX(0); animation-timing-function: cubic-bezier(.6,0,.9,.4); }
+  100% { transform: translateX(560px); }
+}
+.mock-van .van-wheel-spin { transform-box: fill-box; transform-origin: center; animation: van-spin 5s infinite; }
+@keyframes van-spin {
+  0%   { transform: rotate(0); animation-timing-function: cubic-bezier(.15,.7,.35,1); }
+  24%  { transform: rotate(1080deg); }
+  84%  { transform: rotate(1080deg); animation-timing-function: cubic-bezier(.6,0,.9,.4); }
+  100% { transform: rotate(2160deg); }
+}
+.mock-van .van-body { transform-box: view-box; transform-origin: 330px 184px; animation: van-body 5s infinite; }
+@keyframes van-body {
+  0%, 22% { transform: rotate(0) translateY(0); }
+  26% { transform: rotate(1.6deg) translateY(1px); }
+  31% { transform: rotate(-.5deg); }
+  35%, 84% { transform: rotate(0); }
+  88% { transform: rotate(-1.2deg); }
+  94%, 100% { transform: rotate(0); }
+}
+.mock-van .van-puffs { animation: van-puffs-gate 5s infinite; }
+@keyframes van-puffs-gate { 0%, 22% { opacity: 1; } 26%, 82% { opacity: 0; } 86%, 100% { opacity: 1; } }
+.mock-van .van-puff { transform-box: fill-box; transform-origin: center; opacity: 0; animation: van-puff .7s ease-out infinite; }
+.mock-van .van-puff.p2 { animation-delay: .35s; }
+@keyframes van-puff { 0% { opacity: .8; transform: translate(0, 0) scale(.6); } 100% { opacity: 0; transform: translate(-26px, -8px) scale(1.8); } }
+/* livery applied while parked */
+.mock-van .lv-stripe { transform-box: fill-box; transform-origin: left center; animation: lv-stripe 5s infinite; }
+@keyframes lv-stripe { 0%, 32% { transform: scaleX(0); } 42%, 100% { transform: scaleX(1); } }
+.mock-van .lv-logo { transform-box: fill-box; transform-origin: center; animation: lv-pop 5s infinite; }
+@keyframes lv-pop { 0%, 38% { transform: scale(0); opacity: 0; } 44% { transform: scale(1.18); opacity: 1; } 48%, 100% { transform: scale(1); opacity: 1; } }
+.mock-van .lv-name { animation: lv-fade 5s infinite; }
+@keyframes lv-fade { 0%, 44% { opacity: 0; transform: translateX(-10px); } 52%, 100% { opacity: 1; transform: none; } }
+.mock-van .lv-num { animation: lv-fade-num 5s infinite; }
+@keyframes lv-fade-num { 0%, 50% { opacity: 0; } 58%, 100% { opacity: 1; } }
+.mock-van .van-shine { animation: van-shine 5s ease-in-out infinite; }
+@keyframes van-shine { 0%, 60% { transform: translateX(0); } 72%, 100% { transform: translateX(560px); } }
+.mock-van .van-light { animation: van-light 5s infinite; }
+@keyframes van-light { 0%, 24% { opacity: 1; } 30%, 82% { opacity: .35; } 86%, 100% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .mock-van .van-move, .mock-van .van-wheel-spin, .mock-van .van-body, .mock-van .van-puffs, .mock-van .van-puff,
+  .mock-van .lv-stripe, .mock-van .lv-logo, .mock-van .lv-name, .mock-van .lv-num, .mock-van .van-shine, .mock-van .van-light { animation: none; }
+  .mock-van .van-puff { opacity: 0; }
+}
+@media print { .mock-van * { animation: none !important; } }
