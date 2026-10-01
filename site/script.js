@@ -133,7 +133,7 @@ if (demoTap) {
     const on = !demoStage.classList.contains("tapped");
     demoStage.classList.toggle("tapped", on);
     demoStatus.textContent = on
-      ? "The phone opened the business's own page: call, WhatsApp, website and reviews in one tap. Press the card again to reset."
+      ? "The phone opened the business's own website, with call, WhatsApp and review buttons one tap away. Press the card again to reset."
       : "Example for a made-up business. Press the card to try it.";
   });
 }
@@ -142,9 +142,9 @@ if (demoTap) {
 const finder = document.querySelector(".finder-card");
 const results = {
   bronze: { name: "Bronze", price: "£499 one-off", why: "A professional website and 4 plain NFC cards. Ideal if you just need to get online.", interest: "Bronze package" },
-  silver: { name: "Silver", price: "£499 set-up + £175 a month (6-month minimum)", why: "Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.", interest: "Silver package" },
-  gold: { name: "Gold", price: "£699 set-up + £300 a month (6-month minimum)", why: "Everything in Silver, plus 2 videos a month and 5 custom NFC cards. Filming travel is charged at 80p per mile, there and back.", interest: "Gold package" },
-  nfc: { name: "NFC cards on their own", price: "£30 plain or £50 custom, per card", why: "No package needed. Use the price calculator in the NFC section to see your total.", interest: "Custom NFC cards" },
+  silver: { name: "Silver", price: "£499 set-up + £175 a month (6\u2011month minimum)", why: "Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.", interest: "Silver package" },
+  gold: { name: "Gold", price: "£699 set-up + £300 a month (6\u2011month minimum)", why: "Everything in Silver, plus 2 videos a month and 5 custom NFC cards. Filming travel is charged at 80p per mile, there and back.", interest: "Gold package" },
+  nfc: { name: "NFC cards on their own", price: "£30 plain or £50 custom, per card", why: "No package needed. Use the price calculator to see your total and order.", interest: null, href: "#nfc-calc", cta: "Open the price calculator" },
   video: { name: "Videos on their own", price: "Quoted per job", why: "Every filming job is different (location and filming time), so we give you a free quote. Travel is charged at 80p per mile, there and back.", interest: "Video content" },
   design: { name: "Van or uniform design", price: "Quoted per job", why: "Designed by us, printed (and fitted for vans) for you. Price depends on the size and design.", interest: "Van logo design" },
 };
@@ -156,7 +156,7 @@ if (finder) {
     steps.forEach((s) => { s.hidden = s.dataset.step !== String(n); });
     resultBox.hidden = true;
     const first = finder.querySelector(`.finder-step[data-step="${n}"] .finder-opt`);
-    if (first && n !== 1) first.focus();
+    if (first) first.focus();
   };
   finder.addEventListener("click", (e) => {
     const opt = e.target.closest(".finder-opt");
@@ -167,13 +167,18 @@ if (finder) {
       resultBox.querySelector(".finder-name").textContent = chosen.name;
       resultBox.querySelector(".finder-price").textContent = chosen.price;
       resultBox.querySelector(".finder-why").textContent = chosen.why;
+      const go = resultBox.querySelector(".finder-go");
+      go.setAttribute("href", chosen.href || "#contact");
+      go.textContent = chosen.cta || "Get a quote";
       resultBox.hidden = false;
       resultBox.querySelector(".finder-name").setAttribute("tabindex", "-1");
       resultBox.querySelector(".finder-name").focus();
       return;
     }
     if (e.target.closest(".finder-restart")) return show(1);
-    if (e.target.closest(".finder-go") && chosen) fillQuote(chosen.interest);
+    const back = e.target.closest(".finder-back");
+    if (back) return show(back.dataset.back);
+    if (e.target.closest(".finder-go") && chosen && chosen.interest) fillQuote(chosen.interest);
   });
 }
 

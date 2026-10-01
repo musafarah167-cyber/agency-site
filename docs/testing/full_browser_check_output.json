@@ -182,7 +182,7 @@
  [
   "NOTE",
   "finder result texts",
-  "{\"gold\": \"Gold | £699 set-up + £300 a month (6-month minimum) | Everything in Silver, plus 2 videos a month and 5 custom NFC cards. Filming travel is charged at 80p per mile, there and back.\", \"silver\": \"Silver | £499 set-up + £175 a month (6-month minimum) | Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.\", \"bronze\": \"Bronze | £499 one-off | A professional website and 4 plain NFC cards. Ideal if you just need to get online.\", \"nfc\": \"NFC cards on their own | £30 plain or £50 custom, per card | No package needed. Use the price calculator in the NFC section to see your total.\", \"video\": \"Videos on their own | Quoted per job | Every filming job is different (location and filming time), so we give you a free quote. Travel is charged at 80p per mile, there and back.\", \"design\": \"Van or uniform design | Quoted per job | Designed by"
+  "{\"gold\": \"Gold | £699 set-up + £300 a month (6‑month minimum) | Everything in Silver, plus 2 videos a month and 5 custom NFC cards. Filming travel is charged at 80p per mile, there and back.\", \"silver\": \"Silver | £499 set-up + £175 a month (6‑month minimum) | Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.\", \"bronze\": \"Bronze | £499 one-off | A professional website and 4 plain NFC cards. Ideal if you just need to get online.\", \"nfc\": \"NFC cards on their own | £30 plain or £50 custom, per card | No package needed. Use the price calculator to see your total and order.\", \"video\": \"Videos on their own | Quoted per job | Every filming job is different (location and filming time), so we give you a free quote. Travel is charged at 80p per mile, there and back.\", \"design\": \"Van or uniform design | Quoted per job | Designed by us, prin"
  ],
  [
   "PASS",
@@ -370,9 +370,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "1280px finder: after 'Start again' via keyboard, focus stays in the finder (not lost)",
-  "focus is on BODY: keyboard and screen reader users lose their place"
+  ""
  ],
  [
   "PASS",
@@ -510,9 +510,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "375px finder: after 'Start again' via keyboard, focus stays in the finder (not lost)",
-  "focus is on BODY: keyboard and screen reader users lose their place"
+  ""
  ],
  [
   "PASS",
@@ -687,7 +687,7 @@
  [
   "PASS",
   "375px hero frame timing over 6 s (fast Mac, headless)",
-  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms; 22 hero animations running"
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 22 hero animations running"
  ],
  [
   "PASS",
@@ -697,7 +697,7 @@
  [
   "NOTE",
   "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
-  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
+  "tr-phone \"\" bottom 1116 cut 1043 x 561 tr 954-; tr-screen \"\" bottom 1103 cut 1044 x 547 tr 967-"
  ],
  [
   "PASS",
@@ -730,9 +730,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "375px print: no section is invisible when printed straight from the top",
-  "12 of 12 faded-out sections would print blank"
+  ""
  ],
  [
   "PASS",
@@ -770,9 +770,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "768px print: no section is invisible when printed straight from the top",
-  "11 of 11 faded-out sections would print blank"
+  ""
  ],
  [
   "PASS",
@@ -810,9 +810,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "1280px print: no section is invisible when printed straight from the top",
-  "10 of 10 faded-out sections would print blank"
+  ""
  ],
  [
   "PASS",
@@ -887,7 +887,7 @@
  [
   "PASS",
   "375px scrolling the whole page (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
  ],
  [
   "PASS",
