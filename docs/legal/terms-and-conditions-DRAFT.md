@@ -61,8 +61,8 @@ If a written quote or package description says something different, the quote wi
 5. If a website is not on our maintenance plan, you (or someone you choose) are responsible for keeping it updated and backed up.
 
 ## 10. Video content
-1. We film the videos ourselves. We can film at your premises, on a job site or at another location you ask for, as agreed in the quote. The quote will say how much filming time and how many finished videos are included. We may also use footage you give us.
-2. You make sure we are allowed to film at the location (for example, the site owner or customer agrees). Travel to distant locations may be quoted as an extra.
+1. Videos are filmed by us or by a videographer we work with, and we stay your point of contact. We can film at your premises, on a job site or at another location you ask for, as agreed in the quote. The quote will say how much filming time and how many finished videos are included. We may also use footage you give us.
+2. You make sure we are allowed to film at the location (for example, the site owner or customer agrees). Filming is quoted per job, because the price depends on the location, travel and the videographer's time.
 3. You need permission from anyone identifiable in the footage to appear in the video. We will not publish videos of people or premises without that permission.
 4. We may use finished videos in our portfolio unless you tell us in writing before the job starts that you do not want this.
 5. Music, stock footage and other third-party material we use follow the licences of the service we get them from. **[Confirm what licences apply.]**

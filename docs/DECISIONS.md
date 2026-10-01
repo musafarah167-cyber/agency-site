@@ -65,3 +65,4 @@ Only things the owner has said. Add the date when something changes.
 - Silver and Gold are subscriptions with a 6-month minimum term, then 1 month notice (owner decision 2026-10-01). Set-up fees kept.
 - Hero headline (2026-10-01): "Websites, NFC cards and videos for local businesses", slogan moved above it; "What we do" tiles added under the hero; one-line summary on each package (Get online / We look after it for you / Grow with video).
 - Service area: the whole UK (owner, 2026-10-01). Remote work for websites, designs, NFC set-up; filming anywhere on request, distant travel may be quoted extra (matches terms 10.2). Address still not shown on the site.
+- Filming (2026-10-01): owner pays a videographer, so every filming job is quoted (location, travel, videographer fee). Clear Signs stays the customer's point of contact. OPEN: does Gold's "2 videos a month" at £300/month still include filming and travel, or is travel extra?

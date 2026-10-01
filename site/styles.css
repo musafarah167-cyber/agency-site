@@ -62,7 +62,7 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .nfc-person { display: block; font-weight: 600; }
 .nfc-tap { display: block; font-size: .85rem; opacity: .75; }
 .nfc-icon { color: #ffa552; }
-.hero-card-caption { text-align: center; font-size: .85rem; color: #c9d8f0; margin-top: 18px; }
+.hero-card-caption { text-align: left; max-width: 360px; margin-inline: auto; padding-left: 4px; font-size: .85rem; color: #c9d8f0; margin-top: 18px; }
 
 /* sections */
 .trust { border-bottom: 1px solid var(--line); }
@@ -271,8 +271,8 @@ p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
 .tr-paid { animation: tr-paid 5s cubic-bezier(.2,.8,.2,1) infinite; animation-delay: 2.0s; }
 @keyframes tr-paid {
   0% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, 0, -80px) rotateY(0) scale(.3); }
-  12.0% { opacity: 1; transform: translate(-50%, -50%) translate3d(160px, 170px, 40px) rotateY(-22deg) scale(1); }
-  48.0% { opacity: 1; transform: translate(-50%, -50%) translate3d(160px, 162px, 40px) rotateY(-22deg) scale(1); }
+  12.0% { opacity: 1; transform: translate(-50%, -50%) translate3d(178px, 170px, 40px) rotateY(-22deg) scale(1); }
+  48.0% { opacity: 1; transform: translate(-50%, -50%) translate3d(178px, 162px, 40px) rotateY(-22deg) scale(1); }
   56.0%, 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, 0, -80px) rotateY(0) scale(.3); }
 }
 @media (max-width: 820px) {
@@ -308,7 +308,7 @@ p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
   .cs-shade { background: linear-gradient(180deg, rgba(6,23,58,.9) 0%, rgba(6,23,58,.75) 55%, rgba(6,23,58,.35) 100%); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cs-win, .cs-sign, .cs-trail, .cs-van, .cs-bokeh { animation: none; }
+  .cs-windows .cs-win, .cs-sign, .cs-trail.t1, .cs-trail.t2, .cs-trail.t3, .cs-van, .cs-bokeh { animation: none; }
   .cs-sign { opacity: .95; }
 }
 
@@ -336,3 +336,11 @@ input[aria-invalid="true"] { border-color: #b00020; box-shadow: 0 0 0 1px #b0002
 @media (max-width: 820px) {
   .footer-cols { grid-template-columns: 1fr; }
 }
+
+/* performance (testing report 2026-10-01-b): lighter hero on phones, pause when off screen */
+@media (max-width: 820px) {
+  .cs-windows .cs-win, .cs-bokeh { animation: none; }
+}
+.hero.is-offscreen *, .hero.is-offscreen *::before, .hero.is-offscreen *::after { animation-play-state: paused !important; }
+/* 4. more space under the Why heading */
+.why h2 { margin-bottom: 28px; }

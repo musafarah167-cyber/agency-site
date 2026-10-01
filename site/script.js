@@ -72,3 +72,15 @@ function applyMotionSetting() {
 }
 applyMotionSetting();
 reduceMotion.addEventListener("change", applyMotionSetting);
+
+// Pause the hero animation while it is scrolled out of view (saves battery on phones)
+const hero = document.querySelector(".hero");
+if (hero && "IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => {
+    hero.classList.toggle("is-offscreen", !entry.isIntersecting);
+    if (signal) {
+      if (!entry.isIntersecting) signal.pauseAnimations();
+      else applyMotionSetting();
+    }
+  }).observe(hero);
+}

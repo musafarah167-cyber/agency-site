@@ -32,6 +32,7 @@ We only collect what we need. **[Add or remove rows to match what you really do.
 
 ## 4. Who we share it with
 We do not sell your data. We share it only where needed to do the job:
+- **Our videographer** for filming jobs: **[VIDEOGRAPHER NAME]**. They receive the filming location, date, contact details for the day, and the footage they record.
 - **Our printing and fitting partner** for uniform and van work: **[PARTNER NAME, once decided]**. They receive design files, sizes and delivery or fitting details, and **[whether they receive customer name and contact details: CONFIRM]**.
 - **Our NFC card supplier**: **[SUPPLIER NAME]**. They receive **[CONFIRM: e.g. card artwork, quantity, delivery address]**.
 - **Hosting, domain and email providers** used for your website.
