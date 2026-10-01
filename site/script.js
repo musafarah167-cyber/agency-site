@@ -204,18 +204,6 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
   });
 }
 
-// Video mock-up: running timecode that follows the 20-second film
-const filmTime = document.querySelector(".mp-time");
-const filmBar = document.querySelector(".mp-progress");
-if (filmTime && filmBar && !reduceMotion.matches) {
-  setInterval(() => {
-    const anim = filmBar.getAnimations()[0];
-    if (!anim || anim.currentTime == null) return;
-    const s = Math.floor((anim.currentTime % 20000) / 1000);
-    filmTime.textContent = `0:${String(s).padStart(2, "0")} / 0:20`;
-  }, 250);
-}
-
 // Pause the illustrations' animations while they are off screen (saves battery)
 if ("IntersectionObserver" in window) {
   const illusObs = new IntersectionObserver((entries) => {
