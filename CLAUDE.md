@@ -24,7 +24,7 @@ Brand name: Clear Signs (owner confirmed). Owner thought it might be trademarked
 ## Placeholders (search for `[` in the HTML)
 Services also include uniform and van logo designs (separate from packages). Van designs: no fixed price, quoted by message because it depends on van size and customer needs (owner confirmed). Uniform price and design-only vs printing scope still not given.
 NFC prices: blank £30 per card, custom £50 per card (owner confirmed; bulk tiers and minimum order not given).
-Three packages (confirmed 2026-09-30): Bronze £499 one-off; Silver £499 + £49/month; Gold £699 + £249/month. Details in docs/DECISIONS.md. Platinum dropped.
+Three packages (confirmed 2026-09-30): Bronze £499 one-off; Silver £499 + £200/month; Gold £699 + £300/month (both 6-month minimum). Details in docs/DECISIONS.md. Platinum dropped.
 Never invent prices, reviews, claims or certifications.
 
 ## Quote form

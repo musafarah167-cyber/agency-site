@@ -52,8 +52,8 @@ Only things the owner has said. Add the date when something changes.
 - Platinum package DROPPED (2026-09-30). Three packages only: Bronze, Silver, Gold.
 - PACKAGES FINAL (owner accepted Claude's suggestion, 2026-09-30):
   - Bronze: £499 one-off. Website built, 4 plain NFC cards, no maintenance.
-  - Silver: £499 set-up + £49/month. Everything in Bronze, monthly maintenance (2 small edits), reply to messages within 24 hours ("24-hour access" = reply within 24 hours).
-  - Gold: £699 set-up + £249/month. Everything in Silver, 2 videos a month, 5 custom NFC cards instead of 4 plain.
+  - Silver: £499 set-up + £200/month (changed from £49 on 2026-10-01). Everything in Bronze, monthly maintenance (2 small edits), reply to messages within 24 hours ("24-hour access" = reply within 24 hours).
+  - Gold: £699 set-up + £300/month (changed from £249 on 2026-10-01). Everything in Silver, 2 videos a month, 5 custom NFC cards instead of 4 plain.
   - Monthly plans: no minimum term, 1 month notice. Extras (more videos, van/uniform designs) on request.
 - Colours (2026-09-30): orange accent added to the blue and white scheme at owner request.
 - Hero NFC card (2026-09-30): shows an example custom card for a made-up business ("Brookvale Plumbing & Heating", "James Carter"), labelled on the page as an example for a made-up business. Replace with a real customer design once one exists and the customer agrees in writing.
@@ -62,3 +62,5 @@ Only things the owner has said. Add the date when something changes.
 - Back end (owner "agree to all", 2026-10-01): US-based form service free tier OK at first (list it in the privacy policy); payments via Stripe payment links + bank transfer; keep enquiries that do not become jobs for 12 months; local back end prototype approved (no accounts, no deploy).
 - Hero animation replaced (2026-10-01, owner request): a 5-second looping 3D "trailer" in the blue hero. A phone taps the example NFC card, an orange burst ripples out, then three screens fly out in 3D: "Get found" (website), "Get chosen" (video), "Get paid" (a sample "New enquiry" notification). Perspective grid floor and light sweep in the background. Screens hidden on phones; everything stops for reduce-motion users. No libraries.
 - Hero background (2026-10-01, owner request): flat blue replaced by an illustrated, cinematic high street at dusk (SVG): dusk sky with orange horizon glow, skyline with twinkling windows, shopfront signs lighting up one by one, road light trails, a work van with an orange stripe driving past, soft floating lights, vignette. Dark shade behind the text keeps it readable. 5-second loop; stops for reduce-motion users. No photos or stock images used.
+- Silver and Gold are subscriptions with a 6-month minimum term, then 1 month notice (owner decision 2026-10-01). Set-up fees kept.
+- Hero headline (2026-10-01): "Websites, NFC cards and videos for local businesses", slogan moved above it; "What we do" tiles added under the hero; one-line summary on each package (Get online / We look after it for you / Grow with video).

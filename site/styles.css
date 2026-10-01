@@ -311,3 +311,15 @@ p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
   .cs-win, .cs-sign, .cs-trail, .cs-van, .cs-bokeh { animation: none; }
   .cs-sign { opacity: .95; }
 }
+
+/* "What we do" service tiles under the hero (owner request 2026-10-01: clearer at a glance) */
+.services-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 20px 0; }
+.svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.svc-tile { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--ink); background: #fff; transition: border-color .15s, box-shadow .15s; }
+.svc-tile:hover { border-color: var(--orange); box-shadow: 0 4px 14px rgba(10,42,94,.08); }
+.svc-tile svg { flex: none; color: var(--orange-text); }
+.svc-tile strong { display: block; font-size: 1rem; }
+.svc-tile small { display: block; color: var(--muted); font-size: .85rem; line-height: 1.35; }
+@media (max-width: 1000px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .svc-tile { padding: 12px 10px; gap: 10px; } .svc-tile small { font-size: .8rem; } }
+.pkg-sum { margin: -4px 0 10px; font-weight: 600; color: var(--ink) !important; }

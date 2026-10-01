@@ -56,7 +56,7 @@ If a written quote or package description says something different, the quote wi
 ## 9. Website maintenance
 1. Maintenance is monthly and includes: a monthly check of the site, a backup, watching your SSL certificate (the padlock that makes the site secure) and your domain renewal, and up to **2** small content edits per month.
 2. It does not include new pages or redesigns. These can be quoted separately, as can new features and fixing problems caused by someone else editing the site.
-3. There is no minimum term. Either of us can end maintenance with one month's notice in writing. You pay up to the end of the notice period.
+3. Maintenance bought on its own has no minimum term. Silver and Gold packages are monthly subscriptions with a **6-month minimum term**. After the minimum term (or at any time for maintenance on its own), either of us can end it with one month's notice in writing. You pay up to the end of the minimum term or the notice period, whichever is later.
 4. We take reasonable care to keep your site secure, but we cannot guarantee it will never be hacked or go offline, especially where the cause is a hosting or third-party provider.
 5. If a website is not on our maintenance plan, you (or someone you choose) are responsible for keeping it updated and backed up.
 
@@ -77,6 +77,7 @@ If a written quote or package description says something different, the quote wi
 7. **Ownership.** Once you have paid in full, you may use the finished design for your business. We may show it in our portfolio unless you tell us in writing before the job starts that you do not want this.
 
 ## 12. Packages
+Current packages: Bronze £499 one-off; Silver £499 set-up + £200 a month; Gold £699 set-up + £300 a month. Silver and Gold have a 6-month minimum term (see section 9.3).
 1. A package includes only what is listed for it at the time you accept the quote.
 2. Items in a package that are not used are not refundable or exchangeable for cash.
 3. Upgrading to a higher package is possible. We will quote the price difference. **[Decide if downgrades are allowed and when.]**
