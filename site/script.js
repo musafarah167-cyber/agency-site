@@ -41,9 +41,18 @@ form.addEventListener("submit", (e) => {
   const d = new FormData(form);
   const name = (d.get("name") || "").trim();
   const contact = (d.get("contact") || "").trim();
-  if (!name || !contact) {
+  // Mark empty required fields and move focus to the first one, so screen reader and keyboard users know what to fix
+  const missing = [];
+  ["name", "contact"].forEach((field) => {
+    const input = form.elements[field];
+    const empty = !(d.get(field) || "").trim();
+    input.setAttribute("aria-invalid", empty ? "true" : "false");
+    if (empty) missing.push(input);
+  });
+  if (missing.length) {
     errorBox.textContent = "Please enter your name and a phone number or email.";
     errorBox.hidden = false;
+    missing[0].focus();
     return;
   }
   errorBox.hidden = true;
@@ -56,6 +65,10 @@ form.addEventListener("submit", (e) => {
 
 // Respect "reduce motion": stop the hero SVG animation (CSS alone cannot pause SVG motion)
 const signal = document.querySelector(".signal-bg");
-if (signal && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  signal.pauseAnimations();
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+function applyMotionSetting() {
+  if (!signal) return;
+  if (reduceMotion.matches) signal.pauseAnimations(); else signal.unpauseAnimations();
 }
+applyMotionSetting();
+reduceMotion.addEventListener("change", applyMotionSetting);

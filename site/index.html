@@ -10,6 +10,12 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0a2a5e">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- og:image must become a full https:// address once the domain exists (see docs/TODO.md) -->
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -132,6 +138,20 @@
       <a class="svc-tile" href="#branding"><svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M3 22V10h15l5 5h6v7z"/><circle cx="9" cy="23" r="2.5"/><circle cx="23" cy="23" r="2.5"/></svg><span><strong>Van &amp; uniform logos</strong><small>Designed by us, printed for you</small></span></a>
   </div>
 </section>
+
+<section class="section alt why" aria-labelledby="why-title">
+  <div class="container">
+    <p class="eyebrow">Why Clear Signs</p>
+    <h2 id="why-title">Straightforward from start to finish</h2>
+    <div class="grid four why-grid">
+      <article class="card"><h3>Free quotes, clear prices</h3><p>Our package prices are on this page. Everything else gets a free quote, valid for 30 days.</p></article>
+      <article class="card"><h3>You approve it first</h3><p>You see and approve your website, video or design before it goes live or goes to print.</p></article>
+      <article class="card"><h3>You own your website</h3><p>Your domain and hosting are in your name. If you ever leave, your website comes with you.</p></article>
+      <article class="card"><h3>One person to talk to</h3><p>Call or WhatsApp one number for everything. On Silver and Gold we reply within 24 hours.</p></article>
+    </div>
+  </div>
+</section>
+
 
 <section id="nfc" class="section">
   <div class="container">
@@ -282,6 +302,10 @@
     <details><summary>What does website maintenance include?</summary><p>A monthly check of your site, a backup, keeping an eye on your security certificate and domain renewal, and up to 2 small text or photo edits a month. New pages and redesigns are quoted separately. On Silver and Gold there is a 6-month minimum, then you can cancel with one month&#39;s notice.</p></details>
     <details><summary>How long does a website take?</summary><p>Usually 1 to 7 days, depending on how complex the site is. We confirm the timescale in your quote. The clock starts once we have your content (text, logo and photos).</p></details>
     <details><summary>Can I buy a mix of services?</summary><p>Yes. You can buy any service on its own, or ask us for a quote that combines several.</p></details>
+    <details><summary>Do I own my website?</summary><p>Yes. Your domain and hosting are set up in your name, and we are given access to look after them. If you stop working with us, the website stays yours.</p></details>
+    <details><summary>Is there a contract for Silver and Gold?</summary><p>Silver and Gold are monthly subscriptions with a 6-month minimum. After that you can cancel any time with one month&#39;s notice. Bronze is a one-off payment.</p></details>
+    <details><summary>How do I pay?</summary><p>By bank transfer or card. Websites, videos and designs need a 50% deposit to start, with the rest due before the work goes live or to print. NFC card orders are paid in full when you order.</p></details>
+    <details><summary>Do you print and fit van graphics?</summary><p>Yes. We design your van and uniform logos ourselves, and arrange the printing (and fitting for vans) for you. You approve a proof before anything is printed.</p></details>
   </div>
 </section>
 
@@ -291,8 +315,8 @@
     <h2>Get a free quote</h2>
     <p class="section-intro">Fill this in and it opens WhatsApp with your message ready to send. Prefer to talk? Call <a href="tel:+447405535846">07405 535846</a>.</p>
     <form id="quote-form" novalidate>
-      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-      <label>Phone or email<input type="text" name="contact" required autocomplete="tel"></label>
+      <label>Your name<input type="text" name="name" required autocomplete="name" aria-describedby="form-error"></label>
+      <label>Phone or email<input type="text" name="contact" required autocomplete="on" inputmode="text" aria-describedby="form-error"></label>
       <label>What are you interested in?
         <select name="interest">
           <option>Blank NFC cards</option>
@@ -319,17 +343,27 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="container footer-inner footer-cols">
     <div>
       <strong>Clear Signs</strong>
-      <p>NFC cards, websites &amp; video content.</p>
+      <p>Websites, NFC cards, videos, and van and uniform logo designs for local businesses.</p>
     </div>
+    <nav aria-label="Services">
+      <strong>Services</strong>
+      <a href="#nfc">NFC cards</a>
+      <a href="#websites">Websites</a>
+      <a href="#video">Videos</a>
+      <a href="#branding">Van &amp; uniform logos</a>
+      <a href="#packages">Packages and prices</a>
+    </nav>
     <div>
-      <a href="tel:+447405535846">07405 535846</a><br>
-      <a href="mailto:fmusa00@outlook.com">fmusa00@outlook.com</a><br>
+      <strong>Contact</strong>
+      <a href="tel:+447405535846">07405 535846</a>
+      <a href="mailto:fmusa00@outlook.com">fmusa00@outlook.com</a>
       <a href="https://wa.me/447405535846" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#contact">Get a free quote</a>
     </div>
-    <p class="small">&copy; <span id="year">2026</span> Clear Signs.</p>
+    <p class="small">&copy; <span id="year">2026</span> Clear Signs. Run by Farah Musa, sole trader.</p>
   </div>
 </footer>
 

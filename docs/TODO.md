@@ -70,6 +70,8 @@ CAN BE PLACEHOLDER FOR NOW
 - [ ] 3. Private testing area so customer sites are approved before going live
 
 ## G. Site build (Claude)
+- [x] Added 2026-10-01: "Why Clear Signs" section, 4 extra FAQs, fuller footer, form error focus fix, live reduce-motion, 404 page, share image (og-image.png), phone home-screen icon.
+- [ ] At launch (needs the domain): make og:image a full https:// address, add canonical link, robots.txt and sitemap.xml, noindex on staging.
 - [x] Local back end prototype for emailing enquiries (backend/, dry-run, 14 tests pass). Not deployed.
 - [ ] After hosting is set up: wire the quote form to the enquiry handler (steps in docs/backend/HANDOFF.md), choose the email/form service (owner opens the account), update the note under the form and the privacy policy. Keep WhatsApp as the fallback.
 - [ ] At deploy: make sure visitors get updated CSS/JS after changes (cache settings or versioned file names). Seen locally: a browser kept an old styles.css.

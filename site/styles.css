@@ -323,3 +323,16 @@ p a[href^="tel:"] { display: inline-block; padding: 12px 2px; margin: -12px 0; }
 @media (max-width: 1000px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .svc-tile { padding: 12px 10px; gap: 10px; } .svc-tile small { font-size: .8rem; } }
 .pkg-sum { margin: -4px 0 10px; font-weight: 600; color: var(--ink) !important; }
+
+/* why section, footer columns, form errors (2026-10-01) */
+.why-grid .card h3 { font-size: 1.05rem; }
+.why-grid .card p { margin: 0; }
+.footer-cols { grid-template-columns: 1.4fr 1fr 1fr; }
+.footer-cols > div, .footer-cols > nav { display: flex; flex-direction: column; gap: 6px; }
+.footer-cols strong { color: #fff; margin-bottom: 4px; }
+.footer-cols a { text-decoration: none; }
+.footer-cols a:hover { text-decoration: underline; }
+input[aria-invalid="true"] { border-color: #b00020; box-shadow: 0 0 0 1px #b00020; }
+@media (max-width: 820px) {
+  .footer-cols { grid-template-columns: 1fr; }
+}
