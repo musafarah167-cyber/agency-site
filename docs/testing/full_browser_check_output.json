@@ -1,0 +1,927 @@
+[
+ [
+  "PASS",
+  "375px no sideways scroll",
+  ""
+ ],
+ [
+  "PASS",
+  "375px no element wider than screen",
+  ""
+ ],
+ [
+  "PASS",
+  "375px text contrast (AA)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px tap targets at least 44px",
+  ""
+ ],
+ [
+  "PASS",
+  "375px focus not hidden under header",
+  ""
+ ],
+ [
+  "PASS",
+  "375px no skipped heading levels",
+  ""
+ ],
+ [
+  "PASS",
+  "375px menu opens, Escape closes (focus returns), link click closes",
+  ""
+ ],
+ [
+  "PASS",
+  "375px quote form: empty submit marks fields, focuses first, sends nothing",
+  ""
+ ],
+ [
+  "PASS",
+  "375px quote form: valid submit builds WhatsApp link",
+  ""
+ ],
+ [
+  "PASS",
+  "375px only the right phone/WhatsApp numbers",
+  ""
+ ],
+ [
+  "PASS",
+  "375px 'What we do' tiles link to real sections",
+  ""
+ ],
+ [
+  "PASS",
+  "375px console errors / failed requests",
+  ""
+ ],
+ [
+  "PASS",
+  "375px 404 page has h1 and a way home",
+  ""
+ ],
+ [
+  "PASS",
+  "375px 404 page no sideways scroll",
+  ""
+ ],
+ [
+  "PASS",
+  "375px 404 console errors",
+  ""
+ ],
+ [
+  "PASS",
+  "768px no sideways scroll",
+  ""
+ ],
+ [
+  "PASS",
+  "768px no element wider than screen",
+  ""
+ ],
+ [
+  "PASS",
+  "768px text contrast (AA)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px tap targets at least 44px",
+  ""
+ ],
+ [
+  "PASS",
+  "768px focus not hidden under header",
+  ""
+ ],
+ [
+  "PASS",
+  "768px no skipped heading levels",
+  ""
+ ],
+ [
+  "PASS",
+  "768px menu opens, Escape closes (focus returns), link click closes",
+  ""
+ ],
+ [
+  "PASS",
+  "768px quote form: empty submit marks fields, focuses first, sends nothing",
+  ""
+ ],
+ [
+  "PASS",
+  "768px quote form: valid submit builds WhatsApp link",
+  ""
+ ],
+ [
+  "PASS",
+  "768px only the right phone/WhatsApp numbers",
+  ""
+ ],
+ [
+  "PASS",
+  "768px 'What we do' tiles link to real sections",
+  ""
+ ],
+ [
+  "PASS",
+  "768px console errors / failed requests",
+  ""
+ ],
+ [
+  "PASS",
+  "768px 404 page has h1 and a way home",
+  ""
+ ],
+ [
+  "PASS",
+  "768px 404 page no sideways scroll",
+  ""
+ ],
+ [
+  "PASS",
+  "768px 404 console errors",
+  ""
+ ],
+ [
+  "PASS",
+  "finder result 'gold' prices allowed",
+  ""
+ ],
+ [
+  "PASS",
+  "finder result 'silver' prices allowed",
+  ""
+ ],
+ [
+  "PASS",
+  "finder result 'bronze' prices allowed",
+  ""
+ ],
+ [
+  "PASS",
+  "finder result 'nfc' prices allowed",
+  ""
+ ],
+ [
+  "PASS",
+  "finder result 'video' prices allowed",
+  ""
+ ],
+ [
+  "PASS",
+  "finder result 'design' prices allowed",
+  ""
+ ],
+ [
+  "NOTE",
+  "finder result texts",
+  "{\"gold\": \"Gold | £699 set-up + £300 a month (6-month minimum) | Everything in Silver, plus 2 videos a month and 5 custom NFC cards. Filming travel is charged at 80p per mile, there and back.\", \"silver\": \"Silver | £499 set-up + £175 a month (6-month minimum) | Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.\", \"bronze\": \"Bronze | £499 one-off | A professional website and 4 plain NFC cards. Ideal if you just need to get online.\", \"nfc\": \"NFC cards on their own | £30 plain or £50 custom, per card | No package needed. Use the price calculator in the NFC section to see your total.\", \"video\": \"Videos on their own | Quoted per job | Every filming job is different (location and filming time), so we give you a free quote. Travel is charged at 80p per mile, there and back.\", \"design\": \"Van or uniform design | Quoted per job | Designed by"
+ ],
+ [
+  "PASS",
+  "1280px no sideways scroll",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px no element wider than screen",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px text contrast (AA)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px focus not hidden under header",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px no skipped heading levels",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px quote form: empty submit marks fields, focuses first, sends nothing",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px quote form: valid submit builds WhatsApp link",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px only the right phone/WhatsApp numbers",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px 'What we do' tiles link to real sections",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px console errors / failed requests",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px 404 page has h1 and a way home",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px 404 page no sideways scroll",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px 404 console errors",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '1' -> £30, bulk=False, field after leaving=1",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '9' -> £270, bulk=False, field after leaving=9",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '10' -> £300, bulk=True, field after leaving=10",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £50 x '10' -> £500, bulk=True, field after leaving=10",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £50 x '999' -> £49,950, bulk=True, field after leaving=999",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '1000' -> £29,970, bulk=True, field after leaving=999",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '0' -> £30, bulk=False, field after leaving=1",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '-5' -> £30, bulk=False, field after leaving=1",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £50 x '' -> £50, bulk=False, field after leaving=1",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator £30 x '2.5' -> £60, bulk=False, field after leaving=2",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator 'Order these cards' fills the quote form",
+  ""
+ ],
+ [
+  "PASS",
+  "calculator stepper stops at 1 and 999",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px keyboard: first Tab stop is 'Skip to content'",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px keyboard: every stop shows a visible focus ring",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px keyboard: no stop is left off-screen",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px keyboard: focus never falls back to the page body while tabbing",
+  ""
+ ],
+ [
+  "NOTE",
+  "1280px keyboard: 59 Tab stops in a full lap",
+  "Skip to content > Clear Signs > NFC Cards > Websites > Video > Uniforms & Vans > Packages > FAQ > Get a quote > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmusa00@outlook.com > WhatsApp > Get a free "
+ ],
+ [
+  "PASS",
+  "1280px keyboard: skip link moves focus to main content",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px finder: reachable with Tab",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px finder: Enter on 'A website (and more)' opens question 2 and focus moves into it",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px finder: Enter opens question 3 and focus moves into it",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px finder: Space on 'No, just the website' shows Silver and focus goes to the result heading",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px finder: next Tab stop is 'Get a quote'",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px finder: Enter on 'Get a quote' jumps to the form with 'Silver package' selected",
+  ""
+ ],
+ [
+  "FAIL",
+  "1280px finder: after 'Start again' via keyboard, focus stays in the finder (not lost)",
+  "focus is on BODY: keyboard and screen reader users lose their place"
+ ],
+ [
+  "PASS",
+  "1280px calculator: reachable with Tab",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: arrow key switches to Custom (£50)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: Tab goes to the minus button",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: Tab goes to the quantity box",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: typing 12 gives £600 and the bulk note (box shows '12')",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: Tab goes to the plus button",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: Enter on plus adds one card (£650)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: next stop is 'Order these cards'",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px calculator: Enter on order fills the form",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px demo: card button reachable with Tab",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px demo: card button shows a focus ring",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px demo: Enter 'taps' the card and the status text updates",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px demo: Space resets it",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px demo: the fake phone screen has no tab stops",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px keyboard walkthrough console errors",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: first Tab stop is 'Skip to content'",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: every stop shows a visible focus ring",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: no stop is left off-screen",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: focus never falls back to the page body while tabbing",
+  ""
+ ],
+ [
+  "NOTE",
+  "375px keyboard: 54 Tab stops in a full lap",
+  "Skip to content > Clear Signs > Menu > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmusa00@outlook.com > WhatsApp > Get a free quote > Chat on WhatsApp > BODY > Skip to content"
+ ],
+ [
+  "PASS",
+  "375px keyboard: skip link moves focus to main content",
+  ""
+ ],
+ [
+  "PASS",
+  "375px finder: reachable with Tab",
+  ""
+ ],
+ [
+  "PASS",
+  "375px finder: Enter on 'A website (and more)' opens question 2 and focus moves into it",
+  ""
+ ],
+ [
+  "PASS",
+  "375px finder: Enter opens question 3 and focus moves into it",
+  ""
+ ],
+ [
+  "PASS",
+  "375px finder: Space on 'No, just the website' shows Silver and focus goes to the result heading",
+  ""
+ ],
+ [
+  "PASS",
+  "375px finder: next Tab stop is 'Get a quote'",
+  ""
+ ],
+ [
+  "PASS",
+  "375px finder: Enter on 'Get a quote' jumps to the form with 'Silver package' selected",
+  ""
+ ],
+ [
+  "FAIL",
+  "375px finder: after 'Start again' via keyboard, focus stays in the finder (not lost)",
+  "focus is on BODY: keyboard and screen reader users lose their place"
+ ],
+ [
+  "PASS",
+  "375px calculator: reachable with Tab",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: arrow key switches to Custom (£50)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: Tab goes to the minus button",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: Tab goes to the quantity box",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: typing 12 gives £600 and the bulk note (box shows '12')",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: Tab goes to the plus button",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: Enter on plus adds one card (£650)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: next stop is 'Order these cards'",
+  ""
+ ],
+ [
+  "PASS",
+  "375px calculator: Enter on order fills the form",
+  ""
+ ],
+ [
+  "PASS",
+  "375px demo: card button reachable with Tab",
+  ""
+ ],
+ [
+  "PASS",
+  "375px demo: card button shows a focus ring",
+  ""
+ ],
+ [
+  "PASS",
+  "375px demo: Enter 'taps' the card and the status text updates",
+  ""
+ ],
+ [
+  "PASS",
+  "375px demo: Space resets it",
+  ""
+ ],
+ [
+  "PASS",
+  "375px demo: the fake phone screen has no tab stops",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: third Tab stop is the Menu button",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: Enter opens the menu",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: Tab moves into the menu links",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard: Escape closes the menu and returns focus to Menu",
+  ""
+ ],
+ [
+  "PASS",
+  "375px keyboard walkthrough console errors",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: hero has 0 running animations (normal mode: 22)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: SVG (SMIL) animations paused/none",
+  ""
+ ],
+ [
+  "NOTE",
+  "375px reduce motion: running animations on the whole page",
+  "0"
+ ],
+ [
+  "PASS",
+  "768px reduce motion: hero has 0 running animations (normal mode: 22)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: SVG (SMIL) animations paused/none",
+  ""
+ ],
+ [
+  "NOTE",
+  "768px reduce motion: running animations on the whole page",
+  "0"
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: hero has 0 running animations (normal mode: 69)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: SVG (SMIL) animations paused/none",
+  ""
+ ],
+ [
+  "NOTE",
+  "1280px reduce motion: running animations on the whole page",
+  "0"
+ ],
+ [
+  "PASS",
+  "reduce motion: the demo still works (shows the result without animation)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px hero animations pause when scrolled out of view",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px hero animations resume when scrolled back",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px hero frame timing over 6 s (fast Mac, headless)",
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 69 hero animations running"
+ ],
+ [
+  "PASS",
+  "375px hero animations pause when scrolled out of view",
+  ""
+ ],
+ [
+  "PASS",
+  "375px hero animations resume when scrolled back",
+  ""
+ ],
+ [
+  "PASS",
+  "375px hero frame timing over 6 s (fast Mac, headless)",
+  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms; 22 hero animations running"
+ ],
+ [
+  "PASS",
+  "375px slanted hero does not clip buttons, text, card or caption (7 samples)",
+  ""
+ ],
+ [
+  "NOTE",
+  "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
+  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
+ ],
+ [
+  "PASS",
+  "375px illustration captions not covered, nothing sticks out",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reveal: after jumping straight to the bottom nothing on screen is invisible (12 elements fade in)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reveal: after scrolling through the page every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "375px anchor jumps (7 targets): heading below the header, content visible",
+  ""
+ ],
+ [
+  "NOTE",
+  "375px anchor targets tested",
+  "#nfc #websites #video #branding #packages #faq #contact"
+ ],
+ [
+  "PASS",
+  "375px header slims when scrolled (57px) and the page's scroll offset (72px) is at least that tall",
+  ""
+ ],
+ [
+  "FAIL",
+  "375px print: no section is invisible when printed straight from the top",
+  "12 of 12 faded-out sections would print blank"
+ ],
+ [
+  "PASS",
+  "768px slanted hero does not clip buttons, text, card or caption (7 samples)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px illustration captions not covered, nothing sticks out",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reveal: after jumping straight to the bottom nothing on screen is invisible (11 elements fade in)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reveal: after scrolling through the page every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "768px anchor jumps (7 targets): heading below the header, content visible",
+  ""
+ ],
+ [
+  "NOTE",
+  "768px anchor targets tested",
+  "#nfc #websites #video #branding #packages #faq #contact"
+ ],
+ [
+  "PASS",
+  "768px header slims when scrolled (57px) and the page's scroll offset (72px) is at least that tall",
+  ""
+ ],
+ [
+  "FAIL",
+  "768px print: no section is invisible when printed straight from the top",
+  "11 of 11 faded-out sections would print blank"
+ ],
+ [
+  "PASS",
+  "1280px slanted hero does not clip buttons, text, card or caption (7 samples)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px illustration captions not covered, nothing sticks out",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reveal: after jumping straight to the bottom nothing on screen is invisible (10 elements fade in)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reveal: after scrolling through the page every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px anchor jumps (7 targets): heading below the header, content visible",
+  ""
+ ],
+ [
+  "NOTE",
+  "1280px anchor targets tested",
+  "#nfc #websites #video #branding #packages #faq #contact"
+ ],
+ [
+  "PASS",
+  "1280px header slims when scrolled (57px) and the page's scroll offset (72px) is at least that tall",
+  ""
+ ],
+ [
+  "FAIL",
+  "1280px print: no section is invisible when printed straight from the top",
+  "10 of 10 faded-out sections would print blank"
+ ],
+ [
+  "PASS",
+  "JavaScript off: every section is visible",
+  ""
+ ],
+ [
+  "PASS",
+  "JavaScript off: page text is present",
+  ""
+ ],
+ [
+  "PASS",
+  "JavaScript off: footer year is filled (fallback text)",
+  ""
+ ],
+ [
+  "NOTE",
+  "JavaScript off: quote form, calculator, finder, menu and demo need JavaScript (the phone, WhatsApp and email links still work)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: scroll fade-in is off (0 elements get the reveal class)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)",
+  ""
+ ],
+ [
+  "PASS",
+  "375px reduce motion: all sections visible at once",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: scroll fade-in is off (0 elements get the reveal class)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)",
+  ""
+ ],
+ [
+  "PASS",
+  "768px reduce motion: all sections visible at once",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: scroll fade-in is off (0 elements get the reveal class)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: 0 running animations anywhere on the page (incl. video-player mock-up)",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px reduce motion: all sections visible at once",
+  ""
+ ],
+ [
+  "PASS",
+  "1280px scrolling the whole page (fast Mac, headless)",
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+ ],
+ [
+  "PASS",
+  "375px scrolling the whole page (fast Mac, headless)",
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+ ],
+ [
+  "PASS",
+  "only confirmed prices appear on the page",
+  ""
+ ],
+ [
+  "NOTE",
+  "all £ amounts on the page",
+  "£175, £30, £300, £499, £50, £699"
+ ],
+ [
+  "PASS",
+  "filming travel is 80p per mile everywhere",
+  ""
+ ],
+ [
+  "PASS",
+  "package card Bronze shows £499 and one-off",
+  ""
+ ],
+ [
+  "PASS",
+  "package card Silver shows £499 and £175",
+  ""
+ ],
+ [
+  "PASS",
+  "package card Gold shows £699 and £300",
+  ""
+ ],
+ [
+  "NOTE",
+  "placeholders still visible",
+  "['[CLIENT: real footage needed]', '[CLIENT: add real project examples and reviews here. None have been invented.]']"
+ ]
+]

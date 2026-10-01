@@ -4,7 +4,7 @@
   const de = document.documentElement, r = { vw: innerWidth };
   r.scrollW = de.scrollWidth; r.hscroll = de.scrollWidth > innerWidth;
   r.overflowing = [...document.querySelectorAll('body *')].filter(e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.right > innerWidth + 1 && !e.closest('svg') && !e.closest('.hero'); }) // hero clips its own animated scenery; real sideways scroll is the hscroll test above.slice(0, 8).map(e => e.tagName + '.' + (e.getAttribute('class') || ''));
-  r.tapUnder44 = [...document.querySelectorAll('a,button,summary,input,select,textarea')].filter(e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height < 44 && !e.classList.contains('skip-link') && getComputedStyle(e).position !== 'absolute'; }).map(e => e.tagName + ' "' + (e.textContent || e.name).trim().slice(0, 28) + '" h=' + Math.round(e.getBoundingClientRect().height));
+  r.tapUnder44 = [...document.querySelectorAll('a,button,summary,input,select,textarea')].filter(e => { if (!e.checkVisibility()) return false; if (e.type === 'radio' || e.type === 'checkbox') e = e.closest('label') || e; const b = e.getBoundingClientRect(); return b.width > 0 && b.height < 44 && !e.classList.contains('skip-link') && getComputedStyle(e).position !== 'absolute'; }).map(e => e.tagName + ' "' + (e.textContent || e.name).trim().slice(0, 28) + '" h=' + Math.round(e.getBoundingClientRect().height));
   const toggle = document.querySelector('.nav-toggle'), nav = document.getElementById('nav');
   if (getComputedStyle(toggle).display !== 'none') {
     toggle.click(); const open = getComputedStyle(nav).display;
@@ -19,7 +19,7 @@
   const bad = {}; document.querySelectorAll('body *').forEach(el => {
     if (el.closest('svg')) return;
     const t = [...el.childNodes].filter(n => n.nodeType === 3 && n.textContent.trim()).map(n => n.textContent.trim()).join(' '); if (!t) return;
-    const cs = getComputedStyle(el); if (cs.display === 'none' || !el.checkVisibility()) return;
+    const cs = getComputedStyle(el); if (cs.display === 'none' || !el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) return;
     let op = 1, p = el; while (p) { const animated = p.getAnimations().some(a => (a.effect.getKeyframes ? a.effect.getKeyframes() : []).some(k => 'opacity' in k)); if (!animated) op *= +getComputedStyle(p).opacity; p = p.parentElement; } // fades that are animated are measured at full opacity
     const b = bg(el), f = cs.color.match(/[\d.]+/g).slice(0, 3).map(Number).map((v, i) => v * op + b[i] * (1 - op));
     const x = L(f), y = L(b), ratio = (Math.max(x, y) + .05) / (Math.min(x, y) + .05);
@@ -28,7 +28,7 @@
   });
   r.contrastFails = bad;
   const hb = document.querySelector('.site-header').getBoundingClientRect().bottom; r.focusHiddenUnderHeader = [];
-  document.querySelectorAll('main a,main button,main summary,main input,main select,main textarea').forEach(el => { el.focus(); if (el.getBoundingClientRect().top < hb) r.focusHiddenUnderHeader.push(el.textContent.trim().slice(0, 20)); });
+  document.querySelectorAll('main a,main button,main summary,main input,main select,main textarea').forEach(el => { if (!el.checkVisibility()) return; el.focus(); if (el.getBoundingClientRect().top < hb) r.focusHiddenUnderHeader.push(el.textContent.trim().slice(0, 20)); });
   document.activeElement.blur();
   const fl = document.querySelector('.float-wa').getBoundingClientRect(); r.floatBtn = Math.round(fl.width) + 'x' + Math.round(fl.height);
   const ctas = [...document.querySelectorAll('.hero .cta-row .btn')].map(b => Math.round(b.getBoundingClientRect().width)); r.heroButtonWidths = ctas;
