@@ -30,7 +30,7 @@ Branch: `backend`. Date: 2026-09-30. Status: **ready for the coordinator to revi
 US form service free tier OK at first; Stripe payment links + bank transfer; keep non-job enquiries 12 months; prototype approved. Coordinator to record in DECISIONS.md.
 
 ## If the form is later wired to this (front end session; I did not touch `site/`)
-1. Add a hidden honeypot field inside the form, hidden from people and screen readers: `<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">` inside a visually hidden wrapper (CSS class, not `display:none` alone... `display:none` on the wrapper is fine for most bots; keep it simple).
+1. Add a honeypot field inside the form that people never see: `<div hidden><input type="text" name="website" tabindex="-1" autocomplete="off"></div>`.
 2. In `site/script.js`, after validation, `fetch("/api/enquiry", {method:"POST", headers:{"content-type":"application/json"}, body: JSON.stringify(Object.fromEntries(new FormData(form)))})`; on success show a thank-you and keep opening WhatsApp as the fallback; on error show the message and offer WhatsApp.
 3. Change the note under the form and the privacy policy wording ("details go straight into a WhatsApp message" would no longer be the whole story).
 4. Field names already match the prototype: `name`, `contact`, `interest`, `message`, `website`.
