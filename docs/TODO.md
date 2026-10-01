@@ -3,6 +3,14 @@
 Legend: [you] only the owner can do it, [claude] Claude can do it, [both] we do it together.
 Update this file whenever something is done or added.
 
+## Things the owner said will change (update everywhere when they do)
+- [ ] Phone number 07405 535846 (temporary): site buttons, WhatsApp links, script.js, footer, terms, privacy, templates.
+- [ ] Email fmusa00@outlook.com (temporary): footer, terms, privacy, templates. Ideally a domain email.
+- [ ] Business name "Clear Signs": trade mark check pending; may change if taken.
+- [ ] Sole trader -> limited company "Clear Signs" later: add company name, number, registered office to site footer, invoices, terms.
+- [ ] Real work examples (owner will send): "Our work" section, with customer permission.
+- [ ] Example NFC card (made-up "Brookvale") and demo: replace with a real customer design once one agrees in writing.
+
 ## A. Business setup (all [you]; nothing here is legal or tax advice)
 See `docs/business-setup-guide.md` for official sources and figures (checked 2026-09-29). No income yet (2026-09-29), so the 5 October 2026 HMRC deadline does not apply.
 - [ ] Trade mark check for "Clear Signs": UK IPO register, Companies House, Google. Do before buying a domain, logo or printed cards.
