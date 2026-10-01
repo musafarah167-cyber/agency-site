@@ -65,8 +65,6 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .hero-card-caption { text-align: left; max-width: 360px; margin-inline: auto; padding-left: 4px; font-size: .85rem; color: #c9d8f0; margin-top: 18px; }
 
 /* sections */
-.trust { border-bottom: 1px solid var(--line); }
-.trust-list { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 18px 0; font-weight: 600; color: var(--muted); font-size: .95rem; }
 .section { padding: 72px 0; }
 .section.alt { background: var(--alt); }
 .section-intro { color: var(--muted); max-width: 42em; margin-bottom: 32px; }
@@ -81,7 +79,6 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .ticks li { padding-left: 26px; position: relative; margin-bottom: 6px; }
 .ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--orange-text); font-weight: 700; }
 .price-tag { font-size: 1.8rem; font-weight: 800; color: var(--ink) !important; }
-.badge { position: absolute; top: -12px; right: 16px; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; }
 .steps { padding-left: 20px; max-width: 42em; }
 .steps li { margin-bottom: 12px; }
 

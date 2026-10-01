@@ -670,9 +670,9 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "1280px hero frame timing over 6 s (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 69 hero animations running"
+  "30 fps, 95th percentile 33.4 ms, worst 33.5 ms, 24 frames over 33 ms; 69 hero animations running"
  ],
  [
   "PASS",
@@ -685,9 +685,9 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "375px hero frame timing over 6 s (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 22 hero animations running"
+  "30 fps, 95th percentile 33.4 ms, worst 33.5 ms, 21 frames over 33 ms; 22 hero animations running"
  ],
  [
   "PASS",
@@ -697,12 +697,12 @@
  [
   "NOTE",
   "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
-  "tr-phone \"\" bottom 1116 cut 1043 x 561 tr 954-; tr-screen \"\" bottom 1103 cut 1044 x 547 tr 967-"
+  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
  ],
  [
-  "PASS",
+  "FAIL",
   "375px illustration captions not covered, nothing sticks out",
-  ""
+  "['illus illus-van is-offscreen: [object SVGAnimatedString] sticks out right by 33px']"
  ],
  [
   "PASS",
@@ -740,9 +740,9 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "768px illustration captions not covered, nothing sticks out",
-  ""
+  "['illus illus-van is-offscreen: [object SVGAnimatedString] sticks out right by 89px']"
  ],
  [
   "PASS",
@@ -755,9 +755,9 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "768px anchor jumps (7 targets): heading below the header, content visible",
-  ""
+  "[{\"h\": \"#video\", \"headerBottom\": 57, \"headingTop\": 110, \"headingText\": \"Video content\", \"contOpacity\": 1, \"visibleHiddenCount\": 1, \"scrolledHeader\": true}]"
  ],
  [
   "NOTE",
@@ -880,14 +880,14 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "1280px scrolling the whole page (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+  "30 fps, 95th percentile 33.4 ms, worst 33.4 ms, 39 frames over 33 ms, 0 over 50 ms"
  ],
  [
-  "PASS",
+  "FAIL",
   "375px scrolling the whole page (fast Mac, headless)",
-  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+  "30 fps, 95th percentile 33.4 ms, worst 33.4 ms, 41 frames over 33 ms, 0 over 50 ms"
  ],
  [
   "PASS",

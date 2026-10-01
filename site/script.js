@@ -195,7 +195,7 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
     entries.forEach((en) => {
       if (en.isIntersecting) { en.target.classList.add("is-visible"); revealObs.unobserve(en.target); }
     });
-  }, { rootMargin: "0px 0px -10% 0px" });
+  }, { rootMargin: "0px", threshold: 0 });
   revealEls.forEach((el) => {
     // anything already on screen at load stays visible straight away
     if (el.getBoundingClientRect().top < window.innerHeight) return;
