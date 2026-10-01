@@ -18,6 +18,7 @@ Not VAT registered  (only while true; if you register for VAT, this template nee
 | Description | Qty | Unit price | Amount |
 |---|---|---|---|
 | [e.g. Deposit for website build, quote CS-2026-001] | 1 | £[X] | £[X] |
+| [Filming travel only: return trip, X miles] | [X] miles | £0.80 | £[X] |
 | | | | |
 
 Deposit already paid: £[X]

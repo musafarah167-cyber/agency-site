@@ -143,9 +143,9 @@ const finder = document.querySelector(".finder-card");
 const results = {
   bronze: { name: "Bronze", price: "£499 one-off", why: "A professional website and 4 plain NFC cards. Ideal if you just need to get online.", interest: "Bronze package" },
   silver: { name: "Silver", price: "£499 set-up + £175 a month (6-month minimum)", why: "Everything in Bronze, plus we look after your website every month and reply to your messages within 24 hours.", interest: "Silver package" },
-  gold: { name: "Gold", price: "£699 set-up + £300 a month (6-month minimum)", why: "Everything in Silver, plus 2 videos a month and 5 custom NFC cards.", interest: "Gold package" },
+  gold: { name: "Gold", price: "£699 set-up + £300 a month (6-month minimum)", why: "Everything in Silver, plus 2 videos a month and 5 custom NFC cards. Filming travel is charged at 80p per mile, there and back.", interest: "Gold package" },
   nfc: { name: "NFC cards on their own", price: "£30 plain or £50 custom, per card", why: "No package needed. Use the price calculator in the NFC section to see your total.", interest: "Custom NFC cards" },
-  video: { name: "Videos on their own", price: "Quoted per job", why: "Every filming job is different (location, travel and filming time), so we give you a free quote.", interest: "Video content" },
+  video: { name: "Videos on their own", price: "Quoted per job", why: "Every filming job is different (location and filming time), so we give you a free quote. Travel is charged at 80p per mile, there and back.", interest: "Video content" },
   design: { name: "Van or uniform design", price: "Quoted per job", why: "Designed by us, printed (and fitted for vans) for you. Price depends on the size and design.", interest: "Van logo design" },
 };
 if (finder) {
