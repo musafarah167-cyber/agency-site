@@ -176,3 +176,25 @@ if (finder) {
     if (e.target.closest(".finder-go") && chosen) fillQuote(chosen.interest);
   });
 }
+
+// Header slims and gets a shadow once the page is scrolled
+const header = document.querySelector(".site-header");
+const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// Gentle fade-up as sections scroll into view (skipped for reduce-motion users)
+if ("IntersectionObserver" in window && !reduceMotion.matches) {
+  const revealEls = document.querySelectorAll(".section > .container, .services-strip .svc-grid");
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add("is-visible"); revealObs.unobserve(en.target); }
+    });
+  }, { rootMargin: "0px 0px -10% 0px" });
+  revealEls.forEach((el) => {
+    // anything already on screen at load stays visible straight away
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    el.classList.add("reveal");
+    revealObs.observe(el);
+  });
+}
