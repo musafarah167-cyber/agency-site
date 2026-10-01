@@ -15,6 +15,8 @@ See `docs/business-setup-guide.md` for official sources and figures (checked 202
 - [ ] Get written OK from customers before showing their work in the portfolio.
 
 ## B. Online identity
+- [ ] [you] Before launch, check gov.uk / an adviser: a sole trader trading as "Clear Signs" may still have to show their name and a contact address on the website (business names and online trading rules). Owner chose to leave name and address off the site for now.
+- [ ] [you, later] If Clear Signs becomes a limited company: add company name, number and registered office to the website footer, invoices and terms.
 - [x] Private GitHub repo created and first push done (2026-09-29).
 - [ ] [both] Make GitHub login permanent: `gh` was downloaded to a temporary folder for this session only. Next session, install it properly (ask first) or log in again before pushing.
 - [ ] [you] Buy domain (ASK first, costs money): e.g. clearsigns.co.uk if the name is clear.
