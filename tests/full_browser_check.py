@@ -89,7 +89,7 @@ ILLUS = """(()=>{const out=[];document.querySelectorAll('.illus').forEach(f=>{co
     trs.forEach(t=>{const ox=Math.min(t.right,r.right)-Math.max(t.left,r.left),oy=Math.min(t.bottom,r.bottom)-Math.max(t.top,r.top);
       if(ox>1&&oy>1)out.push(f.className+': caption text overlaps '+m.className+' ('+Math.round(ox)+'x'+Math.round(oy)+'px)')})});
   if(cap.right>innerWidth+1||cap.left<-1)out.push(f.className+': caption off screen');
-  f.querySelectorAll('*').forEach(m=>{const r=m.getBoundingClientRect();if(r.width&&r.right>innerWidth+1)out.push(f.className+': '+m.className+' sticks out right by '+Math.round(r.right-innerWidth)+'px')})});
+  f.querySelectorAll('*').forEach(m=>{if(m.closest('svg'))return;/* moving SVG parts are clipped by their frame */const r=m.getBoundingClientRect();if(r.width&&r.right>innerWidth+1)out.push(f.className+': '+m.className+' sticks out right by '+Math.round(r.right-innerWidth)+'px')})});
   return [...new Set(out)]})()"""
 
 ANCHORS = """[...new Set([...document.querySelectorAll('a[href^="#"]')].map(a=>a.getAttribute('href')).filter(h=>h.length>1&&h!=='#top'))]"""
@@ -411,8 +411,9 @@ def main():
             # menu with keyboard on phone
             if w == 375:
                 c.open(base, w, 812)
-                c.key("Tab"); c.key("Tab"); c.key("Tab")
-                ok(c.js("document.activeElement.classList.contains('nav-toggle')"), "375px keyboard: third Tab stop is the Menu button", active(c)["text"])
+                # order since 2026-10-06: skip link, language menu, logo, Menu button
+                c.key("Tab"); c.key("Tab"); c.key("Tab"); c.key("Tab")
+                ok(c.js("document.activeElement.classList.contains('nav-toggle')"), "375px keyboard: fourth Tab stop (after skip link, language menu, logo) is the Menu button", active(c)["text"])
                 c.key("Enter")
                 ok(c.js("document.getElementById('nav').classList.contains('open')"), "375px keyboard: Enter opens the menu")
                 c.key("Tab")

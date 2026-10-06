@@ -331,8 +331,8 @@
  ],
  [
   "NOTE",
-  "1280px keyboard: 59 Tab stops in a full lap",
-  "Skip to content > Clear Signs > NFC Cards > Websites > Video > Uniforms & Vans > Packages > FAQ > Get a quote > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmusa00@outlook.com > WhatsApp > Get a free "
+  "1280px keyboard: 60 Tab stops in a full lap",
+  "Skip to content > English العربية Español Français اردو > Clear Signs > NFC Cards > Websites > Video > Uniforms & Vans > Packages > FAQ > Get a quote > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmus"
  ],
  [
   "PASS",
@@ -471,8 +471,8 @@
  ],
  [
   "NOTE",
-  "375px keyboard: 54 Tab stops in a full lap",
-  "Skip to content > Clear Signs > Menu > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmusa00@outlook.com > WhatsApp > Get a free quote > Chat on WhatsApp > BODY > Skip to content"
+  "375px keyboard: 55 Tab stops in a full lap",
+  "Skip to content > English العربية Español Français اردو > Clear Signs > Menu > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmusa00@outlook.com > WhatsApp > Get a free quote > Chat on WhatsApp > BODY >"
  ],
  [
   "PASS",
@@ -586,7 +586,7 @@
  ],
  [
   "PASS",
-  "375px keyboard: third Tab stop is the Menu button",
+  "375px keyboard: fourth Tab stop (after skip link, language menu, logo) is the Menu button",
   ""
  ],
  [
@@ -670,9 +670,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "1280px hero frame timing over 6 s (fast Mac, headless)",
-  "30 fps, 95th percentile 33.4 ms, worst 33.5 ms, 24 frames over 33 ms; 69 hero animations running"
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 69 hero animations running"
  ],
  [
   "PASS",
@@ -685,9 +685,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "375px hero frame timing over 6 s (fast Mac, headless)",
-  "30 fps, 95th percentile 33.4 ms, worst 33.5 ms, 21 frames over 33 ms; 22 hero animations running"
+  "59.8 fps, 95th percentile 16.8 ms, worst 33.3 ms, 0 frames over 33 ms; 22 hero animations running"
  ],
  [
   "PASS",
@@ -695,14 +695,9 @@
   ""
  ],
  [
-  "NOTE",
-  "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
-  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
- ],
- [
-  "FAIL",
+  "PASS",
   "375px illustration captions not covered, nothing sticks out",
-  "['illus illus-van is-offscreen: [object SVGAnimatedString] sticks out right by 33px']"
+  ""
  ],
  [
   "PASS",
@@ -740,9 +735,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "768px illustration captions not covered, nothing sticks out",
-  "['illus illus-van is-offscreen: [object SVGAnimatedString] sticks out right by 89px']"
+  ""
  ],
  [
   "PASS",
@@ -755,9 +750,9 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "768px anchor jumps (7 targets): heading below the header, content visible",
-  "[{\"h\": \"#video\", \"headerBottom\": 57, \"headingTop\": 110, \"headingText\": \"Video content\", \"contOpacity\": 1, \"visibleHiddenCount\": 1, \"scrolledHeader\": true}]"
+  ""
  ],
  [
   "NOTE",
@@ -880,14 +875,14 @@
   ""
  ],
  [
-  "FAIL",
+  "PASS",
   "1280px scrolling the whole page (fast Mac, headless)",
-  "30 fps, 95th percentile 33.4 ms, worst 33.4 ms, 39 frames over 33 ms, 0 over 50 ms"
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
  ],
  [
-  "FAIL",
+  "PASS",
   "375px scrolling the whole page (fast Mac, headless)",
-  "30 fps, 95th percentile 33.4 ms, worst 33.4 ms, 41 frames over 33 ms, 0 over 50 ms"
+  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
  ],
  [
   "PASS",
