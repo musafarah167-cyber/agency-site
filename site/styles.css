@@ -587,3 +587,8 @@ html[lang="ur"] h1, html[lang="ur"] h2, html[lang="ur"] h3 { line-height: 1.7; }
 .nav-toggle { white-space: nowrap; min-width: max-content; }
 @media (max-width: 400px) { .lang-switch select { padding: 6px 4px; font-size: .85rem; } .logo { font-size: 1.05rem; } }
 html[lang="ur"] .nav-toggle, html[lang="ar"] .nav-toggle { padding: 6px 16px; overflow: visible; line-height: 1.6; font-family: inherit; }
+/* language menu sits at the top-left, before the logo (owner request 2026-10-06) */
+.lang-switch { margin-inline-start: 0; margin-inline-end: 14px; order: -1; }
+.header-inner .logo { margin-inline-end: auto; }
+[dir="rtl"] .header-inner { direction: ltr; }
+[dir="rtl"] .header-inner .nav { direction: rtl; }
