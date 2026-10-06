@@ -80,6 +80,10 @@ CAN BE PLACEHOLDER FOR NOW
 - [ ] 3. Private testing area so customer sites are approved before going live
 
 ## G. Site build (Claude)
+- [ ] [you] Before launch: have each translation (Arabic, Spanish, French, Urdu) checked by a native speaker, especially prices, payment terms and the FAQ. Translations live in site/i18n.js.
+- [ ] [claude] When English wording changes, update the same text in site/i18n.js for every language (the key is the exact English text).
+- [ ] [claude, later] For Google in other languages: separate pages per language with hreflang tags (only matters once the site is live).
+- [ ] [you, optional] More languages later, e.g. Polish, Punjabi, Romanian, Bengali.
 - [x] Added 2026-10-01: "Why Clear Signs" section, 4 extra FAQs, fuller footer, form error focus fix, live reduce-motion, 404 page, share image (og-image.png), phone home-screen icon.
 - [ ] At launch (needs the domain): make og:image a full https:// address, add canonical link, robots.txt and sitemap.xml, noindex on staging.
 - [x] Local back end prototype for emailing enquiries (backend/, dry-run, 14 tests pass). Not deployed.

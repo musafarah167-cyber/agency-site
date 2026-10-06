@@ -1,6 +1,66 @@
 // Business WhatsApp number in international format, digits only (no + or spaces).
 const WHATSAPP_NUMBER = "447405535846";
 
+// ---------------- Translations (English is written in the page; others live in i18n.js) ----------------
+const LANGS = { en: "ltr", ar: "rtl", es: "ltr", fr: "ltr", ur: "rtl" };
+let lang = "en";
+// Text that contains numbers which may change (phone, prices) is matched by pattern, {n} is kept as is
+const PATTERNS = [
+  [/^Call ([\d ]+)$/, "Call {n}"],
+  [/^Price: £(\d+) per card$/, "Price: £{n} per card"],
+  [/^Plain \(£(\d+) each\)$/, "Plain (£{n} each)"],
+  [/^Custom \(£(\d+) each\)$/, "Custom (£{n} each)"],
+  [/^\+ £(\d+) a month$/, "+ £{n} a month"],
+];
+function t(en) {
+  if (lang === "en" || typeof I18N === "undefined" || !I18N[lang]) return en;
+  const dict = I18N[lang];
+  if (dict[en]) return dict[en];
+  for (const [re, key] of PATTERNS) {
+    const m = en.match(re);
+    // \u2066...\u2069 keeps numbers (e.g. the phone number) left-to-right inside Arabic and Urdu text
+    if (m && dict[key]) return dict[key].replace("{n}", "\u2066" + m[1].trim() + "\u2069");
+  }
+  return en;
+}
+// Set text that the script changes later; remembers the English so it can be re-translated
+function setT(el, en) { el.dataset.en = en; el.textContent = t(en); }
+const originalText = new WeakMap();
+const originalTitle = document.title;
+const I18N_ATTRS = ["aria-label", "placeholder", "title", "alt"];
+function applyLang(code) {
+  lang = LANGS[code] ? code : "en";
+  document.documentElement.lang = lang === "en" ? "en-GB" : lang;
+  document.documentElement.dir = LANGS[lang];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => {
+      const p = n.parentElement;
+      if (!p || p.closest("script, style, #lang-select, [data-en]")) return NodeFilter.FILTER_REJECT;
+      return n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    },
+  });
+  let node;
+  while ((node = walker.nextNode())) {
+    if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+    const raw = originalText.get(node);
+    const lead = raw.match(/^\s*/)[0], trail = raw.match(/\s*$/)[0];
+    node.nodeValue = lead + t(raw.replace(/\s+/g, " ").trim()) + trail;
+  }
+  document.querySelectorAll(I18N_ATTRS.map((a) => `[${a}]`).join(",")).forEach((el) => {
+    if (el.closest("#lang-select")) return;
+    I18N_ATTRS.forEach((a) => {
+      if (!el.hasAttribute(a)) return;
+      const key = "i18n" + a.replace(/-./g, (x) => x[1].toUpperCase());
+      if (!(key in el.dataset)) el.dataset[key] = el.getAttribute(a);
+      el.setAttribute(a, t(el.dataset[key]));
+    });
+  });
+  document.querySelectorAll("[data-en]").forEach((el) => { el.textContent = t(el.dataset.en); });
+  document.title = t(originalTitle);
+  const sel = document.getElementById("lang-select");
+  if (sel) sel.value = lang;
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // Mobile menu
@@ -50,7 +110,7 @@ form.addEventListener("submit", (e) => {
     if (empty) missing.push(input);
   });
   if (missing.length) {
-    errorBox.textContent = "Please enter your name and a phone number or email.";
+    setT(errorBox, "Please enter your name and a phone number or email.");
     errorBox.hidden = false;
     missing[0].focus();
     return;
@@ -132,9 +192,9 @@ if (demoTap) {
   demoTap.addEventListener("click", () => {
     const on = !demoStage.classList.contains("tapped");
     demoStage.classList.toggle("tapped", on);
-    demoStatus.textContent = on
+    setT(demoStatus, on
       ? "The phone opened the business's own website, with call, WhatsApp and review buttons one tap away. Press the card again to reset."
-      : "Example for a made-up business. Press the card to try it.";
+      : "Example for a made-up business. Press the card to try it.");
   });
 }
 
@@ -164,12 +224,12 @@ if (finder) {
     if (opt && opt.dataset.result) {
       chosen = results[opt.dataset.result];
       steps.forEach((s) => { s.hidden = true; });
-      resultBox.querySelector(".finder-name").textContent = chosen.name;
-      resultBox.querySelector(".finder-price").textContent = chosen.price;
-      resultBox.querySelector(".finder-why").textContent = chosen.why;
+      setT(resultBox.querySelector(".finder-name"), chosen.name);
+      setT(resultBox.querySelector(".finder-price"), chosen.price);
+      setT(resultBox.querySelector(".finder-why"), chosen.why);
       const go = resultBox.querySelector(".finder-go");
       go.setAttribute("href", chosen.href || "#contact");
-      go.textContent = chosen.cta || "Get a quote";
+      setT(go, chosen.cta || "Get a quote");
       resultBox.hidden = false;
       resultBox.querySelector(".finder-name").setAttribute("tabindex", "-1");
       resultBox.querySelector(".finder-name").focus();
@@ -210,4 +270,18 @@ if ("IntersectionObserver" in window) {
     entries.forEach((en) => en.target.classList.toggle("is-offscreen", !en.isIntersecting));
   });
   document.querySelectorAll(".illus").forEach((el) => illusObs.observe(el));
+}
+
+// Language menu: read ?lang= from the address, switch instantly, keep the choice in the address (no cookies)
+const langSelect = document.getElementById("lang-select");
+const startLang = new URLSearchParams(location.search).get("lang");
+if (startLang && LANGS[startLang] && startLang !== "en") applyLang(startLang);
+if (langSelect) {
+  langSelect.value = lang;
+  langSelect.addEventListener("change", () => {
+    applyLang(langSelect.value);
+    const url = new URL(location.href);
+    if (lang === "en") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
+    history.replaceState(null, "", url);
+  });
 }
