@@ -4,7 +4,7 @@ Copy this file for each customer and keep the copy OUTSIDE the repo. Replace eve
 
 **Farah Musa trading as Clear Signs**, sole trader
 Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE
-Phone 07405 535846 (temporary)  Email fmusa00@outlook.com (temporary)
+Phone 0121 517 2760  WhatsApp 07405 535846  Email fmusa00@outlook.com (temporary)
 Not VAT registered  (only show this while true)
 
 **Quote number:** [NUMBERING SCHEME, e.g. CS-2026-001]

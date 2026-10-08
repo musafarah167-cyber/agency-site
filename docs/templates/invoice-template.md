@@ -5,7 +5,7 @@ Rules on what an invoice must show: see the gov.uk page listed in `docs/business
 
 **Farah Musa trading as Clear Signs**, sole trader
 Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE
-Phone 07405 535846 (temporary)  Email fmusa00@outlook.com (temporary)
+Phone 0121 517 2760  WhatsApp 07405 535846  Email fmusa00@outlook.com (temporary)
 Not VAT registered  (only while true; if you register for VAT, this template needs changing)
 
 **Invoice number:** [NUMBERING SCHEME: unique, in order, no gaps]
@@ -30,4 +30,4 @@ Use reference: [INVOICE NUMBER]
 Or pay by card: [CARD PAYMENT LINK, once a card provider is chosen]
 Late payment: if this invoice is not paid by the due date, work may be paused and a fixed late payment charge of £30 may be added (see our terms, section 4.4).
 
-Thank you. Questions: fmusa00@outlook.com / 07405 535846.
+Thank you. Questions: fmusa00@outlook.com / 0121 517 2760.

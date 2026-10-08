@@ -7,7 +7,7 @@ Last updated: [DATE]
 ---
 
 ## 1. Who we are
-**Clear Signs** is run by **Farah Musa**, a sole trader trading as Clear Signs, of **Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE**. We decide how your personal information is used, so we are the "controller" (the person responsible for it under UK data protection law). Contact us: **fmusa00@outlook.com**, **07405 535846** (both temporary, they may change).
+**Clear Signs** is run by **Farah Musa**, a sole trader trading as Clear Signs, of **Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE**. We decide how your personal information is used, so we are the "controller" (the person responsible for it under UK data protection law). Contact us: **fmusa00@outlook.com** (temporary, it may change), phone **0121 517 2760**, WhatsApp **07405 535846**.
 
 ## 2. What this website does with your information
 - **No accounts, no online shop, no analytics, no advertising trackers.** (Checked by reading the site code on 2026-09-29: `site/index.html` and `site/script.js` set no cookies, use no browser storage, load no third-party scripts, fonts or embeds, and send nothing to a server of ours.)

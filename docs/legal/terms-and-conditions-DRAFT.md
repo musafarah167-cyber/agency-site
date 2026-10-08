@@ -6,7 +6,7 @@ Written by Claude in plain English as a starting point. It is not legal advice. 
 ---
 
 ## 1. Who we are
-These terms apply to work done by **Clear Signs**, run by **Farah Musa**, a sole trader trading as Clear Signs, of **Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE**. Contact: **07405 535846** and **fmusa00@outlook.com** (both temporary, they may change). ("we", "us"). "You" means the customer.
+These terms apply to work done by **Clear Signs**, run by **Farah Musa**, a sole trader trading as Clear Signs, of **Unit 12, Leviss Industrial Estate, Birmingham, B33 9AE**. Contact: phone **0121 517 2760**, WhatsApp **07405 535846**, email **fmusa00@outlook.com** (email temporary, it may change). ("we", "us"). "You" means the customer.
 
 ## 2. What these terms cover
 - NFC cards (blank and custom)
@@ -84,7 +84,7 @@ Current packages: Bronze £499 one-off; Silver £499 set-up + £175 a month; Gol
 
 ## 13. Problems and complaints
 1. If something is faulty or not as agreed, tell us as soon as you notice, with photos where relevant, within **7 days** of receiving it for NFC cards, or **14 days** for everything else, and we will repair, replace or refund at our choice, as fits the problem.
-2. If you are not happy, contact **fmusa00@outlook.com** or **07405 535846** (both temporary) and we will reply within **5 working days**.
+2. If you are not happy, contact **fmusa00@outlook.com** or **0121 517 2760** and we will reply within **5 working days**.
 3. Nothing in these terms limits any legal rights you have that cannot be limited by law.
 
 ## 14. Cancelling

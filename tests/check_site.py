@@ -21,7 +21,7 @@ from pathlib import Path
 from urllib.parse import urldefrag, urljoin, urlparse
 
 SITE = Path(__file__).resolve().parent.parent / "site"
-PHONE_TEL = "tel:+447405535846"
+PHONE_TEL = "tel:+441215172760"
 WHATSAPP = "447405535846"
 PLACEHOLDER = re.compile(r"\[(CLIENT|CONFIRM|X\]|£|PROPOSED|YOUR|TODO|TBC|DECISION)", re.I)
 LAUNCH = "--launch" in sys.argv
@@ -130,7 +130,7 @@ def main():
         for line, tag, href, attrs in p.links:
             where = f"{page}:{line} <{tag}> {href}"
             if href.startswith("tel:"):
-                report("PASS" if href == PHONE_TEL else "FAIL", "tel: link uses +447405535846", where)
+                report("PASS" if href == PHONE_TEL else "FAIL", "tel: link uses +441215172760", where)
                 continue
             if href.startswith("mailto:"):
                 report("PASS" if "@" in href else "FAIL", "mailto: link has an address", where)

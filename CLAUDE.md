@@ -33,8 +33,9 @@ No backend. It validates, then opens WhatsApp with the message prefilled. Add a 
 ## Not done yet
 Real content, logo, per-service pages, domain, hosting, deployment (ask before spending money or going live).
 
-## Phone number (temporary, owner will change it)
-07405 535846. To change: search `447405535846` (tel: and wa.me links, and `WHATSAPP_NUMBER` in `site/script.js`) and `07405 535846` (display text) across `site/index.html` and `site/script.js`. WhatsApp format is international with no + or leading 0.
+## Phone numbers (owner confirmed 2026-10-08)
+- Calls: 0121 517 2760 (landline). On the site as `tel:+441215172760` and display text `0121 517 2760` in `site/index.html` (call buttons, contact intro, footer).
+- WhatsApp: 07405 535846 (mobile) stays for WhatsApp links and the quote form: `wa.me/447405535846` in `site/index.html` and `WHATSAPP_NUMBER` in `site/script.js`. WhatsApp format is international with no + or leading 0.
 
 ## Email (temporary, owner will change it)
 fmusa00@outlook.com. To change: search `fmusa00@outlook.com` in `site/index.html` (mailto link and display text).
