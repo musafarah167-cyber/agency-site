@@ -276,10 +276,11 @@
     <p class="eyebrow">Video content</p>
     <h2>Show your work, win trust</h2>
     <p class="section-intro">Short videos for social media and your website: project showcases, testimonials and behind-the-scenes clips. Every job is different, so message us for a quote. Travel for filming is charged at 80p per mile (there and back).</p>
-    <div class="grid three">
+    <div class="grid two">
       <article class="card"><h3>Short-form clips</h3><p>Reels, TikToks and Shorts made to be watched and shared.</p></article>
       <article class="card"><h3>Project showcases</h3><p>Before-and-after footage of your best jobs.</p></article>
-      <article class="card"><h3>Customer testimonials</h3><p>Real customers, in their own words. [CLIENT: real footage needed]</p></article>
+      <!-- HIDDEN until real testimonial footage arrives; when shown, change the grid below back to "grid three" -->
+      <article class="card" hidden><h3>Customer testimonials</h3><p>Real customers, in their own words. [CLIENT: real footage needed]</p></article>
     </div>
   </div>
 </section>
@@ -434,7 +435,8 @@
   </div>
 </section>
 
-<section class="section alt">
+<!-- HIDDEN until real projects and reviews arrive (owner OK 2026-10-09). To show: remove "hidden", then swap the classes of #faq (alt -> plain) and #contact (plain -> alt) back. -->
+<section class="section alt" id="our-work" hidden>
   <div class="container">
     <p class="eyebrow">Our work</p>
     <h2>Recent projects</h2>
@@ -442,7 +444,7 @@
   </div>
 </section>
 
-<section id="faq" class="section">
+<section id="faq" class="section alt">
   <div class="container narrow">
     <p class="eyebrow">FAQ</p>
     <h2>Common questions</h2>
@@ -459,7 +461,7 @@
   </div>
 </section>
 
-<section id="contact" class="section alt">
+<section id="contact" class="section">
   <div class="container narrow">
     <p class="eyebrow">Contact</p>
     <h2>Get a free quote</h2>
