@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Clear Signs promo (45s, 1080x1920)</title>
+<!--
+  Clear Signs promo video. Every frame is drawn by render(t) from the time t in seconds,
+  so it can be recorded frame by frame (see promo/record.py). Open in a browser to preview:
+  it plays in real time; press space to pause, arrow keys to scrub.
+  Photos: Unsplash (Unsplash Licence). Music: "Corporate Cinematic" by PaulYudin (Pixabay Content Licence).
+-->
+<style>
+  :root { --navy:#0a2a5e; --deep:#06173a; --orange:#f7931e; --orange2:#ffa552; --ink:#0b1f3a; --white:#fff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  body { font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; color: #fff; -webkit-font-smoothing: antialiased; }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: var(--deep); }
+  .layer { position: absolute; inset: 0; opacity: 0; will-change: opacity, transform; }
+  .bg { position: absolute; inset: -4%; background-size: cover; background-position: center; will-change: transform; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,23,58,.72) 0%, rgba(6,23,58,.15) 34%, rgba(6,23,58,.10) 60%, rgba(6,23,58,.70) 100%); }
+  .vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%); pointer-events: none; }
+  .title { position: absolute; left: 90px; top: 180px; font-size: 118px; font-weight: 800; letter-spacing: -2px; line-height: 1; text-shadow: 0 6px 30px rgba(0,0,0,.35); }
+  .sub { position: absolute; left: 92px; top: 320px; font-size: 44px; font-weight: 500; color: rgba(255,255,255,.88); text-shadow: 0 3px 16px rgba(0,0,0,.4); }
+  .punch { position: absolute; left: 0; right: 0; top: 820px; text-align: center; font-size: 170px; font-weight: 800; letter-spacing: -3px; text-shadow: 0 10px 40px rgba(0,0,0,.45); }
+  .card { position: absolute; background: #fff; color: var(--ink); border-radius: 34px; box-shadow: 0 40px 90px rgba(0,0,0,.45); overflow: hidden; }
+  .chip { position: absolute; padding: 14px 24px; border-radius: 99px; background: rgba(20,24,31,.86); color: #fff; font-size: 30px; font-weight: 600; box-shadow: 0 12px 30px rgba(0,0,0,.35); white-space: nowrap; }
+  .chip i { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: var(--orange); margin-right: 12px; vertical-align: middle; }
+  .notif { position: absolute; left: 70px; right: 70px; height: 150px; border-radius: 34px; background: rgba(30,34,44,.78); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; align-items: center; gap: 28px; padding: 0 34px; box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+  .notif .ic { width: 76px; height: 76px; border-radius: 20px; flex: none; display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: 800; }
+  .notif b { display: block; font-size: 32px; } .notif span { display: block; font-size: 30px; color: rgba(255,255,255,.75); margin-top: 6px; }
+  .notif em { position: absolute; right: 34px; top: 30px; font-style: normal; font-size: 24px; color: rgba(255,255,255,.5); }
+  .logo { font-size: 150px; font-weight: 800; letter-spacing: -4px; }
+  .logo .u { position: absolute; left: 6px; bottom: -18px; height: 14px; border-radius: 7px; background: var(--orange); }
+  .icons { display: flex; gap: 40px; justify-content: center; }
+  .icon { width: 120px; height: 120px; border-radius: 34px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.1); border: 2px solid rgba(255,165,82,.55); }
+  .icon svg { width: 64px; height: 64px; stroke: #fff; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .ilab { font-size: 26px; font-weight: 600; color: rgba(255,255,255,.85); text-align: center; margin-top: 14px; }
+  .pkg { position: absolute; left: 100px; right: 100px; height: 250px; border-radius: 30px; background: #fff; color: var(--ink); padding: 34px 44px; box-shadow: 0 24px 60px rgba(0,0,0,.4); }
+  .pkg h3 { font-size: 52px; font-weight: 800; } .pkg p { font-size: 32px; color: #4a5a70; margin-top: 8px; }
+  .pkg .pr { position: absolute; right: 44px; top: 34px; text-align: right; font-size: 54px; font-weight: 800; color: var(--ink); }
+  .pkg .pr small { display: block; font-size: 28px; font-weight: 700; color: #4a5a70; margin-top: 6px; }
+  .pkg .strip { position: absolute; left: 0; top: 0; bottom: 0; width: 16px; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- S1: the problem (0-4.6s) -->
+  <div class="layer" id="s1">
+    <div class="bg" id="bg1" style="background-image:url(assets/01-van-night.jpg)"></div>
+    <div class="shade" style="background:rgba(4,10,24,.45)"></div>
+    <div id="clock" style="position:absolute;left:0;right:0;top:250px;text-align:center;font-size:40px;letter-spacing:10px;color:rgba(255,255,255,.75)">TUE · 21:47</div>
+    <div class="notif" id="n1" style="top:760px"><div class="ic" style="background:#ffd27a"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#1b1f24" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></div><div><b>Search</b><span>No website found for your business</span></div><em>now</em></div>
+    <div class="notif" id="n2" style="top:930px"><div class="ic" style="background:#9cc2ff;color:#0a2a5e">?</div><div><b>Customer</b><span>Couldn't find your number. Tried someone else.</span></div><em>now</em></div>
+    <div class="notif" id="n3" style="top:1100px"><div class="ic" style="background:#f7931e;color:#0a2a5e">0</div><div><b>This week</b><span>0 new enquiries</span></div><em>now</em></div>
+  </div>
+
+  <!-- S2: brand (4.6-8.4s) -->
+  <div class="layer" id="s2" style="background:radial-gradient(ellipse at 50% 40%, #1558d6 0%, #0a2a5e 45%, #06173a 100%)">
+    <div id="logoWrap" style="position:absolute;left:0;right:0;top:700px;text-align:center">
+      <span class="logo" style="position:relative;display:inline-block">Clear Signs<span class="u" id="logoU"></span></span>
+    </div>
+    <div id="meet" style="position:absolute;left:0;right:0;top:960px;text-align:center;font-size:56px;font-weight:600">Everything you need to get seen.</div>
+    <div class="icons" id="icons" style="position:absolute;left:0;right:0;top:1120px">
+      <div class="ic0"><div class="icon"><svg viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M19 13c1.5 1.5 1.5 4.5 0 6M22 11c2.5 2.5 2.5 7.5 0 10"/></svg></div><div class="ilab">NFC cards</div></div>
+      <div class="ic0"><div class="icon"><svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="20" rx="2"/><path d="M3 11h26"/></svg></div><div class="ilab">Websites</div></div>
+      <div class="ic0"><div class="icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M13 11l8 5-8 5z"/></svg></div><div class="ilab">Videos</div></div>
+      <div class="ic0"><div class="icon"><svg viewBox="0 0 32 32"><path d="M3 22V10h15l5 5h6v7z"/><circle cx="9" cy="23" r="2.5"/><circle cx="23" cy="23" r="2.5"/></svg></div><div class="ilab">Van logos</div></div>
+    </div>
+  </div>
+
+  <!-- S3: NFC (8.4-14.2s) -->
+  <div class="layer" id="s3">
+    <div class="bg" id="bg3" style="background-image:url(assets/02-nfc.jpg)"></div>
+    <div class="shade"></div>
+    <div class="title" id="t3">NFC cards</div>
+    <div class="sub" id="u3">Tap a phone. Share your details.</div>
+    <div id="nfcCard" class="card" style="left:110px;top:1080px;width:520px;height:325px;background:#1b1f24;color:#fff;border-top:10px solid #f7931e;padding:36px">
+      <div style="display:flex;align-items:center;gap:20px"><div style="width:74px;height:74px;border-radius:50%;background:#f7931e"></div><div><div style="font-size:44px;font-weight:800">Brookvale</div><div style="font-size:22px;letter-spacing:4px;color:#ffa552">PLUMBING &amp; HEATING</div></div></div>
+      <div style="position:absolute;left:36px;bottom:34px;font-size:28px;color:rgba(255,255,255,.75)">Tap to connect</div>
+      <div style="position:absolute;right:36px;bottom:26px;font-size:60px;color:#ffa552;font-weight:700">)))</div>
+    </div>
+    <div id="nfcPhone" class="card" style="left:560px;top:900px;width:400px;height:780px;border-radius:56px;background:#0b0f14;padding:16px">
+      <div style="width:100%;height:100%;border-radius:42px;background:#fff;display:flex;flex-direction:column;align-items:center;gap:18px;padding:60px 28px;color:#0a2a5e">
+        <div style="width:90px;height:90px;border-radius:50%;background:#f7931e"></div>
+        <div style="font-size:34px;font-weight:800;text-align:center;line-height:1.15">Brookvale Plumbing &amp; Heating</div>
+        <div id="pb1" style="width:100%;padding:20px;border-radius:16px;background:#0a2a5e;color:#fff;text-align:center;font-size:30px;font-weight:700">Call</div>
+        <div id="pb2" style="width:100%;padding:20px;border-radius:16px;background:#0a2a5e;color:#fff;text-align:center;font-size:30px;font-weight:700">WhatsApp</div>
+        <div id="pb3" style="width:100%;padding:20px;border-radius:16px;background:#0a2a5e;color:#fff;text-align:center;font-size:30px;font-weight:700">Website</div>
+        <div id="pb4" style="width:100%;padding:20px;border-radius:16px;background:#f7931e;color:#0a2a5e;text-align:center;font-size:30px;font-weight:700">Leave a review</div>
+      </div>
+    </div>
+    <div id="ring" style="position:absolute;left:450px;top:1180px;width:120px;height:120px;border-radius:50%;border:6px solid #ffa552;opacity:0"></div>
+    <div class="punch" id="p3" style="top:560px">Tapped.</div>
+  </div>
+
+  <!-- S4: Websites (14.2-20.2s) -->
+  <div class="layer" id="s4">
+    <div class="bg" id="bg4" style="background-image:url(assets/03-plumber.jpg)"></div>
+    <div class="shade"></div>
+    <div class="title" id="t4">Websites</div>
+    <div class="sub" id="u4">Built for you. Looked after monthly.</div>
+    <div id="browser" class="card" style="left:80px;right:80px;top:820px;height:760px">
+      <div style="height:64px;background:#eef2f8;display:flex;align-items:center;gap:12px;padding:0 24px"><i style="width:16px;height:16px;border-radius:50%;background:#f7931e"></i><i style="width:16px;height:16px;border-radius:50%;background:#c6cfdc"></i><i style="width:16px;height:16px;border-radius:50%;background:#c6cfdc"></i><span style="margin-left:18px;flex:1;background:#fff;border-radius:10px;padding:8px 18px;font-size:24px;color:#4a5a70">brookvale-example.co.uk</span></div>
+      <div style="padding:34px">
+        <div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:34px;font-weight:800;color:#0a2a5e">Brookvale</div><div id="callNow" style="background:#f7931e;color:#0a2a5e;font-weight:800;font-size:28px;padding:14px 26px;border-radius:12px">Call now</div></div>
+        <div style="margin-top:28px;border-radius:22px;padding:44px;background:linear-gradient(135deg,#0a2a5e,#1558d6);color:#fff">
+          <div style="font-size:52px;font-weight:800;line-height:1.1">Emergency plumbers you can trust</div>
+          <div style="font-size:28px;margin-top:16px;opacity:.85">Same-day call-outs. Free quotes.</div>
+          <div style="display:inline-block;margin-top:26px;background:#f7931e;color:#0a2a5e;font-weight:800;font-size:28px;padding:16px 28px;border-radius:12px">Get a quote</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px"><div style="height:120px;border-radius:16px;background:#eef4fd"></div><div style="height:120px;border-radius:16px;background:#eef4fd"></div><div style="height:120px;border-radius:16px;background:#eef4fd"></div></div>
+      </div>
+    </div>
+    <div class="chip" id="enq" style="left:120px;top:1640px"><i></i>New enquiry · Quote request</div>
+    <div class="punch" id="p4" style="top:520px">Found.</div>
+  </div>
+
+  <!-- S5: Videos (20.2-26.2s) -->
+  <div class="layer" id="s5">
+    <div class="bg" id="bg5" style="background-image:url(assets/05-filming.jpg)"></div>
+    <div class="shade"></div>
+    <div class="title" id="t5">Videos</div>
+    <div class="sub" id="u5">Short clips that show off your work.</div>
+    <div id="reel" class="card" style="left:310px;top:760px;width:460px;height:820px;border-radius:50px;background:#0b0f14;padding:14px">
+      <div style="position:relative;width:100%;height:100%;border-radius:38px;overflow:hidden;background:url(assets/04-electrician.jpg) center/cover">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.7))"></div>
+        <div style="position:absolute;left:28px;bottom:40px;right:90px;font-size:28px;font-weight:700;color:#fff">Full rewire, done in a day ⚡</div>
+        <div id="views" style="position:absolute;left:28px;top:30px;font-size:26px;font-weight:700;color:#fff;background:rgba(0,0,0,.45);padding:8px 16px;border-radius:99px">0 views</div>
+        <div id="hearts" style="position:absolute;right:30px;bottom:110px;width:60px;height:400px"></div>
+      </div>
+    </div>
+    <div class="punch" id="p5" style="top:520px">Watched.</div>
+  </div>
+
+  <!-- S6: Van & uniform logos (26.2-32.2s) -->
+  <div class="layer" id="s6">
+    <div class="bg" id="bg6" style="background-image:url(assets/06-van.jpg)"></div>
+    <div class="shade"></div>
+    <div class="title" id="t6" style="font-size:104px">Van &amp; uniform logos</div>
+    <div class="sub" id="u6">Designed by us. Printed for you.</div>
+    <div id="proof" class="card" style="left:90px;right:90px;top:820px;height:560px;padding:40px">
+      <div style="font-size:26px;font-weight:700;letter-spacing:3px;color:#c2410c">DESIGN PROOF</div>
+      <svg viewBox="0 0 420 200" style="width:100%;margin-top:14px">
+        <path d="M20 160 V60 Q20 40 40 40 H270 L330 95 Q392 104 398 130 V160 Z" fill="#fff" stroke="#c9d3e2" stroke-width="2"/>
+        <path d="M276 50 L322 94 H276 Z" fill="#9cc2ff" opacity=".7"/>
+        <rect id="vStripe" x="20" y="118" width="256" height="12" fill="#f7931e"/>
+        <g id="vLogo"><circle cx="58" cy="78" r="18" fill="#f7931e"/><path d="M58 66c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15z" fill="#1b1f24"/></g>
+        <g id="vName"><text x="86" y="76" font-size="20" font-weight="800" fill="#0a2a5e" font-family="-apple-system, sans-serif">Brookvale</text><text x="86" y="96" font-size="10" font-weight="700" letter-spacing="2" fill="#c2410c" font-family="-apple-system, sans-serif">PLUMBING &amp; HEATING</text></g>
+        <circle cx="90" cy="162" r="22" fill="#1b1f24"/><circle cx="90" cy="162" r="9" fill="#9aa3ad"/>
+        <circle cx="330" cy="162" r="22" fill="#1b1f24"/><circle cx="330" cy="162" r="9" fill="#9aa3ad"/>
+      </svg>
+    </div>
+    <div class="chip" id="approved" style="left:130px;top:1430px"><i style="background:#3ac46a"></i>Proof approved · Sent to print</div>
+    <div class="punch" id="p6" style="top:540px;font-size:136px;letter-spacing:-2px">Remembered.</div>
+  </div>
+
+  <!-- S7: packages (32.2-37.4s) -->
+  <div class="layer" id="s7" style="background:radial-gradient(ellipse at 50% 30%, #1558d6 0%, #0a2a5e 50%, #06173a 100%)">
+    <div style="position:absolute;left:0;right:0;top:240px;text-align:center;font-size:96px;font-weight:800;letter-spacing:-2px" id="t7">Simple packages.</div>
+    <div style="position:absolute;left:0;right:0;top:370px;text-align:center;font-size:40px;color:rgba(255,255,255,.85)" id="u7">Or buy any service on its own.</div>
+    <div class="pkg" id="k1" style="top:560px"><span class="strip" style="background:#cd7f32"></span><h3 style="color:#8a4b12">Bronze</h3><p>Website + 4 NFC cards</p><div class="pr">£499<small>one-off</small></div></div>
+    <div class="pkg" id="k2" style="top:850px"><span class="strip" style="background:#a8a9ad"></span><h3 style="color:#5f6368">Silver</h3><p>+ monthly website care</p><div class="pr">£175<small>a month + £499 set-up</small></div></div>
+    <div class="pkg" id="k3" style="top:1140px"><span class="strip" style="background:#d4af37"></span><h3 style="color:#7a5c00">Gold</h3><p>+ 2 videos a month</p><div class="pr">£300<small>a month + £699 set-up</small></div></div>
+    <div style="position:absolute;left:0;right:0;top:1440px;text-align:center;font-size:30px;color:rgba(255,255,255,.7)" id="m7">Silver and Gold: 6-month minimum</div>
+  </div>
+
+  <!-- S8: payoff (37.4-41s) -->
+  <div class="layer" id="s8">
+    <div class="bg" id="bg8" style="background-image:url(assets/08-happy.jpg)"></div>
+    <div class="shade" style="background:linear-gradient(180deg,rgba(6,23,58,.2),rgba(6,23,58,.75))"></div>
+    <div id="g1" class="punch" style="top:1140px;font-size:120px">Get found.</div>
+    <div id="g2" class="punch" style="top:1290px;font-size:120px">Get chosen.</div>
+    <div id="g3" class="punch" style="top:1440px;font-size:120px;color:#ffa552">Get paid.</div>
+  </div>
+
+  <!-- S9: end card (41-45s) -->
+  <div class="layer" id="s9" style="background:#fbf8f3;color:#0a2a5e">
+    <div id="endLogo" style="position:absolute;left:0;right:0;top:620px;text-align:center"><span class="logo" style="position:relative;display:inline-block;color:#0a2a5e">Clear Signs<span class="u" style="width:96%"></span></span></div>
+    <div id="endTag" style="position:absolute;left:60px;right:60px;top:900px;text-align:center;font-size:52px;font-weight:700;line-height:1.25">Websites, NFC cards &amp; videos<br>for local businesses.</div>
+    <div id="endPill" style="position:absolute;left:0;right:0;top:1160px;text-align:center"><span style="display:inline-block;background:#0a2a5e;color:#fff;font-size:40px;font-weight:700;padding:26px 48px;border-radius:99px"><i style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#f7931e;margin-right:16px;vertical-align:middle"></i>Free quote · WhatsApp 07405 535846</span></div>
+    <div id="endCall" style="position:absolute;left:0;right:0;top:1300px;text-align:center;font-size:38px;font-weight:600;color:#4a5a70">or call 0121 517 2760</div>
+  </div>
+
+  <div class="vignette" id="vig"></div>
+</div>
+
+<script>
+const DURATION = 45;
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const ease = (x) => 1 - Math.pow(1 - x, 3);           // ease-out
+const inout = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = (x) => { const c = 1.6; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+// fade in over [a,a+d], out over [b-d,b]
+const win = (t, a, b, d = .45) => Math.min(prog(t, a, a + d), 1 - prog(t, b - d, b));
+function set(el, o, tf) { const e = typeof el === 'string' ? $(el) : el; e.style.opacity = o; if (tf !== undefined) e.style.transform = tf; }
+// element pops in: rises and fades
+function rise(el, t, at, dist = 60, dur = .6) { const p = ease(prog(t, at, at + dur)); set(el, p, `translateY(${(1 - p) * dist}px)`); return p; }
+function kenburns(id, t, a, b, from = 1.0, to = 1.12, dx = 0) { const p = prog(t, a, b); $(id).style.transform = `scale(${from + (to - from) * p}) translateX(${dx * p}px)`; }
+function scene(id, t, a, b, d = .5) { const o = win(t, a, b, d); set(id, o); return o > 0; }
+// punch word: blur-in, then out; returns visibility
+function punch(id, t, at, out) { const p = ease(prog(t, at, at + .35)); const q = prog(t, out - .3, out); set(id, p * (1 - q), `scale(${1.25 - .25 * p})`); $(id).style.filter = `blur(${(1 - p) * 18}px)`; return p; }
+
+const heartsEl = $('hearts');
+for (let i = 0; i < 6; i++) { const h = document.createElement('div'); h.textContent = '♥'; h.style.cssText = 'position:absolute;bottom:0;font-size:48px;color:#ff5a7e;opacity:0'; heartsEl.appendChild(h); }
+
+function render(t) {
+  // S1 problem 0-4.6
+  if (scene('s1', t, -1, 4.6, .45)) {
+    kenburns('bg1', t, 0, 4.6, 1.08, 1.0);
+    set('clock', prog(t, .2, .8));
+    rise('n1', t, .7, 40); rise('n2', t, 1.6, 40); rise('n3', t, 2.5, 40);
+    // slight shake on the "0 enquiries" card
+    const s = prog(t, 2.9, 3.4); $('n3').style.transform += ` translateX(${Math.sin(s * 30) * 10 * (1 - s)}px)`;
+  }
+  // S2 brand 4.6-8.4
+  if (scene('s2', t, 4.6, 8.4, .4)) {
+    const lp = ease(prog(t, 4.8, 5.6)); set('logoWrap', lp, `scale(${.9 + .1 * lp})`);
+    $('logoU').style.width = (96 * inout(prog(t, 5.3, 6.0))) + '%';
+    const up = ease(prog(t, 6.2, 6.9)); $('logoWrap').style.transform = `translateY(${-140 * up}px) scale(${1 - .25 * up})`;
+    rise('meet', t, 6.4, 40);
+    document.querySelectorAll('#icons .ic0').forEach((el, i) => { const p = back(clamp(prog(t, 6.8 + i * .15, 7.3 + i * .15))); set(el, clamp(p), `scale(${.4 + .6 * p})`); });
+  }
+  // S3 NFC 8.4-14.2
+  if (scene('s3', t, 8.4, 14.2)) {
+    kenburns('bg3', t, 8.4, 14.2, 1.0, 1.1, -20);
+    rise('t3', t, 8.7, 50); rise('u3', t, 8.95, 40);
+    const c = rise('nfcCard', t, 9.3, 120, .7); $('nfcCard').style.transform += ' rotate(-6deg)';
+    // phone glides in and taps the card
+    const ph = inout(prog(t, 9.9, 10.9)); const tap = Math.sin(Math.PI * prog(t, 10.9, 11.2)) * 18;
+    set('nfcPhone', clamp(ph * 1.5), `translate(${(1 - ph) * 500}px, ${(1 - ph) * 200 + tap}px) rotate(${8 - 8 * ph}deg)`);
+    const r = prog(t, 11.0, 11.8); set('ring', (1 - r) * (r > 0 ? 1 : 0), `scale(${1 + r * 4})`);
+    ['pb1','pb2','pb3','pb4'].forEach((id, i) => rise(id, t, 11.2 + i * .12, 30, .4));
+    punch('p3', t, 12.1, 14.2);
+    if (t > 12.1) { set('nfcCard', 1 - prog(t, 12.1, 12.5) * .3); }
+  }
+  // S4 Websites 14.2-20.2
+  if (scene('s4', t, 14.2, 20.2)) {
+    kenburns('bg4', t, 14.2, 20.2, 1.12, 1.0);
+    rise('t4', t, 14.5, 50); rise('u4', t, 14.75, 40);
+    const b = ease(prog(t, 15.1, 15.9)); set('browser', b, `translateY(${(1 - b) * 160}px) perspective(1600px) rotateX(${(1 - b) * 18}deg)`);
+    const pulse = 1 + Math.max(0, Math.sin((t - 16.4) * 6)) * .08 * (t > 16.4 && t < 17.6 ? 1 : 0);
+    $('callNow').style.transform = `scale(${pulse})`;
+    rise('enq', t, 17.0, 60, .5);
+    punch('p4', t, 18.1, 20.2);
+  }
+  // S5 Videos 20.2-26.2
+  if (scene('s5', t, 20.2, 26.2)) {
+    kenburns('bg5', t, 20.2, 26.2, 1.0, 1.1, 20);
+    rise('t5', t, 20.5, 50); rise('u5', t, 20.75, 40);
+    const r = ease(prog(t, 21.1, 21.9)); set('reel', r, `translateY(${(1 - r) * 160}px) rotate(${(1 - r) * -8 + 3}deg)`);
+    const v = Math.round(1240 * inout(prog(t, 21.8, 24.0)));
+    $('views').textContent = (v >= 1000 ? (v / 1000).toFixed(1) + 'k' : v) + ' views';
+    [...heartsEl.children].forEach((h, i) => { const p = prog(t, 22.0 + i * .35, 23.4 + i * .35); h.style.opacity = p > 0 && p < 1 ? Math.sin(Math.PI * p) : 0; h.style.transform = `translate(${Math.sin(p * 6 + i) * 10}px, ${-p * 360}px) scale(${.7 + p * .5})`; });
+    punch('p5', t, 24.1, 26.2);
+  }
+  // S6 Van 26.2-32.2
+  if (scene('s6', t, 26.2, 32.2)) {
+    kenburns('bg6', t, 26.2, 32.2, 1.12, 1.0);
+    rise('t6', t, 26.5, 50); rise('u6', t, 26.75, 40);
+    const p = ease(prog(t, 27.1, 27.9)); set('proof', p, `translateY(${(1 - p) * 160}px)`);
+    const st = inout(prog(t, 27.9, 28.5)); $('vStripe').setAttribute('width', 256 * st);
+    const lg = back(clamp(prog(t, 28.4, 28.9))); $('vLogo').style.transformOrigin = '58px 78px'; $('vLogo').style.transform = `scale(${clamp(lg, 0, 1.3)})`;
+    set('vName', prog(t, 28.8, 29.3));
+    rise('approved', t, 29.4, 60, .5);
+    punch('p6', t, 30.1, 32.2);
+  }
+  // S7 packages 32.2-37.4
+  if (scene('s7', t, 32.2, 37.4)) {
+    rise('t7', t, 32.4, 50); rise('u7', t, 32.7, 40);
+    ['k1','k2','k3'].forEach((id, i) => { const p = ease(prog(t, 33.0 + i * .35, 33.7 + i * .35)); set(id, p, `translateX(${(1 - p) * (i % 2 ? 300 : -300)}px)`); });
+    set('m7', prog(t, 34.4, 34.9));
+  }
+  // S8 payoff 37.4-41
+  if (scene('s8', t, 37.4, 41.0)) {
+    kenburns('bg8', t, 37.4, 41, 1.0, 1.1);
+    ['g1','g2','g3'].forEach((id, i) => { const p = ease(prog(t, 37.8 + i * .55, 38.3 + i * .55)); set(id, p, `translateY(${(1 - p) * 50}px)`); $(id).style.filter = `blur(${(1 - p) * 12}px)`; });
+  }
+  $('vig').style.opacity = 1 - prog(t, 40.8, 41.4);
+  // S9 end 41-45
+  if (scene('s9', t, 41.0, 46, .5)) {
+    const l = ease(prog(t, 41.2, 41.9)); set('endLogo', l, `scale(${.92 + .08 * l})`);
+    rise('endTag', t, 41.8, 40); rise('endPill', t, 42.4, 40); rise('endCall', t, 42.8, 30);
+  }
+}
+window.render = render;
+window.DURATION = DURATION;
+
+// live preview when opened normally (recording sets window.RECORDING = true first)
+if (!window.RECORDING && !location.search.includes('record')) {
+  let start = performance.now(), paused = false, pt = 0;
+  const loop = () => { if (!paused) { const t = ((performance.now() - start) / 1000) % DURATION; pt = t; render(t); } requestAnimationFrame(loop); };
+  addEventListener('keydown', (e) => {
+    if (e.code === 'Space') { paused = !paused; if (!paused) start = performance.now() - pt * 1000; }
+    if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') { pt = clamp(pt + (e.code === 'ArrowRight' ? 1 : -1), 0, DURATION); start = performance.now() - pt * 1000; render(pt); }
+  });
+  loop();
+} else { render(0); }
+</script>
+</body>
+</html>
