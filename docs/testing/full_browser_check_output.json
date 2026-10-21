@@ -332,7 +332,7 @@
  [
   "NOTE",
   "1280px keyboard: 60 Tab stops in a full lap",
-  "Skip to content > English العربية Español Français اردو > Clear Signs > NFC Cards > Websites > Video > Uniforms & Vans > Packages > FAQ > Get a quote > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmus"
+  "Skip to content > English العربية Español Français اردو > Clear Signs > NFC Cards > Websites > Video > Uniforms & Vans > Packages > FAQ > Get a quote > Get a free quote > Call 0121 517 2760 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 0121 517 2760 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 0121 517 2760 > f"
  ],
  [
   "PASS",
@@ -472,7 +472,7 @@
  [
   "NOTE",
   "375px keyboard: 55 Tab stops in a full lap",
-  "Skip to content > English العربية Español Français اردو > Clear Signs > Menu > Get a free quote > Call 07405 535846 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 07405 535846 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 07405 535846 > fmusa00@outlook.com > WhatsApp > Get a free quote > Chat on WhatsApp > BODY >"
+  "Skip to content > English العربية Español Français اردو > Clear Signs > Menu > Get a free quote > Call 0121 517 2760 > WhatsApp > NFC cardsTap a phone, share your details > WebsitesBuilt for you, looked after mont > VideosShort clips that show off your wor > Van & uniform logosDesigned by us, print > Order blanks > Get custom cards > calc-type > One fewer card > INPUT > One more card > Order these cards > Brookvale Plumbing & Heating Tap here > Enquire about uniforms > Get a van quote > A website (and more) > Just NFC cards > Just videos > A van or uniform design > Choose Bronze > Choose Silver > Choose Gold > What is an NFC card? > Do NFC cards work on iPhone and Android? > What does website maintenance include? > How long does a website take? > Can I buy a mix of services? > Do I own my website? > Is there a contract for Silver and Gold? > How do I pay? > Do you print and fit van graphics? > Where do you work? > 0121 517 2760 > name > contact > Blank NFC cards Custom NFC cards New web > message > Send via WhatsApp > NFC cards > Websites > Videos > Van & uniform logos > Packages and prices > 0121 517 2760 > fmusa00@outlook.com > WhatsApp > Get a free quote > Chat on WhatsApp > BOD"
  ],
  [
   "PASS",
@@ -687,12 +687,17 @@
  [
   "PASS",
   "375px hero frame timing over 6 s (fast Mac, headless)",
-  "59.8 fps, 95th percentile 16.8 ms, worst 33.3 ms, 0 frames over 33 ms; 22 hero animations running"
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 22 hero animations running"
  ],
  [
   "PASS",
   "375px slanted hero does not clip buttons, text, card or caption (7 samples)",
   ""
+ ],
+ [
+  "NOTE",
+  "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
+  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
  ],
  [
   "PASS",
@@ -701,7 +706,7 @@
  ],
  [
   "PASS",
-  "375px reveal: after jumping straight to the bottom nothing on screen is invisible (12 elements fade in)",
+  "375px reveal: after jumping straight to the bottom nothing on screen is invisible (11 elements fade in)",
   ""
  ],
  [
@@ -741,7 +746,7 @@
  ],
  [
   "PASS",
-  "768px reveal: after jumping straight to the bottom nothing on screen is invisible (11 elements fade in)",
+  "768px reveal: after jumping straight to the bottom nothing on screen is invisible (10 elements fade in)",
   ""
  ],
  [
@@ -781,7 +786,7 @@
  ],
  [
   "PASS",
-  "1280px reveal: after jumping straight to the bottom nothing on screen is invisible (10 elements fade in)",
+  "1280px reveal: after jumping straight to the bottom nothing on screen is invisible (9 elements fade in)",
   ""
  ],
  [
@@ -877,12 +882,12 @@
  [
   "PASS",
   "1280px scrolling the whole page (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+  "57.4 fps, 95th percentile 16.7 ms, worst 400 ms, 1 frames over 33 ms, 1 over 50 ms"
  ],
  [
   "PASS",
   "375px scrolling the whole page (fast Mac, headless)",
-  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
+  "58.3 fps, 95th percentile 16.8 ms, worst 266.6 ms, 1 frames over 33 ms, 1 over 50 ms"
  ],
  [
   "PASS",
@@ -917,6 +922,6 @@
  [
   "NOTE",
   "placeholders still visible",
-  "['[CLIENT: real footage needed]', '[CLIENT: add real project examples and reviews here. None have been invented.]']"
+  "[]"
  ]
 ]
