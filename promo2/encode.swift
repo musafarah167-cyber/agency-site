@@ -49,16 +49,16 @@ for (i, st) in starts.enumerated() {
   voiceRanges.append((st, st + CMTimeGetSeconds(vd)))
 }
 let mp = AVMutableAudioMixInputParameters(track: mt)
-let lo: Float = 0.16, hi: Float = 0.42
+let lo: Float = 0.17, hi: Float = 0.55
 mp.setVolumeRamp(fromStartVolume: 0, toEndVolume: hi, timeRange: CMTimeRange(start: .zero, duration: sec(0.6)))
-var cursor = 0.6, level = hi
-for (s, e) in voiceRanges {   // duck to `lo` 0.25 s before each line, back up after
-  let down = max(cursor, s - 0.3)
-  if level != lo { mp.setVolumeRamp(fromStartVolume: level, toEndVolume: lo, timeRange: CMTimeRange(start: sec(down), duration: sec(0.25))); level = lo }
-  cursor = e
+var level = hi
+for (k, (st, en)) in voiceRanges.enumerated() {   // duck under each line; swell back up in gaps longer than 0.9 s
+  if level != lo { mp.setVolumeRamp(fromStartVolume: level, toEndVolume: lo, timeRange: CMTimeRange(start: sec(max(0.6, st - 0.3)), duration: sec(0.25))); level = lo }
+  let next = k + 1 < voiceRanges.count ? voiceRanges[k + 1].0 : CMTimeGetSeconds(dur) - 2.0
+  if next - en > 0.9 { mp.setVolumeRamp(fromStartVolume: lo, toEndVolume: hi, timeRange: CMTimeRange(start: sec(en - 0.2), duration: sec(0.35))); level = hi }
 }
 let total = CMTimeGetSeconds(dur)
-mp.setVolumeRamp(fromStartVolume: lo, toEndVolume: 0, timeRange: CMTimeRange(start: sec(total - 2.0), duration: sec(2.0)))
+mp.setVolumeRamp(fromStartVolume: level, toEndVolume: 0, timeRange: CMTimeRange(start: sec(total - 2.0), duration: sec(2.0)))
 let vp = AVMutableAudioMixInputParameters(track: vt); vp.setVolume(1.0, at: .zero)
 let mix = AVMutableAudioMix(); mix.inputParameters = [mp, vp]
 let audioURL = URL(fileURLWithPath: outPath + ".a.m4a"); try? FileManager.default.removeItem(at: audioURL)

@@ -4,3 +4,5 @@ node_modules/
 .claude/worktrees/
 promo/out/
 promo2/out/
+promo2/.venv/
+promo2/voices/
