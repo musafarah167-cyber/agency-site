@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Clear Signs: website film (45s, 1080x1920, three.js)</title>
+<!--
+  45-second cinematic film of the Clear Signs website. Every frame is drawn by render(t) (t in seconds)
+  so it can be recorded frame by frame (promo2/record.py). Open via a local server at the repo root
+  (http://localhost:PORT/promo2/video.html) to preview in real time: space pauses, arrows scrub.
+  3D: three.js. Screens show real screenshots of the site (promo2/capture.py).
+  Voiceover: macOS "Daniel" voice (promo2/vo). Music: see promo/CREDITS.md.
+-->
+<style>
+  @font-face { font-family: "Archivo"; src: url("../site/fonts/archivo-latin-wght.woff2") format("woff2"); font-weight: 100 900; }
+  :root { --navy:#0a2a5e; --deep:#06173a; --orange:#f7931e; --orange2:#ffa552; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  body { font-family: "Archivo", -apple-system, "Helvetica Neue", Arial, sans-serif; color: #fff; -webkit-font-smoothing: antialiased; }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: var(--deep); }
+  canvas#gl { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+  .layer { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
+  .photo { position: absolute; inset: -4%; background-size: cover; background-position: center; }
+  #grain { position: absolute; inset: 0; width: 1080px; height: 1920px; opacity: .06; mix-blend-mode: overlay; }
+  #vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 50%, rgba(0,0,0,.62) 100%); }
+  .title { position: absolute; left: 80px; right: 80px; top: 170px; font-size: 104px; font-weight: 800; letter-spacing: -0.035em; line-height: .98; text-wrap: balance; text-shadow: 0 8px 40px rgba(0,0,0,.45); opacity: 0; }
+  .title small { display: block; margin-top: 22px; font-size: 42px; font-weight: 500; letter-spacing: 0; color: rgba(255,255,255,.82); }
+  .title b { color: var(--orange2); font-weight: 800; }
+  #sub { position: absolute; left: 70px; right: 70px; bottom: 150px; text-align: center; font-size: 46px; font-weight: 600; line-height: 1.3; text-wrap: balance; color: #fff;
+         text-shadow: 0 2px 4px rgba(0,0,0,.9), 0 0 30px rgba(0,0,0,.65); }
+  #sub span { background: rgba(6,23,58,.55); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 4px 14px; border-radius: 10px; }
+  .big { position: absolute; left: 0; right: 0; text-align: center; font-size: 150px; font-weight: 800; letter-spacing: -0.04em; opacity: 0; text-shadow: 0 10px 50px rgba(0,0,0,.5); }
+  .logo { font-size: 150px; font-weight: 800; letter-spacing: -0.045em; position: relative; display: inline-block; }
+  .logo .u { position: absolute; left: 4px; bottom: -14px; height: 14px; border-radius: 7px; background: var(--orange); width: 0; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl" width="1080" height="1920"></canvas>
+
+  <!-- opening: the problem -->
+  <div class="layer" id="open">
+    <div class="photo" id="openPhoto" style="background-image:url(../promo/assets/01-van-night.jpg)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,24,.55),rgba(4,10,24,.25) 40%,rgba(4,10,24,.8))"></div>
+    <div class="title" id="o1" style="top:260px">Brilliant work.</div>
+    <div class="title" id="o2" style="top:400px;color:#ffa552">Silent phone?</div>
+  </div>
+
+  <!-- brand -->
+  <div class="layer" id="brand" style="display:flex;align-items:center;justify-content:center">
+    <div style="text-align:center;margin-top:-260px"><span class="logo">Clear Signs<span class="u" id="brandU"></span></span></div>
+  </div>
+
+  <div class="title" id="t3">Websites that bring in <b>enquiries</b></div>
+  <div class="title" id="t4">NFC cards.<br><b>One tap.</b></div>
+  <div class="title" id="t5">Videos &amp; <b>van logos</b></div>
+  <div class="title" id="t6">Simple packages<small>Bronze £499 · Silver £175/mo · Gold £300/mo</small></div>
+  <div class="title" id="t7"><b>5 languages</b><small>English · العربية · Español · Français · اردو</small></div>
+
+  <div class="layer" id="scrim" style="background:rgba(4,10,24,.62)"></div>
+  <div class="big" id="g1" style="top:640px">Get found.</div>
+  <div class="big" id="g2" style="top:810px">Get chosen.</div>
+  <div class="big" id="g3" style="top:980px;color:#ffa552">Get paid.</div>
+
+  <!-- end card -->
+  <div class="layer" id="end" style="background:radial-gradient(ellipse at 50% 38%, #1558d6 0%, #0a2a5e 48%, #06173a 100%)">
+    <div style="position:absolute;left:0;right:0;top:640px;text-align:center"><span class="logo" id="endLogo">Clear Signs<span class="u" style="width:96%"></span></span></div>
+    <div id="endTag" style="position:absolute;left:80px;right:80px;top:900px;text-align:center;font-size:50px;font-weight:600;line-height:1.25;color:rgba(255,255,255,.9)">Websites, NFC cards &amp; videos for local businesses across the UK.</div>
+    <div id="endPill" style="position:absolute;left:0;right:0;top:1130px;text-align:center"><span style="display:inline-block;background:#f7931e;color:#0a2a5e;font-size:44px;font-weight:800;padding:28px 52px;border-radius:99px">Free quote · WhatsApp 07405 535846</span></div>
+    <div id="endCall" style="position:absolute;left:0;right:0;top:1290px;text-align:center;font-size:40px;font-weight:600;color:rgba(255,255,255,.8)">or call 0121 517 2760</div>
+  </div>
+
+  <div id="vig"></div>
+  <canvas id="grain" width="540" height="960"></canvas>
+  <div id="sub"></div>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const DURATION = 45;
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const ease = (x) => 1 - Math.pow(1 - x, 3);
+const inout = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const win = (t, a, b, d = .45) => Math.min(prog(t, a, a + d), 1 - prog(t, b - d, b));
+const lerp = (a, b, p) => a + (b - a) * p;
+// keyframed tracks: [[t, value(s)], ...] with smooth in-out between keys
+function track(keys, t) {
+  if (t <= keys[0][0]) return keys[0][1];
+  for (let i = 0; i < keys.length - 1; i++) {
+    const [t0, v0] = keys[i], [t1, v1] = keys[i + 1];
+    if (t <= t1) { const p = inout(prog(t, t0, t1)); return Array.isArray(v0) ? v0.map((v, j) => lerp(v, v1[j], p)) : lerp(v0, v1, p); }
+  }
+  return keys[keys.length - 1][1];
+}
+
+// ---------- voiceover subtitles (timings match promo2/vo + encode) ----------
+const VO = [
+  [0.6, 4.2, "You do brilliant work. So why isn't your phone ringing?"],
+  [6.0, 7.7, "Meet Clear Signs."],
+  [8.3, 14.3, "Websites that turn visitors into enquiries. A call button and quote form, on every phone."],
+  [15.0, 20.1, "NFC business cards. One tap, and your details are on their phone."],
+  [20.4, 25.4, "Videos that show off your work. Van and uniform logos that get you remembered."],
+  [26.1, 30.5, "Simple packages, from just £499."],
+  [33.0, 36.3, "In five languages, right across the UK."],
+  [37.4, 40.9, "Get found. Get chosen. Get paid."],
+  [41.1, 44.8, "Clear Signs. WhatsApp us today, for your free quote."],
+];
+window.VO_TIMES = VO.map(v => v[0]);
+
+// ---------- three.js scene ----------
+const canvas = $('gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x05122d);
+scene.fog = new THREE.Fog(0x05122d, 12, 30);
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(36, 1080 / 1920, 0.1, 100);
+
+scene.add(new THREE.HemisphereLight(0x9cc2ff, 0x0a1428, 0.55));
+const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(4, 6, 6); scene.add(key);
+const rim = new THREE.DirectionalLight(0xffa552, 2.2); rim.position.set(-6, 2, -4); scene.add(rim);
+const fill = new THREE.PointLight(0x1558d6, 18, 18); fill.position.set(0, -2, 4); scene.add(fill);
+
+// soft glow floor disc
+const floorTex = (() => { const c = document.createElement('canvas'); c.width = c.height = 512; const g = c.getContext('2d');
+  const r = g.createRadialGradient(256, 256, 0, 256, 256, 256); r.addColorStop(0, 'rgba(21,88,214,.55)'); r.addColorStop(.5, 'rgba(10,42,94,.25)'); r.addColorStop(1, 'rgba(5,18,45,0)');
+  g.fillStyle = r; g.fillRect(0, 0, 512, 512); return new THREE.CanvasTexture(c); })();
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(14, 14), new THREE.MeshBasicMaterial({ map: floorTex, transparent: true, depthWrite: false }));
+floor.rotation.x = -Math.PI / 2; floor.position.y = -1.32; scene.add(floor);
+
+// dust particles for depth
+const N = 700, pos = new Float32Array(N * 3), seed = (i) => { const x = Math.sin(i * 12.9898) * 43758.5453; return x - Math.floor(x); };
+for (let i = 0; i < N; i++) { pos[i * 3] = (seed(i) - .5) * 16; pos[i * 3 + 1] = (seed(i + 99) - .5) * 14; pos[i * 3 + 2] = (seed(i + 7) - .5) * 14; }
+const dustGeo = new THREE.BufferGeometry(); dustGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+const dot = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d'); const r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,220,170,1)'); r.addColorStop(1, 'rgba(255,220,170,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c); })();
+const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ size: .05, map: dot, transparent: true, opacity: .55, depthWrite: false, blending: THREE.AdditiveBlending }));
+scene.add(dust);
+
+const loader = new THREE.TextureLoader();
+const load = (url) => new Promise((res) => loader.load(url, (tx) => { tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; res(tx); }));
+const metal = new THREE.MeshStandardMaterial({ color: 0x2a2f38, metalness: .85, roughness: .32 });
+const metalLight = new THREE.MeshStandardMaterial({ color: 0x9aa3ad, metalness: .9, roughness: .25 });
+const black = new THREE.MeshStandardMaterial({ color: 0x07090c, metalness: .2, roughness: .4 });
+
+// ---- laptop: base + hinged lid with a screen that shows the real site ----
+const laptop = new THREE.Group(); scene.add(laptop);
+const LW = 3.3, LD = 2.2;
+const base = new THREE.Mesh(new RoundedBoxGeometry(LW, 0.1, LD, 4, 0.05), metalLight); base.position.y = -1.25; laptop.add(base);
+const deck = new THREE.Mesh(new THREE.PlaneGeometry(LW * .86, LD * .5), new THREE.MeshStandardMaterial({ color: 0x3a4048, roughness: .7, metalness: .3 }));
+deck.rotation.x = -Math.PI / 2; deck.position.set(0, -1.195, -0.25); laptop.add(deck);
+const pad = new THREE.Mesh(new THREE.PlaneGeometry(1.1, .62), new THREE.MeshStandardMaterial({ color: 0x8a939d, metalness: .8, roughness: .3 }));
+pad.rotation.x = -Math.PI / 2; pad.position.set(0, -1.194, 0.68); laptop.add(pad);
+const hinge = new THREE.Group(); hinge.position.set(0, -1.2, -LD / 2 + 0.02); laptop.add(hinge);
+const lid = new THREE.Mesh(new RoundedBoxGeometry(LW, 2.15, 0.07, 4, 0.04), metal); lid.position.set(0, 1.075, -0.035); hinge.add(lid);
+const SW = 3.1, SH = SW / 1.6;
+const deskMat = new THREE.MeshBasicMaterial({ toneMapped: false });
+const deskScreen = new THREE.Mesh(new THREE.PlaneGeometry(SW, SH), deskMat); deskScreen.position.set(0, 1.08, 0.002); hinge.add(deskScreen);
+const glare = new THREE.Mesh(new THREE.PlaneGeometry(SW, SH), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthWrite: false }));
+glare.position.set(0, 1.08, 0.004); hinge.add(glare);
+
+// ---- phone ----
+const phone = new THREE.Group(); scene.add(phone);
+const PW = 0.98, PH = 2.05;
+phone.add(new THREE.Mesh(new RoundedBoxGeometry(PW, PH, 0.09, 6, 0.12), black));
+const phoneMat = new THREE.MeshBasicMaterial({ toneMapped: false });
+const pScreen = new THREE.Mesh(new RoundedBoxGeometry(PW * .92, PH * .955, 0.001, 6, 0.0005), phoneMat); pScreen.position.z = 0.047; phone.add(pScreen);
+const phoneMat2 = new THREE.MeshBasicMaterial({ toneMapped: false, transparent: true, opacity: 0 });
+const pScreen2 = new THREE.Mesh(new RoundedBoxGeometry(PW * .92, PH * .955, 0.001, 6, 0.0005), phoneMat2); pScreen2.position.z = 0.049; phone.add(pScreen2);
+
+// ---- NFC card (front drawn on a canvas) ----
+const cardTex = (() => { const c = document.createElement('canvas'); c.width = 1024; c.height = 646; const g = c.getContext('2d');
+  g.fillStyle = '#16191f'; g.fillRect(0, 0, 1024, 646);
+  const gr = g.createLinearGradient(0, 0, 1024, 646); gr.addColorStop(0, 'rgba(255,255,255,.07)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = gr; g.fillRect(0, 0, 1024, 646);
+  g.fillStyle = '#f7931e'; g.beginPath(); g.arc(120, 130, 58, 0, Math.PI * 2); g.fill();
+  g.fillStyle = '#16191f'; g.beginPath(); g.moveTo(120, 92); g.bezierCurveTo(98, 122, 92, 138, 92, 150); g.arc(120, 150, 28, Math.PI, 0, true); g.bezierCurveTo(148, 138, 142, 122, 120, 92); g.fill();
+  g.fillStyle = '#fff'; g.font = '800 72px Archivo, Helvetica, Arial'; g.fillText('Brookvale', 205, 140);
+  g.fillStyle = '#ffa552'; g.font = '700 30px Archivo, Helvetica, Arial'; g.fillText('P L U M B I N G   &   H E A T I N G', 208, 190);
+  g.fillStyle = '#fff'; g.font = '600 44px Archivo, Helvetica, Arial'; g.fillText('James Carter', 70, 540);
+  g.fillStyle = 'rgba(255,255,255,.7)'; g.font = '500 32px Archivo, Helvetica, Arial'; g.fillText('Tap to connect', 70, 590);
+  g.strokeStyle = '#ffa552'; g.lineWidth = 12; g.lineCap = 'round';
+  [40, 70, 100].forEach((r) => { g.beginPath(); g.arc(860, 545, r, -0.6, 0.6); g.stroke(); });
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; })();
+const card = new THREE.Group(); scene.add(card);
+card.add(new THREE.Mesh(new RoundedBoxGeometry(1.7, 1.07, 0.03, 4, 0.06), new THREE.MeshStandardMaterial({ color: 0x16191f, metalness: .3, roughness: .35 })));
+const cardFace = new THREE.Mesh(new THREE.PlaneGeometry(1.64, 1.035), new THREE.MeshStandardMaterial({ map: cardTex, roughness: .35, metalness: .2 })); cardFace.position.z = 0.016; card.add(cardFace);
+// tap ring
+const ring = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.012, 8, 64), new THREE.MeshBasicMaterial({ color: 0xffa552, transparent: true, opacity: 0, toneMapped: false })); scene.add(ring);
+
+// ---------- textures ----------
+const SHOT = '../promo2/shots/';
+const T = {};
+const ready = Promise.all([
+  load(SHOT + 'desktop-full.jpg').then((t) => T.desk = t),
+  load(SHOT + 'desktop-ar.jpg').then((t) => T.ar = t),
+  load(SHOT + 'desktop-ur.jpg').then((t) => T.ur = t),
+  load(SHOT + 'desktop-es.jpg').then((t) => T.es = t),
+  load(SHOT + 'phone-hero.jpg').then((t) => T.pHero = t),
+  load(SHOT + 'phone-nfc.jpg').then((t) => T.pNfc = t),
+  load(SHOT + 'phone-branding.jpg').then((t) => T.pBrand = t),
+  load(SHOT + 'phone-packages.jpg').then((t) => T.pPack = t),
+  document.fonts.ready,
+]).then(() => { cardTex.needsUpdate = true; });
+const DESK_H = 7979, PHONE_H = 16000, PHONE_VIEW = 1688;
+function deskWindow(scrollPx) {   // show a 1440x900 window of the full-page shot, starting at scrollPx
+  const tx = T.desk; deskMat.map = tx; tx.repeat.set(1, 900 / DESK_H); tx.offset.set(0, 1 - (scrollPx + 900) / DESK_H); deskMat.needsUpdate = true;
+}
+function deskSingle(tx) { tx.repeat.set(1, 1); tx.offset.set(0, 0); if (deskMat.map !== tx) { deskMat.map = tx; deskMat.needsUpdate = true; } }
+// phone screens: [time the new screen starts fading in, texture key]
+const PHONE_SCREENS = [[0, 'pHero'], [17.9, 'pNfc'], [21.0, 'pBrand'], [26.4, 'pPack'], [36.9, 'pHero']];
+function setMap(mat, tx) { if (mat.map !== tx) { mat.map = tx; mat.needsUpdate = true; } }
+function phoneScreen(t) {
+  let i = 0; while (i + 1 < PHONE_SCREENS.length && t >= PHONE_SCREENS[i + 1][0]) i++;
+  const cur = T[PHONE_SCREENS[i][1]], prev = T[PHONE_SCREENS[Math.max(0, i - 1)][1]];
+  const f = i === 0 ? 1 : ease(prog(t, PHONE_SCREENS[i][0], PHONE_SCREENS[i][0] + .35));
+  setMap(phoneMat, prev); setMap(phoneMat2, cur); phoneMat2.opacity = f;
+}
+
+// ---------- grain ----------
+const gctx = $('grain').getContext('2d'); const gimg = gctx.createImageData(540, 960);
+function grain(frame) { let s = frame * 9301 + 49297; for (let i = 0; i < gimg.data.length; i += 4) { s = (s * 16807) % 2147483647; const v = s & 255; gimg.data[i] = gimg.data[i + 1] = gimg.data[i + 2] = v; gimg.data[i + 3] = 255; } gctx.putImageData(gimg, 0, 0); }
+
+function show(id, o, tf) { const e = $(id); e.style.opacity = o; if (tf !== undefined) e.style.transform = tf; }
+function titleIn(id, t, a, b) { const p = ease(prog(t, a, a + .6)), q = prog(t, b - .4, b); show(id, p * (1 - q), `translateY(${(1 - p) * 40}px)`); $(id).style.filter = `blur(${(1 - p) * 10}px)`; }
+
+// ---------- the timeline ----------
+const CAM = [ // [t, [px,py,pz, lx,ly,lz]]
+  [0, [0, 0.6, 11, 0, 0, 0]], [7.6, [0, 0.6, 11, 0, 0, 0]],
+  [8.2, [2.6, 1.3, 9.2, 0, -0.1, 0]], [14.6, [-1.1, 0.6, 7.8, 0, 0, 0]],
+  [16.0, [0.3, 0.45, 9.6, 0.05, -0.55, 1.3]], [20.0, [0.0, 0.35, 9.0, 0.05, -0.55, 1.3]],
+  [21.4, [-2.6, 1.2, 7.8, 0.2, 0.0, 0]], [25.4, [-1.6, 0.8, 7.4, 0.1, 0.0, 0]],
+  [26.8, [-0.55, 0.15, 4.6, -0.55, 0.0, 0]], [32.2, [0.6, 0.1, 4.4, 0.6, 0.0, 0]],
+  [33.4, [0, 0.3, 6.6, 0, 0.0, 0]], [36.8, [0, 0.3, 6.1, 0, 0.0, 0]],
+  [38.6, [0, 2.2, 13.5, 0, -0.2, 0]], [45, [0, 2.6, 15, 0, -0.2, 0]],
+];
+const LAPTOP = [ // [t, [x,y,z, rotY, lidOpen(0..1)]]
+  [0, [0, -7, 0, 0.7, 0]], [7.9, [0, -7, 0, 0.7, 0]], [9.2, [0, 0, 0, 0.32, 0]], [10.6, [0, 0, 0, 0.18, 1]],
+  [14.6, [0, 0, 0, 0.1, 1]], [16.0, [-0.3, -0.25, -3.2, 0.22, 1]], [20.0, [-0.3, -0.25, -3.2, 0.18, 1]],
+  [21.4, [0, 0, 0, -0.15, 1]], [25.4, [0, 0, 0, 0.05, 1]], [26.8, [0, 0, 0, 0, 1]], [36.8, [0, 0, 0, 0, 1]],
+  [38.6, [-0.4, 0, 0, 0.35, 1]], [45, [-0.4, 0.2, 0, 0.55, 1]],
+];
+const PHONE = [ // [t, [x,y,z, rotX, rotY, rotZ]]
+  [0, [6, -0.2, 1.6, 0, -0.4, 0]], [10.4, [6, -0.2, 1.6, 0, -0.4, 0]], [11.8, [1.75, -0.35, 1.3, 0, -0.35, 0.04]],
+  [14.6, [1.85, -0.25, 1.3, 0, -0.3, 0.04]], [16.6, [1.05, -0.05, 1.4, 0, -0.3, 0.05]], [17.4, [0.45, -0.2, 1.65, -0.5, -0.2, 0.4]],
+  [17.9, [0.3, -0.3, 1.62, -0.6, -0.15, 0.5]], [18.7, [0.95, -0.05, 1.45, -0.1, -0.3, 0.08]], [20.0, [1.0, 0.0, 1.45, 0, -0.32, 0.05]],
+  [21.4, [1.9, -0.3, 1.3, 0, -0.45, 0.03]], [25.4, [1.9, -0.25, 1.3, 0, -0.35, 0.03]], [26.8, [5, -0.25, 1.3, 0, -0.35, 0]],
+  [36.8, [5, -0.25, 1.3, 0, -0.35, 0]], [38.6, [1.9, -0.2, 1.4, 0, -0.5, 0.04]], [45, [2.1, 0, 1.4, 0, -0.65, 0.04]],
+];
+const CARD = [ // [t, [x,y,z, rotX, rotY, scale]]
+  [0, [-4, 2.5, 2, 0, 0, 0]], [14.6, [-4, 2.5, 2, 0.5, -2, 0]], [16.2, [-0.55, -0.55, 1.5, -0.45, 0.35, .78]],
+  [17.4, [-0.5, -0.6, 1.5, -0.6, 0.12, .78]], [20.0, [-0.6, -0.55, 1.5, -0.5, 0.25, .78]], [21.2, [-4.5, 1.5, 1, 0.3, 1.5, 0]], [45, [-4.5, 1.5, 1, 0.3, 1.5, 0]],
+];
+const SCROLL = [ [0, 0], [11.2, 0], [13.6, 2300], [14.6, 2300], [15.6, 1300], [20.0, 1420], [20.8, 3020], [23.2, 3080], [24.2, 3500], [25.6, 3540], [26.6, 4800], [32.6, 4800] ];
+
+function render(t, frame = Math.round(t * 30)) {
+  // overlays
+  show('open', 1 - prog(t, 5.5, 6.3)); $('openPhoto').style.transform = `scale(${1.12 - .1 * prog(t, 0, 6.3)})`;
+  titleIn('o1', t, 0.7, 5.6); titleIn('o2', t, 2.9, 5.6);
+  show('brand', win(t, 6.0, 8.2, .4)); $('brandU').style.width = (96 * inout(prog(t, 6.4, 7.2))) + '%';
+  titleIn('t3', t, 9.6, 14.6); titleIn('t4', t, 15.4, 20.2); titleIn('t5', t, 21.0, 25.8); titleIn('t6', t, 26.6, 32.6); titleIn('t7', t, 33.3, 37.0);
+  ['g1', 'g2', 'g3'].forEach((id, i) => { const a = 37.4 + i * 1.05; const p = ease(prog(t, a, a + .45)); const q = prog(t, 40.6, 41.0); show(id, p * (1 - q), `scale(${1.15 - .15 * p})`); $(id).style.filter = `blur(${(1 - p) * 14}px)`; });
+  show('scrim', win(t, 37.2, 41.2, .5));
+  show('end', prog(t, 40.8, 41.4)); show('endLogo', ease(prog(t, 41.2, 41.9)), `scale(${.94 + .06 * ease(prog(t, 41.2, 41.9))})`);
+  show('endTag', ease(prog(t, 41.7, 42.3))); show('endPill', ease(prog(t, 42.2, 42.8)), `translateY(${(1 - ease(prog(t, 42.2, 42.8))) * 30}px)`); show('endCall', ease(prog(t, 42.6, 43.2)));
+  // subtitles
+  const line = VO.find(([a, b]) => t >= a - .05 && t <= b + .25); const sub = $('sub');
+  if (line) { const txt = line[2]; if (sub.dataset.t !== txt) { sub.dataset.t = txt; sub.innerHTML = `<span>${txt}</span>`; } sub.style.opacity = Math.min(prog(t, line[0] - .05, line[0] + .15), 1 - prog(t, line[1] + .05, line[1] + .25)); }
+  else sub.style.opacity = 0;
+  $('vig').style.opacity = 1 - prog(t, 40.8, 41.4) * .7;
+
+  // 3D
+  const c = track(CAM, t); const drift = Math.sin(t * .6) * .08;
+  camera.position.set(c[0] + drift, c[1] + Math.sin(t * .45) * .05, c[2]); camera.lookAt(c[3], c[4], c[5]); camera.updateProjectionMatrix();
+  const L = track(LAPTOP, t); laptop.position.set(L[0], L[1] + Math.sin(t * .9) * .03, L[2]); laptop.rotation.y = L[3];
+  hinge.rotation.x = lerp(Math.PI / 2 - 0.02, -0.16, ease(L[4]));
+  const P = track(PHONE, t); phone.position.set(P[0], P[1] + Math.sin(t * 1.1 + 1) * .04, P[2]); phone.rotation.set(P[3], P[4], P[5]);
+  const C = track(CARD, t); card.position.set(C[0], C[1], C[2]); card.rotation.set(C[3], C[4] + Math.sin(t * .8) * .05, 0); card.scale.setScalar(Math.max(.001, C[5]));
+  const rp = prog(t, 17.8, 18.7); ring.position.set(-0.35, -0.55, 1.62); ring.scale.setScalar(1 + rp * 3); ring.material.opacity = rp > 0 && rp < 1 ? (1 - rp) : 0; ring.rotation.set(-0.8, 0.05, 0);
+  // screens
+  if (t >= 33.0 && t < 37.0) { const k = Math.floor(prog(t, 33.2, 36.8) * 4); deskSingle([T.ar, T.ur, T.es, T.ar][Math.min(3, k)] || T.ar); }
+  else deskWindow(track(SCROLL, t));
+  phoneScreen(t);
+  glare.material.opacity = .08 * Math.max(0, Math.sin(t * .7));
+  dust.rotation.y = t * .02; dust.position.y = Math.sin(t * .2) * .2;
+  fill.intensity = 14 + 6 * Math.sin(t * .5);
+  renderer.render(scene, camera);
+  grain(frame);
+}
+window.render = render; window.DURATION = DURATION;
+window.READY = ready.then(() => { render(0); return true; });
+
+if (!location.search.includes('record')) {
+  ready.then(() => {
+    let start = performance.now(), paused = false, pt = 0;
+    const loop = () => { if (!paused) { pt = ((performance.now() - start) / 1000) % DURATION; render(pt); } requestAnimationFrame(loop); };
+    addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { paused = !paused; if (!paused) start = performance.now() - pt * 1000; }
+      if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') { pt = clamp(pt + (e.code === 'ArrowRight' ? 1 : -1), 0, DURATION); start = performance.now() - pt * 1000; render(pt); }
+    });
+    loop();
+  });
+}
+</script>
+</body>
+</html>

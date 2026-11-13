@@ -460,9 +460,9 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "375px keyboard: no stop is left off-screen",
-  ""
+  "['Just videos', 'A van or uniform design', 'Choose Bronze', 'Choose Silver', 'Choose Gold']"
  ],
  [
   "PASS",
@@ -611,7 +611,7 @@
  ],
  [
   "PASS",
-  "375px reduce motion: hero has 0 running animations (normal mode: 22)",
+  "375px reduce motion: hero has 0 running animations (normal mode: 7)",
   ""
  ],
  [
@@ -626,7 +626,7 @@
  ],
  [
   "PASS",
-  "768px reduce motion: hero has 0 running animations (normal mode: 22)",
+  "768px reduce motion: hero has 0 running animations (normal mode: 7)",
   ""
  ],
  [
@@ -641,7 +641,7 @@
  ],
  [
   "PASS",
-  "1280px reduce motion: hero has 0 running animations (normal mode: 69)",
+  "1280px reduce motion: hero has 0 running animations (normal mode: 10)",
   ""
  ],
  [
@@ -672,7 +672,7 @@
  [
   "PASS",
   "1280px hero frame timing over 6 s (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 69 hero animations running"
+  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms; 10 hero animations running"
  ],
  [
   "PASS",
@@ -687,7 +687,7 @@
  [
   "PASS",
   "375px hero frame timing over 6 s (fast Mac, headless)",
-  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms; 22 hero animations running"
+  "60 fps, 95th percentile 16.8 ms, worst 16.8 ms, 0 frames over 33 ms; 7 hero animations running"
  ],
  [
   "PASS",
@@ -697,7 +697,7 @@
  [
   "NOTE",
   "375px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
-  "tr-phone \"\" bottom 1115 cut 1043 x 560 tr 954-; tr-screen \"\" bottom 1102 cut 1044 x 547 tr 967-"
+  "tr-phone \"\" bottom 1136 cut 1063 x 561 tr 975-; tr-screen \"\" bottom 1123 cut 1064 x 547 tr 987-"
  ],
  [
   "PASS",
@@ -738,6 +738,11 @@
   "PASS",
   "768px slanted hero does not clip buttons, text, card or caption (7 samples)",
   ""
+ ],
+ [
+  "NOTE",
+  "768px the animated phone slides up from behind the slanted edge during the loop (by design, only part of the animation)",
+  "tr-phone \"\" bottom 911 cut 836 x 795 tr 744-; tr-screen \"\" bottom 897 cut 836 x 780 tr 757-"
  ],
  [
   "PASS",
@@ -786,7 +791,7 @@
  ],
  [
   "PASS",
-  "1280px reveal: after jumping straight to the bottom nothing on screen is invisible (9 elements fade in)",
+  "1280px reveal: after jumping straight to the bottom nothing on screen is invisible (10 elements fade in)",
   ""
  ],
  [
@@ -880,14 +885,14 @@
   ""
  ],
  [
-  "PASS",
+  "FAIL",
   "1280px scrolling the whole page (fast Mac, headless)",
-  "57.4 fps, 95th percentile 16.7 ms, worst 400 ms, 1 frames over 33 ms, 1 over 50 ms"
+  "0.7 fps, 95th percentile 16.8 ms, worst 459931.5 ms, 1 frames over 33 ms, 1 over 50 ms"
  ],
  [
   "PASS",
   "375px scrolling the whole page (fast Mac, headless)",
-  "58.3 fps, 95th percentile 16.8 ms, worst 266.6 ms, 1 frames over 33 ms, 1 over 50 ms"
+  "60 fps, 95th percentile 16.7 ms, worst 16.8 ms, 0 frames over 33 ms, 0 over 50 ms"
  ],
  [
   "PASS",
