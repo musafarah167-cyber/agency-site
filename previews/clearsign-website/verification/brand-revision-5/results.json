@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-17",
+  "checks": [
+    {
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    }
+  ],
+  "downloads": [
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/wordmark-light.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/wordmark-dark.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/wordmark-mono.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/wordmark-white.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/signature-light.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/symbol-dark.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/signature-dark.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/symbol-white.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/symbol-mono.svg",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:3210/assets/brand/symbol-white-mono.svg",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "contrast": [
+    {
+      "role": "Charcoal/warm white",
+      "foreground": "#242420",
+      "background": "#f7f6f2",
+      "ratio": 14.4
+    },
+    {
+      "role": "Muted/warm white",
+      "foreground": "#65655f",
+      "background": "#f7f6f2",
+      "ratio": 5.42
+    },
+    {
+      "role": "Charcoal/amber",
+      "foreground": "#242420",
+      "background": "#d69a34",
+      "ratio": 6.33
+    },
+    {
+      "role": "Dark amber/warm white",
+      "foreground": "#835600",
+      "background": "#f7f6f2",
+      "ratio": 5.89
+    },
+    {
+      "role": "Amber/charcoal",
+      "foreground": "#d69a34",
+      "background": "#242420",
+      "ratio": 6.33
+    }
+  ]
+}

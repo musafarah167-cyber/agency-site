@@ -1,0 +1,20 @@
+[
+  {
+    "browser": "Chrome touch",
+    "touchEmulation": true,
+    "menu": true,
+    "localFormPreview": true,
+    "servicePageFits": true,
+    "hero": "ready",
+    "errors": []
+  },
+  {
+    "browser": "WebKit",
+    "touchEmulation": true,
+    "menu": true,
+    "localFormPreview": true,
+    "servicePageFits": true,
+    "hero": "ready",
+    "errors": []
+  }
+]

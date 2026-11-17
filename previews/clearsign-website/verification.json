@@ -1,0 +1,301 @@
+{
+  "time": "2026-11-17T00:45:34.810Z",
+  "browser": "Installed Chrome",
+  "checks": [
+    "Real 3D frames advance",
+    "Motion control freezes actual 3D frames",
+    "Scroll motion also disabled",
+    "Follow-up example displays",
+    "Example selector exposes state",
+    "Service link carries interest to contact",
+    "Service link carries scenario to contact",
+    "Enquiry preview displays",
+    "User input is safely rendered as text",
+    "Form does not put personal details in URL",
+    "Editing retains input",
+    "index.html has one heading",
+    "index.html has shared navigation",
+    "solutions.html has one heading",
+    "solutions.html has shared navigation",
+    "industries.html has one heading",
+    "industries.html has shared navigation",
+    "about.html has one heading",
+    "about.html has shared navigation",
+    "contact.html has one heading",
+    "contact.html has shared navigation",
+    "service-websites.html has one heading",
+    "service-websites.html has shared navigation",
+    "service-ai.html has one heading",
+    "service-ai.html has shared navigation",
+    "service-automation.html has one heading",
+    "service-automation.html has shared navigation",
+    "service-software.html has one heading",
+    "service-software.html has shared navigation",
+    "service-marketing.html has one heading",
+    "service-marketing.html has shared navigation",
+    "All ten pages fit four representative widths",
+    "Internal destination loads: /index.html",
+    "Internal destination loads: /index.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /about.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /service-marketing.html",
+    "Internal destination loads: /brand.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /about.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /service-marketing.html",
+    "Internal destination loads: /contact.html",
+    "Mobile menu opens",
+    "Escape closes mobile menu",
+    "Live reduced motion stops hero",
+    "Reduced motion freezes actual scene rendering",
+    "Graphics failure keeps static artwork",
+    "Fallback artwork remains visible",
+    "No-JavaScript form cannot submit personal data",
+    "No-JavaScript content remains visible",
+    "No-JavaScript navigation remains available",
+    "No-JavaScript artwork loads",
+    "No-JavaScript workflow summary remains visible",
+    "No page script errors",
+    "No failed assets",
+    "No external network requests"
+  ],
+  "layouts": [
+    {
+      "page": "index.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "solutions.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "solutions.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "solutions.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "solutions.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "industries.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "industries.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "industries.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "industries.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "about.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "about.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "about.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "about.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "contact.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "contact.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "contact.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "contact.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "service-websites.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "service-websites.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "service-websites.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "service-websites.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "service-ai.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "service-ai.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "service-ai.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "service-ai.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "service-automation.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "service-automation.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "service-automation.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "service-automation.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "service-software.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "service-software.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "service-software.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "service-software.html",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing.html",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing.html",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing.html",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing.html",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "external": [],
+  "limits": [
+    "No physical-device testing",
+    "No full accessibility certification",
+    "Enquiries preview locally; no delivery",
+    "No publication"
+  ]
+}
