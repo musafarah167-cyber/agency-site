@@ -36,7 +36,8 @@ for(const file of files) {
   if(file.endsWith('.html')) {
     matches=[...text.matchAll(/\b(?:href|src|action)\s*=\s*["']([^"']+)["']/g)].map(match=>match[1]);
     if(!/<html\s+lang="en-GB"/.test(text)) errors.push(`${file}: missing British English document language`);
-    if(!/<meta\s+name="robots"\s+content="noindex,nofollow"/.test(text)) errors.push(`${file}: missing preview indexing restriction`);
+    if (/<meta[^>]+(?:noindex|nofollow)/i.test(text)) errors.push(`${file}: public page blocks search engines`);
+    if (/(Local design preview|Preview only|mock[- ]?up|Pause animations|Motion on|remain for review)/i.test(text)) errors.push(`${file}: review wording in a public page`);
   }
   if(file.endsWith('.css')) matches=[...text.matchAll(/url\(\s*["']?([^"')]+)/g)].map(match=>match[1]);
   if(file.endsWith('.js')) matches=[...text.matchAll(/(?:\bfrom\s*|\bimport\s*\(\s*|\bimport\s*)["']([^"']+)["']/g)].map(match=>match[1]);

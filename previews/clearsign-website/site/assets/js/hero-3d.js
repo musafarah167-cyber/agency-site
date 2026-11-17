@@ -122,6 +122,7 @@ export async function initHeroScene({ canvas, stage, onReady = () => {} } = {}) 
 
   let disposed = false, lost = false, ready = false, paused = false, visible = true, suspended = false;
   let elapsed = 0, last = 0, progress = 0, displayedProgress = 0, painted = 0;
+  const introSeconds = 4;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const pose = { time: 0, progress: 0 };
 
@@ -157,16 +158,20 @@ export async function initHeroScene({ canvas, stage, onReady = () => {} } = {}) 
     const delta = now - last;
     if (delta < 32) return;
     const dt = Math.min(delta / 1000, .06);
-    elapsed += dt; displayedProgress += (progress - displayedProgress) * (1 - Math.exp(-dt * 8)); last = now;
+    elapsed = Math.min(introSeconds, elapsed + delta / 1000);
+    displayedProgress = elapsed === introSeconds ? progress : displayedProgress + (progress - displayedProgress) * (1 - Math.exp(-dt * 8));
+    last = now;
     render();
+    if (elapsed === introSeconds) sync();
   }
   function sync() {
     if (disposed) return;
-    const state = lost ? 'fallback' : reduce.matches ? 'reduced' : paused ? 'paused' : document.hidden || suspended ? 'hidden' : !visible ? 'offscreen' : 'running';
+    const state = lost ? 'fallback' : reduce.matches ? 'reduced' : paused ? 'paused' : document.hidden || suspended ? 'hidden' : !visible ? 'offscreen' : elapsed >= introSeconds ? 'settled' : 'running';
     stage.dataset.heroMotion = state;
     renderer.setAnimationLoop(state === 'running' ? frame : null);
     last = 0;
-    if (state === 'paused' || state === 'reduced') render();
+    if (state === 'settled') displayedProgress = progress;
+    if (state === 'paused' || state === 'reduced' || state === 'settled') render();
   }
   function resize() {
     if (disposed || lost) return;
@@ -206,7 +211,11 @@ export async function initHeroScene({ canvas, stage, onReady = () => {} } = {}) 
       const next = Math.min(1, Math.max(0, Number(value) || 0));
       if (Math.abs(next - progress) < .001) return;
       progress = next;
-      // Running loops apply progress on the next frame; paused/reduced stay still.
+      // After the introduction, draw only when the visitor scrolls.
+      if (stage.dataset.heroMotion === 'settled') {
+        displayedProgress = progress;
+        render();
+      }
     },
     dispose() {
       if (disposed) return;

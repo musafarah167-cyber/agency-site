@@ -1,0 +1,184 @@
+{
+  "checks": [
+    {
+      "name": "Custom validation replaces temporary browser popups",
+      "passed": true
+    },
+    {
+      "name": "An empty submission shows three persistent field errors",
+      "passed": true
+    },
+    {
+      "name": "An invalid submission focuses the first field",
+      "passed": true
+    },
+    {
+      "name": "Invalid name is announced",
+      "passed": true
+    },
+    {
+      "name": "Field errors remain visible after moving elsewhere",
+      "passed": true
+    },
+    {
+      "name": "Spaces and an invalid email each receive an explanation",
+      "passed": true
+    },
+    {
+      "name": "Correcting a field clears its invalid state",
+      "passed": true
+    },
+    {
+      "name": "A valid enquiry still previews",
+      "passed": true
+    },
+    {
+      "name": "Heading identifies the prepared project email",
+      "passed": true
+    },
+    {
+      "name": "Entered text remains safely rendered",
+      "passed": true
+    },
+    {
+      "name": "Editing keeps entered details",
+      "passed": true
+    },
+    {
+      "name": "The hero identifies businesses it is for",
+      "passed": true
+    },
+    {
+      "name": "AI agents are defined in the opening",
+      "passed": true
+    },
+    {
+      "name": "Contact stays available in #business-needs",
+      "passed": true
+    },
+    {
+      "name": "Contact stays available in .business-story",
+      "passed": true
+    },
+    {
+      "name": "Contact stays available in .industries-intro",
+      "passed": true
+    },
+    {
+      "name": "All five service choices are available together before the worked example",
+      "passed": true
+    },
+    {
+      "name": "Homepage section headings are distinct",
+      "passed": true
+    },
+    {
+      "name": "websites can be opened directly from its homepage row",
+      "passed": true
+    },
+    {
+      "name": "ai can be opened directly from its homepage row",
+      "passed": true
+    },
+    {
+      "name": "automation can be opened directly from its homepage row",
+      "passed": true
+    },
+    {
+      "name": "software can be opened directly from its homepage row",
+      "passed": true
+    },
+    {
+      "name": "marketing can be opened directly from its homepage row",
+      "passed": true
+    },
+    {
+      "name": "Homepage has no animation controls",
+      "passed": true
+    },
+    {
+      "name": "System reduced motion keeps the artwork still",
+      "passed": true
+    },
+    {
+      "name": "All four public email addresses are visible and correctly linked",
+      "passed": true
+    },
+    {
+      "name": "General email can be found in the footer",
+      "passed": true
+    },
+    {
+      "name": "Hero caption is readable on phones",
+      "passed": true
+    },
+    {
+      "name": "Homepage actions have enough tap space at 1440px",
+      "passed": true
+    },
+    {
+      "name": "Homepage actions fit with their intended gap at 1440px",
+      "passed": true
+    },
+    {
+      "name": "Masthead and unframed C share the original warm-white surface",
+      "passed": true
+    },
+    {
+      "name": "The large C sits beside the desktop headline",
+      "passed": true
+    },
+    {
+      "name": "Homepage actions have enough tap space at 320px",
+      "passed": true
+    },
+    {
+      "name": "Homepage actions fit with their intended gap at 320px",
+      "passed": true
+    },
+    {
+      "name": "Homepage actions have enough tap space at 390px",
+      "passed": true
+    },
+    {
+      "name": "Homepage actions fit with their intended gap at 390px",
+      "passed": true
+    },
+    {
+      "name": "Admin service has one consistent main name",
+      "passed": true
+    },
+    {
+      "name": "The admin jump link uses its service name",
+      "passed": true
+    },
+    {
+      "name": "Customer portal is explained at first use",
+      "passed": true
+    },
+    {
+      "name": "Breadcrumb, FAQ and footer targets are comfortable to tap",
+      "passed": true
+    },
+    {
+      "name": "Website example is clearly our own work",
+      "passed": true
+    },
+    {
+      "name": "Current homepage capture replaces homepage-preview.png",
+      "passed": true
+    },
+    {
+      "name": "Current homepage capture replaces website-specimen-mobile.png",
+      "passed": true
+    },
+    {
+      "name": "No script errors, external requests or sending",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "external": [],
+  "posts": []
+}

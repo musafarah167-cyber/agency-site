@@ -1,3 +1,13 @@
+# Launch checks, 17 November 2026
+
+[Browser and layout checks](launch-browser.json) · [Contact and accessibility checks](launch-focused.json)
+
+All 164 browser checks passed across 110 layouts. A further 44 checks passed, including email links, form validation, the automatic end to the C animation and the visitor’s reduced-motion preference. The source check covered 11 pages, 60 files and 496 local links or asset references.
+
+The form prepares a message in the visitor’s email app. These tests check its recipient and contents. Mailbox delivery, physical devices and screen readers require separate checks.
+
+## Earlier design reviews
+
 # Current website review
 
 [Website and layout checks](warm-white-browser.json) · [Homepage and practical checks](warm-white-focused.json)

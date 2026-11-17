@@ -1,6 +1,6 @@
 # ClearSign identity — charcoal, warm white and amber
 
-17 November 2026. Palette selected by Khalid; stronger amber hierarchy and the original large C animation retained at his request. Website publication remains separate.
+Use these ClearSign logos for digital artwork and print preparation.
 
 - `wordmark-light.svg`: charcoal C/name with an amber detached square, for light backgrounds.
 - `wordmark-dark.svg`: ivory C/name with an amber detached square, for dark backgrounds.

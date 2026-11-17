@@ -12,7 +12,7 @@ From the repository root, start a local preview with Python 3.
 python3 -m http.server 3210 --bind 127.0.0.1 --directory previews/clearsign-website/site
 ```
 
-Open [the homepage](http://127.0.0.1:3210/) or [the brand guide](http://127.0.0.1:3210/brand.html) on that computer. The pages are already built. The enquiry form lets you review a message and keeps it on your device.
+Open [the homepage](http://127.0.0.1:3210/) or [the brand guide](http://127.0.0.1:3210/brand.html) on that computer. The pages are already built. Visitors can email general enquiries, sales, support or accounts. The project form prepares an email to sales for the visitor to send in their own email app.
 
 ## Edit the review
 

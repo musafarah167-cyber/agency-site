@@ -10,17 +10,17 @@ const before=process.argv.includes('--before');const checks=[];const errors=[],e
 const base=process.env.CLEARSIGN_PREVIEW_URL || 'http://127.0.0.1:3210/';const b=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
 try{
  const c=await b.newContext({viewport:{width:390,height:844}});const p=await c.newPage();p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:'))external.push(r.url());if(r.method()!=='GET')posts.push({url:r.url(),method:r.method()})});
- await p.goto(base+'contact.html');await p.getByRole('button',{name:'Preview your enquiry',exact:true}).click();
+ await p.goto(base+'contact.html');await p.getByRole('button',{name:'Prepare my email',exact:true}).click();
  check(await p.locator('form').evaluate(e=>e.noValidate),'Custom validation replaces temporary browser popups');
  check(await p.locator('[data-field-error]:visible').count()===3,'An empty submission shows three persistent field errors');
  check(await p.locator('[name=name]').evaluate(e=>e===document.activeElement),'An invalid submission focuses the first field');
  check(await p.locator('[name=name]').getAttribute('aria-invalid')==='true','Invalid name is announced');
  await p.locator('[name=business]').fill('Example');check(await p.locator('[data-field-error]:visible').count()===3,'Field errors remain visible after moving elsewhere');
- await p.locator('[name=name]').fill('  ');await p.locator('[name=message]').fill('\n  ');await p.locator('[name=email]').fill('not-an-email');await p.getByRole('button',{name:'Preview your enquiry',exact:true}).click();
+ await p.locator('[name=name]').fill('  ');await p.locator('[name=message]').fill('\n  ');await p.locator('[name=email]').fill('not-an-email');await p.getByRole('button',{name:'Prepare my email',exact:true}).click();
  check(await p.locator('[data-field-error]:visible').count()===3,'Spaces and an invalid email each receive an explanation');
  await p.locator('[name=name]').fill('Test <img src=x onerror=alert(1)>');check(await p.locator('[name=name]').getAttribute('aria-invalid')!=='true','Correcting a field clears its invalid state');
- await p.locator('[name=email]').fill('test@example.com');await p.locator('[name=message]').fill('A local test enquiry.');await p.getByRole('button',{name:'Preview your enquiry',exact:true}).click();
- check(await p.locator('#enquiry-result').isVisible(),'A valid enquiry still previews');check((await p.locator('#enquiry-result-heading').textContent()).trim()==='Your enquiry preview','Preview heading does not imply a later send step');check(await p.locator('#enquiry-summary img').count()===0,'Entered text remains safely rendered');await p.locator('#edit-enquiry').click();check((await p.locator('[name=name]').inputValue()).includes('<img'),'Editing keeps entered details');
+ await p.locator('[name=email]').fill('test@example.com');await p.locator('[name=message]').fill('A local test enquiry.');await p.getByRole('button',{name:'Prepare my email',exact:true}).click();
+ check(await p.locator('#enquiry-result').isVisible(),'A valid enquiry still previews');check((await p.locator('#enquiry-result-heading').textContent()).trim()==='Your project email','Heading identifies the prepared project email');check(await p.locator('#enquiry-summary img').count()===0,'Entered text remains safely rendered');await p.locator('#edit-enquiry').click();check((await p.locator('[name=name]').inputValue()).includes('<img'),'Editing keeps entered details');
  await p.goto(base);check(/trades|salons|car hire/i.test(await p.locator('.hero-eyebrow').textContent()),'The hero identifies businesses it is for');check(/digital assistant/i.test(await p.locator('.hero-content').textContent()),'AI agents are defined in the opening');
  for(const selector of ['#business-needs','.business-story','.industries-intro'])check(await p.locator(selector+' a[href="contact.html"]').count()>0,'Contact stays available in '+selector);
  const servicesBeforeExample = await p.locator('#business-needs').evaluate(section => {
@@ -31,9 +31,16 @@ try{
  check(servicesBeforeExample, 'All five service choices are available together before the worked example');
  const names=(await p.locator('main h2').allTextContents()).map(t=>t.replace(/\s/g,'').toLowerCase());check(new Set(names).size===names.length,'Homepage section headings are distinct');
  const slugs=['websites','ai','automation','software','marketing'];for(const slug of slugs)check(await p.locator('#home-service-'+slug).getAttribute('href')==='service-'+slug+'.html',slug+' can be opened directly from its homepage row');
- const motion=p.locator('.hero-motion');const label=await motion.getAttribute('aria-label');await motion.click();check(await motion.getAttribute('aria-label')===label&&label==='Pause animations','Motion toggle has one stable accessible label');check(await motion.getAttribute('aria-pressed')==='true','Pressed motion toggle means paused');
- await p.goto(base+'about.html');check(await p.locator('html').evaluate(e=>e.classList.contains('motion-off')),'Pause preference survives another page');check(await p.locator('.motion-control').getAttribute('aria-pressed')==='true','The new page shows the saved paused state');
- await p.goto(base);check(await p.locator('.hero-motion').evaluate(e=>parseFloat(getComputedStyle(e).fontSize))>=14,'Motion control is readable on phones');check(await p.locator('.hero-media-footer>span').evaluate(e=>parseFloat(getComputedStyle(e).fontSize))>=12,'Hero caption is readable on phones');
+ check(await p.locator('.motion-control,.hero-motion').count() === 0, 'Homepage has no animation controls');
+ await p.emulateMedia({reducedMotion:'reduce'});
+ await p.waitForFunction(() => document.querySelector('#hero-3d-stage').dataset.heroMotion==='reduced');
+ check(await p.locator('html').evaluate(e=>e.classList.contains('motion-off')), 'System reduced motion keeps the artwork still');
+ await p.goto(base+'contact.html');
+ const addresses=await p.locator('.contact-emails a').evaluateAll(links=>links.map(link=>[link.textContent,link.getAttribute('href')]));
+ check(['info','sales','support','accounts'].every(role=>addresses.some(([label,href])=>label===role+'@clearsign.uk' && href==='mailto:'+label)), 'All four public email addresses are visible and correctly linked');
+ await p.goto(base);
+ check(await p.locator('footer a[href="mailto:info@clearsign.uk"]').isVisible(), 'General email can be found in the footer');
+ check(await p.locator('.hero-media-footer>span').evaluate(e=>parseFloat(getComputedStyle(e).fontSize))>=12,'Hero caption is readable on phones');
  for (const width of [1440, 320, 390]) {
    await p.setViewportSize({width, height: 900});
    await p.evaluate(() => document.fonts.ready);

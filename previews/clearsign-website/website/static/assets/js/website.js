@@ -22,7 +22,6 @@ function configureMotion(){
  root.classList.toggle('motion-off',off);
  const journey=document.getElementById('connected-work');
  if(journey){journey.dataset.scAct='flow';journey.style.height='';}
- document.querySelectorAll('.motion-control').forEach(b=>{const label=reduced.matches?'Reduced motion':'Pause animations';b.textContent=label;b.setAttribute('aria-pressed',String(off));b.setAttribute('aria-label',label);b.title=reduced.matches?'Animations are paused by your device setting.':paused?'Animations paused. Select to resume.':'Select to pause animations.';b.disabled=reduced.matches;});
  if(!off&&window.ScrollCraft&&document.querySelector('[data-sc-act]')){try{engine=window.ScrollCraft.mount(document);}catch(e){root.classList.add('motion-off');}}
  // Readable static mode is also ready, with no hidden content or extra pinned space.
  if(off)root.classList.add('sc-ready');
@@ -37,7 +36,6 @@ function updateProgress(){
  if(journey){const act=engine?.acts?.find(a=>a.el===journey);const progress=paused||reduced.matches||mobile.matches?1:Math.max(.05,Math.min(1,((act?.p??0)-.18)/.64));journey.style.setProperty('--journey-progress',String(progress));journey.dataset.progress=progress.toFixed(3);journey.querySelectorAll('#journey-steps li').forEach((li,i)=>li.classList.toggle('is-active',progress>=i/3));}
 }
 window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(updateProgress);}},{passive:true});
-document.querySelectorAll('.motion-control').forEach(b=>b.addEventListener('click',()=>{paused=!paused;try{localStorage.setItem(motionPreferenceKey,paused?'off':'on');}catch{/* The control still works when preferences cannot be saved. */}configureMotion();}));
 reduced.addEventListener('change',configureMotion);
 configureMotion();
 const heroStage=document.getElementById('hero-3d-stage');
@@ -112,6 +110,10 @@ if(form){
   const selectedContext=contextInput.value;
   const rows=[['Name',String(data.get('name')).trim()],['Business',String(data.get('business')||'').trim()||'Not provided'],['Email',String(data.get('email')).trim()],['Service',data.get('interest')],...(contextChoices.includes(selectedContext)?[[workflowContext?'Enquiry about':'Business type',selectedContext]]:[]),['What you need',String(data.get('message')).trim()]];
   summary.replaceChildren(...rows.map(([label,value])=>{const row=document.createElement('div'),term=document.createElement('dt'),description=document.createElement('dd');term.textContent=label;description.textContent=String(value);row.append(term,description);return row;}));
+  const subject = 'ClearSign project enquiry' + (data.get('interest') === 'Not sure yet' ? '' : ' – ' + data.get('interest'));
+  const body = rows.map(([label,value]) => label + ': ' + value).join('\n\n').replace(/\r?\n/g, '\r\n');
+  document.getElementById('send-enquiry-email').href = 'mailto:' + form.dataset.recipient
+    + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   form.hidden=true;result.hidden=false;document.getElementById('enquiry-result-heading').focus();
  });
  document.getElementById('edit-enquiry').addEventListener('click',()=>{attempted=false;feedback.hidden=true;result.hidden=true;form.hidden=false;form.elements.name.focus();});

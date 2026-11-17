@@ -46,6 +46,6 @@ export const serviceVisuals = {
         <span>Tap to open<br>our website.</span>
       </div>
     </div>
-    <figcaption>ClearSign tap-to-open card design, shown as a mock-up.</figcaption>
+    <figcaption>Front and back of the ClearSign tap-to-open card design.</figcaption>
   </figure>`
 };
