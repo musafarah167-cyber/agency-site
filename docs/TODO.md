@@ -99,3 +99,9 @@ CAN BE PLACEHOLDER FOR NOW
 - [x] On-page SEO done: title, description, Open Graph, theme-color, one h1 (T4)
 - [ ] Still to do for SEO (needs a domain, Phase 3): robots.txt, sitemap, canonical, og:url, local business structured data
 - [ ] Final checks before launch: checklist written in `docs/process/website-build-process.md` (T7); still to run when the site is ready
+
+## Company website review — 17 November 2026
+
+- [x] Prepare the current ten-page website, brand kit, local viewing instructions and check evidence for a separate review branch.
+- [ ] Review with Hussam and record any follow-up work.
+- [ ] Launch separately after confirmed business details, real enquiry delivery and production checks; no publication authorised by this handover.

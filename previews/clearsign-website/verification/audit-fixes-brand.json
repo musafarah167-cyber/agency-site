@@ -1,0 +1,90 @@
+[
+  {
+    "width": 320,
+    "scale": 1,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 320,
+    "scale": 2,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 390,
+    "scale": 1,
+    "viewport": 390,
+    "scrollWidth": 390,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 390,
+    "scale": 2,
+    "viewport": 390,
+    "scrollWidth": 390,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 768,
+    "scale": 1,
+    "viewport": 768,
+    "scrollWidth": 768,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 768,
+    "scale": 2,
+    "viewport": 768,
+    "scrollWidth": 768,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 1440,
+    "scale": 1,
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  },
+  {
+    "width": 1440,
+    "scale": 2,
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "outside": [],
+    "clipped": [],
+    "panelOverflow": [],
+    "applicationsFit": true,
+    "cardContentFits": true
+  }
+]

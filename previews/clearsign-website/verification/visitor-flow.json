@@ -1,0 +1,672 @@
+{
+  "time": "2026-11-17T01:37:19.845Z",
+  "checks": [
+    "Logo/hero unchanged: assets/brand/symbol-white-mono.svg",
+    "Logo/hero unchanged: assets/brand/wordmark-white.svg",
+    "Logo/hero unchanged: assets/brand/symbol-white.svg",
+    "Logo/hero unchanged: assets/brand/signature-light.svg",
+    "Logo/hero unchanged: assets/brand/wordmark-mono.svg",
+    "Logo/hero unchanged: assets/brand/symbol-dark.svg",
+    "Logo/hero unchanged: assets/brand/symbol-blue.svg",
+    "Logo/hero unchanged: assets/brand/signature-white.svg",
+    "Logo/hero unchanged: assets/brand/signature-dark.svg",
+    "Logo/hero unchanged: assets/brand/wordmark-light.svg",
+    "Logo/hero unchanged: assets/brand/symbol-mono.svg",
+    "Logo/hero unchanged: assets/brand/symbol-red.svg",
+    "Logo/hero unchanged: assets/brand/wordmark-dark.svg",
+    "Logo/hero unchanged: assets/brand/signature-mono.svg",
+    "Logo/hero unchanged: assets/favicon.svg",
+    "Logo/hero unchanged: hero-3d.js",
+    "Logo/hero unchanged: assets/hero-sculpture.png",
+    "websites contact action is on first mobile screen",
+    "websites breadcrumb returns to services",
+    "websites carries exact service into form",
+    "websites has a visible writing example",
+    "ai contact action is on first mobile screen",
+    "ai breadcrumb returns to services",
+    "ai carries exact service into form",
+    "ai has a visible writing example",
+    "automation contact action is on first mobile screen",
+    "automation breadcrumb returns to services",
+    "automation carries exact service into form",
+    "automation has a visible writing example",
+    "software contact action is on first mobile screen",
+    "software breadcrumb returns to services",
+    "software carries exact service into form",
+    "software has a visible writing example",
+    "marketing contact action is on first mobile screen",
+    "marketing breadcrumb returns to services",
+    "marketing carries exact service into form",
+    "marketing has a visible writing example",
+    "websites overview action carries service",
+    "ai overview action carries service",
+    "automation overview action carries service",
+    "software overview action carries service",
+    "marketing overview action carries service",
+    "Industry 0 gives relevant service choices",
+    "Industry 0 avoids an assumed service",
+    "Industry 0 carries business context",
+    "Industry 1 gives relevant service choices",
+    "Industry 1 avoids an assumed service",
+    "Industry 1 carries business context",
+    "Industry 2 gives relevant service choices",
+    "Industry 2 avoids an assumed service",
+    "Industry 2 carries business context",
+    "Industry 3 gives relevant service choices",
+    "Industry 3 avoids an assumed service",
+    "Industry 3 carries business context",
+    "Industry 4 gives relevant service choices",
+    "Industry 4 avoids an assumed service",
+    "Industry 4 carries business context",
+    "Industry context is visible in contact",
+    "Five services plus Not sure yet",
+    "Optional business name does not block preview",
+    "Input is rendered safely as text",
+    "Missing optional business is clear",
+    "Preview has labelled fields including business context",
+    "Keyboard focus reaches preview heading",
+    "Personal details do not enter the URL",
+    "Editing retains entered details",
+    "Writing example follows the selection",
+    "Legacy phone link still selects AI agents",
+    "Workflow context is not labelled as a business type",
+    "Mobile menu names Services plainly",
+    "Escape closes menu",
+    "index has one main heading",
+    "solutions has one main heading",
+    "industries has one main heading",
+    "about has one main heading",
+    "contact has one main heading",
+    "service-websites has one main heading",
+    "service-ai has one main heading",
+    "service-automation has one main heading",
+    "service-software has one main heading",
+    "service-marketing has one main heading",
+    "All ten pages fit six widths including menu breakpoint",
+    "All ten pages fit 200% text at narrow widths",
+    "Internal destination loads: /index.html",
+    "Internal destination loads: /index.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /about.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /service-marketing.html",
+    "Internal destination loads: /brand.html",
+    "Internal destination loads: /solutions.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /industries.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /about.html",
+    "Internal destination loads: /contact.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /service-websites.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /service-ai.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-automation.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /service-software.html",
+    "Internal destination loads: /service-marketing.html",
+    "Internal destination loads: /service-marketing.html",
+    "Internal destination loads: /service-marketing.html",
+    "Internal destination loads: /service-marketing.html",
+    "Original C still animates",
+    "Motion control still freezes C",
+    "Reduced motion is honoured",
+    "No-JavaScript form cannot send personal details",
+    "No-JavaScript navigation remains usable",
+    "No-JavaScript service action remains visible",
+    "No browser script errors",
+    "No broken page assets",
+    "No external requests",
+    "WebKit preserves exact service context",
+    "WebKit optional-business form preview works"
+  ],
+  "actions": [
+    {
+      "slug": "websites",
+      "top": 392.1875,
+      "bottom": 444.1875
+    },
+    {
+      "slug": "ai",
+      "top": 392.1875,
+      "bottom": 444.1875
+    },
+    {
+      "slug": "automation",
+      "top": 458.890625,
+      "bottom": 510.890625
+    },
+    {
+      "slug": "software",
+      "top": 392.1875,
+      "bottom": 444.1875
+    },
+    {
+      "slug": "marketing",
+      "top": 418.578125,
+      "bottom": 470.578125
+    }
+  ],
+  "layouts": [
+    {
+      "page": "index",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 320,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 390,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 768,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 861,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 900,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 1440,
+      "scale": 1,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "index",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "solutions",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "industries",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "about",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-websites",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-ai",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-automation",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-software",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 320,
+      "scale": 2,
+      "overflow": false
+    },
+    {
+      "page": "service-marketing",
+      "width": 390,
+      "scale": 2,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "external": [],
+  "limits": [
+    "Physical devices and screen readers not checked",
+    "No real customer usability study or conversion measurement",
+    "Enquiry remains an unsent local preview"
+  ]
+}

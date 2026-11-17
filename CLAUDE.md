@@ -1,3 +1,7 @@
+# Current company-website review
+
+The 17 November 2026 review is in previews/clearsign-website/. Read its README.md, AGENTS.md and HANDOVER.md for current colour, source and no-publication rules. The older guidance below describes the unchanged legacy site/ and does not override the current preview’s owner decisions.
+
 # Agency site
 
 Marketing agency website. Services: NFC cards (blank + custom), website builds and maintenance, video content, tiered packages.

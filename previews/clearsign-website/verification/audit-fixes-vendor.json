@@ -1,0 +1,171 @@
+{
+  "checkedAt": "2026-11-17T08:51:44.310Z",
+  "node": "v22.12.0",
+  "checks": [
+    {
+      "name": "Original and generated modules import with revision 187",
+      "pass": true
+    },
+    {
+      "name": "Every public export is retained",
+      "pass": true,
+      "details": {
+        "count": 443
+      }
+    },
+    {
+      "name": "Export types are unchanged",
+      "pass": true
+    },
+    {
+      "name": "Every Three.js name used by the unchanged hero resolves",
+      "pass": true,
+      "details": [
+        "Shape",
+        "CanvasTexture",
+        "EquirectangularReflectionMapping",
+        "SRGBColorSpace",
+        "Vector3",
+        "BufferGeometry",
+        "Float32BufferAttribute",
+        "WebGLRenderer",
+        "ACESFilmicToneMapping",
+        "PCFSoftShadowMap",
+        "Scene",
+        "PerspectiveCamera",
+        "Group",
+        "PMREMGenerator",
+        "MeshPhysicalMaterial",
+        "DoubleSide",
+        "ExtrudeGeometry",
+        "Mesh",
+        "CatmullRomCurve3",
+        "HemisphereLight",
+        "DirectionalLight",
+        "PlaneGeometry",
+        "ShadowMaterial",
+        "MathUtils"
+      ]
+    },
+    {
+      "name": "Actual hero C extrusion and ribbon geometry are byte-identical",
+      "pass": true,
+      "details": [
+        {
+          "attributes": {
+            "position": {
+              "count": 10932,
+              "hash": "274826f04c79c477de0cb9b387f1c063a5ea7b1d979038344fdaf3c472b2659c"
+            },
+            "uv": {
+              "count": 10932,
+              "hash": "791e6cafd86a32007e858a32ad87c72440c09915ced8a3700c9e257edbb2b9e9"
+            },
+            "normal": {
+              "count": 10932,
+              "hash": "00c6fce988762b0e9fe6d5828e2315c1ff987a9d5eb672e10cef848083bae55e"
+            }
+          },
+          "indexHash": null,
+          "bounds": {
+            "min": [
+              -2.0250000953674316,
+              -1.875,
+              -0.375
+            ],
+            "max": [
+              2.0250000953674316,
+              1.875,
+              0.375
+            ]
+          }
+        },
+        {
+          "attributes": {
+            "position": {
+              "count": 516,
+              "hash": "f0f4434aa05f44b8fa2d6e56f16b170e0957f664bcce6073bec6b459e4c38bb2"
+            },
+            "normal": {
+              "count": 516,
+              "hash": "589b97f92ee643058fbae3aa0d558f2656c0e38e689b53ced6741d5d03ffffa1"
+            }
+          },
+          "indexHash": "3c85e0d9aee018cd3eb733c3a22634b8a6da5b3ef4cb16b9e9d79b3ebbea9c66",
+          "bounds": {
+            "min": [
+              -5.012439250946045,
+              -1.874904751777649,
+              -1.6170265674591064
+            ],
+            "max": [
+              5.230381965637207,
+              1.9373459815979004,
+              0.6986918449401855
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "All protected logo, fallback and hero files match baseline",
+      "pass": true,
+      "details": {
+        "count": 17
+      }
+    },
+    {
+      "name": "ScrollCraft differs from pinned upstream only at seek-loop startup",
+      "pass": true
+    },
+    {
+      "name": "Patched ScrollCraft parses",
+      "pass": true
+    },
+    {
+      "name": "Generic script rebuilds pinned modules in a separate directory",
+      "pass": true
+    },
+    {
+      "name": "Regenerated modules, license and manifest are byte-identical",
+      "pass": true
+    },
+    {
+      "name": "Second rebuild is deterministic",
+      "pass": true
+    },
+    {
+      "name": "Wrong source version is rejected before writing",
+      "pass": true
+    },
+    {
+      "name": "Changed source module is rejected",
+      "pass": true
+    },
+    {
+      "name": "Changed tool is rejected before execution",
+      "pass": true
+    },
+    {
+      "name": "Unexpected existing vendor edits are preserved",
+      "pass": true
+    },
+    {
+      "name": "Preserved original source three.module.js",
+      "pass": true
+    },
+    {
+      "name": "Preserved original source three.core.js",
+      "pass": true
+    },
+    {
+      "name": "Preserved original archive",
+      "pass": true
+    },
+    {
+      "name": "Preserved original ScrollCraft source",
+      "pass": true
+    }
+  ],
+  "limitation": "Imports, exports, actual hero geometry, build reproduction and source preservation checked here. These checks do not exercise GPU rendering or browser animation lifecycle; those require the integrated browser check."
+}

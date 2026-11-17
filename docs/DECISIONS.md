@@ -80,3 +80,7 @@ Only things the owner has said. Add the date when something changes.
 - Placeholders hidden (owner asked Claude to do it, 2026-10-09): "Our work" section and the "Customer testimonials" video card are hidden (code kept, see comments in index.html) until real projects/footage arrive.
 - Domain check (2026-10-09, lookup only, nothing bought): clearsigns.co.uk and clearsigns.com are TAKEN. Available: clearsigns.uk, clearsignsuk.co.uk, clearsignsmedia.co.uk, clearsignsdigital.co.uk, clearsigns.agency, clearsigns.digital. The taken .co.uk/.com make the trade mark / name check more important before buying anything.
 - Promo video (2026-10-21, owner request modelled on an example ad): 45 s vertical MP4, in promo/. Free Unsplash photos + Pixabay music (owner approved the downloads). Sources/licences in promo/CREDITS.md.
+
+## Current company website shared for review — 17 November 2026
+
+The owner requested the finished website be pushed for Hussam to review. The current preview is previews/clearsign-website/, separate from the unchanged site/. Selected identity: charcoal, warm white and stronger amber; original large C/ribbon animation preferred. The enquiry form is an unsent preview. Sharing this review does not authorise merging or publishing.
