@@ -20,8 +20,10 @@ All ten pages are prebuilt. Python 3 serves them; no package installation or ext
 node previews/clearsign-website/build/site.mjs
 ```
 
-Use a current supported Node.js version. `build/site.mjs` is the source for shared HTML and page composition. Content lives in `content/`; do not make lasting copy edits directly to generated HTML. `website.js` owns navigation, the unsent form preview and shared motion. `hero-3d.js` owns the sculpture, and `scroll-story.js` owns the illustrative enquiry journey. CSS loads from general to specific, ending with `refinement.css`. Brand review uses `brand-kit.css`.
+Use a current supported Node.js version. `build/site.mjs` is the source for shared HTML and page composition. Content lives in `content/`; do not make lasting copy edits directly to generated HTML. `website.js` owns navigation, the unsent form preview and shared motion. `hero-3d.js` owns the sculpture, and `scroll-story.js` owns the illustrative enquiry journey. CSS loads from general to specific, ending with `refinement.css` then `clarity.css`. The latter refines readable service hierarchy, contact actions and the form. Brand review uses `brand-kit.css`.
 
 Read [HANDOVER.md](HANDOVER.md) for what works and what remains, [AGENTS.md](AGENTS.md) for editing boundaries and [SOURCES.md](SOURCES.md) for local runtime/licence details.
 
 The enquiry form does **not send or save messages**. The sample workflows are illustrative, not evidence that those customer systems have been delivered. There are no invented clients, testimonials, prices or results.
+
+The current flow uses five distinct services throughout: Websites, AI agents, Admin & follow-up, Custom software, and Marketing & print. Visitors can pick a service or their type of business, then review an enquiry with that context already selected. See `verification/visitor-flow.json` and `verification/visitor-flow-review.md` for the latest checks; earlier reports are historical.

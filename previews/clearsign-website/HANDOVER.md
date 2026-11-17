@@ -4,9 +4,15 @@
 
 ## What changed
 
-A ten-page website explains websites, personalised AI agents, automation/customer records, tailored software and marketing/print. The home page leads with missed enquiries, then shows practical service inclusions, a sample car-hire enquiry journey, relevant industries and the team’s process.
+A ten-page website explains websites, personalised AI agents, admin and follow-up, tailored software and marketing/print. The home page leads with missed enquiries, then shows practical service inclusions, a sample car-hire enquiry journey, relevant industries and the team’s process.
 
 Khalid chose charcoal, warm white and amber, then asked for amber to stand out more. He preferred the original large animated C: it is restored with a charcoal body, full amber detached square and one silver ribbon. Primary buttons, headline emphasis and selected example stages use amber. Brand downloads match.
+
+## Latest visitor-flow improvements
+
+Service names now lead the homepage list, with the benefit and concrete examples beneath. AI agents and automation are explained in ordinary language. Each service introduction has an immediate enquiry action and links to its inclusions, example and questions. The selected service follows into the form.
+
+Who we help gives several suitable choices for salons/barbers, restaurants/takeaways, car hire, trades/garages and accountants/legal firms. It carries the business type into an enquiry without assuming which service is wanted. The form has five distinct choices, optional business name, writing examples and a labelled editable preview. The existing logos and hero are unchanged.
 
 ## What works and what was checked
 
@@ -14,9 +20,11 @@ Khalid chose charcoal, warm white and amber, then asked for amber to stand out m
 - Local 3D rendering, exact pause/resume, reduced motion, offscreen suspension and static fallback.
 - Scroll-connected sample record on desktop; all three example steps readable on mobile.
 - Editable, unsent enquiry preview. No personal details sent or stored; user input rendered safely as text.
-- 84 browser assertions across 40 page/width layouts; Chrome and WebKit touch checks; normal/200% text homepage checks at 320/390/768/844px; ten logo downloads checked.
+- Latest visitor-flow checks: 150 assertions, 80 layouts across all ten pages, Chrome/WebKit enquiry flow and 17 unchanged logo/hero asset hashes. Independent enlarged-text review passed 20 layouts with no clipped text. See verification/visitor-flow.json and verification/visitor-flow-review.md.
+- The isolated sharing package was rebuilt and all 11 HTML pages loaded without broken assets, script errors or external requests; its C and enquiry preview work.
+- Previous revision evidence is retained: 84 assertions across 40 page/width layouts, Chrome/WebKit touch checks, normal/200% homepage text and ten logo downloads.
 
-Compact browser evidence is included in verification.json and verification/. These are recorded checks of this revision, not CI or a security certification. Physical phones, software keyboards, screen-reader sessions and printed/embroidered samples have not been checked. Conversion performance has not been measured.
+Compact browser evidence is included in verification.json and verification/. The visitor-flow files describe the latest revision; older reports are labelled historical. These are recorded local checks, not automated repository checks or a security certification. Physical phones, software keyboards, screen-reader sessions and printed/embroidered samples have not been checked. Conversion performance has not been measured.
 
 ## Before launch
 

@@ -7,7 +7,7 @@ export const services = [
     "filename": "service-websites.html",
     "title": "A website that works for your business.",
     "navTitle": "Websites",
-    "intro": "Show people what you do and make it easy to get in touch. We design and build business websites with straightforward navigation, well-written content and a layout that works on phones.",
+    "intro": "Help people understand your services and get in touch. We build clear, easy-to-use websites that work on phones, with the information customers need before they enquire or book.",
     "benefit": "Explain your services, show your work and give customers an easy way to enquire or book.",
     "included": [
       {
@@ -16,7 +16,7 @@ export const services = [
       },
       {
         "title": "Designed for phones and larger screens",
-        "description": "Readable text, accessible controls and navigation that makes sense on the devices your customers use."
+        "description": "Readable text, easy-to-tap buttons and clear menus on phones, tablets and computers."
       },
       {
         "title": "Enquiries and booking links",
@@ -24,11 +24,11 @@ export const services = [
       },
       {
         "title": "Help with words and content",
-        "description": "We work with you on the copy and business details, then agree which photos or videos are needed."
+        "description": "We help write the pages, check your business details with you and plan the photos or videos you need."
       },
       {
         "title": "Launch and maintenance",
-        "description": "Review the site with us before launch. We also agree who will handle updates and what any ongoing maintenance covers."
+        "description": "Check the finished website before it goes live. We agree who will keep it up to date and what support is included."
       }
     ],
     "example": {
@@ -39,12 +39,12 @@ export const services = [
         "They follow the booking link or send your team an enquiry.",
         "Your booking system confirms the appointment, or your team replies to the request."
       ],
-      "outcome": "The aim is to help someone go from finding your business to arranging a visit without hunting for information."
+      "outcome": "Customers can find the details they need and take the next step without hunting through different pages or social accounts."
     },
     "boundaries": [
-      "The quote sets out the pages, content, revisions and contact options included.",
+      "Your quote lists the pages, content, changes and contact options included.",
       "A booking request is not a confirmed appointment. We check how your booking system handles confirmations.",
-      "Hosting, domain access and maintenance are agreed before launch.",
+      "We agree who looks after your web address, hosting and updates. Hosting is the service that keeps the website online.",
       "Search-engine setup can be included. Rankings and a particular number of enquiries are not guaranteed."
     ],
     "faqs": [
@@ -62,7 +62,7 @@ export const services = [
       },
       {
         "question": "What happens after launch?",
-        "answer": "We agree the handover, access and any ongoing maintenance with you. Updates outside that agreement can be quoted separately."
+        "answer": "We show you how to use the website and agree who handles updates. Your proposal explains access, support and any ongoing charges."
       }
     ],
     "related": [
@@ -76,28 +76,28 @@ export const services = [
     "filename": "service-ai.html",
     "title": "An AI agent with a job to do.",
     "navTitle": "AI agents",
-    "intro": "Give routine enquiries a first point of contact. We can explore an AI agent that answers approved questions, takes messages or collects details for your team, starting with a small, supervised trial.",
-    "benefit": "Explore an agent for common questions, enquiry details and callback requests, with clear rules for passing requests to your team.",
+    "intro": "An AI agent is a digital assistant for tasks such as answering common questions or taking messages. We set it up with your business information and start with a supervised trial.",
+    "benefit": "Give routine enquiries a first response and collect the details your team needs to reply.",
     "included": [
       {
-        "title": "A role chosen with you",
-        "description": "Start with one task, such as answering opening-time questions or collecting a caller’s details for a callback."
+        "title": "One useful job to start with",
+        "description": "Choose a task such as answering opening-time questions or taking a name, number and message when your team is busy."
       },
       {
         "title": "Your business information",
-        "description": "We prepare the information and answers the agent can use, and agree how you will review changes."
+        "description": "You check the answers and business details it will use. We agree how those details will be kept up to date."
       },
       {
-        "title": "Limits on what it can do",
-        "description": "You decide which actions it may take. Quotes, bookings and changes to customer records need their own checks and permissions."
+        "title": "You decide what it can do",
+        "description": "Agree what the agent can answer or change, and when it must leave the decision to your team."
       },
       {
-        "title": "Handover to your team",
-        "description": "Set out when the agent should take a message or pass the conversation to someone in your business."
+        "title": "A clear way to reach a person",
+        "description": "Decide when it should take a callback request or pass the conversation to your team, then test that the request arrives."
       },
       {
         "title": "A trial before wider use",
-        "description": "We test realistic questions and difficult cases with you, then review the results before agreeing to live use."
+        "description": "Try everyday questions and difficult cases with us. We review the answers and messages together before agreeing to customer use."
       }
     ],
     "example": {
@@ -108,22 +108,22 @@ export const services = [
         "It collects the caller’s details and a short description of what they need.",
         "Your team receives the request and handles anything that needs a person’s decision."
       ],
-      "outcome": "A trial would check the accuracy of the answers, the quality of the messages and whether requests reliably reach your team."
+      "outcome": "The trial checks that answers are accurate, messages are useful and requests reach the right person."
     },
     "boundaries": [
-      "We begin with a defined trial and agree checks before using the agent with customers.",
-      "The agent uses approved information and actions. Your team handles requests outside those limits.",
+      "We agree a small trial, what success looks like and the checks needed before customer use.",
+      "Your team handles anything outside the agent’s approved information or actions.",
       "Bookings, orders and quotes require separately tested connections and your permission.",
-      "The proposal covers phone and software charges, information handling and ongoing review."
+      "Your proposal explains phone and software charges, how information is handled and who checks the agent after launch."
     ],
     "faqs": [
       {
         "question": "What makes the agent personalised?",
-        "answer": "Its role, business information, tone and permitted actions are tailored to your business. We explain the software, access and ownership arrangements in the proposal."
+        "answer": "Its job, answers, tone and allowed actions are set up for your business. Your proposal also explains your access and what you own."
       },
       {
         "question": "Can it answer our business phone?",
-        "answer": "That is one possible role. We would first check your phone setup and trial tasks such as answering common questions, taking messages and passing requests to your team."
+        "answer": "We can trial that after checking your phone setup. We start with common questions and messages, and agree how callers reach a person."
       },
       {
         "question": "Does it learn everything automatically?",
@@ -131,7 +131,7 @@ export const services = [
       },
       {
         "question": "How would we know if it is helping?",
-        "answer": "Before the trial, we choose what to measure: for example, accurate enquiry details or time saved on a repeated task. We review those results and the running costs with you."
+        "answer": "We agree what to measure before the trial, such as accurate messages or time saved. Then we review the results and running costs with you."
       }
     ],
     "related": [
@@ -144,29 +144,29 @@ export const services = [
     "slug": "automation",
     "filename": "service-automation.html",
     "title": "Spend less time moving information around.",
-    "navTitle": "Automation",
-    "intro": "Keep enquiries, customer records and follow-ups connected. We look at the tasks you repeat and work out which steps your existing tools could handle automatically.",
-    "benefit": "Connect forms, customer records and reminders so your team spends less time copying details between tools.",
+    "navTitle": "Admin & follow-up",
+    "intro": "Automation means letting software handle a repeated task, such as saving an enquiry or reminding you to reply. We check which parts of your daily admin your existing tools could do for you.",
+    "benefit": "Keep customer details and next actions together, with less copying between forms, spreadsheets and messages.",
     "included": [
       {
         "title": "A review of the work you repeat",
-        "description": "Show us how an enquiry or job moves through your business. We look for duplicate entries, missed reminders and unnecessary handovers."
+        "description": "Show us how you handle an enquiry or job. We look for details entered twice, missed reminders and time spent chasing updates."
       },
       {
-        "title": "Organised customer records",
-        "description": "Keep contact details, enquiries and follow-up tasks together, using a suitable customer-management system or the tools you already have."
+        "title": "Customer details in one place",
+        "description": "Keep contacts, enquiries, quotes and next steps together. Your team can see what has happened and who needs a reply."
       },
       {
         "title": "Connections between your tools",
-        "description": "We check whether your forms, spreadsheets and business software can share the information you need."
+        "description": "For example, an enquiry form could add a customer record instead of someone copying the details. We check what your software supports."
       },
       {
         "title": "Reminders and customer updates",
-        "description": "Agree when reminders should appear and which messages can be sent automatically, including when they should stop."
+        "description": "Choose which reminders or messages should happen automatically. You approve the wording, who receives them and when they stop."
       },
       {
         "title": "A plan for problems",
-        "description": "Test missing details, duplicate requests and failed connections. Your team needs to know when something requires attention."
+        "description": "We test missing details, duplicate requests and failed connections, then agree how your team will know something needs attention."
       }
     ],
     "example": {
@@ -181,7 +181,7 @@ export const services = [
     },
     "boundaries": [
       "We agree what starts each process, what happens automatically and who handles problems.",
-      "Connections depend on what your software supports and the access available.",
+      "We check what your software can do and whether we have the access needed to connect it.",
       "You approve customer messages, timing and recipients before automatic sending is enabled.",
       "We use ordinary automation where it is sufficient. A reminder does not need an AI agent."
     ],
@@ -191,12 +191,12 @@ export const services = [
         "answer": "Not necessarily. We check them first. Better settings or a small connection may do the job without replacing a system your team knows."
       },
       {
-        "question": "What is a customer-management system?",
-        "answer": "Often called a CRM, it keeps contact details, enquiries and follow-up tasks together. Your team can see who needs a reply and what has already happened."
+        "question": "What does CRM mean?",
+        "answer": "CRM stands for customer relationship management. In practice, it is a shared place for contacts, enquiries, quotes and next steps, so your team can see who needs a reply."
       },
       {
         "question": "Can you automate follow-up messages?",
-        "answer": "We can assess the process with you. You approve the wording, timing and recipients, and we agree when messages should stop or be passed to a person."
+        "answer": "We can assess that with you. You approve the messages, recipients and timing, including when sending should stop or a person should take over."
       },
       {
         "question": "What happens if a connection stops working?",
@@ -215,20 +215,20 @@ export const services = [
     "filename": "service-software.html",
     "title": "Software built around your working day.",
     "navTitle": "Custom software",
-    "intro": "When the tools you use cannot do the job, we can discuss building one that can. That might be a job tracker, customer portal or a single place to see and update your work.",
+    "intro": "Need one place to track jobs, share updates with customers or see outstanding work? We can build a tool around that task, after checking whether an existing product would do the job.",
     "benefit": "Bring job details, progress and team tasks together in a tool designed around how you work.",
     "included": [
       {
-        "title": "The problem before the product",
-        "description": "We look at who does the work, which information they need and where the current process slows them down."
+        "title": "Start with the work you need to do",
+        "description": "Show us who does the work, what they need to know and where the current process slows them down."
       },
       {
         "title": "A check of existing options",
-        "description": "An existing product may already do what you need. We check before recommending something new to build and maintain."
+        "description": "We check whether a ready-made product can do the job before recommending a new tool to build and maintain."
       },
       {
-        "title": "A manageable first version",
-        "description": "Agree the essential screens and actions first, whether that is tracking jobs, sharing customer updates or viewing reports."
+        "title": "Start with the essentials",
+        "description": "Choose the most useful task first: tracking a job, sharing a customer update or seeing which work is overdue."
       },
       {
         "title": "The right access for each person",
@@ -236,7 +236,7 @@ export const services = [
       },
       {
         "title": "Testing and ongoing care",
-        "description": "Try the software with your team before launch. We agree hosting, support and how future changes will be handled."
+        "description": "Your team tries the tool before launch. We agree who keeps it running online, provides support and handles future changes."
       }
     ],
     "example": {
@@ -252,13 +252,13 @@ export const services = [
     "boundaries": [
       "The first version is described and quoted before development starts.",
       "We check external systems before promising a connection to them.",
-      "Hosting, access, ownership and maintenance are set out in the proposal.",
+      "The proposal explains your access, what you own, where the tool runs and who looks after it.",
       "You review and test the software before it is approved for customer use."
     ],
     "faqs": [
       {
         "question": "What kinds of software could you build?",
-        "answer": "We can discuss job trackers, customer portals, reporting tools and connections between systems. Start by telling us what the team needs to do."
+        "answer": "A job tracker, a report showing outstanding work, or a customer portal: a secure page where customers sign in to see their updates. Tell us what you need to do."
       },
       {
         "question": "Do we actually need custom software?",
@@ -270,7 +270,7 @@ export const services = [
       },
       {
         "question": "Who looks after it once it is built?",
-        "answer": "Your proposal sets out hosting, access and the support arrangement. We agree maintenance and future changes with you before starting."
+        "answer": "We agree that before building. Your proposal explains where the tool runs, who can access it, who provides support and what future changes may cost."
       }
     ],
     "related": [
@@ -284,28 +284,28 @@ export const services = [
     "filename": "service-marketing.html",
     "title": "Show people what your business does.",
     "navTitle": "Marketing & print",
-    "intro": "From a short film of your work to branded clothing and tap-to-share cards, we help you present your business consistently, online and in person.",
-    "benefit": "Promotional videos, NFC cards, branded workwear and vehicle graphics that put your business in front of people.",
+    "intro": "Show people your work and make your business easy to recognise. We create videos, tap-to-open business cards, branded workwear and vehicle graphics. You can ask for one item or bring several together.",
+    "benefit": "Use clear videos and consistent business details across your cards, clothing and vehicles.",
     "included": [
       {
         "title": "Filming and editing",
-        "description": "Promotional clips, social videos and project showcases. We agree what you want to show and the formats you need."
+        "description": "Short videos for your website or social pages, showing your business, services or finished work. We agree what to film and deliver."
       },
       {
         "title": "A plan for the shoot",
-        "description": "We organise the content around the audience, location and finished videos, with travel and filming time included in the quote."
+        "description": "We agree the location, people and work to film. Your quote includes the filming time, travel and finished videos."
       },
       {
-        "title": "NFC business cards",
-        "description": "A card that opens your chosen web link when tapped against a compatible phone. Choose a plain or custom design."
+        "title": "Tap-to-open business cards (NFC)",
+        "description": "Tap the card against a compatible phone to open your website, booking page or other chosen link. Plain and custom designs are available."
       },
       {
         "title": "Branded clothing",
-        "description": "Designs for shirts, polos and caps, with printing arranged through our suppliers. Quantities and supplier details are checked before ordering."
+        "description": "Designs for shirts, polos, caps and other agreed workwear. We arrange printing through suppliers and confirm quantities and materials before ordering."
       },
       {
         "title": "Van graphics",
-        "description": "Designs for your vehicle, with printing and fitting arranged through a partner. Materials and production are confirmed in the quote."
+        "description": "Vehicle graphics designed for your business, with printing and fitting arranged through a partner."
       }
     ],
     "example": {
@@ -319,9 +319,9 @@ export const services = [
       "outcome": "These services can be discussed individually or brought together for one project."
     },
     "boundaries": [
-      "Each quote sets out filming, travel, editing, revisions and final formats.",
+      "Your quote lists the filming, travel, edits, changes and finished files included.",
       "Printing and fitting depend on confirmed materials, quantities and supplier availability.",
-      "We agree the destination link and check the intended setup before preparing NFC cards.",
+      "For tap-to-open cards, we agree the link and check it works before preparing your cards.",
       "Paid advertising, daily social account management and a full brand-identity package are outside this service."
     ],
     "faqs": [

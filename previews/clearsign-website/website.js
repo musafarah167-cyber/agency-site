@@ -39,9 +39,37 @@ const heroStage=document.getElementById('hero-3d-stage');
 if(heroStage){import('./hero-3d.js').then(async m=>{heroScene=await m.initHeroScene({canvas:document.getElementById('hero-3d-canvas'),stage:heroStage,onReady:ready=>document.getElementById('hero').classList.toggle('has-3d',ready!==false)});heroScene.setPaused(paused||reduced.matches);updateProgress();}).catch(()=>{heroStage.dataset.hero3d='fallback';document.getElementById('hero').classList.remove('has-3d');});}
 const form=document.getElementById('enquiry-form');
 if(form){
- const result=document.getElementById('enquiry-result');const params=new URLSearchParams(location.search);const requestedInterest=params.get('interest');const interest=requestedInterest==='Marketing & branding'?'Marketing & print':requestedInterest;const interests=[...form.elements.interest.options].map(o=>o.value);if(interests.includes(interest))form.elements.interest.value=interest;
- const scenario=params.get('scenario');if(['Website enquiry','Phone enquiry','Repeated admin','Salons & barbers','Restaurants','Car hire','Professional firms'].includes(scenario)){const note=document.getElementById('scenario-note');note.textContent='Enquiry about: '+scenario;note.hidden=false;}
- form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const d=new FormData(form);document.getElementById('enquiry-summary').textContent=`${d.get('name')} · ${d.get('business')}\n${d.get('email')}\nInterested in: ${d.get('interest')}\n\n${d.get('message')}`;form.hidden=true;result.hidden=false;document.getElementById('edit-enquiry').focus();});
+ const result=document.getElementById('enquiry-result');
+ const params=new URLSearchParams(location.search);
+ const scenario=params.get('scenario');
+ const aliases={'Website & enquiries':'Websites','Marketing & branding':'Marketing & print','AI & automation':scenario==='Phone enquiry'?'AI agents':'Admin & follow-up'};
+ const requested=params.get('interest');
+ const interest=aliases[requested]||requested;
+ const interests=[...form.elements.interest.options].map(o=>o.value);
+ if(interests.includes(interest))form.elements.interest.value=interest;
+ const contexts=['Website enquiry','Phone enquiry','Repeated admin','Salons & barbers','Restaurants','Restaurants & takeaways','Car hire','Trades & garages','Professional firms','Accountants & legal firms'];
+ const workflowContext=['Website enquiry','Phone enquiry','Repeated admin'].includes(scenario);
+ if(contexts.includes(scenario)){
+  const note=document.getElementById('scenario-note');
+  note.textContent=(workflowContext?'Enquiry about: ':'Your business: ')+scenario;note.hidden=false;
+ }
+ const examples={
+  'Not sure yet':'For example: “We miss calls while working and need a better way to take messages.”',
+  'Websites':'For example: “We need a website where people can see our services and request a booking.”',
+  'AI agents':'For example: “Our team is busy serving customers. We need help answering routine questions and taking messages.”',
+  'Admin & follow-up':'For example: “Our enquiries are spread across emails and spreadsheets. We need to keep track of who needs a reply.”',
+  'Custom software':'For example: “We need one place for staff to see job details and update their progress.”',
+  'Marketing & print':'For example: “We would like a short video of our work and tap-to-share cards for the team.”'
+ };
+ const updateHint=()=>{document.getElementById('message-hint').textContent=examples[form.elements.interest.value]||examples['Not sure yet'];};
+ form.elements.interest.addEventListener('change',updateHint);updateHint();
+ form.addEventListener('submit',e=>{
+  e.preventDefault();if(!form.reportValidity())return;
+  const data=new FormData(form),summary=document.getElementById('enquiry-summary');
+  const rows=[['Name',data.get('name')],['Business',String(data.get('business')||'').trim()||'Not provided'],['Email',data.get('email')],['Service',data.get('interest')],...(contexts.includes(scenario)?[[workflowContext?'Enquiry about':'Business type',scenario]]:[]),['What you need',data.get('message')]];
+  summary.replaceChildren(...rows.map(([label,value])=>{const row=document.createElement('div'),term=document.createElement('dt'),description=document.createElement('dd');term.textContent=label;description.textContent=String(value);row.append(term,description);return row;}));
+  form.hidden=true;result.hidden=false;document.getElementById('enquiry-result-heading').focus();
+ });
  document.getElementById('edit-enquiry').addEventListener('click',()=>{result.hidden=true;form.hidden=false;form.elements.name.focus();});
  form.querySelector('fieldset').disabled=false;
 }
