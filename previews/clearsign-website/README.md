@@ -26,4 +26,6 @@ Read [HANDOVER.md](HANDOVER.md) for what works and what remains, [AGENTS.md](AGE
 
 The enquiry form does **not send or save messages**. The sample workflows are illustrative, not evidence that those customer systems have been delivered. There are no invented clients, testimonials, prices or results.
 
-The current flow uses five distinct services throughout: Websites, AI agents, Admin & follow-up, Custom software, and Marketing & print. Visitors can pick a service or their type of business, then review an enquiry with that context already selected. See `verification/visitor-flow.json` and `verification/visitor-flow-review.md` for the latest checks; earlier reports are historical.
+The current flow uses five distinct services throughout: Websites, AI agents, Admin & follow-up, Custom software, and Marketing & print. Visitors can pick a service or their type of business, then review an enquiry with that context already selected. See `verification/audit-fixes.json` and `verification/audit-fixes-review.md` for the latest checks; visitor-flow and earlier reports are historical.
+
+The audit corrections preserve all logo/hero assets, fix keyboard/menu/story and form editing/validation, and keep brand examples readable on phones and with enlarged text. Three.js runtime files are minified derivatives (63.9% smaller before HTTP compression). Scroll Craft has one documented local startup patch and loads only where used. See [vendor provenance](assets/vendor/PROVENANCE.md); ordinary HTML rebuilding still needs no package installation.

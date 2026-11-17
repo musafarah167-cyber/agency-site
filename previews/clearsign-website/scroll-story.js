@@ -10,7 +10,7 @@
   if (steps.length !== 3 || panels.length !== 3 || buttons.length !== 3 || !controls || !summary) return;
   let current = -1;
   let scheduled = false;
-  let inView = false;
+  let manualSelection = false;
   const desktop = window.matchMedia('(min-width: 801px)');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const updateMotion = () => section.classList.toggle('story-instant', reduced.matches || document.documentElement.classList.contains('motion-off'));
@@ -26,7 +26,18 @@
   };
   const updateFromScroll = () => {
     scheduled = false;
-    if (!inView || !desktop.matches) return;
+    if (!desktop.matches) {
+      manualSelection = false;
+      return;
+    }
+    const sectionBounds = section.getBoundingClientRect();
+    if (sectionBounds.bottom <= 0 || sectionBounds.top >= window.innerHeight) {
+      // A new visit starts when the whole story has left the viewport.
+      manualSelection = false;
+      return;
+    }
+    // Keep an explicit choice while the visitor scrolls or resizes to read it.
+    if (manualSelection) return;
     const marker = window.innerHeight * .43;
     let closest = 0;
     let distance = Infinity;
@@ -38,7 +49,7 @@
     select(closest);
   };
   const onScroll = () => {
-    if (scheduled || !inView || !desktop.matches) return;
+    if (scheduled) return;
     scheduled = true;
     requestAnimationFrame(updateFromScroll);
   };
@@ -46,17 +57,17 @@
   summary.hidden = true;
   section.classList.add('story-enhanced');
   select(0);
-  buttons.forEach((button, index) => button.addEventListener('click', event => select(index, event.detail === 0)));
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      inView = entries.some(entry => entry.isIntersecting);
-      if (inView) onScroll();
-    });
-    observer.observe(section);
-  } else { inView = true; }
+  buttons.forEach((button, index) => button.addEventListener('click', event => {
+    manualSelection = desktop.matches;
+    select(index, event.detail === 0);
+  }));
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll, { passive: true });
   reduced.addEventListener?.('change', updateMotion);
-  desktop.addEventListener?.('change', onScroll);
+  desktop.addEventListener?.('change', () => {
+    if (!desktop.matches) manualSelection = false;
+    onScroll();
+  });
   new MutationObserver(updateMotion).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  onScroll();
 })();

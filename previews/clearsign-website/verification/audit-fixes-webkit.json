@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "name": "Brand page fits WebKit at 320",
+      "pass": true
+    },
+    {
+      "name": "Brand scenes fit at 320",
+      "pass": true
+    },
+    {
+      "name": "Brand page fits WebKit at 390",
+      "pass": true
+    },
+    {
+      "name": "Brand scenes fit at 390",
+      "pass": true
+    },
+    {
+      "name": "Brand page fits WebKit at 1440",
+      "pass": true
+    },
+    {
+      "name": "Brand scenes fit at 1440",
+      "pass": true
+    },
+    {
+      "name": "Brand page fits WebKit at 200% text",
+      "pass": true
+    },
+    {
+      "name": "Minified hero renders in WebKit",
+      "pass": true
+    },
+    {
+      "name": "WebKit motion control pauses the C",
+      "pass": true
+    },
+    {
+      "name": "No WebKit script errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

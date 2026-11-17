@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "library": {
+    "name": "three",
+    "version": "0.187.0",
+    "runtimeRevision": "187",
+    "license": "MIT",
+    "sourceUrl": "https://registry.npmjs.org/three/-/three-0.187.0.tgz",
+    "sourceArchiveSha256": "ff540832ded0cfe919764d24a3d88f3e2a05f23303f876423e4f893841e90728"
+  },
+  "tool": {
+    "name": "Terser",
+    "version": "5.27.0",
+    "versionEvidence": "Declared by Next.js 16.1.7; this vendored bundle has no embedded version. Exact bundle SHA-256 is required.",
+    "sha256": "e4ae9a64825ea7f53606c3ee01633f08b64e12000a30d3687f52b64977f9a652"
+  },
+  "options": {
+    "module": true,
+    "compress": true,
+    "mangle": true,
+    "format": {
+      "comments": "/@license|SPDX|Copyright/i"
+    }
+  },
+  "outputEncoding": "UTF-8, no appended newline",
+  "files": [
+    {
+      "file": "three.module.js",
+      "sourceBytes": 658900,
+      "outputBytes": 374603,
+      "sourceSha256": "104f56145899722094556490d787aae0617cc2fc3382f31df02d724ea1aee341",
+      "outputSha256": "056b357713ade405c1edb84237fc026aa6fe42b9d8cd3ac54d1d1c5480096f33"
+    },
+    {
+      "file": "three.core.js",
+      "sourceBytes": 1474799,
+      "outputBytes": 395577,
+      "sourceSha256": "613e370f76638fdef83926642bf256dc9615684922de1ce1f63a8583e5d78578",
+      "outputSha256": "b7b00c4b630f53b6fc60fabd8ef17ef866fc41976e1993ed02fd6db33ee09c45"
+    }
+  ],
+  "license": {
+    "file": "THREE-LICENSE.txt",
+    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+  },
+  "notes": [
+    "Generated derivatives retain the original module URLs and public exports.",
+    "The generated assets run without the minifier or its Next.js host.",
+    "Archive URL and hash identify the preserved source; this script checks the package version, source modules, license and minifier locally and does not contact the registry."
+  ]
+}

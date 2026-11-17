@@ -1,0 +1,341 @@
+[
+  {
+    "name": "normal-scroll-0",
+    "pass": true,
+    "expected": 0,
+    "selected": 0,
+    "visiblePanels": [
+      0
+    ],
+    "panel": "A weekend away.",
+    "focus": null,
+    "scrollY": 2202,
+    "width": 1440,
+    "height": 900,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "normal-scroll-1",
+    "pass": true,
+    "expected": 1,
+    "selected": 1,
+    "visiblePanels": [
+      1
+    ],
+    "panel": "One place to pick it up.",
+    "focus": null,
+    "scrollY": 2467,
+    "width": 1440,
+    "height": 900,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "normal-scroll-2",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": null,
+    "scrollY": 2732,
+    "width": 1440,
+    "height": 900,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "keyboard-selected",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2202,
+    "width": 1440,
+    "height": 900,
+    "reduced": false,
+    "instant": true
+  },
+  {
+    "name": "keyboard-arrow-down",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2242,
+    "width": 1440,
+    "height": 900,
+    "reduced": false,
+    "instant": true
+  },
+  {
+    "name": "pointer-one-pixel",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2243,
+    "width": 1440,
+    "height": 900,
+    "reduced": false,
+    "instant": true
+  },
+  {
+    "name": "one-pixel-resize",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2243,
+    "width": 1441,
+    "height": 900,
+    "reduced": false,
+    "instant": true
+  },
+  {
+    "name": "height-resize",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2243,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": true
+  },
+  {
+    "name": "same-panel-choice-persists",
+    "pass": true,
+    "expected": 0,
+    "selected": 0,
+    "visiblePanels": [
+      0
+    ],
+    "panel": "A weekend away.",
+    "focus": "0",
+    "scrollY": 2476,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "reading-scroll-persists",
+    "pass": true,
+    "expected": 0,
+    "selected": 0,
+    "visiblePanels": [
+      0
+    ],
+    "panel": "A weekend away.",
+    "focus": "0",
+    "scrollY": 2741,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "new-manual-choice-persists",
+    "pass": true,
+    "expected": 1,
+    "selected": 1,
+    "visiblePanels": [
+      1
+    ],
+    "panel": "One place to pick it up.",
+    "focus": "1",
+    "scrollY": 2742,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "moving-focus-keeps-choice",
+    "pass": true,
+    "expected": 1,
+    "selected": 1,
+    "visiblePanels": [
+      1
+    ],
+    "panel": "One place to pick it up.",
+    "focus": null,
+    "scrollY": 2743,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "whole-story-exited-below",
+    "pass": true
+  },
+  {
+    "name": "reenter-from-below-resumes",
+    "pass": true,
+    "expected": 0,
+    "selected": 0,
+    "visiblePanels": [
+      0
+    ],
+    "panel": "A weekend away.",
+    "focus": null,
+    "scrollY": 2211,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "resumed-scroll-progresses",
+    "pass": true,
+    "expected": 1,
+    "selected": 1,
+    "visiblePanels": [
+      1
+    ],
+    "panel": "One place to pick it up.",
+    "focus": null,
+    "scrollY": 2476,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "reenter-from-above-resumes",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "0",
+    "scrollY": 2741,
+    "width": 1441,
+    "height": 880,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "mobile-all-steps",
+    "pass": true,
+    "previewHidden": true,
+    "inlineExamples": 3
+  },
+  {
+    "name": "return-to-desktop-resumes",
+    "pass": true,
+    "expected": 0,
+    "selected": 0,
+    "visiblePanels": [
+      0
+    ],
+    "panel": "A weekend away.",
+    "focus": null,
+    "scrollY": 2209,
+    "width": 801,
+    "height": 900,
+    "reduced": false,
+    "instant": false
+  },
+  {
+    "name": "reduced-motion-nudge",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2203,
+    "width": 1440,
+    "height": 900,
+    "reduced": true,
+    "instant": true
+  },
+  {
+    "name": "reduced-motion-resize",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2203,
+    "width": 1441,
+    "height": 900,
+    "reduced": true,
+    "instant": true
+  },
+  {
+    "name": "reduced-motion-no-panel-animation",
+    "pass": true
+  },
+  {
+    "name": "reduced-motion-reentry-resumes",
+    "pass": true,
+    "expected": 1,
+    "selected": 1,
+    "visiblePanels": [
+      1
+    ],
+    "panel": "One place to pick it up.",
+    "focus": "2",
+    "scrollY": 2467,
+    "width": 1441,
+    "height": 900,
+    "reduced": true,
+    "instant": true
+  },
+  {
+    "name": "space-key-choice-persists",
+    "pass": true,
+    "expected": 2,
+    "selected": 2,
+    "visiblePanels": [
+      2
+    ],
+    "panel": "Keep the conversation going.",
+    "focus": "2",
+    "scrollY": 2468,
+    "width": 1441,
+    "height": 900,
+    "reduced": true,
+    "instant": true
+  },
+  {
+    "name": "no-page-errors",
+    "pass": true,
+    "errors": []
+  }
+]

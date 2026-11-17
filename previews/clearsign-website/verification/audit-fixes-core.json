@@ -1,0 +1,59 @@
+{
+  "phase": "after",
+  "checks": [
+    {
+      "name": "Menu closes as keyboard focus leaves header",
+      "pass": true
+    },
+    {
+      "name": "Next keyboard link is unobscured",
+      "pass": true
+    },
+    {
+      "name": "Whitespace-only required fields are rejected",
+      "pass": true
+    },
+    {
+      "name": "Attached business type can be edited",
+      "pass": true
+    },
+    {
+      "name": "Edited business type appears in preview",
+      "pass": true
+    },
+    {
+      "name": "Preview sends no request",
+      "pass": true
+    },
+    {
+      "name": "Business type can be removed",
+      "pass": true
+    },
+    {
+      "name": "Textarea has one short label",
+      "pass": true
+    },
+    {
+      "name": "Contact is marked as the actual current page",
+      "pass": true
+    },
+    {
+      "name": "Contact does not load homepage-only animation scripts",
+      "pass": true
+    },
+    {
+      "name": "Services parent is not mislabelled current page",
+      "pass": true
+    },
+    {
+      "name": "Services overview has correct current-page marker",
+      "pass": true
+    },
+    {
+      "name": "No browser errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}

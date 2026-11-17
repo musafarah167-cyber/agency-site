@@ -73,3 +73,7 @@
  .sv-map-input,.sv-map-output{grid-template-columns:repeat(auto-fit,minmax(min(100%,4.5rem),1fr))}
  .sv-map-centre{width:min(100%,9.0625rem)}
 }
+
+/* Keep the section cue separate from the exact current-page announcement. */
+#main-nav>a.is-current-section{color:var(--color-text);text-decoration:underline;text-underline-offset:8px;text-decoration-color:var(--color-highlight);text-decoration-thickness:2px}
+.form-field,#scenario-note:not([hidden]){display:grid;gap:9px}

@@ -1,0 +1,255 @@
+{
+  "checkedAt": "2026-11-17T08:59:58.004Z",
+  "browser": "157.0.8103.79",
+  "checks": [
+    {
+      "name": "Whitespace blocked with field-specific error",
+      "pass": true,
+      "detail": {
+        "hidden": false,
+        "active": "name",
+        "name": "Enter your name.",
+        "message": "Tell us what you would like to improve."
+      }
+    },
+    {
+      "name": "Correcting name leaves empty message blocked",
+      "pass": true,
+      "detail": {
+        "hidden": false,
+        "active": "message",
+        "message": "Tell us what you would like to improve."
+      }
+    },
+    {
+      "name": "Corrected fields can preview; trim preserves internal newline",
+      "pass": true,
+      "detail": {
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nNot sure yet\nWhat you need\nFirst line.\nSecond line.",
+        "requests": []
+      }
+    },
+    {
+      "name": "Preview still makes no network request",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Edit preserves original entered message",
+      "pass": true
+    },
+    {
+      "name": "Message has one concise accessible name and separate hint",
+      "pass": true,
+      "detail": [
+        {
+          "name": "What would you like to improve?",
+          "description": "For example: “We miss calls while working and need a better way to take messages.”",
+          "properties": [
+            {
+              "name": "invalid",
+              "value": {
+                "type": "token",
+                "value": "false"
+              }
+            },
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "editable",
+              "value": {
+                "type": "token",
+                "value": "plaintext"
+              }
+            },
+            {
+              "name": "settable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "multiline",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            {
+              "name": "readonly",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "name": "required",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            {
+              "name": "describedby",
+              "value": {
+                "type": "idrefList",
+                "value": "message-hint",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 119,
+                    "idref": "message-hint"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "labelledby",
+              "value": {
+                "type": "nodeList",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 118,
+                    "text": "What would you like to improve?"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Salons & barbers: service and context can change",
+      "pass": true,
+      "detail": {
+        "label": "Business type (optional)",
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nCustom software\nBusiness type\nCar hire\nWhat you need\nSynthetic review message."
+      }
+    },
+    {
+      "name": "Salons & barbers: edit retains changed context",
+      "pass": true
+    },
+    {
+      "name": "Salons & barbers: context can be removed",
+      "pass": true,
+      "detail": {
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nCustom software\nWhat you need\nSynthetic review message."
+      }
+    },
+    {
+      "name": "Phone enquiry: service and context can change",
+      "pass": true,
+      "detail": {
+        "label": "Enquiry topic (optional)",
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nCustom software\nEnquiry about\nRepeated admin\nWhat you need\nSynthetic review message."
+      }
+    },
+    {
+      "name": "Phone enquiry: edit retains changed context",
+      "pass": true
+    },
+    {
+      "name": "Phone enquiry: context can be removed",
+      "pass": true,
+      "detail": {
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nCustom software\nWhat you need\nSynthetic review message."
+      }
+    },
+    {
+      "name": "Restaurants: service and context can change",
+      "pass": true,
+      "detail": {
+        "label": "Business type (optional)",
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nCustom software\nBusiness type\nTrades & garages\nWhat you need\nSynthetic review message."
+      }
+    },
+    {
+      "name": "Restaurants: edit retains changed context",
+      "pass": true
+    },
+    {
+      "name": "Restaurants: context can be removed",
+      "pass": true,
+      "detail": {
+        "text": "Name\nReview Example\nBusiness\nNot provided\nEmail\nreviewer@example.com\nService\nCustom software\nWhat you need\nSynthetic review message."
+      }
+    },
+    {
+      "name": "Contact nav marks actual page",
+      "pass": true
+    },
+    {
+      "name": "Menu closes when keyboard focus leaves",
+      "pass": true,
+      "detail": {
+        "expanded": "false",
+        "inside": false,
+        "active": "<a href=\"index.html\">Home</a>"
+      }
+    },
+    {
+      "name": "Escape closes menu and returns focus",
+      "pass": true
+    },
+    {
+      "name": "Service uses parent class without false current page",
+      "pass": true
+    },
+    {
+      "name": "Services overview marks its actual page",
+      "pass": true
+    },
+    {
+      "name": "No browser page errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "requestFailures": [],
+  "scriptResponses": [
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3210/website.js",
+      "status": 200
+    }
+  ],
+  "lastLoad": {
+    "url": "http://127.0.0.1:3210/solutions.html",
+    "class": "js-enhanced motion-off sc-ready",
+    "scripts": [
+      "http://127.0.0.1:3210/website.js"
+    ]
+  }
+}
