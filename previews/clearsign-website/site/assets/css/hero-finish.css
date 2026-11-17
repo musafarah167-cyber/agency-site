@@ -1,0 +1,113 @@
+/* The masthead and the unframed sculpture share the original warm-white paper. */
+.home-page .hero {
+  color: var(--color-text);
+  background: var(--color-page);
+  border-bottom: 1px solid var(--color-border);
+}
+.home-page .hero-layout {
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(20px, 2vw, 36px);
+  padding-block: clamp(48px, 5vw, 80px);
+}
+.home-page .hero .hero-eyebrow {
+  align-items: center;
+  gap: 12px;
+  max-width: none;
+  margin: 0 0 24px;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+.home-page .hero .hero-eyebrow::before {
+  width: 22px;
+  margin: 0;
+}
+.home-page .hero h1 {
+  max-width: none;
+  font-size: clamp(3.125rem, 5.25vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -.05em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+.home-page .hero-highlight {
+  background: linear-gradient(transparent 89%, var(--color-highlight) 89% 97%, transparent 97%);
+}
+.home-page .hero-content > p:not(.hero-eyebrow):not(.hero-local) {
+  max-width: 43ch;
+  margin-top: 28px;
+  font-size: clamp(1rem, 1.25vw, 1.1875rem);
+  line-height: 1.62;
+}
+.home-page .hero-actions { margin-top: 28px; }
+.home-page .hero-actions .text-link { gap: 8px; }
+.home-page .hero-actions .text-link svg {
+  width: 16px;
+  height: 16px;
+  transform: rotate(90deg);
+}
+.home-page .hero .hero-local {
+  max-width: none;
+  margin: 16px 0 0;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.home-page .hero-media {
+  --art-overhang: clamp(0px, 1.25vw, 24px);
+  width: min(calc(100% + var(--art-overhang)), 820px);
+  justify-self: end;
+  margin: 0 calc(-1 * var(--art-overhang)) 0 0;
+}
+.home-page .hero-sculpture-frame { aspect-ratio: 1.3; }
+.home-page .hero-media-footer {
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin: 8px var(--art-overhang) 0 12px;
+  padding-top: 4px;
+  font-size: .875rem;
+  line-height: 1.45;
+}
+.home-page .hero-media-footer > span { min-width: 0; max-width: 100%; }
+.home-page .hero-media-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--color-text);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.home-page .hero-media-footer a:hover { color: var(--color-accent); text-decoration: underline; }
+.home-page .hero-media-footer svg { width: 16px; height: 16px; transform: rotate(90deg); }
+.home-page .hero .hero-motion {
+  max-width: 100%;
+  margin: 0;
+  color: var(--color-text-secondary);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 860px) {
+  .home-page .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 600px;
+    gap: 24px;
+    padding-block: 38px 32px;
+  }
+  .home-page .hero h1 { font-size: clamp(2.5rem, 9.3vw, 4.25rem); }
+  .home-page .hero .hero-eyebrow { margin-bottom: 18px; }
+  .home-page .hero-content > p:not(.hero-eyebrow):not(.hero-local) { margin-top: 20px; }
+  .home-page .hero-actions { margin-top: 24px; }
+  .home-page .hero-media { --art-overhang: 0px; width: 100%; }
+  .home-page .hero-sculpture-frame { aspect-ratio: 1.4; }
+  .home-page .hero-media-footer { margin: 4px 0 0; }
+}
+@media (max-width: 480px) {
+  .home-page .hero-layout { gap: 20px; padding-block: 28px 24px; }
+  .home-page .hero h1 { font-size: clamp(2.5rem, 10.75vw, 3.125rem); }
+  .home-page .hero .hero-eyebrow { gap: 8px; font-size: .8125rem; }
+  .home-page .hero .hero-eyebrow::before { width: 16px; }
+  .home-page .hero-actions .text-link { gap: 6px; }
+  .home-page .hero .hero-local { font-size: .8125rem; }
+  .home-page .hero-media-footer a { font-size: .8125rem; }
+}

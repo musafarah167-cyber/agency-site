@@ -1,4 +1,10 @@
-# Latest audit corrections — 17 November 2026
+# Current website review
+
+[Website and layout checks](warm-white-browser.json) · [Homepage and practical checks](warm-white-focused.json)
+
+The current package contains the warm-white homepage, the larger C and the revised spacing. The reports below describe earlier versions of the draft.
+
+## Earlier audit corrections — 17 November 2026
 
 See audit-fixes-review.md and audit-fixes.json: 165 integrated assertions, 88 layouts across all eleven pages, plus targeted and independent checks. This revision supersedes the visitor-flow revision described below. The smaller runtime uses the same original C and all protected artwork is unchanged.
 
