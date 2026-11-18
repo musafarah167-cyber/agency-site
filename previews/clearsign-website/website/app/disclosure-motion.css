@@ -1,0 +1,41 @@
+/* Height keyframes from shadcn/ui's MIT-licensed tailwind.css, revision 968d8cb9dc.
+   Radix measures the panel at its current width, including enlarged phone text. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height, var(--accordion-panel-height, auto));
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height, var(--accordion-panel-height, auto));
+    }
+    to {
+      height: 0;
+    }
+  }
+  [data-slot='accordion-content'][data-state='open'] {
+    animation: accordion-down 180ms ease-out;
+  }
+  [data-slot='accordion-content'][data-state='closed'] {
+    animation: accordion-up 160ms ease-out;
+  }
+  [data-slot='accordion-trigger'] .toggle::after {
+    transition: transform 160ms ease-out;
+  }
+  .phone-menu[open] nav {
+    animation: menu-enter 160ms ease-out;
+  }
+  @keyframes menu-enter {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

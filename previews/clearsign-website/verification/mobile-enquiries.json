@@ -1,0 +1,113 @@
+{
+  "base": "http://127.0.0.1:3218/",
+  "results": [
+    {
+      "browser": "Chrome",
+      "contexts": 14,
+      "roleAddresses": 4,
+      "validation": true,
+      "emailDraft": true,
+      "edit": true,
+      "industryJourney": true,
+      "packageAndStandalone": true,
+      "timeEstimate": true,
+      "phoneChapterNavigation": true,
+      "privateAiJourney": true,
+      "demoRequest": true,
+      "phoneScreens": [
+        {
+          "width": 320,
+          "height": 568,
+          "homeActionBottom": 397,
+          "firstProofHeadingTop": 543,
+          "contactActionBottom": 397,
+          "demoActionBottom": 507
+        },
+        {
+          "width": 360,
+          "height": 640,
+          "homeActionBottom": 379,
+          "firstProofHeadingTop": 525,
+          "contactActionBottom": 397,
+          "demoActionBottom": 485
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "homeActionBottom": 429,
+          "firstProofHeadingTop": 583,
+          "contactActionBottom": 372,
+          "demoActionBottom": 509
+        },
+        {
+          "width": 430,
+          "height": 932,
+          "homeActionBottom": 411,
+          "firstProofHeadingTop": 565,
+          "contactActionBottom": 372,
+          "demoActionBottom": 516
+        }
+      ],
+      "motion": {
+        "open": "accordion-down",
+        "close": "accordion-up",
+        "reducedMotion": "none"
+      },
+      "noSubmissions": true
+    },
+    {
+      "browser": "WebKit",
+      "contexts": 14,
+      "roleAddresses": 4,
+      "validation": true,
+      "emailDraft": true,
+      "edit": true,
+      "industryJourney": true,
+      "packageAndStandalone": true,
+      "timeEstimate": true,
+      "phoneChapterNavigation": true,
+      "privateAiJourney": true,
+      "demoRequest": true,
+      "phoneScreens": [
+        {
+          "width": 320,
+          "height": 568,
+          "homeActionBottom": 397,
+          "firstProofHeadingTop": 543,
+          "contactActionBottom": 397,
+          "demoActionBottom": 507
+        },
+        {
+          "width": 360,
+          "height": 640,
+          "homeActionBottom": 379,
+          "firstProofHeadingTop": 525,
+          "contactActionBottom": 397,
+          "demoActionBottom": 485
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "homeActionBottom": 429,
+          "firstProofHeadingTop": 583,
+          "contactActionBottom": 372,
+          "demoActionBottom": 509
+        },
+        {
+          "width": 430,
+          "height": 932,
+          "homeActionBottom": 411,
+          "firstProofHeadingTop": 565,
+          "contactActionBottom": 372,
+          "demoActionBottom": 516
+        }
+      ],
+      "motion": {
+        "open": "accordion-down",
+        "close": "accordion-up",
+        "reducedMotion": "none"
+      },
+      "noSubmissions": true
+    }
+  ]
+}

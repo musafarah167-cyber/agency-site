@@ -1,12 +1,13 @@
 # Sources and licences
 
-## Local runtime
+## Website software and artwork
 
-- Three.js 0.187.0: locally minified derivatives at website/static/assets/vendor/three.module.js and three.core.js; MIT licence retained in THREE-LICENSE.txt.
-- Scroll Craft: nateherkai/scroll-craft, commit 75d81f74e83692add18cd7a8a8e078b8a887a579. The CSS is unchanged; the JS has one documented local patch to skip its empty video loop; licence in SCROLLCRAFT-LICENSE.txt. Custom example transitions and hero sculpture are separate page code.
-- Archivo: self-hosted WOFF2 and font-embedded wordmarks; SIL Open Font License in website/static/assets/fonts/OFL.txt and website/static/assets/brand/FONT-LICENSE.txt.
+- Next.js, React and the accordion package versions are recorded in the [dependency lockfile](website/package-lock.json).
+- The original C animation uses the two Three.js 0.187.0 browser files. Their build record and MIT licence are included. [Vendor directory](website/public/assets/vendor/)
+- The demo enquiry uses the shadcn/ui accordion pattern with a Radix component. [shadcn licence](website/public/assets/vendor/SHADCN-LICENSE.txt)
+- Archivo is served from the website. Its licence also covers the type used inside the wordmarks. [Font licence](website/public/assets/fonts/OFL.txt)
 
-No external runtime requests, telemetry or package installation are needed to view the review. The hero fallback and website specimen images are captures of this website, not customer photographs.
+The hero still and website examples show ClearSign's own work.
 
 ## Design guidance applied
 
@@ -21,4 +22,4 @@ Written guidance informed typography, hierarchy, clarity, controls and motion; t
 
 Repository popularity and the focused package scan do not certify absence of malware. No downloaded design installer or global skill installation is included.
 
-Exact source/tool/output hashes, retained licences, build instructions and the Scroll Craft patch are in [vendor provenance](website/static/assets/vendor/PROVENANCE.md). The Terser build tool is not shipped or needed to run the site. Original master logo assets and hero controller are unchanged.
+Build details for the 3D files and notes on earlier Scroll Craft work are in the [vendor provenance](website/public/assets/vendor/PROVENANCE.md). The website includes the compiled 3D files needed for the hero.

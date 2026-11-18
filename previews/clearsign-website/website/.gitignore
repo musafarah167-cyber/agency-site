@@ -1,2 +1,6 @@
-# Local build records keep generated output safe to replace; never publish them.
 .build-state/
+.next/
+out/
+node_modules/
+*.tsbuildinfo
+next-env.d.ts

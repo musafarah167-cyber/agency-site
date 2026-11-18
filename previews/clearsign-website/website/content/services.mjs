@@ -1,4 +1,4 @@
-// Service explanations for the unpublished ClearSign website.
+// Service explanations shared by the ClearSign website.
 // Examples and measures are proposed project goals, not customer results.
 
 export const services = [
@@ -89,14 +89,14 @@ export const services = [
   {
     "slug": "ai",
     "filename": "service-ai.html",
-    "title": "Help with enquiries while your team is busy.",
+    "title": "AI for the work your team does",
     "navTitle": "AI agents",
-    "intro": "A personalised AI agent is a digital assistant set up with your business information. It can answer routine questions, take messages or help prepare follow-ups. We start with one task and a supervised trial.",
-    "benefit": "Give routine requests a first response and pass useful details to your team. Your staff stay responsible for decisions, exceptions and anything outside the agent’s agreed task.",
+    "intro": "We can connect AI to everyday tools, brief an assistant on your business or explore a private installation for work that needs to stay on site.",
+    "benefit": "Think of an assistant as an extra colleague you brief on a specific job. It can follow a conversation, find an answer in approved material or prepare a record for someone to check. We agree what it can do and when a person takes over.",
     "included": [
       {
-        "title": "A phone assistant",
-        "description": "Trial answers to routine questions and collection of names, numbers and messages. We check your phone setup and agree how callers reach a person."
+        "title": "A phone assistant briefed on your business",
+        "description": "We agree its greeting, the facts it can share and the questions to ask. Together we test callers changing a detail, asking for a person or raising something outside its brief."
       },
       {
         "title": "A website enquiry assistant",
@@ -104,11 +104,11 @@ export const services = [
       },
       {
         "title": "A quote-follow-up assistant",
-        "description": "Help prepare a follow-up using an existing quote and customer record. Your team approves the wording and any rules for sending; the agent does not invent prices."
+        "description": "Help prepare a follow-up using an existing quote and customer record. Your team approves the wording, the price from your quote and when a message can be sent."
       },
       {
-        "title": "Your information and clear limits",
-        "description": "Choose one of these jobs to start. You approve the information, tone and allowed actions, including when the agent must take a message or hand over."
+        "title": "An assistant for internal documents",
+        "description": "Help staff find the right procedure in an approved handbook. We can have the assistant point to the source, respect staff access and flag questions the material does not answer."
       },
       {
         "title": "A supervised trial and review",
@@ -116,14 +116,14 @@ export const services = [
       }
     ],
     "example": {
-      "business": "A team handling phone enquiries",
-      "trigger": "Your staff are busy when someone calls with a question or asks for a callback.",
+      "business": "A high-street law firm",
+      "trigger": "A caller asks about buying a home, then mentions they are also selling their current property. The solicitors are in appointments.",
       "steps": [
-        "The agent answers questions using the business information you have approved.",
-        "It collects the caller’s details and a short description of what they need.",
-        "Your team receives the request and handles anything that needs a person’s decision."
+        "The assistant can pick up the change and ask whether the caller wants to discuss both transactions.",
+        "It takes a name, callback number and a convenient time, using the intake questions the firm approved.",
+        "The conveyancing team receives the note. A solicitor makes the callback and handles fees and legal advice."
       ],
-      "outcome": "The aim is a useful first response while staff are busy. The trial checks accuracy, message delivery and human handover before deciding whether it is suitable for wider use."
+      "outcome": "The first conversation gives the solicitor a clearer reason to call and a time that suits the prospective client."
     },
     "boundaries": [
       "We agree a small trial, what success looks like and the checks needed before customer use.",
@@ -134,7 +134,7 @@ export const services = [
     "faqs": [
       {
         "question": "What makes the agent personalised?",
-        "answer": "Its job, answers, tone and allowed actions are set up for your business. Your proposal also explains your access and what you own."
+        "answer": "You approve a brief covering your services, team, opening hours and examples of real enquiries. The assistant uses those details and the conversation so far to ask a relevant next question. We test handovers with your staff before wider use."
       },
       {
         "question": "Can it answer our business phone?",
@@ -166,7 +166,7 @@ export const services = [
       },
       {
         "title": "Time and running costs",
-        "description": "Compare routine handling time and review effort with the phone, software and AI charges. Use that evidence to decide whether to expand."
+        "description": "Compare the time staff spend on the task and checking the output. Include usage charges for online tools or equipment, power and support on site."
       }
     ]
   },
@@ -176,7 +176,7 @@ export const services = [
     "title": "Less copying. Clearer follow-up.",
     "navTitle": "Admin & follow-up",
     "intro": "Connect the tools you already use so routine steps happen automatically. Save an enquiry, assign it to a colleague or create a reminder to reply, with less copying between emails, spreadsheets and customer records.",
-    "benefit": "Keep contacts, enquiries and next actions together so your team knows who is responsible. This service connects repeated steps; custom software is for a new tool your current systems cannot provide.",
+    "benefit": "Keep contacts, enquiries and next actions together so your team knows who is responsible. We connect the tools you already use to handle repeated steps. If you need a new tool, we can also discuss custom software.",
     "included": [
       {
         "title": "A review of the work you repeat",
@@ -200,14 +200,14 @@ export const services = [
       }
     ],
     "example": {
-      "business": "A car-hire company",
-      "trigger": "Someone asks about a vehicle for a weekend, and your team needs to check availability.",
+      "business": "An accountancy practice",
+      "trigger": "A potential client asks about bookkeeping and payroll through the website while the practice manager is in a meeting.",
       "steps": [
-        "The enquiry form collects the vehicle, dates and customer’s contact details.",
-        "The request is saved in your customer records and assigned to a team member.",
-        "A reminder prompts that person to check availability and send a quote."
+        "The form collects the services they need, their contact details and a preferred callback time.",
+        "The request goes into the firm’s enquiry list with a named colleague and a due date.",
+        "A reminder prompts the callback, and the colleague records whether the enquiry became a first meeting."
       ],
-      "outcome": "The team can see who owns the enquiry and when to follow up. Your staff still check availability, set the price and confirm any hire."
+      "outcome": "The team can see which enquiries are waiting, who owns them and which lead to new client work."
     },
     "boundaries": [
       "We agree what starts each process, what happens automatically and who handles problems.",
@@ -260,7 +260,7 @@ export const services = [
     "filename": "service-software.html",
     "title": "Keep jobs, people and progress together.",
     "navTitle": "Custom software",
-    "intro": "When messages and spreadsheets make work hard to track, a shared tool can help your team see what needs doing. We build job trackers, reporting views and customer portals: pages where customers sign in for updates. We check existing products first.",
+    "intro": "When messages and spreadsheets make work hard to track, a shared tool can help your team see what needs doing. We can scope job trackers, fleet management, reporting and customer portals. We check existing products first.",
     "benefit": "Give each person the information and next actions they need. Start with one part of the working day, then consider adding more once your team has tried it.",
     "included": [
       {
@@ -274,6 +274,10 @@ export const services = [
       {
         "title": "A practical first version",
         "description": "Start with a job tracker, customer update page or reporting view. Agree the essential actions first so the team can try it before you expand."
+      },
+      {
+        "title": "Fleet management around your operation",
+        "description": "Track vehicle availability, assignments, handovers or service dates in one place. We can configure a suitable product, connect one you use or scope a custom tool if there is a gap. Your team confirms allocations."
       },
       {
         "title": "The right access for each person",
@@ -340,6 +344,65 @@ export const services = [
     ]
   },
   {
+    "slug": "branding",
+    "filename": "service-branding.html",
+    "title": "A recognisable look for your business",
+    "navTitle": "Branding",
+    "intro": "Give your team a visual identity they can use wherever customers see your name.",
+    "benefit": "A consistent logo, colours and type help customers connect the business they saw on the high street with the one they find online. You can commission the identity on its own or use it across a website, campaign or print project with us.",
+    "included": [
+      {
+        "title": "A brief built around your customers",
+        "description": "We look at who you want to reach, where they see your business and which parts of your existing identity they already recognise."
+      },
+      {
+        "title": "A logo, colours and type that work together",
+        "description": "We agree whether you need a new mark or a tidier version of the one you have. We try the design at the sizes and on the backgrounds your business actually uses."
+      },
+      {
+        "title": "Files your team and suppliers can use",
+        "description": "Choose the formats you need for email, social profiles, websites or print. A short guide shows which file to use, the colours and how much space to leave around the logo."
+      }
+    ],
+    "example": {
+      "business": "Our own ClearSign identity",
+      "trigger": "Our symbol needs to stay recognisable on a small phone screen, in an email and on a printed card.",
+      "steps": [
+        "A stand-alone C fits a small profile image where a full company name would be difficult to read.",
+        "Light and dark versions keep the wordmark legible on different backgrounds.",
+        "The print supplier uses the same colours as the team updating the website."
+      ],
+      "outcome": "Everyone works from the same set of visual assets."
+    },
+    "boundaries": [
+      "We agree the design work, rounds of changes, formats and file handover before starting.",
+      "Printing, filming or a website can be added to the same brief if you need them."
+    ],
+    "faqs": [
+      {
+        "question": "Can we keep our current logo?",
+        "answer": "Yes. If people already recognise it, we can work with the files you have and agree where the colours, spacing or formats need attention."
+      },
+      {
+        "question": "Can we order branding on its own?",
+        "answer": "Yes. You can take the finished files to your own web or print supplier. We can also apply the identity to a website, video or print project if you want those services together."
+      }
+    ],
+    "related": ["websites", "marketing"],
+    "interest": "Branding",
+    "measureIntro": "Before designing, choose the places where customers need to recognise you. Review the finished identity in those settings with your team.",
+    "measures": [
+      {
+        "title": "Readability where customers see you",
+        "description": "Try the logo on a phone, an email signature and a proof at the intended print size."
+      },
+      {
+        "title": "Consistency across the business",
+        "description": "Compare the agreed colours and versions across the places where customers first meet you. Ask new enquiries where they recognised the name."
+      }
+    ]
+  },
+  {
     "slug": "marketing",
     "filename": "service-marketing.html",
     "title": "Help people recognise and remember you.",
@@ -382,7 +445,7 @@ export const services = [
       "Your quote lists the filming, travel, edits, changes and finished files included.",
       "Printing and fitting depend on confirmed materials, quantities and supplier availability.",
       "For tap-to-open cards, we agree the link and check it works before preparing your cards.",
-      "Paid advertising, daily social account management and a full brand-identity package are outside this service."
+      "A new visual identity can be added through the branding service. The marketing brief lists the specific materials or videos we will produce."
     ],
     "faqs": [
       {
@@ -403,8 +466,8 @@ export const services = [
       }
     ],
     "related": [
-      "websites",
-      "automation"
+      "branding",
+      "websites"
     ],
     "interest": "Marketing & print",
     "measureIntro": "Agree who you want to reach, what you want them to do and where the material will be used. Review the response alongside production costs and the work it brings in.",

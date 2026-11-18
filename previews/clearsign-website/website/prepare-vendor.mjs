@@ -19,7 +19,7 @@ if (!flags['--source-dir'] || !flags['--terser']) throw new Error(usage);
 
 const sourceDir = resolve(flags['--source-dir']);
 const terserPath = resolve(flags['--terser']);
-const outputDir = flags['--output-dir'] ? resolve(flags['--output-dir']) : resolve(dirname(fileURLToPath(import.meta.url)), 'static/assets/vendor');
+const outputDir = flags['--output-dir'] ? resolve(flags['--output-dir']) : resolve(dirname(fileURLToPath(import.meta.url)), 'public/assets/vendor');
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outputRelative = relative(projectRoot, outputDir);
 if (!outputRelative || outputRelative === '..' || outputRelative.startsWith(`..${sep}`) || isAbsolute(outputRelative)) {

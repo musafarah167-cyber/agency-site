@@ -1,5 +1,5 @@
 # ClearSign Solutions
 
-The latest company-website review is in [previews/clearsign-website](previews/clearsign-website/README.md), with its brand kit, local viewing instructions and handover.
+The company website on this branch is in [previews/clearsign-website](previews/clearsign-website/README.md). That folder contains the editable source, the built pages and the instructions for checking the phone layout and demo booking journey.
 
-The existing site/ and backend/ remain unchanged. This review branch does not publish a website. Only site/ is eligible for any future deployment, which requires separate owner authorisation. Historical business notes elsewhere in the repository are not current service commitments or prices.
+The publishable files are in [the website export](previews/clearsign-website/site/). Publishing a revision to clearsign.uk requires a separate owner decision.
