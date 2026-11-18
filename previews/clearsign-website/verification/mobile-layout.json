@@ -1,0 +1,1042 @@
+{
+  "base": "http://127.0.0.1:3218/",
+  "checks": [
+    {
+      "title": "/ opens",
+      "passed": true
+    },
+    {
+      "title": "/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/solutions/ opens",
+      "passed": true
+    },
+    {
+      "title": "/solutions/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/service-websites/ opens",
+      "passed": true
+    },
+    {
+      "title": "/service-websites/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/service-branding/ opens",
+      "passed": true
+    },
+    {
+      "title": "/service-branding/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/service-ai/ opens",
+      "passed": true
+    },
+    {
+      "title": "/service-ai/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/service-automation/ opens",
+      "passed": true
+    },
+    {
+      "title": "/service-automation/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/service-software/ opens",
+      "passed": true
+    },
+    {
+      "title": "/service-software/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/service-marketing/ opens",
+      "passed": true
+    },
+    {
+      "title": "/service-marketing/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/industries/ opens",
+      "passed": true
+    },
+    {
+      "title": "/industries/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/about/ opens",
+      "passed": true
+    },
+    {
+      "title": "/about/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/contact/ opens",
+      "passed": true
+    },
+    {
+      "title": "/contact/ page heading",
+      "passed": true
+    },
+    {
+      "title": "/demo/ opens",
+      "passed": true
+    },
+    {
+      "title": "/demo/ page heading",
+      "passed": true
+    },
+    {
+      "title": "Mobile keyboard navigation, the guided demo, six services and a service enquiry",
+      "passed": true
+    },
+    {
+      "title": "Home desktop primary and secondary touch targets",
+      "passed": true
+    },
+    {
+      "title": "Home desktop primary and secondary touch targets",
+      "passed": true
+    },
+    {
+      "title": "Home phone primary and secondary touch targets",
+      "passed": true
+    },
+    {
+      "title": "Home phone primary and secondary touch targets",
+      "passed": true
+    },
+    {
+      "title": "Reduced-motion homepage skips 3D downloads",
+      "passed": true
+    },
+    {
+      "title": "Homepage pictures loaded",
+      "passed": true
+    },
+    {
+      "title": "Without JavaScript the mobile menu, still artwork, project mail and demo requests work",
+      "passed": true
+    },
+    {
+      "title": "3D mark stops animating after its entrance",
+      "passed": true
+    },
+    {
+      "title": "Returning to the homepage restores the artwork and switching to reduced motion displays the still",
+      "passed": true
+    },
+    {
+      "title": "Connection preference {\"saveData\":true,\"effectiveType\":\"4g\"} gets the lightweight still",
+      "passed": true
+    },
+    {
+      "title": "Connection preference {\"saveData\":false,\"effectiveType\":\"3g\"} gets the lightweight still",
+      "passed": true
+    },
+    {
+      "title": "Mobile keyboard navigation, the guided demo, six services and a service enquiry",
+      "passed": true
+    },
+    {
+      "title": "Without JavaScript the mobile menu, still artwork, project mail and demo requests work",
+      "passed": true
+    }
+  ],
+  "layouts": [
+    {
+      "page": "home",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "home",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "solutions",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-websites",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-branding",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-ai",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-automation",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-software",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "service-marketing",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "industries",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "about",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "contact",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 360,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 430,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 768,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 1024,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 1440,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 1920,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 2560,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 320,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "demo",
+      "width": 768,
+      "scale": 2,
+      "issues": []
+    },
+    {
+      "page": "home-webkit",
+      "width": 320,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home-webkit",
+      "width": 390,
+      "scale": 1,
+      "issues": []
+    },
+    {
+      "page": "home-webkit",
+      "width": 390,
+      "scale": 2,
+      "issues": []
+    }
+  ],
+  "failures": []
+}

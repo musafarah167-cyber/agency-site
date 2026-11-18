@@ -1,13 +1,9 @@
-# ClearSign company website
+# Website handover for Khalid and Hussam
 
-Khalid chose the earlier light homepage. The restored design puts the large animated C directly alongside the headline on desktop. On phones, the enquiry button comes first and the C follows below.
+This branch starts from the shared website review at commit `c1e5a7a`. Website changes are in this directory. When bringing other work across, compare the editable files in `website/` first, then rebuild `site/` from the combined source.
 
-The five services cover websites, AI agents, admin and follow-up, custom software, and marketing and print. Each service page opens with an example. In the car hire example, visitors can step through capturing an enquiry, organising the details and following up. The contact page lists four ClearSign email addresses. The project form prepares a message to sales@clearsign.uk and opens it in the visitor’s email app. The visitor sends it there.
+The homepage names what ClearSign builds and gives visitors two choices straight away. They can request an outline in writing or arrange a guided demonstration of the takeaway voice assistant. The phone layout answers questions about bookings, chasing quotes and invoices, repeated data entry and keeping client files on site. A visitor can estimate time spent on one task before deciding whether to share it.
 
-The main enquiry buttons measure 52 pixels tall on desktop and 48 on a phone. The two homepage actions sit together at 390 pixels wide and stack at 320. The smaller secondary links have at least 44 pixels of tap height in the opening.
+The branding service is available to customers. Former public brand-kit addresses take visitors to that service. The contact form and demo request prepare a message for the visitor to send in their email app. The team confirms demo times.
 
-[Open the viewing instructions](README.md) · [View the desktop screenshot](homepage-preview.png) · [View the phone screenshot](website-specimen-mobile.png) · [Read the checks](verification/README.md)
-
-## Hosting and enquiries
-
-Khalid authorised a push followed by publication on Netlify Free and connection to clearsign.uk. Upload the generated site/ folder only. The C settles after four seconds and respects the device’s reduced-motion setting. Khalid is creating the info, sales, support and accounts email addresses in Google Workspace. Actual delivery requires an active address and a visitor who sends the message.
+[How to open and edit this branch](README.md) · [Browser results](verification/README.md)

@@ -1,58 +1,310 @@
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-const {chromium,webkit}=await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const out=path.join(project,'outputs/website-checks/');
-await fs.mkdir(path.join(out,'tmp'),{recursive:true});
-process.env.TMPDIR=path.join(out,'tmp');
-const base=process.env.CLEARSIGN_PREVIEW_URL || 'http://127.0.0.1:3210/';
-const checks=[],layouts=[],errors=[],failed=[],external=[],actions=[];function assert(value,message){if(!value)throw Error(message);checks.push(message);}
-const b=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});const context=await b.newContext({viewport:{width:390,height:844}});const p=await context.newPage();await p.addInitScript(()=>{window.__emptyVideoTicks=0;const original=window.requestAnimationFrame;window.requestAnimationFrame=function(fn){if(fn.name==='tick')window.__emptyVideoTicks++;return original.call(this,fn)};});p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)failed.push(r.url());});p.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:'))external.push(r.url());});
-const services=[['websites','Websites'],['ai','AI agents'],['automation','Admin & follow-up'],['software','Custom software'],['marketing','Marketing & print']];
-for(const [slug,label]of services){
- await p.goto(base+'service-'+slug+'.html',{waitUntil:'networkidle'});const action=p.locator('.page-actions .button');const box=await action.boundingBox();actions.push({slug,top:box.y,bottom:box.y+box.height});assert(box.y+box.height<844,slug+' contact action is on first mobile screen');
- assert(await p.locator('.breadcrumb a[href="solutions.html"]').count()===1,slug+' breadcrumb returns to services');await action.click();assert(await p.locator('[name=interest]').inputValue()===label,slug+' carries exact service into form');assert((await p.locator('#message-hint').textContent()).length>40,slug+' has a visible writing example');
+import path from 'node:path';
+import { chrome, safari, evidence, base, visit, ready, pages, route } from './site-browser.mjs';
+
+const layouts = [],
+  failures = [],
+  checks = [];
+const check = (valid, title) => {
+  checks.push({ title, passed: !!valid });
+  if (!valid) failures.push(title);
+};
+function observe(page) {
+  page.on('pageerror', (e) => failures.push('Browser error ' + e.message));
+  page.on('console', (m) => {
+    if (m.type() === 'error') failures.push('Console ' + m.text() + ' ' + m.location().url);
+  });
+  page.on('response', (r) => {
+    if (r.status() >= 400) failures.push(r.status() + ' ' + r.url());
+  });
+  page.on('request', (r) => {
+    const url = new URL(r.url());
+    if (['http:', 'https:'].includes(url.protocol) && url.origin !== base.origin)
+      failures.push('External request ' + url.origin);
+  });
 }
-await p.goto(base+'solutions.html');for(const [slug,label]of services){const href=await p.locator('#'+slug+' .solution-actions .button').getAttribute('href');assert(new URL(href,base).searchParams.get('interest')===label,slug+' overview action carries service');}
-await p.goto(base+'industries.html');const industryContexts=['Salons & barbers','Restaurants & takeaways','Car hire','Trades & garages','Accountants & legal firms'];for(const [index,section]of (await p.locator('.industry-detail').all()).entries()){assert(await section.locator('.industry-service-links a').count()>=2,'Industry '+index+' gives relevant service choices');const href=await section.locator('.button').getAttribute('href');const u=new URL(href,base);assert(u.searchParams.get('interest')==='Not sure yet','Industry '+index+' avoids an assumed service');assert(u.searchParams.get('scenario')===industryContexts[index],'Industry '+index+' carries business context');}
-await p.locator('#trades .button').click();assert(await p.locator('#enquiry-context').inputValue()==='Trades & garages','Industry context is visible and selected in contact');assert(await p.locator('[name=interest] option').count()===6,'Five services plus Not sure yet');
-await p.locator('[name=name]').fill('Test <img src=x onerror=alert(1)>');await p.locator('[name=email]').fill('test@example.com');await p.locator('[name=message]').fill('We need a clearer website.\nAnd an easier way to take enquiries.');const before=p.url();await p.getByRole('button',{name:'Prepare my email',exact:true}).click();assert(await p.locator('#enquiry-result').isVisible(),'Optional business name does not block the email');
-const prepared = new URL(await p.locator('#send-enquiry-email').getAttribute('href'));
-assert(prepared.protocol === 'mailto:' && prepared.pathname === 'sales@clearsign.uk' && prepared.searchParams.get('body').includes('Trades & garages') && prepared.searchParams.get('body').includes('We need a clearer website.'), 'Email is addressed to sales and carries the customer’s details and context');assert(await p.locator('#enquiry-summary img').count()===0,'Input is rendered safely as text');assert((await p.locator('#enquiry-summary').textContent()).includes('Not provided'),'Missing optional business is clear');assert(await p.locator('#enquiry-summary dt').count()===6,'Preview has labelled fields including business context');assert(await p.locator('#enquiry-result-heading').evaluate(el=>el===document.activeElement),'Keyboard focus reaches preview heading');assert(p.url()===before,'Personal details do not enter the URL');await p.locator('#edit-enquiry').click();assert((await p.locator('[name=name]').inputValue()).includes('<img'),'Editing retains entered details');await p.locator('[name=interest]').selectOption('Marketing & print');assert((await p.locator('#message-hint').textContent()).includes('video'),'Writing example follows the selection');
-await p.goto(base+'contact.html?interest=AI%20%26%20automation&scenario=Phone%20enquiry');assert(await p.locator('[name=interest]').inputValue()==='AI agents','Legacy phone link still selects AI agents');assert((await p.locator('#context-label').textContent())==='Enquiry topic (optional)'&&await p.locator('#enquiry-context').inputValue()==='Phone enquiry','Workflow context has an editable topic label');
-await p.goto(base);await p.locator('.menu-toggle').click();assert(await p.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Services',exact:true}).isVisible(),'Mobile menu names Services plainly');await p.keyboard.press('Escape');assert(await p.locator('.menu-toggle').getAttribute('aria-expanded')==='false','Escape closes menu');
-// A phone visitor can now try the same enquiry example as a desktop visitor.
-await p.locator('.hero-media-footer a[href="#business-story"]').click();
-const story = p.locator('#business-story');
-for (const label of ['Organise', 'Follow up', 'Capture']) {
-  const choice = story.getByRole('button', {name:label, exact:true});
-  await choice.focus();
-  await p.keyboard.press('Space');
-  const panelId = await choice.getAttribute('aria-controls');
-  assert(await choice.getAttribute('aria-pressed') === 'true' && await story.locator('#' + panelId).isVisible(), 'Phone example shows the selected ' + label + ' stage');
+async function layoutCheck(page, slug, width, scale = 1) {
+  await page.setViewportSize({ width, height: 900 });
+  await page.evaluate((zoom) => {
+    document.documentElement.style.fontSize = zoom * 100 + '%';
+  }, scale);
+  await page.waitForFunction(
+    ({ width, scale }) =>
+      window.innerWidth === width &&
+      getComputedStyle(document.documentElement).fontSize === scale * 16 + 'px',
+    { width, scale }
+  );
+  const issues = await page.evaluate(async () => {
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    const viewport = document.documentElement.clientWidth;
+    const errors = [];
+    if (document.documentElement.scrollWidth > viewport + 1)
+      errors.push('page overflows by ' + (document.documentElement.scrollWidth - viewport));
+    const sel = 'main h1,main h2,main h3,main p,main label,main summary,main a,button,.mast .logo';
+    for (const el of document.querySelectorAll(sel)) {
+      if (!el.checkVisibility() || (el.closest('details:not([open])') && !el.closest('summary')))
+        continue;
+      const box = el.getBoundingClientRect();
+      if (box.width === 0 || box.height === 0) continue;
+      if (box.left < -1 || box.right > viewport + 1)
+        errors.push(el.tagName + ' box ' + (el.textContent || '').trim().slice(0, 32));
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      for (const r of range.getClientRects())
+        if (r.width && (r.left < -1 || r.right > viewport + 1)) {
+          errors.push(el.tagName + ' text ' + (el.textContent || '').trim().slice(0, 32));
+          break;
+        }
+    }
+    return [...new Set(errors)].slice(0, 7);
+  });
+  layouts.push({ page: slug || 'home', width, scale, issues });
+  if (issues.length)
+    failures.push((slug || 'home') + ' ' + width + ' ×' + scale + ': ' + issues.join(', '));
 }
-await p.goto(base + 'service-websites.html');
-const ownSite = p.locator('.service-sample img');
-assert(await ownSite.count() === 2 && await ownSite.evaluateAll(images => images.every(i => i.complete && i.naturalWidth > 0)), 'Websites opens with loaded desktop and phone examples');
-const pages=['index','solutions','industries','about','contact',...services.map(s=>'service-'+s[0]),'brand'];const links=new Set();for(const page of pages){await p.goto(base+page+'.html',{waitUntil:'networkidle'});assert(await p.locator('h1').count()===1,page+' has one main heading');(await p.locator('a[href]').evaluateAll(els=>els.map(el=>el.href))).forEach(h=>links.add(h));for(const width of [320,390,768,861,900,1440,1920,2560]){await p.setViewportSize({width,height:900});const over=await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+1);layouts.push({page,width,scale:1,overflow:over});}}
-assert(layouts.every(l=>!l.overflow),'All eleven pages fit eight widths including wide desktops');
-for(const page of pages){for(const width of [320,390]){await p.setViewportSize({width,height:900});await p.goto(base+page+'.html');await p.addStyleTag({content:'html{font-size:200%!important}'});const over=await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+1);layouts.push({page,width,scale:2,overflow:over});}}
-await fs.writeFile(out+'layouts.json',JSON.stringify(layouts,null,2));assert(layouts.every(l=>!l.overflow),'All eleven pages fit 200% text at narrow widths');
-for(const href of links){const u=new URL(href);if(u.origin===new URL(base).origin){const response=await context.request.get(u.href);assert(response.ok(),'Internal destination loads: '+u.pathname);}}
-await p.setViewportSize({width:1920,height:1080});await p.goto(base,{waitUntil:'networkidle'});
-const desktopFit=await p.locator('.hero-layout').evaluate(el=>({width:el.getBoundingClientRect().width,viewport:document.documentElement.clientWidth}));assert(desktopFit.width>=desktopFit.viewport*.8,'Wide desktop content uses at least 80% of the available screen');
-await p.setViewportSize({width:1440,height:1000});await p.goto(base,{waitUntil:'networkidle'});await p.waitForFunction(()=>document.getElementById('hero-3d-stage').dataset.hero3d==='ready');assert(await p.evaluate(()=>window.__emptyVideoTicks)===0,'No empty ScrollCraft video loop on homepage');const progressBefore=await p.locator('#hero').evaluate(e=>e.style.getPropertyValue('--sc-p'));await p.evaluate(()=>window.scrollTo({top:300,behavior:'instant'}));await p.waitForTimeout(100);assert(await p.locator('#hero').evaluate(e=>e.style.getPropertyValue('--sc-p'))!==progressBefore,'ScrollCraft act progress still updates');await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));const frames=()=>p.locator('#hero-3d-stage').getAttribute('data-hero-frames');const f=await frames();await p.waitForTimeout(200);assert(+await frames()>+f,'Original C still animates');assert(await p.locator('.motion-control').count() === 0, 'No visible animation controls');
-await p.waitForFunction(() => document.querySelector('#hero-3d-stage').dataset.heroMotion === 'settled', null, {timeout:10000});
-const settledFrames = await frames();
-await p.waitForTimeout(220);
-assert(await frames() === settledFrames, 'The C settles after its short introduction');
-await p.emulateMedia({reducedMotion:'reduce'});
-assert(await p.locator('html').evaluate(e => e.classList.contains('motion-off')), 'Reduced motion is honoured');
-const nojs=await b.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const n=await nojs.newPage();await n.goto(base+'contact.html');assert(await n.locator('[name=name]').isDisabled(),'No-JavaScript form cannot send personal details');await n.goto(base+'service-ai.html');assert(await n.locator('#main-nav').isVisible(),'No-JavaScript navigation remains usable');assert(await n.locator('.page-actions .button').isVisible(),'No-JavaScript service action remains visible');
-await n.goto(base);
-assert(await n.locator('#business-story .story-steps').isVisible() && await n.locator('#business-story .story-steps li').count() === 3, 'All three example steps are readable on phones without scripts');
-assert(await n.locator('#business-story .story-controls').isHidden(), 'Static phone example has no inactive choices');
-assert(!errors.length,'No browser script errors');assert(!failed.length,'No broken page assets');assert(!external.length,'No external requests');await b.close();
-const wb=await webkit.launch({headless:true});const wp=await wb.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});await wp.goto(base+'service-ai.html');await wp.locator('.page-actions .button').tap();assert(await wp.locator('[name=interest]').inputValue()==='AI agents','WebKit preserves exact service context');await wp.locator('[name=name]').fill('Browser test');await wp.locator('[name=email]').fill('test@example.com');await wp.locator('[name=message]').fill('Help with common enquiries.');await wp.getByRole('button',{name:'Prepare my email'}).tap();assert(await wp.locator('#enquiry-result').isVisible(),'WebKit optional-business form preview works');await wb.close();
-const report={time:new Date().toISOString(),checks,actions,layouts,errors,failed,external,limits:['Physical devices and screen readers not checked','No real customer usability study or conversion measurement','Actual delivery depends on the visitor sending the email and the destination mailbox receiving it']};await fs.writeFile(out+'browser-verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify({checks:checks.length,actions,layouts:layouts.length}));
+async function menuAndHero(page) {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(visit('/'));
+  await ready(page);
+  await page.locator('.skip').focus();
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => document.activeElement?.id === 'main-content');
+  assert.match(await page.locator('main h1').innerText(), /websites,\s*brands and software/i);
+  await page.locator('.home-intro').getByRole('link', { name: 'Book a phone demo' }).click();
+  await page.waitForURL((url) => url.pathname === '/demo/');
+  await page.goBack();
+  await page
+    .getByRole('navigation', { name: 'On this page' })
+    .getByRole('link', { name: 'The demo' })
+    .click();
+  await page.waitForURL((url) => url.pathname === '/' && url.hash === '#business-story');
+  assert.equal(
+    await page
+      .locator('.work-band')
+      .getByRole('link', { name: 'Book a phone assistant demo' })
+      .getAttribute('href'),
+    '/demo/'
+  );
+  assert.equal(await page.getByRole('link', { name: /brand kit/i }).count(), 0);
+  await page.locator('.phone-menu summary').click();
+  assert(await page.locator('.phone-menu nav').isVisible());
+  await page.keyboard.press('Escape');
+  assert(!(await page.locator('.phone-menu nav').isVisible()));
+  assert(await page.locator('.phone-menu summary').evaluate((el) => el === document.activeElement));
+  await page.locator('.phone-menu summary').press('Enter');
+  await page.locator('.phone-menu nav').getByRole('link', { name: 'Who we help' }).click();
+  await page.waitForURL(/industries\//);
+  assert(!(await page.locator('.phone-menu nav').isVisible()));
+  await page.goBack();
+  await ready(page);
+  await page.locator('#business-needs').getByRole('link', { name: 'Browse our services' }).click();
+  await page.waitForURL(/solutions\//);
+  const services = page.locator('.directory-links a');
+  assert.deepEqual((await services.evaluateAll((links) => links.map((a) => a.pathname))).sort(), [
+    '/service-ai/',
+    '/service-automation/',
+    '/service-branding/',
+    '/service-marketing/',
+    '/service-software/',
+    '/service-websites/',
+  ]);
+  await page.locator('#automation a').click();
+  await page.waitForURL(/service-automation\//);
+  await page.getByRole('link', { name: 'Discuss this service' }).click();
+  await page.waitForURL(/contact\//);
+  assert.equal(await page.locator('[name=interest]').inputValue(), 'Admin & follow-up');
+  checks.push({
+    title: 'Mobile keyboard navigation, the guided demo, six services and a service enquiry',
+    passed: true,
+  });
+}
+async function noScript(browser) {
+  const c = await browser.newContext({
+      javaScriptEnabled: false,
+      viewport: { width: 390, height: 844 },
+    }),
+    p = await c.newPage();
+  try {
+    await p.goto(visit('/'));
+    assert(await p.locator('.hero-art img').isVisible());
+    assert(await p.getByText(/Multiply minutes per task/).isVisible());
+    assert(!(await p.locator('#minutes-per-task').isVisible()));
+    await p.goto(visit('/industries/'));
+    await p.getByText('Trades & garages', { exact: true }).first().click();
+    assert(
+      await p.locator('#trades').getByRole('link', { name: 'Discuss my business' }).isVisible()
+    );
+    await p.locator('.phone-menu summary').click();
+    await p.locator('.phone-menu nav').getByRole('link', { name: 'Get in touch' }).click();
+    await p.waitForURL(/contact\//);
+    for (const key of ['sales', 'info', 'accounts', 'support'])
+      assert(
+        await p
+          .locator('main a[href="mailto:' + key + '@clearsign.uk"]')
+          .first()
+          .isVisible()
+      );
+    await p.locator('main').getByRole('link', { name: 'Book a phone assistant demo' }).click();
+    await p.waitForURL(/\/demo\//);
+    const request = new URL(await p.locator('#demo-email').getAttribute('href'));
+    assert.equal(request.pathname, 'sales@clearsign.uk');
+    assert(request.searchParams.get('body').includes('which times are available'));
+    assert.equal(await p.locator('#demo-time').count(), 0);
+    checks.push({
+      title:
+        'Without JavaScript the mobile menu, still artwork, project mail and demo requests work',
+      passed: true,
+    });
+  } finally {
+    await c.close();
+  }
+}
+
+const b = await chrome();
+try {
+  const c = await b.newContext({ reducedMotion: 'reduce' }),
+    p = await c.newPage();
+  observe(p);
+  for (const slug of pages) {
+    const response = await p.goto(visit(route(slug)));
+    check(response.status() === 200, route(slug) + ' opens');
+    await ready(p);
+    if (slug === 'contact') await p.locator('[name=interest]').waitFor();
+    if (slug === 'demo') {
+      await p.locator('#demo-preferences button').click();
+      await p.locator('#demo-time').waitFor();
+    }
+    check((await p.locator('main h1').count()) === 1, route(slug) + ' page heading');
+    for (const w of [320, 360, 390, 430, 768, 1024, 1440, 1920, 2560])
+      await layoutCheck(p, slug, w);
+    for (const w of [320, 390, 768]) await layoutCheck(p, slug, w, 2);
+    await p.evaluate(() => (document.documentElement.style.fontSize = ''));
+  }
+  await menuAndHero(p);
+  for (const [name, width, height] of [
+    ['desktop', 1440, 920],
+    ['phone', 390, 844],
+  ]) {
+    await p.setViewportSize({ width, height });
+    await p.goto(visit('/'));
+    await ready(p);
+    await p.locator('.hero-art img').evaluate((i) => i.decode());
+    await p.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+    await p.screenshot({ path: path.join(evidence, name + '.png'), animations: 'disabled' });
+    await p.screenshot({
+      path: path.join(evidence, name + '-full.png'),
+      fullPage: true,
+      animations: 'disabled',
+    });
+    const links = p.locator('.home-intro .actions a');
+    for (const a of await links.all())
+      check(
+        (await a.boundingBox()).height >= 44,
+        'Home ' + name + ' primary and secondary touch targets'
+      );
+  }
+  const req = await p.evaluate(() => performance.getEntriesByType('resource').map((r) => r.name));
+  check(
+    !req.some((s) => s.includes('/assets/vendor/three') || s.includes('/assets/js/hero-3d')),
+    'Reduced-motion homepage skips 3D downloads'
+  );
+  check(
+    await p
+      .locator('img:visible')
+      .evaluateAll((nodes) => nodes.every((n) => n.complete && n.naturalWidth > 0)),
+    'Homepage pictures loaded'
+  );
+  await c.close();
+  await noScript(b);
+  const normal = await b.newContext({
+      viewport: { width: 1440, height: 900 },
+      reducedMotion: 'no-preference',
+    }),
+    n = await normal.newPage();
+  observe(n);
+  await n.goto(visit('/'));
+  await n.locator('.hero-art[data-ready=true]').waitFor({ timeout: 18000 });
+  await n.waitForFunction(
+    () => document.querySelector('.hero-art')?.dataset.heroMotion === 'settled',
+    {},
+    { timeout: 15000 }
+  );
+  const first = await n.locator('.hero-art').getAttribute('data-hero-frames');
+  await n.waitForTimeout(300);
+  check(
+    first === (await n.locator('.hero-art').getAttribute('data-hero-frames')),
+    '3D mark stops animating after its entrance'
+  );
+  await n.screenshot({ path: path.join(evidence, 'desktop-animation.png') });
+  await n.setViewportSize({ width: 390, height: 844 });
+  await n.waitForFunction(
+    () => document.querySelector('.hero-art canvas')?.getBoundingClientRect().width < 400
+  );
+  await n.screenshot({ path: path.join(evidence, 'phone-animation.png') });
+  await n.setViewportSize({ width: 1440, height: 900 });
+  await n.locator('.desk-nav').getByRole('link', { name: 'About', exact: true }).click();
+  await n.waitForURL(/about\//);
+  await n.locator('.mast .logo').click();
+  await n.locator('.hero-art[data-ready=true]').waitFor({ timeout: 15000 });
+  await n.emulateMedia({ reducedMotion: 'reduce' });
+  await n.waitForFunction(() => document.querySelector('.hero-art')?.dataset.ready === 'false');
+  await n.locator('.hero-art img').waitFor({ state: 'visible' });
+  check(
+    await n.locator('.hero-art img').isVisible(),
+    'Returning to the homepage restores the artwork and switching to reduced motion displays the still'
+  );
+  await normal.close();
+  for (const hint of [
+    { saveData: true, effectiveType: '4g' },
+    { saveData: false, effectiveType: '3g' },
+  ]) {
+    const limited = await b.newContext({
+      viewport: { width: 390, height: 844 },
+      reducedMotion: 'no-preference',
+    });
+    await limited.addInitScript(
+      (value) => Object.defineProperty(navigator, 'connection', { configurable: true, value }),
+      hint
+    );
+    const limitedPage = await limited.newPage(),
+      requests = [];
+    limitedPage.on('request', (r) => requests.push(r.url()));
+    await limitedPage.goto(visit('/'), { waitUntil: 'networkidle' });
+    await limitedPage.locator('.hero-art img').evaluate((img) => img.decode());
+    check(
+      !requests.some(
+        (url) => url.includes('/assets/js/hero-3d') || url.includes('/assets/vendor/three')
+      ) && (await limitedPage.locator('.hero-art img').isVisible()),
+      'Connection preference ' + JSON.stringify(hint) + ' gets the lightweight still'
+    );
+    await limited.close();
+  }
+} finally {
+  await b.close();
+}
+const w = await safari();
+try {
+  const p = await w.newPage({ reducedMotion: 'reduce', viewport: { width: 390, height: 844 } });
+  observe(p);
+  await menuAndHero(p);
+  await p.goto(visit('/'));
+  await ready(p);
+  await layoutCheck(p, 'home-webkit', 320);
+  await layoutCheck(p, 'home-webkit', 390);
+  await layoutCheck(p, 'home-webkit', 390, 2);
+  await noScript(w);
+} finally {
+  await w.close();
+}
+await fs.writeFile(
+  path.join(evidence, 'browser-checks.json'),
+  JSON.stringify({ base: base.href, checks, layouts, failures }, null, 2) + '\n'
+);
+console.log(
+  layouts.length + ' responsive layout checks; ' + checks.length + ' route and interaction checks.'
+);
+if (failures.length) {
+  console.error([...new Set(failures)].slice(0, 26).join('\n'));
+  process.exitCode = 1;
+}

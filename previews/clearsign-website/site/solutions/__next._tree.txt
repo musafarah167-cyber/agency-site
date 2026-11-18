@@ -1,0 +1,6 @@
+:HL["/_next/static/css/68c6da28be79d2ba.css","style"]
+:HL["/assets/fonts/archivo-latin-wght.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
+:HL["/assets/brand/wordmark-dark.svg","image"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"solutions","h":96,"c":"$Q2"}]]
+0:{"b":"f82de75bb4422da858","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

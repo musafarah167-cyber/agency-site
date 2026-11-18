@@ -1,0 +1,63 @@
+.phone-journey {
+  display: none;
+}
+@media (max-width: 760px) {
+  .phone-journey {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: var(--paper);
+    border-block: 1px solid var(--line);
+  }
+  .phone-journey .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0.2rem;
+  }
+  .phone-journey a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.25rem 0.05rem;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 1.15;
+    text-decoration: none;
+    text-align: center;
+  }
+  .phone-journey a[aria-current='location'] {
+    border-color: var(--amber);
+    color: var(--ink);
+  }
+  .phone-journey a:focus-visible {
+    outline-offset: -3px;
+  }
+  .home-chapters > section {
+    scroll-margin-top: 3.1rem;
+  }
+}
+@container site (max-width:18em) {
+  .phone-journey {
+    position: static;
+  }
+  .phone-journey .wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .home-chapters > section {
+    scroll-margin-top: 0.5rem;
+  }
+}
+@media (max-height: 440px) {
+  .phone-journey {
+    position: static;
+  }
+  .home-chapters > section {
+    scroll-margin-top: 0.5rem;
+  }
+}

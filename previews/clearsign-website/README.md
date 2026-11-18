@@ -1,28 +1,34 @@
-# ClearSign website review
+# ClearSign website
 
-The homepage opens on warm white, with the large animated C beside “Turn enquiries into customers.” Five services are grouped by the problems they help a business solve. The car hire example shows how a caller’s details can reach the person who needs to follow up.
+The website explains how ClearSign helps smaller businesses win customers and reduce admin. On a phone, visitors can request a project outline, book a guided voice assistant demo, explore four common business problems and measure time spent on a repeated task.
 
-[Desktop screenshot](homepage-preview.png) · [Phone screenshot](website-specimen-mobile.png) · [Handover](HANDOVER.md)
+[Phone screenshot](website-specimen-mobile.png) · [Desktop screenshot](homepage-preview.png) · [Handover for Khalid and Hussam](HANDOVER.md)
 
-## Open the website locally
+## View this branch locally
 
-From the repository root, start a local preview with Python 3.
+From the repository root, run these commands with Node.js 22.12 or later.
 
 ```sh
-python3 -m http.server 3210 --bind 127.0.0.1 --directory previews/clearsign-website/site
+cd previews/clearsign-website
+node website/preview.mjs
 ```
 
-Open [the homepage](http://127.0.0.1:3210/) or [the brand guide](http://127.0.0.1:3210/brand.html) on that computer. The pages are already built. Visitors can email general enquiries, sales, support or accounts. The project form prepares an email to sales for the visitor to send in their own email app.
+Open [the local website](http://127.0.0.1:3213/). The checked-in pages are ready to view. To use a different port, start the preview with `SITE_PORT=3214 node website/preview.mjs` and open that port in your browser.
 
-## Edit the review
+## Edit and check the site
 
-From `previews/clearsign-website/`, run these commands once after checkout and again after editing.
+Stay in this directory. Install the locked website dependencies and start the editing server.
+
+```sh
+node website/local.mjs install
+node website/local.mjs dev
+```
+
+Open [the editing preview](http://127.0.0.1:3212/). After making changes, run the following commands to build and check the pages.
 
 ```sh
 node website/build.mjs
 node website/check.mjs
 ```
 
-Edit the copy, layout and artwork in [website/](website/README.md). The build produces the viewable [site/](site/) folder. The source includes the logo, fonts, original 3D animation and a still picture for devices that cannot show it. The earlier preview addresses also open the updated pages.
-
-[Browser checks](tests/README.md) · [Verification results](verification/README.md) · [Sources and licences](SOURCES.md)
+[Editing guide](website/README.md) · [Browser checks](tests/README.md) · [Check results](verification/README.md) · [Sources and licences](SOURCES.md)

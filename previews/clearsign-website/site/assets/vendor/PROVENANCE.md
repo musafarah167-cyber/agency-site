@@ -24,7 +24,7 @@ node website/prepare-vendor.mjs \
   --terser /path/to/pinned-terser/bundle.min.js
 ```
 
-`--output-dir /path/to/vendor-directory` is optional; the default is `website/static/assets/vendor` (the source copied into `site/assets/vendor` by the website build). The script checks the package name/version, both source file hashes, license hash, minifier bundle hash and expected generated hashes before writing. It rejects unexpected edits in existing output modules or the license. It does not download or install anything. Generated modules can be used directly without rebuilding or including build tools in the website.
+`--output-dir /path/to/vendor-directory` is optional; the default is `website/public/assets/vendor` (the source copied into `site/assets/vendor` by the website build). The script checks the package name/version, both source file hashes, license hash, minifier bundle hash and expected generated hashes before writing. It rejects unexpected edits in existing output modules or the license. It does not download or install anything. Generated modules can be used directly without rebuilding or including build tools in the website.
 
 Tool: Terser 5.27.0 as declared by its Next.js 16.1.7 host. The vendored Terser package has no embedded version; therefore the script requires this exact bundle SHA-256: `e4ae9a64825ea7f53606c3ee01633f08b64e12000a30d3687f52b64977f9a652`. An arbitrary Terser 5.27.0 distribution is not asserted to have the same bundle bytes. Terser is BSD-2-Clause licensed and is not shipped as a runtime asset. A fresh checkout needs either the already generated files or a separately supplied matching build tool and source package.
 

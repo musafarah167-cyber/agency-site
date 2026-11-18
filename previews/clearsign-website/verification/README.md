@@ -1,4 +1,12 @@
-# Launch checks, 17 November 2026
+# Current branch checks, 18 November 2026
+
+A clean install using the dependency lockfile built all twelve pages. The export check verified eleven earlier page addresses, 42 internal links or assets and the sitemap. The 144 files included in this branch match the local website reviewed by Khalid, byte for byte.
+
+The browser checks passed across 147 layouts and 38 page and interaction checks. Chrome and WebKit, the browser engine used by Safari, also passed the phone section menu, demo booking, time estimate, seven industry examples and enquiry flows. The narrowest phone was 320 pixels wide. Enlarged text was checked at twice the normal size. These were browser simulations.
+
+[Layout and navigation results](mobile-layout.json) · [Phone and enquiry results](mobile-enquiries.json)
+
+## Earlier launch checks, 17 November 2026
 
 [Browser and layout checks](launch-browser.json) · [Contact and accessibility checks](launch-focused.json)
 

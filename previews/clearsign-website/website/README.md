@@ -1,15 +1,18 @@
 # Editing the ClearSign website
 
-Run the commands from the review folder, which contains this `website/` directory and its generated `site/` sibling.
+The website is built with Next.js. Run the [setup and preview commands](../README.md) from the parent directory, `previews/clearsign-website/`. The generated `site/` is the folder used for a release.
 
-```sh
-node website/build.mjs
-node website/check.mjs
-python3 -m http.server 3210 --bind 127.0.0.1 --directory site
-```
+| What to change | Where to look |
+| --- | --- |
+| Homepage copy and order of sections | `app/page.tsx` |
+| Service list, enquiry choices and industries | `content/growth.ts` |
+| Deliverables and questions on each service | `content/services.mjs` |
+| Page layouts and navigation | `app/` and `components/` |
+| Type, colours and spacing | `app/globals.css` and `app/studio.css` |
+| Phone section menu | `components/phone-journey.tsx` and `app/phone-journey.css` |
+| Admin time check | `components/time-check.tsx` |
+| Website images, logos and animation | `public/assets/` |
 
-Edit the service copy and examples in `content/`. The opening, navigation and shared page layouts live in `build.mjs`. The original C lives in `static/assets/js/hero-3d.js`. Its presentation is in `static/assets/css/hero-finish.css`. Shared button sizes and spacing are at the top of `static/assets/css/clarity.css`.
+The time check estimates the hours a task currently takes. On the contact and demonstration pages the visitor reviews an email and sends it in their own email app. Demo appointments are confirmed by the team. The original C animation has a still version for reduced motion.
 
-The two pictures in `static/assets/images/` show the actual homepage on the Websites service page. Refresh them when the homepage appearance changes.
-
-Build once after checking out the review, before editing. The builder records the files it generated locally so subsequent builds can safely replace them. It stops if it sees an unfamiliar or hand-edited file in the generated folder. The optional vendor build and its licences are described in [vendor provenance](static/assets/vendor/PROVENANCE.md).
+Build with `node website/build.mjs` and verify the export with `node website/check.mjs`. The builder protects locally edited or unexpected output files. It also accepts `--out outputs/<review-folder>` to create a separate export. [Browser checks](../tests/README.md)
